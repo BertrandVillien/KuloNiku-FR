@@ -109,4 +109,5 @@ uv run kuloniku-fr merge-batches \
 ```
 
 Les choix culinaires et les validations visuelles restantes sont consignés dans
-`docs/TERMINOLOGY.md`.
+`docs/TERMINOLOGY.md`. La couverture, les contrôles et les quinze validations
+restantes sont résumés dans `docs/QUALITY.md`.

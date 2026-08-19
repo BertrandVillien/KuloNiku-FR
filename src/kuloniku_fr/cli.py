@@ -444,6 +444,14 @@ def command_prepare_backups(args) -> int:
                         "notes": "Propagé depuis le dialogue principal anglais identique.",
                     }
                 )
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for item in manifest:
+            if item["id"] == "900-dialogue-backups-identiques":
+                item["status"] = "done"
+        manifest_path.write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
     print(f"{len(propagated)} dialogues de sauvegarde propagés sans retraduction")
     print(f"{sum(len(batch.rows) for batch in batches[1 if exact_rows else 0:])} lignes à réviser par agents")
     return 0

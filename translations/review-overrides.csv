@@ -12,3 +12,170 @@ Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné premium,revie
 Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Narutomaki premium,provisional,À confirmer sur le visuel de l'ingrédient.
 Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",provisional,À confirmer sur le visuel de l'ingrédient.
+INGREDIENT_SKEWER_OCTOPUS,Poulpe,reviewed,Les six autres langues désignent le poulpe ; thaï et allemand divergent.
+NOTIFICATION_UNLOCK_MESSAGE,"Débloqué : [X]",reviewed,Formulation neutre pour tout élément déverrouillé.
+Dialogue/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « Meatballs to the Wall », je ne dois pas laisser les revers me définir !",provisional,Titre de chanson à confirmer en jeu.
+Dialogue/GH_CASSIE_AQUARIUM_1_7,"Eh bien, quelle motivation !",reviewed,Formulation neutre.
+Dialogue/GH_CASSIE_INDOOR_2_5,"Tu penses à tout, [NAME].",reviewed,Formulation neutre.
+Dialogue/GH_CASSIE_OUTDOOR_1_4,"Si ça arrive, marchons doucement pour éviter la pluie.",reviewed,Formulation neutre.
+Dialogue/GH_SHUGA_OPENING_2_1,"Yo, [NAME]. Toujours la classe.",reviewed,Formulation neutre et registre de Shuga.
+Dialogue/GH_SHUGA_BEACH_2_8,"D'accord, je vais tout faire pour t'impressionner !",reviewed,Formulation neutre.
+Dialogue/GH_SHUGA_GENERIC_2_4,"Je trouve les gens bosseurs cool ! Courage !",reviewed,Formulation neutre.
+Dialogue/GH_SHUGA_INDOOR_2_CHOICE_5,Seulement en bonne compagnie.,reviewed,Formulation neutre.
+Dialogue/GH_SHUGA_OUTDOOR_1_CHOICE_2,Juste en bonne compagnie.,reviewed,Formulation neutre.
+Dialogue/CEM13_END_1,"À l'hydratation ! C'est ce qu'on attend d'un restaurant classé [COLOR=ALERT]top 5[/COLOR].",reviewed,Anglais divergent ; les sept autres langues parlent d'hydratation et du top 5.
+Dialogue/VNM44_8,"J'admets que tu cuisines très bien. Mais personne ne peut tout faire sans aide.",reviewed,Formulation neutre.
+Dialogue/VNM54_PLAYERWIN_CHOICE_2,"Parce que je cuisine si bien et que j'ai tant de charme ?",reviewed,Formulation neutre.
+Dialogue/VNU2_1,"S-Salut, [NAME]. Merci d'être là.",reviewed,Formulation neutre.
+Dialogue/VNU2_21,"T-Tu assurais au jeu de tir, [NAME]. Tu maniais le pistolet avec brio.",reviewed,Formulation neutre.
+Dialogue/VNU2_CHOICE_6,"Ça me fait plaisir que tu t'amuses.",reviewed,Formulation neutre.
+Dialogue/VNU2_42,"Et j'ai parlé à la personne au comptoir toute seule ! J'ai acheté des jetons ! E-Enfin, j'ai utilisé un script, mais--",reviewed,Évite l'accord inconnu de l'employé.
+Dialogue/VNU3_CHOICE_6,"Hein ? Pardon, je n'écoutais pas.",reviewed,Formulation neutre.
+Dialogue/VNU3_CHOICE_8,"Je ne sais pas, j'ai pas mal à faire.",reviewed,Formulation neutre.
+Dialogue/VNS3_2,"J'espère que tu es d'attaque pour t'amuser ! Un feu d'artifice est prévu ce soir.",reviewed,Formulation neutre.
+Dialogue/VNS3_16,"Désolé. Je-- Je dois avoir faim. Trouvons quelque chose à manger !",reviewed,Shuga est un personnage masculin établi.
+Dialogue/VNS3_24,"En fait-- Désolé, [NAME]. Mais discutons simplement, d'accord ?",reviewed,Shuga est un personnage masculin établi.
+Dialogue/VNS3_CHOICE_5,"Ça a l'air sympa, mais je fatigue.",reviewed,Formulation neutre.
+Dialogue/VNS3_CHOICE_8,"Pardon, Shuga...",reviewed,Formulation neutre.
+Dialogue/GH_CASSIE_AMUSEMENTPARK_1_CHOICE_2,"C'est un gros engagement. Sommes-nous à la hauteur ?",reviewed,Formulation neutre.
+Dialogue/GH_UME_AQUARIUM_1_7,"Petite, je voulais être un requin ninja... Mais mes dents pointues n'ont jamais poussé.",reviewed,L'anglais diverge ; les sept autres langues confirment l'anecdote du requin ninja.
+Dialogue/VNM70_63,"Merci de me supporter. Et pour notre... *ahem* amitié.",reviewed,Formulation neutre.
+Dialogue/VNM70_93,"Ça ne te dérange pas, hein ?! ...Hein ?",reviewed,Formulation neutre.
+Dialogue/VNM70_CHOICE_17,"Rends-moi juste adorable ! (Comme toi)",reviewed,Formulation neutre.
+Dialogue/VNM70_100,"Depuis ton arrivée, ma vie a été bouleversée.",reviewed,Formulation neutre.
+Dialogue/VNM70_102,"Je suis surtout reconnaissante de notre amitié et de notre rivalité, [NAME]. Merci encore.",reviewed,Formulation neutre.
+Dialogue/VNM82_1,"Salut, chef ! Tout est prêt pour ton tout premier Festival ?",reviewed,Formulation neutre.
+Dialogue/VNM84_CHOICE_2,"Pas de tambours ici, désolé.",reviewed,Formulation neutre.
+Dialogue/GPN6_2_6,"(Nous avons parlé d'idées marketing possibles. Cassie a surtout parlé, mais ça m'a fait plaisir de passer du temps avec elle.)",reviewed,Formulation neutre.
+Dialogue/GPN7_1_2,"C'est fou comme tu gères bien une routine quotidienne normale.",reviewed,Formulation neutre.
+Dialogue/GPN7_2_5,"Je sais qu'ici, je n'aurai guère l'occasion de l'utiliser. Mais si je précommande, je peux avoir [SHUGA_MERCH2] en édition limitée...",reviewed,Formulation neutre.
+Dialogue/CHARMANT_CUSTOMER_INTRO_1,"Bonjour, [CHARMANT_NICKNAME]. Tu es [CHARMANT_ADJECTIVE], presque aussi sublime que moi ! ...Presque.",reviewed,Formulation neutre.
+Dialogue/MINNIE_CUSTOMER_INTRO_2,"""Quand je serai grande, je veux être [NPC_JOB_FANCY] et aussi [MINNIE_HOBBY]. Je vais beaucoup étudier !""",reviewed,Les fragments dynamiques s'insèrent sans accord ajouté.
+Dialogue/EMA_CUSTOMER_INTRO_2,"""Tu sais ? [EMA_FAMILY] vient de [EMA_ACTION]. Quelle bénédiction !""",reviewed,Formulation neutre.
+Dialogue/NENE_CUSTOMER_INTRO_2,"""J'ai été [NPC_JOB_FANCY], je te l'ai déjà dit ? Une époque vraiment [DAN_MISSION2] de ma vie, mon chou.""",provisional,Accord du fragment dynamique [NPC_JOB_FANCY] à valider en jeu.
+Dialogue/TANTI_CUSTOMER_INTRO_1,"""Je n'ai pas reçu le loyer de [TANTI_RENTER] ce mois-ci. J'ai donc dû saisir [NPC_ITEM] en paiement ! Tu te rends compte ?!""",reviewed,Formulation neutre.
+Dialogue/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça et un jour tu seras un [MEI_ADJECTIVE] [MEI_JOB], comme moi.""",provisional,Accord des fragments dynamiques à valider en jeu.
+Dialogue/SHUGA_JOB1_1,tricot de chaussettes pour,reviewed,+4 caractères : sens complet conservé.
+Dialogue/SHUGA_JOB1_7,faire un direct sur LickTok pour,reviewed,+2 caractères : sens complet conservé.
+Dialogue/SHUGA_JOB2_7,plantes en pot de Noka,reviewed,Terme complet conservé.
+Dialogue/NPC_ITEM_8,fourchettes,reviewed,+2 caractères : terme usuel.
+Dialogue/DAN_INCIDENT1_1,faux,provisional,Accord du fragment dynamique à valider en jeu.
+Dialogue/DAN_INCIDENT1_4,étrangement tic-tacantes,provisional,Accord du fragment dynamique à valider en jeu.
+Dialogue/CHARMANT_NICKNAME_3,mon as de Bakuso,reviewed,Formulation neutre.
+Dialogue/CHARMANT_NICKNAME_5,as des nouilles,reviewed,Formulation neutre.
+Dialogue/CHARMANT_NICKNAME_6,as de la cuisine,reviewed,Formulation neutre.
+Dialogue/CHARMANT_ADJECTIVE_1,sublime,reviewed,Formulation neutre.
+Dialogue/CHARMANT_ADJECTIVE_2,grandiose,reviewed,Formulation neutre.
+Dialogue/CHARMANT_ADJECTIVE_3,céleste,reviewed,Formulation neutre.
+Dialogue/CHARMANT_ADJECTIVE_4,adorable,reviewed,Formulation neutre.
+Dialogue/CHARMANT_ADJECTIVE_6,classe,reviewed,Formulation neutre.
+Dialogue/CHARMANT_ADJECTIVE_7,magnétique,reviewed,Formulation neutre.
+Dialogue/NPC_JOB_FANCY_4,gouverneur,provisional,Accord du fragment dynamique à valider en jeu.
+Dialogue/NPC_JOB_FANCY_6,artiste d'environnement,reviewed,Formulation neutre.
+Dialogue/EMA_FAMILY_3,cousin au troisième degré,reviewed,Parenté volontairement absurde conservée.
+Dialogue/VNC0_35,"Oh, on a un nouvel article au menu. C'est un gâteau aux fraises préparé par [NAME], aux fourneaux !",reviewed,Formulation neutre.
+Festival/DESC_FES_MEAT_DAY,Au moins 3 ingrédients carnés par commande,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_SPICE_MANIA,Au moins 3 ingrédients de la table d'assaisonnement par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_DEEPLY_FRIED,Au moins 3 ingrédients de la table de friture par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_FLASHY_SLASH,Au moins 3 ingrédients de la table de découpe par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_BROTH_FOCUSED,Au moins 3 ingrédients de la table de cuisson par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_FARM_HARVEST,Au moins 3 légumes par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essayez différentes approches. Mais surtout, amusez-vous !",reviewed,Formulation sûre malgré la clé générique.
+Tutorial/GPN10_3,"Voici ta liste d'[COLOR=ALERT]objectifs[/COLOR]. Commence par créer une recette et obtenir quelques ingrédients !",reviewed,Formulation neutre.
+Shop/SHOP_SEASONING_VINEGARPOWDER_NAME,Poudre de vinaigre,reviewed,Appellation culinaire harmonisée.
+BUTTON_SHOP,Boutique,reviewed,Libellé d'interface harmonisé.
+Dialogue/VNLOCATION_AQUARIUM_NAME,Saunaquarium de KuloNiku,reviewed,Graphie du nom propre harmonisée.
+VNLOCATION_PARK_NAME,Parc municipal,reviewed,Nom du lieu harmonisé.
+Dialogue/VNLOCATION_PARK,Parc municipal,reviewed,Nom du lieu harmonisé.
+Dialogue/VNLOCATION_PARK_NAME,Parc municipal,reviewed,Nom du lieu harmonisé.
+Dialogue/STELLACONTEST_PLAYERWIN_21,"À plus, minus !",reviewed,Jeu de mots « Smell you later » adapté sans faux sens.
+Dialogue/DIALOGUE_VNM11_55,"À plus, minus !",reviewed,Jeu de mots harmonisé.
+Dialogue/VNM40_4,Hein ?,reviewed,Ponctuation française corrigée.
+Dialogue/GH_UME_INDOOR_2_3,Hein ?,reviewed,Ponctuation française corrigée.
+Dialogue/VNS2_47,Hein ?,reviewed,Ponctuation française corrigée.
+Dialogue/VNS2_48,Hein ?,reviewed,Ponctuation française corrigée.
+Dialogue/GH_DAN_BEACH_1_5,Voilà l'esprit !,reviewed,Expression française harmonisée.
+Dialogue/GH_SHUGA_OUTDOOR_1_3,"Ah ouais ? C'est génial.",reviewed,Répétition identique harmonisée avec la réplique de Shuga.
+Dialogue/GH_SHUGA_OUTDOOR_1_5,"Ah ouais ? Honnêtement, moi aussi.",reviewed,Répétition identique harmonisée avec la réplique de Shuga.
+Dialogue/GH_SHUGA_OUTDOOR_1_CHOICE_3,Je préfère me détendre chez moi.,reviewed,Sens complet harmonisé.
+Dialogue/VNS3_59,"Oh, [NAME]...",reviewed,Ponctuation vocative harmonisée.
+Dialogue/CEM6_2,"Je viens prendre de tes nouvelles ! Tu prends tes marques ?",reviewed,Raccourci naturel ; sens et ton conservés.
+Dialogue/CEM6_17,"Voici de quoi augmenter tes chances : du [COLOR=ALERT]pak-choï mariné[/COLOR] ! Tout droit de chez Ume !",reviewed,Raccourci naturel ; marqueur et intention conservés.
+Dialogue/CEM6_18,"Pense à acheter de nouveaux ingrédients, d'accord ? C'est simple pour fidéliser tes clients !",reviewed,Raccourci naturel ; conseil et relation client conservés.
+Dialogue/VNM15_5,"Ne me sous-estime pas, mon pote ! J'ai fait des dizaines de petits boulots en resto !",reviewed,Raccourci naturel ; registre et emploi à temps partiel conservés.
+Dialogue/VNM16_B_1,"D'accord ! Je vais te montrer de quoi les fans sont capables !",reviewed,Raccourci naturel ; enthousiasme conservé.
+Dialogue/VNM70_CHOICE_14,C'est tout toi !,reviewed,Raccourci naturel ; sens conservé.
+Dialogue/VNM70_89,"C'est pourquoi je cuisine : réchauffer les cœurs et rendre les gens heureux. Comme quand ta grand-mère m'a offert ce bol de boulettes et nouilles.",reviewed,Raccourci naturel ; intention et souvenir conservés.
+Dialogue/VNM82_3,"Tiens, je te montre !",reviewed,Raccourci naturel ; ton spontané conservé.
+Dialogue/VNM84_2,"Non ! Je suis là pour VOUS VOIR TOUS DEUX !",reviewed,Raccourci naturel ; emphase conservée.
+Dialogue/GPN5_3_5,"O-Oh, ça ne te dérange pas si je te montre les photos de ma collection ? J'adore la peluche [MEI_JOB] [TYRO_DINO] !",reviewed,Raccourci naturel ; hésitation et variables conservées.
+Dialogue/GPN6_3_3,"Masque oculaire chauffant en [SAI_ITEM1], aromathérapie, beurre corporel, masseur crânien... En écoutant mon artiste indé préféré jouer de [ELIO_INSTRUMENT].",reviewed,Raccourci naturel ; variables et énumération conservées.
+Dialogue/GPN7_3_1,"Je suis allé aujourd'hui à L'Assiette secrète voir comment ça va.",reviewed,Raccourci naturel ; visite et intention conservées.
+Dialogue/MEI_PEOPLE_5,brutes,reviewed,Raccourci naturel ; sens conservé.
+Dialogue/OTARU_TITLE2_1,araignée,reviewed,Les langues source désignent simplement une araignée.
+Dialogue/JOCKO_FOOD_1,riz nature,reviewed,Appellation culinaire naturelle et concise.
+Dialogue/ALI_ACTION_7,ne pondent pas,reviewed,Raccourci naturel ; sens conservé.
+Dialogue/JAYA_PLACE_1,poursuivi par un chien,reviewed,Raccourci naturel ; sens conservé.
+Dialogue/DIALOGUE_VNM11_25,"« Parfait ! Ça devrait avoir le goût de piment fantôme ! Régale-toi ! ♥ »",reviewed,Raccourci naturel ; ton et symbole conservés.
+Dialogue (Backup)/TUTORIALCOOKINGSTART_3,"Hein ? C'est toi qui reprends ce restaurant ?",reviewed,Formulation neutre ; propriété et nouveauté conservées.
+Dialogue (Backup)/TUTORIALCOOKINGSTART_8,"Dis, tu sais cuisiner ? Tu sais ce que c'est, au moins ?",reviewed,Raccourci naturel ; double question moqueuse conservée.
+Dialogue (Backup)/UMEINTROEND_4,"J'espère, euh, te revoir. Bonne journée... à couper au couteau.",reviewed,Raccourci naturel ; hésitation et jeu de mots conservés.
+Dialogue (Backup)/PLAYER_SLEEP_DAYOFF_CONFIRMATION,"(Demain, c'est mon [COLOR=ALERT]jour de repos[/COLOR]. Devrais-je aller à Bakuso pour souffler ? Il pourrait s'y passer quelque chose de bien.)",reviewed,Raccourci naturel ; marqueurs et hésitation intérieure conservés.
+Dialogue (Backup)/CEM6_11,"Comme tu te lances dans les duels culinaires, je vais t'en présenter un aspect important.",reviewed,Raccourci naturel ; sens conservé.
+Dialogue (Backup)/CEM6_13,"Ces bons récompensent les gagnants des duels culinaires. Pour une saine compétition !",reviewed,Raccourci naturel ; récompense et intention conservées.
+Dialogue (Backup)/CEM6_15,"J'ai inscrit ton nom au registre des habitués des duels culinaires, tu peux donc en recevoir aussi.",reviewed,Raccourci naturel ; inscription et conséquence conservées.
+Dialogue (Backup)/VNM15_10,"Pour que tu saches, je travaille comme cuisinier à la chaîne au Meatbeats. Genre, 20 heures par semaine !",reviewed,Raccourci naturel ; emploi et durée conservés.
+Dialogue (Backup)/VNM20_PLAYERWIN_5,"Ça veut dire que tu assures aux fourneaux et que tu travailles dur, [NAME]. Je te soutiens !",reviewed,Formulation neutre ; encouragement conservé.
+Dialogue (Backup)/VNM13_END_5,"Tu as vaincu Mami : ton restaurant est désormais 9e en ville.",reviewed,Raccourci naturel ; rang conservé.
+Dialogue (Backup)/VNM13_END_6,"Mais tu peux faire mieux, [NAME] ! Défie les autres chefs et fais de Bakuso le [COLOR=ALERT]restaurant n° 1 de la ville[/COLOR] !",reviewed,Raccourci naturel ; objectif et marqueur conservés.
+Dialogue (Backup)/VNM13_END_7,"À l'époque, Bakuso était le meilleur restaurant du coin. Ta grand-mère était une cheffe parmi les chefs : sa cuisine, si délicieuse ! Si créative !",reviewed,Raccourci naturel ; éloge conservé.
+Dialogue (Backup)/CEM7_5,"Ces changements seront-ils pour le meilleur ou le pire ? Seules mes recherches sur le terrain le diront.",reviewed,Raccourci naturel ; incertitude scientifique conservée.
+Dialogue (Backup)/VNM27_8,"Je n'avais pas d'argent, mais elle m'a quand même offert un petit bol de nouilles.",reviewed,Raccourci naturel ; contraste et détail conservés.
+Dialogue (Backup)/VNM28_13,"Sois prudent, [NAME]. Je ne veux pas que Bakuso r-redisparaisse... S'il te plaît...",reviewed,Raccourci naturel ; bégaiement et inquiétude conservés.
+Dialogue (Backup)/VNM28_15,"E-Euh... ? Ne te moque pas de moi !",reviewed,Raccourci naturel ; hésitation conservée.
+Dialogue (Backup)/CEM10_13,"Ils sont tous de l'extérieur, cela dit.",reviewed,Raccourci naturel ; sens conservé.
+Dialogue (Backup)/CEM10_14,"Bref, pour aider les restaurants durant cette période agitée, nous avons établi une liste d'[COLOR=ALERT]objectifs[/COLOR] pour tous.",reviewed,Raccourci naturel ; marqueur et portée conservés.
+Dialogue (Backup)/CEM13_1,"Quoi de neuf, petit ? Les affaires ?",reviewed,Raccourci naturel ; registre familier conservé.
+Dialogue (Backup)/VNM40_5,"Ne sois pas gentil avec moi ! Je suis ton adversaire, compris ?",reviewed,Raccourci naturel ; défi conservé.
+Dialogue (Backup)/VNM44_17,"J'ai horreur de l'admettre, mais c'est sans doute notre meilleure option. Je ferai ce que je peux.",reviewed,Raccourci naturel ; réticence et soutien conservés.
+Dialogue (Backup)/CEM16_6,"Tu peux servir des boissons aux clients ! Hourra pour l'hydratation !",reviewed,Raccourci naturel ; fonction et ton conservés.
+Dialogue (Backup)/VNM50_1,"Super ! Stella est de retour !",reviewed,Raccourci naturel ; joie conservée.
+Dialogue (Backup)/VNM50_27,"Je pense que cette réunion a été utile. Travaillons ensemble pour en savoir plus sur le plan de Crois !",reviewed,Raccourci naturel ; coopération et objectif conservés.
+Dialogue (Backup)/VNM51_13,"Alors, affronte-moi dans un duel culinaire !",reviewed,Raccourci naturel ; demande conservée.
+Dialogue (Backup)/VNM56_12,"...Ça veut juste dire qu'on doit travailler encore plus dur !",reviewed,Raccourci naturel ; détermination conservée.
+Dialogue (Backup)/VNM74_20,"Comme l'a dit Rosso, nous devons vaincre Crois pour de bon. C'est notre objectif ultime.",reviewed,Raccourci naturel ; objectif final conservé.
+Dialogue (Backup)/VNM74_64,On arrangera ça.,reviewed,Raccourci naturel ; sens conservé.
+Dialogue (Backup)/VNM74_65,"Je n'aurais jamais imaginé qu'on referait tomber un magnat corrompu. Ça rappelle le bon vieux temps.",reviewed,Raccourci naturel ; souvenir et ironie conservés.
+Dialogue (Backup)/VNM74_66,"Je n'ai jamais vécu quelque chose d'a-aussi excitant. On est, euh, des défenseurs de la justice.",reviewed,Raccourci naturel ; bégaiement et hésitation conservés.
+Dialogue (Backup)/VNM63_PLAYERWIN_32,"Ouais ! Les tables ont tourné ! Attends, comment dit-on déjà ?",reviewed,Raccourci naturel ; expression volontairement bancale conservée.
+Dialogue (Backup)/VNM64_18,"J'ai apporté mes shakes à la carambole, mondialement célèbres ! Garantie : trois jours éveillé ou remboursé !",reviewed,Raccourci naturel ; produit et garantie conservés.
+Dialogue (Backup)/VNM64_20,"[NAME], c'est toi qui ouvres le bal !",reviewed,Raccourci naturel ; invitation conservée.
+Dialogue (Backup)/CEM17_END_7,"La dernière fois, ce n'était pas mon choix : Crois m'y a forcée.",reviewed,Raccourci naturel ; contrainte conservée.
+Dialogue (Backup)/CEM17_END_9,"Nous sommes chefs, après tout ! Laissons notre cuisine parler !",reviewed,Raccourci naturel ; défi culinaire conservé.
+Dialogue (Backup)/CEM17_END_10,"Alors au travail, [NAME] ! Si tu te relâches, je ne te pardonnerai jamais !",reviewed,Raccourci naturel ; menace conservée.
+Dialogue (Backup)/VNM70_71,"Je vais chercher des idées d'activités entre amis.",reviewed,Formulation neutre ; amitié conservée.
+Dialogue (Backup)/VNM70_91,Je vais voir.,reviewed,Raccourci naturel ; intention conservée.
+Dialogue (Backup)/VNM70_92,"D'accord, je vais voir--",reviewed,Raccourci naturel ; interruption conservée.
+Dialogue (Backup)/VNM70_100,Ne te relâche pas !,reviewed,Raccourci naturel ; avertissement conservé.
+Dialogue (Backup)/CEM19_5,"J'ai placé la [COLOR=ALERT]machine à bons[/COLOR] à [COLOR=ALERT]la boutique d'Ume[/COLOR]. Elle touche une part des bénéfices.",reviewed,Raccourci naturel ; marqueurs et commission conservés.
+Dialogue (Backup)/GPN9_2_1,"Oh, la nouvelle recrue de Bakuso ! Quel plaisir de te voir dans mon humble lieu de travail !",reviewed,Formulation neutre ; accueil théâtral conservé.
+Dialogue (Backup)/GPN9_3_2,"Reviens un [COLOR=ALERT]dimanche[/COLOR] ou [COLOR=ALERT]mercredi[/COLOR] : tu trouveras des chefs rivaux prêts pour un duel culinaire ! Quel bonheur !",reviewed,Raccourci naturel ; marqueurs et enthousiasme conservés.
+Dialogue (Backup)/VNM85_14,"Obtenir de nouveaux ingrédients, ajouter des plats au menu ou se faire des amis !",reviewed,Raccourci naturel ; énumération conservée.
+Dialogue (Backup)/VNM21_11,Q-Que racontes-tu ?,reviewed,Raccourci naturel ; bégaiement conservé.
+Dialogue (Backup)/VNM21_22,"Quoi ? Qu'est-ce qui te retient ici ?",reviewed,Raccourci naturel ; question conservée.
+Dialogue (Backup)/VNM21_32,"Je vais juste-- Il me faut du temps pour tout assimiler. Désolée.",reviewed,Raccourci naturel ; interruption et excuse conservées.
+Dialogue (Backup)/VNM21_33,"...Ne t'inquiète pas, je ferai mon travail comme d'habitude, si tu fais le tien.",reviewed,Raccourci naturel ; réciprocité et travail conservés.
+Dialogue (Backup)/CEM4_17,"Continue de rouler ces boulettes !",reviewed,Formulation neutre ; encouragement conservé.
+Dialogue (Backup)/VNM24_PLAYERWIN_6,"On voit que ça te plaît ici. Tu cuisines de tout ton cœur.",reviewed,Formulation neutre ; bonheur et dévouement conservés.
+Dialogue (Backup)/VNM24_PLAYERWIN_7,"Tu es devenu une vraie pointure en cuisine, Faucon...",reviewed,Formulation neutre ; compliment conservé.
+Dialogue (Backup)/VNM56_14,"Mais les autres me manquent un peu.",reviewed,Formulation neutre ; solitude conservée.
+Dialogue (Backup)/CEM17_START_1,"Hé, [NAME]. Déjà au travail ? Tu ne lâches rien.",reviewed,Formulation neutre ; ton admiratif conservé.
+Dialogue (Backup)/VNM65_CONFIRMATION_1,"Hé, [NAME]. On y va ?",reviewed,Formulation neutre ; confirmation conservée.
+Dialogue (Backup)/VNM70_89,"Ça ne te dérange pas, hein ?! ...Hein ?",reviewed,Formulation neutre ; insistance conservée.
+Dialogue (Backup)/VNM70_96,"Depuis ton arrivée, ma vie est bouleversée.",reviewed,Formulation neutre ; sens conservé.
+Dialogue (Backup)/VNM70_98,"Je suis surtout reconnaissante de notre amitié et de notre rivalité, [NAME]. Merci encore.",reviewed,Formulation neutre ; relation conservée.
+Dialogue (Backup)/VNM87_4,"Parle-moi quand tu voudras notre revanche. Tu connais la chanson.",reviewed,Formulation neutre ; condition et ton conservés.
+Dialogue (Backup)/VNM21_15,"Tu fais de l'espionnage ? Alors tout ça n'est qu'une ruse ?",reviewed,Formulation neutre ; accusation conservée.
+Dialogue (Backup)/VNM21_18,"Mais je comprends. Tu as dû demander à Faucon de cuisiner pour toi ! Je ne sais pas ce que tu as dit, mais ça doit s'arrêter !",reviewed,Formulation neutre ; accusation conservée.
+Dialogue (Backup)/VNM21_26,"Si tu insistes à te faire passer pour spécialiste en cuisine, j'écraserai moi-même ce rêve stupide.",reviewed,Formulation neutre ; accusation conservée.
+Dialogue (Backup)/VNM21_29,"Parle-moi quand tu voudras affronter à nouveau la réalité.",reviewed,Formulation neutre ; condition conservée.
