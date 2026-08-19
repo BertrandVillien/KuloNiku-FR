@@ -55,6 +55,9 @@ utiles, sans joindre de fichier original du jeu.
   distincts dans `translations/batches/`.
 - L’agent principal vérifie le nombre de lignes, l’ordre, les clés, les marqueurs,
   les longueurs et les statuts avant de fusionner.
+- Les corrections transversales validées vont dans
+  `translations/review-overrides.csv`; la fusion les réapplique après les lots,
+  ce qui conserve un historique clair sans modifier les sorties des agents.
 - Les noms de plats traditionnels exigent une vérification d’usage en français;
   une translittération ou un nom indonésien ne doit jamais être « traduit » par
   approximation.

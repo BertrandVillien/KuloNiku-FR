@@ -97,7 +97,16 @@ uv run kuloniku-fr merge-batches
 uv run kuloniku-fr lint work/lab/game/resources.assets translations/fr.csv
 ```
 
-Les sauvegardes de dialogues identiques seront propagées depuis leur dialogue
-principal; seules les variantes réelles feront l’objet de lots supplémentaires.
+Après les lots actifs, les sauvegardes de dialogues identiques sont propagées
+depuis leur dialogue principal et seules les variantes réelles deviennent de
+petits lots supplémentaires :
+
+```sh
+uv run kuloniku-fr prepare-backups
+uv run kuloniku-fr merge-batches \
+  --source-dir work/translation-backups/source \
+  --output-dir translations/backup-batches
+```
+
 Les choix culinaires et les validations visuelles restantes sont consignés dans
 `docs/TERMINOLOGY.md`.
