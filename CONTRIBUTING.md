@@ -9,6 +9,7 @@ versionnées.
 1. Extraire la version installée vers `work/context.csv` avec la commande
    `context` : toutes les langues et le budget de caractères y sont côte à côte.
 2. Sélectionner un lot cohérent de clés : ingrédients, interface, tutoriel, etc.
+   Consulter aussi `docs/TERMINOLOGY.md` pour les choix déjà harmonisés.
 3. Faire traduire ce lot par un sous-agent en lui fournissant les huit langues.
 4. Utiliser la clé, les langues et le contexte en jeu pour lever les ambiguïtés.
 5. Comparer la longueur française à `max_source_chars`. Dépasser seulement si

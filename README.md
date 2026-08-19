@@ -99,3 +99,5 @@ uv run kuloniku-fr lint work/lab/game/resources.assets translations/fr.csv
 
 Les sauvegardes de dialogues identiques seront propagées depuis leur dialogue
 principal; seules les variantes réelles feront l’objet de lots supplémentaires.
+Les choix culinaires et les validations visuelles restantes sont consignés dans
+`docs/TERMINOLOGY.md`.
