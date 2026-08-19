@@ -10,7 +10,15 @@ import tempfile
 
 import UnityPy
 
-from .batching import make_batches, read_csv_rows, translated_keys, write_batches
+from .batching import (
+    Batch,
+    make_batches,
+    propagate_dialogue_backups,
+    read_csv_rows,
+    row_characters,
+    translated_keys,
+    write_batches,
+)
 from .i2_asset import LanguageSource, find_i2_object
 from .installation import (
     atomic_copy,
@@ -344,6 +352,84 @@ def command_merge_batches(args) -> int:
     return 0
 
 
+def command_prepare_backups(args) -> int:
+    source_path = Path(args.source).resolve()
+    translations_path = Path(args.translations).resolve()
+    source_dir = Path(args.source_dir).resolve()
+    output_dir = Path(args.output_dir).resolve()
+    manifest_path = Path(args.manifest).resolve()
+    source_rows = read_csv_rows(source_path)
+    translations = read_french_csv(translations_path)
+    propagated, unresolved = propagate_dialogue_backups(source_rows, translations)
+
+    by_key = {row["key"]: row for row in source_rows}
+    batches: list[Batch] = []
+    exact_rows = [by_key[key] for key in propagated]
+    if exact_rows:
+        batches.append(
+            Batch(
+                "900-dialogue-backups-identiques",
+                "dialogue-backups-exact",
+                exact_rows,
+                sum(row_characters(row) for row in exact_rows),
+            )
+        )
+
+    sequence = 901
+    current: list[dict[str, str]] = []
+    current_chars = 0
+    for row in unresolved:
+        if not any(row.get(field, "") for field in CSV_FIELDS[1:]):
+            continue
+        size = row_characters(row)
+        if current and current_chars + size > args.character_budget:
+            batches.append(
+                Batch(
+                    f"{sequence:03d}-dialogue-backups-a-reviser",
+                    "dialogue-backups-review",
+                    current,
+                    current_chars,
+                )
+            )
+            sequence += 1
+            current = []
+            current_chars = 0
+        current.append(row)
+        current_chars += size
+    if current:
+        batches.append(
+            Batch(
+                f"{sequence:03d}-dialogue-backups-a-reviser",
+                "dialogue-backups-review",
+                current,
+                current_chars,
+            )
+        )
+
+    write_batches(batches, source_dir, output_dir, manifest_path)
+    if exact_rows:
+        output_path = output_dir / "900-dialogue-backups-identiques.csv"
+        with output_path.open("w", newline="", encoding="utf-8") as stream:
+            writer = csv.DictWriter(
+                stream,
+                fieldnames=["key", "fr", "status", "notes"],
+                lineterminator="\n",
+            )
+            writer.writeheader()
+            for key, french in propagated.items():
+                writer.writerow(
+                    {
+                        "key": key,
+                        "fr": french,
+                        "status": "reviewed",
+                        "notes": "Propagé depuis le dialogue principal anglais identique.",
+                    }
+                )
+    print(f"{len(propagated)} dialogues de sauvegarde propagés sans retraduction")
+    print(f"{sum(len(batch.rows) for batch in batches[1 if exact_rows else 0:])} lignes à réviser par agents")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="kuloniku-fr")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -411,6 +497,18 @@ def build_parser() -> argparse.ArgumentParser:
     merge_parser.add_argument("--source-dir", default="work/translation-batches/source")
     merge_parser.add_argument("--output-dir", default="translations/batches")
     merge_parser.set_defaults(handler=command_merge_batches)
+
+    backups_parser = subparsers.add_parser(
+        "prepare-backups",
+        help="propager les dialogues de sauvegarde identiques et préparer les exceptions",
+    )
+    backups_parser.add_argument("--source", default="work/source.csv")
+    backups_parser.add_argument("--translations", default="translations/fr.csv")
+    backups_parser.add_argument("--source-dir", default="work/translation-backups/source")
+    backups_parser.add_argument("--output-dir", default="translations/backup-batches")
+    backups_parser.add_argument("--manifest", default="work/translation-backups/manifest.json")
+    backups_parser.add_argument("--character-budget", type=int, default=80_000)
+    backups_parser.set_defaults(handler=command_prepare_backups)
     return parser
 
 

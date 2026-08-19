@@ -6,3 +6,4 @@ work/
 outputs/
 *.assets
 translations/batches/*.csv
+translations/backup-batches/*.csv
