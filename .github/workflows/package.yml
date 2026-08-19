@@ -1,0 +1,44 @@
+name: Paquets autonomes
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  package:
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            platform: macOS
+            executable: KuloNiku-FR
+          - os: windows-latest
+            platform: Windows
+            executable: KuloNiku-FR.exe
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install . pyinstaller
+      - run: python -m PyInstaller --clean --onefile --collect-all UnityPy --name KuloNiku-FR packaging/entrypoint.py
+      - shell: bash
+        run: |
+          mkdir -p "package/translations"
+          cp "dist/${{ matrix.executable }}" package/
+          cp translations/fr.csv package/translations/
+          cp README.md LICENSE package/
+          if [[ "${{ matrix.platform }}" == "macOS" ]]; then
+            cp "packaging/Installer KuloNiku FR.command" package/
+            cp "packaging/Restaurer KuloNiku.command" package/
+            chmod +x package/*.command package/KuloNiku-FR
+          else
+            cp "packaging/Installer KuloNiku FR.bat" package/
+            cp "packaging/Restaurer KuloNiku.bat" package/
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KuloNiku-FR-${{ matrix.platform }}
+          path: package/

@@ -1,0 +1,33 @@
+key,fr,status,notes
+ACTION_STARTCOOKING,Cuisiner !,reviewed,
+ACTION_SERVE,Servir,reviewed,
+INGREDIENT_MEATBALL,Boulette,reviewed,
+INGREDIENT_TENDON,Boulette de tendon,reviewed,Bakso urat
+INGREDIENT_EGGBALL,Boulette à l'œuf,reviewed,Bakso telur
+INGREDIENT_FISHBALLS,Boulettes de poisson,reviewed,Forme complète nécessaire
+INGREDIENT_NOODLES,Nouilles,reviewed,
+INGREDIENT_VERMICELLI,Vermicelles de riz,reviewed,Bihun : riz nécessaire
+INGREDIENT_SOUP,Soupe,reviewed,
+INGREDIENT_DUMPLING,Ravioli,reviewed,Pangsit
+INGREDIENT_WHITETOFU,Tofu blanc,reviewed,
+INGREDIENT_SPICYTOFU,Tofu épicé,reviewed,
+INGREDIENT_SPICYTEMPEH,Tempeh épicé,reviewed,
+INGREDIENT_CHICKEN,Poulet,reviewed,
+INGREDIENT_SHRIMP,Crevette,reviewed,Forme française exacte
+INGREDIENT_PINEAPPLE,Ananas,reviewed,
+INGREDIENT_PICKLEDBOKCHOY,Pak choï mariné,reviewed,
+INGREDIENT_CHILI,Piment,reviewed,
+INGREDIENT_SPRINGONION,Cébette,reviewed,
+INGREDIENT_GARLIC,Ail,reviewed,
+INGREDIENT_FISHCAKE,Narutomaki,reviewed,Spécialité japonaise
+DRINK_COLA,Cola,reviewed,
+DRINK_TEA,Thé,reviewed,
+DRINK_JUICE,Jus,reviewed,
+DRINK_ICE,Glaçons,reviewed,
+INGREDIENT_SKEWER_OCTOPUS,Poulpe,provisional,Thaï et allemand : calamar
+INGREDIENT_SKEWER_LAMB,Agneau,reviewed,
+INGREDIENT_SKEWER_MUSHROOM,Champignon,reviewed,Forme neutre la plus courte
+INGREDIENT_SKEWER_TOMATO,Tomate,reviewed,
+INGREDIENTSET_MEATS,Viandes,reviewed,
+INGREDIENTSET_VEGETABLES,Légumes,reviewed,
+SETTINGS_LANGUAGESELECTION,Français,reviewed,

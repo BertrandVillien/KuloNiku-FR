@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kuloniku-fr"
+version = "0.1.0"
+description = "Outils communautaires pour construire le patch français de KuloNiku"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "UnityPy==1.25.3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3,<9"]
+
+[project.scripts]
+kuloniku-fr = "kuloniku_fr.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kuloniku_fr"]
