@@ -5,4 +5,4 @@ __pycache__/
 work/
 outputs/
 *.assets
-
+translations/batches/*.csv

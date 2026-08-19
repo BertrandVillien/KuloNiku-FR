@@ -45,3 +45,15 @@ possédant la démo ou le jeu.
 
 Une pull request doit indiquer le lot, la version testée et les observations
 utiles, sans joindre de fichier original du jeu.
+
+## Lots automatisés
+
+- Un agent ne reçoit aucun historique de conversation : seulement le brief et
+  son fichier source compact.
+- Deux agents peuvent travailler en parallèle uniquement sur deux fichiers
+  distincts dans `translations/batches/`.
+- L’agent principal vérifie le nombre de lignes, l’ordre, les clés, les marqueurs,
+  les longueurs et les statuts avant de fusionner.
+- Les noms de plats traditionnels exigent une vérification d’usage en français;
+  une translittération ou un nom indonésien ne doit jamais être « traduit » par
+  approximation.

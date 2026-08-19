@@ -76,3 +76,26 @@ le menu à de nouveaux codes de langue.
 Les futures releases autonomes seront construites pour macOS et Windows avec
 deux lanceurs simples : installer et restaurer. Leur état de validation est suivi
 dans `docs/ROADMAP.md`.
+
+## Traduction complète par lots
+
+Le générateur exclut les textes déjà traduits et les sauvegardes de dialogues,
+puis crée des lots thématiques limités par un budget de caractères :
+
+```sh
+uv run kuloniku-fr make-batches --character-budget 80000
+```
+
+Chaque sous-agent reçoit seulement `translations/AGENT_BRIEF.md` et un CSV sous
+`work/translation-batches/source/`. Il écrit dans un fichier distinct sous
+`translations/batches/`, ce qui permet deux traductions parallèles sans conflit.
+
+Après validation des sorties :
+
+```sh
+uv run kuloniku-fr merge-batches
+uv run kuloniku-fr lint work/lab/game/resources.assets translations/fr.csv
+```
+
+Les sauvegardes de dialogues identiques seront propagées depuis leur dialogue
+principal; seules les variantes réelles feront l’objet de lots supplémentaires.

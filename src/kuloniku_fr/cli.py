@@ -10,6 +10,7 @@ import tempfile
 
 import UnityPy
 
+from .batching import make_batches, read_csv_rows, translated_keys, write_batches
 from .i2_asset import LanguageSource, find_i2_object
 from .installation import (
     atomic_copy,
@@ -277,6 +278,68 @@ def command_restore(args) -> int:
     return 0
 
 
+def command_make_batches(args) -> int:
+    source_path = Path(args.source).resolve()
+    translations_path = Path(args.translations).resolve()
+    source_dir = Path(args.source_dir).resolve()
+    output_dir = Path(args.output_dir).resolve()
+    manifest_path = Path(args.manifest).resolve()
+    batches = make_batches(
+        read_csv_rows(source_path),
+        translated_keys(translations_path),
+        character_budget=args.character_budget,
+    )
+    write_batches(batches, source_dir, output_dir, manifest_path)
+    print(f"{len(batches)} lots préparés pour {sum(len(batch.rows) for batch in batches)} clés actives")
+    print(f"Budget maximal : {args.character_budget} caractères multilingues par lot")
+    print(f"Manifeste : {manifest_path}")
+    return 0
+
+
+def command_merge_batches(args) -> int:
+    translations_path = Path(args.translations).resolve()
+    source_dir = Path(args.source_dir).resolve()
+    output_dir = Path(args.output_dir).resolve()
+    base_rows = read_csv_rows(translations_path)
+    by_key = {row["key"]: row for row in base_rows}
+    merged_files = 0
+    merged_rows = 0
+    for output_path in sorted(output_dir.glob("*.csv")):
+        source_path = source_dir / output_path.name
+        if not source_path.exists():
+            raise FileNotFoundError(f"Source de lot absente : {source_path}")
+        expected = [row["key"] for row in read_csv_rows(source_path)]
+        rows = read_csv_rows(output_path)
+        if [row.get("key") for row in rows] != expected:
+            raise ValueError(f"Clés ou ordre incorrects dans {output_path}")
+        if not rows or not {"key", "fr", "status", "notes"}.issubset(rows[0]):
+            raise ValueError(f"Colonnes de traduction invalides dans {output_path}")
+        for row in rows:
+            if not row.get("fr"):
+                raise ValueError(f"Traduction vide pour {row.get('key')} dans {output_path}")
+            if row.get("status") not in {"reviewed", "provisional"}:
+                raise ValueError(f"Statut invalide pour {row.get('key')} dans {output_path}")
+            by_key[row["key"]] = {
+                "key": row["key"],
+                "fr": row["fr"],
+                "status": row["status"],
+                "notes": row.get("notes", ""),
+            }
+            merged_rows += 1
+        merged_files += 1
+
+    original_order = [row["key"] for row in read_csv_rows(Path(args.source).resolve())]
+    order_index = {key: index for index, key in enumerate(original_order)}
+    ordered = sorted(by_key.values(), key=lambda row: order_index.get(row["key"], len(order_index)))
+    with translations_path.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=["key", "fr", "status", "notes"])
+        writer.writeheader()
+        writer.writerows(ordered)
+    print(f"{merged_rows} lignes fusionnées depuis {merged_files} lots")
+    print(f"Total français : {len(ordered)}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="kuloniku-fr")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -328,6 +391,22 @@ def build_parser() -> argparse.ArgumentParser:
     restore_parser.add_argument("game", help="application, dossier du jeu ou resources.assets")
     restore_parser.add_argument("--apply", action="store_true", help="effectuer réellement la restauration")
     restore_parser.set_defaults(handler=command_restore)
+
+    batches_parser = subparsers.add_parser("make-batches", help="préparer des lots compacts pour les agents")
+    batches_parser.add_argument("--source", default="work/source.csv")
+    batches_parser.add_argument("--translations", default="translations/fr.csv")
+    batches_parser.add_argument("--source-dir", default="work/translation-batches/source")
+    batches_parser.add_argument("--output-dir", default="translations/batches")
+    batches_parser.add_argument("--manifest", default="work/translation-batches/manifest.json")
+    batches_parser.add_argument("--character-budget", type=int, default=80_000)
+    batches_parser.set_defaults(handler=command_make_batches)
+
+    merge_parser = subparsers.add_parser("merge-batches", help="valider et fusionner les lots terminés")
+    merge_parser.add_argument("--source", default="work/source.csv")
+    merge_parser.add_argument("--translations", default="translations/fr.csv")
+    merge_parser.add_argument("--source-dir", default="work/translation-batches/source")
+    merge_parser.add_argument("--output-dir", default="translations/batches")
+    merge_parser.set_defaults(handler=command_merge_batches)
     return parser
 
 
