@@ -18,6 +18,38 @@ Personnages et noms propres rencontrés : Stella, Mami, Ume, Rosso, Lado, Shuga,
 Mr. Crois, Cassie, Noka, Dan, Mr. Chu, Elio, Runa, Nekora, Tyro, Chil et Sai.
 Ne pas franciser les noms propres sans preuve explicite dans les autres langues.
 
+## Voix récurrentes
+
+- **Stella** : rivale théâtrale, sûre d'elle et mordante, avec énergie de rock
+  star; garder ses sarcasmes et exclamations sans la rendre artificiellement
+  vulgaire.
+- **Mami** : franche, chaleureuse et encourageante; registre oral simple.
+- **Ume** : timide, polie et hésitante; conserver bégaiements, reprises et
+  points de suspension sans les amplifier.
+- **Shuga** : décontracté, amical, vocabulaire de musique et de rythme; argot
+  français léger et durable, sans anglicismes gratuits.
+- **Lado** : professionnel, exigeant et très formel; vocabulaire de standards,
+  méthode et qualité.
+- **Dan** : grandiloquent, mystérieux, parle comme un agent secret et appelle
+  parfois le protagoniste « Faucon »; assumer ce jeu de rôle.
+- **Cassie** : amicale, pragmatique et citadine; cofondatrice de Bakuso.
+- **Noka** : passionnée de plantes; préserver les images végétales et son
+  enthousiasme.
+- **Elio** : batteur libre et enjoué; ton énergique et spontané.
+- **Runa** : calme, précise et imperturbable.
+- **Nekora** : maid féline mignonne et imprévisible; adapter les jeux de mots de
+  chat quand ils fonctionnent en français, sans traduire son nom.
+- **Tyro** : enfant passionné de dinosaures; vocabulaire enfantin et rugissements.
+- **Chil** : très détendu et serviable; registre familier naturel, jeux autour
+  de « chill » seulement lorsqu'ils restent compréhensibles.
+- **Sai** : savant fou enthousiaste; emphase scientifique et expériences
+  dangereuses traitées avec humour.
+- **Mr. Chu** : marchand ambulant habile et légèrement roublard.
+
+Le genre du personnage joueur n'est pas garanti par une clé générique. Éviter
+« chef/cheffe », « nouveau/nouvelle » ou tout autre accord genré lorsqu'une
+formulation neutre reste naturelle; sinon marquer la ligne `provisional`.
+
 ## Niveau d’adaptation attendu
 
 - Produire un français naturel de jeu vidéo, comme une localisation officielle,
@@ -54,6 +86,8 @@ Ne pas franciser les noms propres sans preuve explicite dans les autres langues.
 - Settings → Paramètres; Gameplay → Jouabilité; Accessibility → Accessibilité.
 - Main Menu → Menu principal; Resume → Reprendre; Paused → En pause.
 - Meatball → Boulette lorsqu’il s’agit de l’ingrédient générique.
+- Brawl / Meatball Brawl → Duel culinaire dans les textes courants; conserver
+  un éventuel titre stylisé seulement si la clé ou plusieurs langues l'imposent.
 - Fish balls → Boulettes de poisson; rice vermicelli → Vermicelles de riz.
 - Broth/soup base selon le contexte : Bouillon ou Soupe, ne pas uniformiser sans
   regarder la clé et les autres langues.
