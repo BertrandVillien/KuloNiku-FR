@@ -23,7 +23,7 @@ Dialogue/GH_SHUGA_BEACH_2_8,"D'accord, je vais tout faire pour t'impressionner !
 Dialogue/GH_SHUGA_GENERIC_2_4,"Je trouve les gens bosseurs cool ! Courage !",reviewed,Formulation neutre.
 Dialogue/GH_SHUGA_INDOOR_2_CHOICE_5,Seulement en bonne compagnie.,reviewed,Formulation neutre.
 Dialogue/GH_SHUGA_OUTDOOR_1_CHOICE_2,Juste en bonne compagnie.,reviewed,Formulation neutre.
-Dialogue/CEM13_END_1,"À l'hydratation ! C'est ce qu'on attend d'un restaurant classé [COLOR=ALERT]top 5[/COLOR].",reviewed,Anglais divergent ; les sept autres langues parlent d'hydratation et du top 5.
+Dialogue/CEM13_END_1,"Mais dernièrement... les gens ne voient la cuisine que comme un moyen de gagner de l'argent. Si tu propulses Bakuso à la [COLOR=ALERT]1re place[/COLOR], peut-être qu'ils...",reviewed,Contenu du champ anglais priorisé ; il est exceptionnellement rédigé en indonésien dans le fichier source.
 Dialogue/VNM44_8,"J'admets que tu cuisines très bien. Mais personne ne peut tout faire sans aide.",reviewed,Formulation neutre.
 Dialogue/VNM54_PLAYERWIN_CHOICE_2,"Parce que je cuisine si bien et que j'ai tant de charme ?",reviewed,Formulation neutre.
 Dialogue/VNU2_1,"S-Salut, [NAME]. Merci d'être là.",reviewed,Formulation neutre.
@@ -38,7 +38,7 @@ Dialogue/VNS3_24,"En fait-- Désolé, [NAME]. Mais discutons simplement, d'accor
 Dialogue/VNS3_CHOICE_5,"Ça a l'air sympa, mais je fatigue.",reviewed,Formulation neutre.
 Dialogue/VNS3_CHOICE_8,"Pardon, Shuga...",reviewed,Formulation neutre.
 Dialogue/GH_CASSIE_AMUSEMENTPARK_1_CHOICE_2,"C'est un gros engagement. Sommes-nous à la hauteur ?",reviewed,Formulation neutre.
-Dialogue/GH_UME_AQUARIUM_1_7,"Petite, je voulais être un requin ninja... Mais mes dents pointues n'ont jamais poussé.",reviewed,L'anglais diverge ; les sept autres langues confirment l'anecdote du requin ninja.
+Dialogue/GH_UME_AQUARIUM_1_7,"Euh, finalement, pas besoin de me le dire.",reviewed,Version anglaise priorisée comme révision la plus récente probable.
 Dialogue/VNM70_63,"Merci de me supporter. Et pour notre... *ahem* amitié.",reviewed,Formulation neutre.
 Dialogue/VNM70_93,"Ça ne te dérange pas, hein ?! ...Hein ?",reviewed,Formulation neutre.
 Dialogue/VNM70_CHOICE_17,"Rends-moi juste adorable ! (Comme toi)",reviewed,Formulation neutre.
@@ -74,12 +74,12 @@ Dialogue/NPC_JOB_FANCY_4,gouverneur,provisional,Accord du fragment dynamique à 
 Dialogue/NPC_JOB_FANCY_6,artiste d'environnement,reviewed,Formulation neutre.
 Dialogue/EMA_FAMILY_3,cousin au troisième degré,reviewed,Parenté volontairement absurde conservée.
 Dialogue/VNC0_35,"Oh, on a un nouvel article au menu. C'est un gâteau aux fraises préparé par [NAME], aux fourneaux !",reviewed,Formulation neutre.
-Festival/DESC_FES_MEAT_DAY,Au moins 3 ingrédients carnés par commande,provisional,Quantité 2/3 divergente à valider en jeu.
-Festival/DESC_FES_SPICE_MANIA,Au moins 3 ingrédients de la table d'assaisonnement par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
-Festival/DESC_FES_DEEPLY_FRIED,Au moins 3 ingrédients de la table de friture par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
-Festival/DESC_FES_FLASHY_SLASH,Au moins 3 ingrédients de la table de découpe par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
-Festival/DESC_FES_BROTH_FOCUSED,Au moins 3 ingrédients de la table de cuisson par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
-Festival/DESC_FES_FARM_HARVEST,Au moins 3 légumes par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_MEAT_DAY,Au moins 2 ingrédients carnés par commande,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_SPICE_MANIA,Au moins 2 ingrédients de la table d'assaisonnement par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_DEEPLY_FRIED,Au moins 2 ingrédients de la table de friture par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_FLASHY_SLASH,Au moins 2 ingrédients de la table de découpe par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_BROTH_FOCUSED,Au moins 2 ingrédients de la table de cuisson par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_FARM_HARVEST,Au moins 2 légumes par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essayez différentes approches. Mais surtout, amusez-vous !",reviewed,Formulation sûre malgré la clé générique.
 Tutorial/GPN10_3,"Voici ta liste d'[COLOR=ALERT]objectifs[/COLOR]. Commence par créer une recette et obtenir quelques ingrédients !",reviewed,Formulation neutre.
 Shop/SHOP_SEASONING_VINEGARPOWDER_NAME,Poudre de vinaigre,reviewed,Appellation culinaire harmonisée.

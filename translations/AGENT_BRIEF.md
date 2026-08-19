@@ -59,6 +59,12 @@ formulation neutre reste naturelle; sinon marquer la ligne `provisional`.
 - Comparer systématiquement les huit langues du fichier source. L’indonésien
   éclaire souvent les plats et la culture; l’espagnol, l’allemand et le portugais
   aident à lever les ambiguïtés; le chinois et le thaï peuvent confirmer le sens.
+- En cas de divergence, utiliser l'anglais comme référence prioritaire pour les
+  faits, nombres, règles et état narratif, car il peut contenir une révision plus
+  récente. Utiliser l'indonésien comme référence prioritaire pour la culture, les
+  plats, le vocabulaire et l'intention locale. Si anglais et indonésien divergent
+  fortement, documenter la décision : le fichier comporte au moins un champ
+  anglais accidentellement rédigé en indonésien.
 - Pour les plats indonésiens ou noms traditionnels, conserver le nom consacré
   lorsqu’il n’existe pas d’équivalent français exact. Ajouter une courte
   description seulement si l’interface et les autres langues le font déjà.

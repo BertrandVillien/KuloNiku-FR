@@ -9,7 +9,7 @@ Instantané du 20 août 2026, établi sur la démo macOS `v0.10.5`.
 - 15 clés sans français : elles sont également vides dans les huit langues
   officielles et utilisent donc le repli anglais vide.
 - 12 181 traductions `reviewed`.
-- 15 traductions `provisional`, toutes accompagnées d'une raison vérifiable en
+- 9 traductions `provisional`, toutes accompagnées d'une raison vérifiable en
   jeu.
 
 ## Contrôles réussis
@@ -41,7 +41,7 @@ caractères. Les dépassements conservés nécessiteraient de perdre du sens, un
 voix de personnage, une relation ou un marqueur dynamique. Le test en jeu reste
 la mesure décisive.
 
-## Quinze validations en jeu restantes
+## Neuf validations en jeu restantes
 
 - titre de chanson : `Dialogue/VNM20_PLAYERWIN_4` ;
 - fragments dynamiques et accords : `Dialogue/NENE_CUSTOMER_INTRO_2`,
@@ -50,6 +50,6 @@ la mesure décisive.
 - visuel narutomaki : `Shop/SHOP_INGREDIENT_FISHCAKE_NAME`,
   `Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME`,
   `Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC` ;
-- règle « 2 ou 3 ingrédients » : les six clés `Festival/DESC_FES_*` marquées
-  `provisional` dans `translations/fr.csv`.
 
+Les six règles de festival suivent désormais l'anglais et l'indonésien, qui
+concordent sur deux ingrédients.

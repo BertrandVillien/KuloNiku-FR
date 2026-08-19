@@ -1994,7 +1994,7 @@ Dialogue/CEM13_5,Ne pense pas que je suis sans cœur. Nous devons tous survivre.
 Dialogue/CEM13_6,"Et toi, tu sembles bien t'en sortir. Je veux dire, déjà [COLOR=ALERT]rang 5[/COLOR] ?",reviewed,
 Dialogue/CEM13_7,Félicitations ! Tiens : un [COLOR=ALERT]Set de table à boissons[/COLOR] tout neuf.,reviewed,
 Dialogue/CEM13_8,"Alors, pourquoi ne pas l'essayer tout de suite, oui oui ?",reviewed,
-Dialogue/CEM13_END_1,À l'hydratation ! C'est ce qu'on attend d'un restaurant classé [COLOR=ALERT]top 5[/COLOR].,reviewed,Anglais divergent ; les sept autres langues parlent d'hydratation et du top 5.
+Dialogue/CEM13_END_1,"Mais dernièrement... les gens ne voient la cuisine que comme un moyen de gagner de l'argent. Si tu propulses Bakuso à la [COLOR=ALERT]1re place[/COLOR], peut-être qu'ils...",reviewed,Contenu du champ anglais priorisé ; il est exceptionnellement rédigé en indonésien dans le fichier source.
 Dialogue/CEM13_END_2,"Enfin, je suis sûr que tout le monde te regarde désormais. Y compris la personne derrière tout ce chaos culinaire.",reviewed,
 Dialogue/CEM13_END_3,C'est ton heure ! Inspire les petits ! Fais la promo de mon Set de table à boissons !,reviewed,
 Dialogue/CEM13_END_4,Fais ceci : [COLOR=ALERT]décore ton restaurant[/COLOR]. Rends-le plus joli.,reviewed,
@@ -3117,7 +3117,7 @@ Dialogue/GH_UME_AQUARIUM_1_4,"N-Non, « Teenage Mutant Ninja Sharks ».",reviewe
 Dialogue/GH_UME_AQUARIUM_1_5,"J'aime bien « Orgueil, préjugés et requins », mais la fin est un peu faible...",reviewed,
 Dialogue/GH_UME_AQUARIUM_1_CHOICE_3,Teenage Mutant Ninja Sharks ?,reviewed,
 Dialogue/GH_UME_AQUARIUM_1_6,"Oui, c'est ça !",reviewed,
-Dialogue/GH_UME_AQUARIUM_1_7,"Petite, je voulais être un requin ninja... Mais mes dents pointues n'ont jamais poussé.",reviewed,L'anglais diverge ; les sept autres langues confirment l'anecdote du requin ninja.
+Dialogue/GH_UME_AQUARIUM_1_7,"Euh, finalement, pas besoin de me le dire.",reviewed,Version anglaise priorisée comme révision la plus récente probable.
 Dialogue/GH_UME_ARCADE_1_1,L-La borne « Dino May Cry » a l'air très amusante... et intense...,reviewed,
 Dialogue/GH_UME_ARCADE_1_2,"T-Tu veux essayer d'y jouer avec moi, [NAME] ?",reviewed,
 Dialogue/GH_UME_ARCADE_1_CHOICE_1,C'est trop violent pour toi.,reviewed,
@@ -12004,7 +12004,7 @@ Hint/HINT_RECIPE,Nouvelle(s) recette(s) à préparer !,reviewed,
 Festival/TITLE_FES_FREE_DRINK,Boisson offerte,reviewed,
 Festival/DESC_FES_FREE_DRINK,Toutes les commandes doivent être servies avec une boisson,reviewed,
 Festival/TITLE_FES_MEAT_DAY,Fête de la viande,reviewed,
-Festival/DESC_FES_MEAT_DAY,Au moins 3 ingrédients carnés par commande,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_MEAT_DAY,Au moins 2 ingrédients carnés par commande,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_NO_TASTE_DAY,Journée sans saveur,reviewed,
 Festival/DESC_FES_NO_TASTE_DAY,"Toutes les commandes doivent avoir au moins 1 goût sur « Pas » ([COLOR=SWEET]Pas sucré[/COLOR], [COLOR=SOUR]Pas acide[/COLOR], etc.)",reviewed,
 Festival/TITLE_FES_RAINY_DAY,Spécial pluvieux,reviewed,
@@ -12013,15 +12013,15 @@ Festival/TITLE_FES_VEGGIE_LOVER,Amour des légumes,reviewed,
 Festival/DESC_FES_VEGGIE_LOVER,Aucune commande ne doit contenir de viande,reviewed,
 Festival/FESTIVAL_REMAINING_DAY,Festival demain !,reviewed,
 Festival/TITLE_FES_SPICE_MANIA,Mania des épices,reviewed,
-Festival/DESC_FES_SPICE_MANIA,Au moins 3 ingrédients de la table d'assaisonnement par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_SPICE_MANIA,Au moins 2 ingrédients de la table d'assaisonnement par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_DEEPLY_FRIED,Fête de la friture,reviewed,
-Festival/DESC_FES_DEEPLY_FRIED,Au moins 3 ingrédients de la table de friture par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_DEEPLY_FRIED,Au moins 2 ingrédients de la table de friture par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_SKEWER_PROMO,Gala du grill,reviewed,
 Festival/DESC_FES_SKEWER_PROMO,Chaque commande doit avoir une brochette.,reviewed,
 Festival/TITLE_FES_FLASHY_SLASH,Découpe à gogo,reviewed,
-Festival/DESC_FES_FLASHY_SLASH,Au moins 3 ingrédients de la table de découpe par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_FLASHY_SLASH,Au moins 2 ingrédients de la table de découpe par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_BROTH_FOCUSED,Fête de la cuisson,reviewed,
-Festival/DESC_FES_BROTH_FOCUSED,Au moins 3 ingrédients de la table de cuisson par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_BROTH_FOCUSED,Au moins 2 ingrédients de la table de cuisson par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_MEATY_MEAT,Carnaval carnivore,reviewed,
 Festival/DESC_FES_MEATY_MEAT,Aucun légume dans les commandes.,reviewed,
 Festival/TITLE_FES_SWEET_TOOTH,Fête des caries,reviewed,
@@ -12031,7 +12031,7 @@ Festival/DESC_FES_SALTY_SPECIAL,Toutes doivent être [COLOR=SALTY]moyennement sa
 Festival/TITLE_FES_FEELING_SOUR,L'heure acide,reviewed,
 Festival/DESC_FES_FEELING_SOUR,Toutes doivent être [COLOR=SOUR]moyennement acides[/COLOR].,reviewed,
 Festival/TITLE_FES_FARM_HARVEST,Fête des récoltes,reviewed,
-Festival/DESC_FES_FARM_HARVEST,Au moins 3 légumes par commande.,provisional,Quantité 2/3 divergente à valider en jeu.
+Festival/DESC_FES_FARM_HARVEST,Au moins 2 légumes par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/ERROR_FESTIVAL_INGREDIENTSET,Pas assez de [X] ajoutés,reviewed,
 Festival/ERROR_FESTIVAL_NOINGREDIENTSET,Ingrédient interdit ajouté,reviewed,
 Festival/ERROR_FESTIVAL_NOTASTE,Pas de profil de goût sur « Pas »,reviewed,
