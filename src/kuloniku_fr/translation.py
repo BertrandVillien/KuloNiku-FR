@@ -57,26 +57,28 @@ def apply_french(
     source: LanguageSource,
     translations: dict[str, str],
     *,
-    replace_language: str | None = None,
+    slot_language: str | None = "de",
 ) -> tuple[int, int, list[str]]:
-    """Ajoute le français, ou remplace explicitement une langue pour les anciens tests.
+    """Injecte le français dans un emplacement reconnu par le menu du jeu.
 
     Toutes les clés françaises absentes reçoivent la version anglaise de la version
     installée. Une mise à jour du jeu peut donc ajouter de nouvelles clés sans rendre
     le patch inutilisable.
+
+    KuloNiku filtre son menu avec une liste codée séparément. Le nom et le code de
+    l'emplacement doivent donc rester inchangés. ``None`` conserve un mode
+    expérimental d'ajout, utile pour l'analyse mais non proposé par l'installateur.
     """
 
     codes = [language.code for language in source.languages]
     if "fr" in codes:
         target_index = codes.index("fr")
         source.languages[target_index].name = "French"
-    elif replace_language:
+    elif slot_language:
         try:
-            target_index = codes.index(replace_language)
+            target_index = codes.index(slot_language)
         except ValueError as exc:
-            raise ValueError(f"Langue à remplacer absente : {replace_language}") from exc
-        source.languages[target_index].name = "French"
-        source.languages[target_index].code = "fr"
+            raise ValueError(f"Emplacement de langue absent : {slot_language}") from exc
     else:
         from .i2_asset import Language
 

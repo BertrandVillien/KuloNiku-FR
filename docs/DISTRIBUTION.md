@@ -44,14 +44,17 @@ sauvegarde est restaurée automatiquement.
 
 ## Prototype actuel
 
-Le premier test historique remplaçait l’allemand. Le constructeur actuel ajoute
-une vraie entrée `French (fr)` sans supprimer de langue. Les textes absents de
+Le test d’ajout d’une neuvième entrée `French (fr)` a montré que le menu du jeu
+la masque. Le mode compatible conserve donc l’emplacement reconnu `German (de)`
+et remplace uniquement son contenu et son libellé visible. Les textes absents de
 `translations/fr.csv` utilisent l’anglais de la version locale comme repli.
 
 ## Inspiration et choix retenus
 
-- Le patch coréen KuloNiku montre qu’un paquet à déposer dans le dossier du jeu
-  est compréhensible, mais il reste lié à une version précise.
+- Le patch coréen KuloNiku conserve l’emplacement anglais et en remplace le
+  contenu. Cette comparaison a confirmé que le menu filtre les codes de langue.
+- KuloNiku FR applique la même compatibilité sur l’emplacement allemand afin de
+  préserver l’anglais comme langue source et comme repli.
 - `pyI2L` valide le principe d’extraction/réinjection d’une table I2 et d’un CSV.
 - KuloNiku FR conserve la simplicité, mais génère le patch localement, sauvegarde
   avant écriture et tolère les nouvelles clés grâce au repli anglais.

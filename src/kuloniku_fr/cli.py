@@ -132,13 +132,19 @@ def command_build(args) -> int:
     for key, value in translations.items():
         if key in by_key:
             warnings.extend(lint_translation(by_key[key], value))
+    slot_language = None if getattr(args, "append_language", False) else args.slot_language
     replaced, fallback_count, unknown_keys = apply_french(
-        source, translations, replace_language=args.replace_language
+        source, translations, slot_language=slot_language
     )
-    target_index = [language.code for language in source.languages].index("fr")
+    source_codes = [language.code for language in source.languages]
+    target_code = "fr" if "fr" in source_codes else slot_language
+    target_index = [language.code for language in source.languages].index(target_code)
     patched_raw = source.serialize()
     reparsed = LanguageSource.parse(patched_raw)
-    if reparsed.languages[target_index].code != "fr":
+    reparsed_selection = next(
+        term for term in reparsed.terms if term.key == "SETTINGS_LANGUAGESELECTION"
+    )
+    if reparsed_selection.translations[target_index] != "Français":
         raise RuntimeError("Le contrôle du contenu français a échoué.")
 
     obj.set_raw_data(patched_raw)
@@ -147,7 +153,10 @@ def command_build(args) -> int:
 
     # Validation indépendante du fichier final.
     _, _, validation = load_source(output_path)
-    if validation.languages[target_index].code != "fr":
+    validation_selection = next(
+        term for term in validation.terms if term.key == "SETTINGS_LANGUAGESELECTION"
+    )
+    if validation_selection.translations[target_index] != "Français":
         raise RuntimeError("Le fichier final ne contient pas la langue française.")
 
     metadata = {
@@ -157,7 +166,7 @@ def command_build(args) -> int:
         "terms_translated": replaced,
         "terms_fallback_english": fallback_count,
         "translation_keys_unknown": unknown_keys,
-        "mode": f"replace:{args.replace_language}" if args.replace_language else "append",
+        "mode": f"slot:{slot_language}" if slot_language else "append-experimental",
         "warnings": [warning.__dict__ for warning in warnings],
     }
     metadata_path = output_path.with_suffix(output_path.suffix + ".json")
@@ -198,7 +207,14 @@ def command_install(args) -> int:
     if "en" not in codes:
         raise RuntimeError("La langue anglaise de repli est absente.")
     if "fr" in codes:
-        raise RuntimeError("Cette installation contient déjà une langue française. Restaurez-la avant de repatcher.")
+        raise RuntimeError("Cette installation contient l’ancien essai fr ajouté. Restaurez-la avant de repatcher.")
+    if "de" in codes:
+        selection = next(
+            (term for term in parsed.terms if term.key == "SETTINGS_LANGUAGESELECTION"),
+            None,
+        )
+        if selection and selection.translations[codes.index("de")] == "Français":
+            raise RuntimeError("Le patch français est déjà installé. Restaurez-le avant de repatcher.")
     translations = read_french_csv(translations_path)
     game_keys = {term.key for term in parsed.terms}
     matched = len(set(translations) & game_keys)
@@ -219,14 +235,19 @@ def command_install(args) -> int:
             output = Path(temporary_dir) / "resources.assets"
             build_args = argparse.Namespace(
                 assets=str(asset.path), translations=str(translations_path), output=str(output),
-                force=False, replace_language=None,
+                force=False, slot_language="de",
             )
             command_build(build_args)
             atomic_copy(output, asset.path)
         resign_macos(asset.path)
         _, _, validation = load_source(asset.path)
-        if "fr" not in [language.code for language in validation.languages]:
-            raise RuntimeError("La validation finale de la langue française a échoué.")
+        codes = [language.code for language in validation.languages]
+        target_index = codes.index("de")
+        selection = next(
+            term for term in validation.terms if term.key == "SETTINGS_LANGUAGESELECTION"
+        )
+        if selection.translations[target_index] != "Français":
+            raise RuntimeError("La validation finale de l’emplacement français a échoué.")
     except Exception:
         atomic_copy(backup_path, asset.path)
         resign_macos(asset.path)
@@ -279,9 +300,14 @@ def build_parser() -> argparse.ArgumentParser:
     build_parser.add_argument("translations")
     build_parser.add_argument("output")
     build_parser.add_argument(
-        "--replace-language",
-        default=None,
-        help="ancien mode de test; par défaut le français est ajouté sans supprimer de langue",
+        "--slot-language",
+        default="de",
+        help="emplacement reconnu par le menu à réutiliser (de par défaut)",
+    )
+    build_parser.add_argument(
+        "--append-language",
+        action="store_true",
+        help="mode expérimental : ajouter fr, actuellement masqué par le menu du jeu",
     )
     build_parser.add_argument("--force", action="store_true")
     build_parser.set_defaults(handler=command_build)

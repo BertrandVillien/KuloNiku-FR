@@ -3,7 +3,7 @@
 ## Fait
 
 - extraction et réécriture exacte de la table I2 Localization ;
-- ajout d’une langue française sans supprimer les langues officielles ;
+- injection française dans l’emplacement allemand reconnu par le menu ;
 - repli anglais pour toute clé absente, y compris après mise à jour ;
 - simulation, sauvegarde SHA-256, remplacement atomique et restauration ;
 - détection macOS/Windows et Démo/Complet par la structure installée ;
@@ -12,7 +12,7 @@
 
 ## À valider avant la première release publique
 
-- apparition et sélection de `Français` dans la démo macOS avec le mode ajout ;
+- apparition et sélection de `Français` dans la démo macOS avec le mode `slot:de` ;
 - même test sur la version complète macOS ;
 - test réel sur Windows ;
 - comportement après « Vérifier l’intégrité » et après une mise à jour Steam ;

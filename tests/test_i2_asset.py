@@ -41,7 +41,9 @@ def test_append_french_keeps_languages_and_falls_back_to_english():
     source = LanguageSource.parse(obj.get_raw_data())
     original_codes = [language.code for language in source.languages]
 
-    translated, fallback, unknown = apply_french(source, {"ACTION_SERVE": "Servir"})
+    translated, fallback, unknown = apply_french(
+        source, {"ACTION_SERVE": "Servir"}, slot_language=None
+    )
 
     assert [language.code for language in source.languages] == [*original_codes, "fr"]
     assert translated == 1
@@ -54,6 +56,35 @@ def test_append_french_keeps_languages_and_falls_back_to_english():
     assert other.translations[-1] == other.translations[0]
     reparsed = LanguageSource.parse(source.serialize())
     assert reparsed.languages[-1].code == "fr"
+
+
+@pytest.mark.skipif(not LAB_ASSET.exists(), reason="copie de laboratoire absente")
+def test_french_slot_keeps_supported_language_metadata():
+    import UnityPy
+
+    environment = UnityPy.load(str(LAB_ASSET))
+    obj = next(obj for obj in environment.objects if obj.path_id == 3606)
+    source = LanguageSource.parse(obj.get_raw_data())
+    original_languages = [
+        (language.name, language.code) for language in source.languages
+    ]
+
+    apply_french(
+        source,
+        {"SETTINGS_LANGUAGESELECTION": "Français", "ACTION_SERVE": "Servir"},
+        slot_language="de",
+    )
+
+    assert [
+        (language.name, language.code) for language in source.languages
+    ] == original_languages
+    german_index = [language.code for language in source.languages].index("de")
+    selection = next(
+        term for term in source.terms if term.key == "SETTINGS_LANGUAGESELECTION"
+    )
+    serve = next(term for term in source.terms if term.key == "ACTION_SERVE")
+    assert selection.translations[german_index] == "Français"
+    assert serve.translations[german_index] == "Servir"
 
 
 @pytest.mark.skipif(not LAB_ASSET.exists(), reason="copie de laboratoire absente")

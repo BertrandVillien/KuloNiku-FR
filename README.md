@@ -6,8 +6,9 @@ Projet communautaire de traduction française de **KuloNiku: Bowl Up!**.
 
 - Prototype validé techniquement sur la démo macOS `0.10.5`.
 - Extraction confirmée de la table Unity `I2Languages` : 12 211 clés, 8 langues.
-- Le constructeur ajoute le français comme nouvelle langue et utilise l’anglais
-  de la version installée pour chaque entrée encore non traduite.
+- Le menu du jeu n’accepte que huit emplacements codés. Le patch conserve
+  techniquement l’emplacement allemand (`de`), l’affiche comme « Français » et
+  y injecte le français. L’anglais de la version installée sert de repli.
 - Aucun fichier original du jeu ne doit être versionné ou distribué dans ce dépôt.
 
 ## Principes
@@ -67,6 +68,10 @@ française. Les nouvelles clés restent en anglais et les clés françaises deve
 absentes sont signalées.
 
 Projet communautaire non officiel, sans affiliation avec Gambir Studio.
+
+La langue allemande redevient disponible dès la restauration du fichier
+original. Cette contrainte pourra disparaître si le studio ouvre officiellement
+le menu à de nouveaux codes de langue.
 
 Les futures releases autonomes seront construites pour macOS et Windows avec
 deux lanceurs simples : installer et restaurer. Leur état de validation est suivi
