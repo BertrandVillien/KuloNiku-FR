@@ -158,7 +158,7 @@ def write_batches(
         output_path = output_dir / f"{batch.identifier}.csv"
         with source_path.open("w", newline="", encoding="utf-8") as stream:
             fields = [*SOURCE_FIELDS, "max_source_chars"]
-            writer = csv.DictWriter(stream, fieldnames=fields)
+            writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
             writer.writeheader()
             for row in batch.rows:
                 item = {field: row.get(field, "") for field in SOURCE_FIELDS}

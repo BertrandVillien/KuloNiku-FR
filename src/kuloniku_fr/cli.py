@@ -69,7 +69,7 @@ def command_extract(args) -> int:
     _, _, source = load_source(path)
     destination.parent.mkdir(parents=True, exist_ok=True)
     with destination.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=CSV_FIELDS)
+        writer = csv.DictWriter(stream, fieldnames=CSV_FIELDS, lineterminator="\n")
         writer.writeheader()
         for term in source.terms:
             row = {"key": term.key}
@@ -88,7 +88,7 @@ def command_context(args) -> int:
     language_fields = [language.code for language in source.languages]
     fields = ["key", "category", "max_source_chars", *language_fields]
     with destination.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for term in source.terms:
             category = term.key.split("_", 1)[0] if "_" in term.key else "OTHER"
@@ -332,7 +332,11 @@ def command_merge_batches(args) -> int:
     order_index = {key: index for index, key in enumerate(original_order)}
     ordered = sorted(by_key.values(), key=lambda row: order_index.get(row["key"], len(order_index)))
     with translations_path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=["key", "fr", "status", "notes"])
+        writer = csv.DictWriter(
+            stream,
+            fieldnames=["key", "fr", "status", "notes"],
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(ordered)
     print(f"{merged_rows} lignes fusionnées depuis {merged_files} lots")
