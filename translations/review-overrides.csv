@@ -1,0 +1,14 @@
+key,fr,status,notes
+TOOLS_TOPPING,Table de découpe,reviewed,Terme harmonisé avec les tutoriels et la boutique.
+TOOLS_SEASONING,Assaisonnement,reviewed,Nom de station couvrant sauces et condiments.
+Dialogue/FOODREVIEW_NO_ICE,Vous n'avez pas mis de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
+Dialogue/FOODREVIEW_WRONG_ICE,Je ne voulais pas de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
+Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné,reviewed,Graphie harmonisée avec l'ingrédient.
+Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Narutomaki,provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_DRINK_ICE_NAME,Glaçons,reviewed,Évite l'ambiguïté avec une crème glacée.
+Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_NAME,Vermicelles de riz premium,reviewed,Terme harmonisé avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_DESC,"Vermicelles de riz premium pour la table de cuisson.<br>""Délicieux et nourrissants, ces vermicelles seraient filés à partir des nuages du paradis.""",reviewed,Terme harmonisé avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné premium,reviewed,Graphie harmonisée avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Narutomaki premium,provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",provisional,À confirmer sur le visuel de l'ingrédient.

@@ -336,6 +336,23 @@ def command_merge_batches(args) -> int:
             merged_rows += 1
         merged_files += 1
 
+    overrides_path = Path(args.overrides).resolve()
+    override_rows = 0
+    if overrides_path.exists():
+        for row in read_csv_rows(overrides_path):
+            key = row.get("key", "")
+            if key not in by_key:
+                raise ValueError(f"Clé de correction inconnue : {key}")
+            if not row.get("fr") or row.get("status") not in {"reviewed", "provisional"}:
+                raise ValueError(f"Correction invalide pour {key}")
+            by_key[key] = {
+                "key": key,
+                "fr": row["fr"],
+                "status": row["status"],
+                "notes": row.get("notes", ""),
+            }
+            override_rows += 1
+
     original_order = [row["key"] for row in read_csv_rows(Path(args.source).resolve())]
     order_index = {key: index for index, key in enumerate(original_order)}
     ordered = sorted(by_key.values(), key=lambda row: order_index.get(row["key"], len(order_index)))
@@ -348,6 +365,8 @@ def command_merge_batches(args) -> int:
         writer.writeheader()
         writer.writerows(ordered)
     print(f"{merged_rows} lignes fusionnées depuis {merged_files} lots")
+    if override_rows:
+        print(f"{override_rows} corrections de relecture appliquées")
     print(f"Total français : {len(ordered)}")
     return 0
 
@@ -496,6 +515,7 @@ def build_parser() -> argparse.ArgumentParser:
     merge_parser.add_argument("--translations", default="translations/fr.csv")
     merge_parser.add_argument("--source-dir", default="work/translation-batches/source")
     merge_parser.add_argument("--output-dir", default="translations/batches")
+    merge_parser.add_argument("--overrides", default="translations/review-overrides.csv")
     merge_parser.set_defaults(handler=command_merge_batches)
 
     backups_parser = subparsers.add_parser(

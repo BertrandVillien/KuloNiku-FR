@@ -55,8 +55,8 @@ TOOLS_LADDLE,Louche,reviewed,
 TOOLS_STOVE,Plaque,reviewed,
 TOOLS_HOTPOT,Marmite,reviewed,
 TOOLS_FRYING,Poêle,reviewed,
-TOOLS_TOPPING,Planche de coupe,reviewed,
-TOOLS_SEASONING,Épices,reviewed,
+TOOLS_TOPPING,Table de découpe,reviewed,Terme harmonisé avec les tutoriels et la boutique.
+TOOLS_SEASONING,Assaisonnement,reviewed,Nom de station couvrant sauces et condiments.
 TOOLS_KNIFE,Couteau,reviewed,
 TOOLS_WASHING,Évier,reviewed,
 TOOLS_SKEWERING,Gril,reviewed,
@@ -607,8 +607,8 @@ Dialogue/FOODREVIEW_MISSING_SKEWER,[X] manquait à ma brochette.,reviewed,
 Dialogue/FOODREVIEW_NO_UTENSIL,Pas de couvert.,reviewed,
 Dialogue/FOODREVIEW_WRONG_UTENSIL,"J'ai demandé [X], mais tu m'as donné [Y].",reviewed,
 Dialogue/FOODREVIEW_NO_DRINK,Tu ne m'as pas donné de boisson.,reviewed,
-Dialogue/FOODREVIEW_NO_ICE,Vous n'avez pas mis de glace.,reviewed,
-Dialogue/FOODREVIEW_WRONG_ICE,Sans glace.,reviewed,
+Dialogue/FOODREVIEW_NO_ICE,Vous n'avez pas mis de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
+Dialogue/FOODREVIEW_WRONG_ICE,Je ne voulais pas de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
 Dialogue/FOODREVIEW_WRONG_AMOUNT,La quantité de boisson semble incorrecte.,reviewed,
 Dialogue/FOODREVIEW_PATIENCE_SAD,C'était un peu lent mais ça va.,reviewed,
 Dialogue/FOODREVIEW_PATIENCE_ANGRY,Vous m'avez trop fait attendre.,reviewed,
@@ -3938,7 +3938,304 @@ Dialogue/VNM70_67,Je vois pourquoi tu étais aussi un espion de premier ordre.,r
 Dialogue/VNM70_CHOICE_13,On n’est pas juste potes. On est super potes !,reviewed,
 Dialogue/VNM70_68,S-Super potes ?!,reviewed,
 Dialogue/VNM70_69,Je... Je crois que je n’ai jamais eu de super pote avant.,reviewed,
+Dialogue/VNM70_70,"Mouahaha ! Très bien, je l'autorise !",reviewed,
+Dialogue/VNM70_71,Je chercherai des activités de meilleures amies à faire ensemble.,reviewed,
+Dialogue/VNM70_72,"Bref, j'ai aussi quelque chose pour toi.",reviewed,Dépassement de 2 caractères.
+Dialogue/VNM70_73,C'est le vieux livre de recettes de ta grand-mère.,reviewed,Dépassement de 10 caractères.
+Dialogue/VNM70_74,"Tu devrais l'avoir. De toute façon, je sais tout par cœur.",reviewed,
+Dialogue/VNM70_75,"Et il restait, euh, des pages vierges. Alors je me disais, peut-être...",reviewed,
+Dialogue/VNM70_76,On pourrait créer de nouvelles recettes ensemble.,reviewed,Dépassement de 9 caractères.
+Dialogue/VNM70_77,J'ai entendu dire que les collaborations sont très à la mode.,reviewed,
+Dialogue/VNM70_78,J'ai justement commencé à travailler sur une recette.,reviewed,
+Dialogue/VNM70_79,Ce sera plus rapide de te montrer. Prête-moi ta cuisine !,reviewed,
+Dialogue/VNM70_80,"Bon, blanchis ça une minute... Fais bouillir ça... Ajoute de la sauce soja...",reviewed,
+Dialogue/VNM70_81,Tadaa !,reviewed,
+Dialogue/VNM70_82,"Alors, qu'en penses-tu ?",reviewed,Dépassement de 1 caractères.
+Dialogue/VNM70_CHOICE_14,Ça te ressemble tout à fait !,reviewed,Dépassement de 6 caractères.
+Dialogue/VNM70_83,"Mouahaha ! Je sais, c'est cool, non ?!",reviewed,Dépassement de 5 caractères.
+Dialogue/VNM70_84,Tu peux encore me complimenter si tu veux.,reviewed,
+Dialogue/VNM70_CHOICE_15,C'est trop mignon !,reviewed,Dépassement de 1 caractères.
+Dialogue/VNM70_85,M-Mignon ?! Tu veux dire que je--,reviewed,
+Dialogue/VNM70_86,"Enfin, chacun a droit à son opinion.",reviewed,
+Dialogue/VNM70_87,"Il m'a fallu du temps pour que ce soit parfait, mais ça en valait la peine.",reviewed,Dépassement de 7 caractères.
+Dialogue/VNM70_88,"Ta grand-mère m'a montré que la cuisine peut rendre les gens heureux. Je le sais, je l'ai vécu.",reviewed,
+Dialogue/VNM70_89,"C'est pour ça que je me suis mise à cuisiner ! Je veux réchauffer les cœurs et rendre les gens heureux. Comme lorsque ta grand-mère m'a offert ce bol de boulettes et de nouilles, il y a des années.",reviewed,Dépassement de 15 caractères.
+Dialogue/VNM70_90,Mais Crois m'a égarée. J'ai fini par promouvoir son idéologie.,reviewed,
+Dialogue/VNM70_91,Puis... tu m'as ramenée. Tu m'as rappelé ce qui compte vraiment. Je ne l'oublierai jamais.,reviewed,
+Dialogue/VNM70_92,"M-Mais bref, comme c'est un menu collaboratif, je pensais ajouter quelque chose qui te représente aussi.",reviewed,
+Dialogue/VNM70_93,"Tu n'y es pas opposé·e, hein ?! ...Hein ?",provisional,Accord neutre à valider en jeu.
+Dialogue/VNM70_CHOICE_16,Fais-moi juste cool !,reviewed,
+Dialogue/VNM70_94,"Héhé, je vois que tu veux être comme moi.",reviewed,
+Dialogue/VNM70_95,Je vais voir ce que je peux faire.,reviewed,
+Dialogue/VNM70_CHOICE_17,Fais-moi juste mignon·ne ! (Comme toi),provisional,Accord neutre à valider en jeu.
+Dialogue/VNM70_96,"Bien sûr, je vais voir ce que je peux--",reviewed,Dépassement de 4 caractères.
+Dialogue/VNM70_97,"Hé, c'était quoi, la dernière partie ?!",reviewed,
+Dialogue/VNM70_CHOICE_18,Faisons-le ensemble !,reviewed,
+Dialogue/VNM70_98,Mouahaha ! Voilà une excellente idée !,reviewed,Dépassement de 3 caractères.
+Dialogue/VNM70_99,Trouvons un moment alors.,reviewed,
+Dialogue/VNM70_100,"Depuis que tu es arrivé·e, ma vie a été bouleversée.",provisional,Accord neutre à valider en jeu.
+Dialogue/VNM70_101,Mais j'ai décidé d'être reconnaissante pour tout. Le bon comme le mauvais.,reviewed,
+Dialogue/VNM70_102,"Je suis surtout reconnaissante de t'avoir comme ami·e et rival·e, [NAME]. Merci encore.",provisional,Accords neutres à valider en jeu.
+Dialogue/VNM70_103,Mais un avertissement.,reviewed,
+Dialogue/VNM70_104,Ne te relâche pas !,reviewed,
+Dialogue/VNM70_105,"Tu es le rival de la grande cheffe rock star Stella, alors comporte-toi comme tel !",reviewed,
+Dialogue/VNM70_106,Je serai toujours là. Prête à te défier. Pour les années à venir.,reviewed,
+Dialogue/VNM70_107,"Tu ferais mieux de t'y habituer, [NAME] !",reviewed,Dépassement de 6 caractères.
+Dialogue/VNM82_1,"Salut, chef ! Prêt·e pour ton tout premier Festival ?",provisional,Accord neutre à valider en jeu.
+Dialogue/VNM82_2,"Ne t'inquiète pas, c'est vraiment très simple !",reviewed,
+Dialogue/VNM82_3,"Tiens, laisse-moi te montrer !",reviewed,Dépassement de 8 caractères.
+Dialogue/VNM83_1,Et voilà... c'est fini !,reviewed,Dépassement de 4 caractères.
+Dialogue/VNM83_2,"Alors, comment s'est passé ton premier Festival ?",reviewed,Dépassement de 4 caractères.
+Dialogue/VNM83_CHOICE_1,C'était amusant !,reviewed,
+Dialogue/VNM83_3,"Pas vrai ? Je suis contente que ça t'ait plu, chef !",reviewed,Dépassement de 8 caractères.
+Dialogue/VNM83_4,C'est un excellent moyen de rendre les choses plus palpitantes pour les clients comme pour toi !,reviewed,
+Dialogue/VNM83_CHOICE_2,C'était assez stressant.,reviewed,
+Dialogue/VNM83_5,Oh. Je suis désolée que tu le vives comme ça.,reviewed,Dépassement de 5 caractères.
+Dialogue/VNM83_6,"Ce n'est rien, je comprends que ça puisse être accablant. Surtout au début.",reviewed,Dépassement de 6 caractères.
+Dialogue/VNM83_CHOICE_3,J'ai eu plein de bonus ! Génial !,reviewed,
+Dialogue/VNM83_7,Bien joué ! Tu l'as mérité !,reviewed,
+Dialogue/VNM83_8,C'est un bon moyen de gagner un peu plus d'argent si tu en as envie.,reviewed,
+Dialogue/VNM83_9,Je reviendrai samedi prochain.,reviewed,
+Dialogue/VNM83_10,Et n'oublie pas : [COLOR=ALERT]tu peux toujours dire non[/COLOR] la prochaine fois si tu n'as pas envie d'organiser un Festival.,reviewed,Dépassement de 3 caractères.
+Dialogue/VNM83_11,"Dans ce cas, tu ouvriras simplement Bakuso comme d'habitude.",reviewed,Dépassement de 2 caractères.
+Dialogue/VNM83_12,"Bon, je dois filer ! Continue de rouler ces boulettes !",reviewed,
+Dialogue/CEM19_1,"Hé, hé ! Que fais-tu, petit ?",reviewed,
+Dialogue/CEM19_2,"J'ai une excellente nouvelle pour toi, oui oui.",reviewed,Dépassement de 3 caractères.
+Dialogue/CEM19_3,"Après quelques recherches, j'ai décidé de lancer une affaire ici !",reviewed,
+Dialogue/CEM19_4,Je vais vendre des [COLOR=ALERT]bons[/COLOR] ! J'ai découvert qu'ils sont très demandés !,reviewed,
+Dialogue/CEM19_5,"J'ai installé la [COLOR=ALERT]machine à bons[/COLOR] chez [COLOR=ALERT]Ume[/COLOR]. Elle touche sa part des bénéfices, évidemment.",reviewed,
+Dialogue/CEM19_6,Quant à la façon dont j'obtiens ces bons... Disons que j'ai mes méthodes.,reviewed,
+Dialogue/CEM19_7,"Nous savons tous les deux que certains secrets doivent le rester, oui oui.",reviewed,
+Dialogue/CEM19_8,"Bien, une longue journée m'attend. Il est temps de faire le plein !",reviewed,Dépassement de 7 caractères.
+Dialogue/VNM84_1,"Hé, [NAME]. Rosso est là pour te voir.",reviewed,
+Dialogue/VNM84_2,"Non, non ! Je suis là pour vous voir TOUS LES DEUX !",reviewed,Dépassement de 12 caractères.
+Dialogue/VNM84_3,Moi aussi ?,reviewed,
+Dialogue/VNM84_4,Exactement ! Cela vous concerne tous les deux.,reviewed,Dépassement de 4 caractères.
+Dialogue/VNM84_5,"J'ai une annonce énorme, spectaculaire et FANTABULEUSE ! Réjouissez-vous ! Roulement de tambour, s'il vous plaît !",reviewed,Dépassement de 12 caractères.
+Dialogue/VNM84_6,...,reviewed,
+Dialogue/VNM84_7,...,reviewed,
+Dialogue/VNM84_8,"Hum hum. J'ai dit : roulement de tambour, s'il vous plaît !",reviewed,Dépassement de 21 caractères.
+Dialogue/VNM84_CHOICE_1,(Je sais ! Je vais tambouriner sur les casseroles et les poêles !),reviewed,Dépassement de 13 caractères.
+Dialogue/VNM84_9,Oh oui ! Voilà l'esprit !,reviewed,
+Dialogue/VNM84_CHOICE_2,"Désolé·e, nous n'avons pas de tambours ici.",provisional,Accord neutre à valider en jeu. Dépassement de 4 caractères.
+Dialogue/VNM84_10,"Oui. Tu peux te dépêcher, s'il te plaît ?",reviewed,Dépassement de 6 caractères.
+Dialogue/VNM84_11,Oh là là ! Les jeunes d'aujourd'hui sont si impatients !,reviewed,
+Dialogue/VNM84_CHOICE_3,Accouche !,reviewed,
+Dialogue/VNM84_12,"Eh bien, eh bien. Pas de goût pour le théâtre ? Comme c'est triste.",reviewed,
+Dialogue/VNM84_13,Très bien. J'ai le plaisir d'annoncer le système de [COLOR=ALERT]partenaire de duel[/COLOR] !,reviewed,
+Dialogue/VNM84_14,"Désormais, les chefs participant à un duel culinaire peuvent amener un partenaire pour les assister !",reviewed,
+Dialogue/VNM84_15,Tu peux inviter n'importe lequel de tes amis comme partenaire de duel.,reviewed,
+Dialogue/VNM84_16,"Mais tu dois enregistrer un partenaire par défaut. Pour Bakuso, c'est Cassie ici, n'est-ce pas ?",reviewed,
+Dialogue/VNM84_17,O-Oui ! Je m'en charge !,reviewed,
+Dialogue/VNM84_18,Parfait ! Rappelez-vous : [COLOR=ALERT]les partenaires apportent chacun des compétences différentes[/COLOR].,reviewed,Dépassement de 5 caractères.
+Dialogue/VNM84_19,J'ai hâte de vous voir tous les deux au duel culinaire !,reviewed,
+Dialogue/VNM84_20,Partenaire de duel...,reviewed,
+Dialogue/VNM84_21,J'ai toujours trouvé que tu étais vraiment cool en duel culinaire.,reviewed,
+Dialogue/VNM84_22,Je suis ravie de pouvoir t'aider là-bas !,reviewed,
+Dialogue/CEM20_START_1,"Salutations, humain chef de Bakuso !",reviewed,
+Dialogue/CEM20_START_2,Noka est là ! Noka a une nouvelle idée pour augmenter la consommation de plantes à KuloNiku.,reviewed,Dépassement de 6 caractères.
+Dialogue/CEM20_START_3,Noka va partout dire aux gens qu'ils peuvent désormais commander de la [COLOR=ALERT]viande[/COLOR] ou des [COLOR=ALERT]légumes[/COLOR] au restaurant.,reviewed,
+Dialogue/CEM20_START_4,"C'est une idée géniale, non ? Bientôt, tout le monde commandera des [COLOR=ALERT]légumes[/COLOR] partout ! Restaurants, cafés et même boucherie !",reviewed,
+Dialogue/CEM20_START_5,"Oh, Noka va te montrer comment ça marche !",reviewed,Dépassement de 4 caractères.
+Dialogue/CEM20_END_1,"Tu comprends maintenant, humain chef ?",reviewed,
+Dialogue/CEM20_END_2,Merci de contribuer à faire des plantes les formes de vie suprêmes.,reviewed,
+Dialogue/CEM20_END_3,"Maintenant, Noka doit prévenir plus d'humains-viande ! Bye bye !",reviewed,
+Dialogue/INTERACTION_CONFIRMATION,Je devrais peut-être dire bonjour à [PARTNER] ?,reviewed,Dépassement de 3 caractères.
+Dialogue/INTERACTION_STORE_CONFIRMATION,Que devrais-je faire ?,reviewed,Dépassement de 3 caractères.
+Dialogue/GPN5_1_1,A-Aujourd'hui a été une longue journée.,reviewed,Dépassement de 1 caractères.
+Dialogue/GPN5_1_2,"Il y avait beaucoup de clients, donc j'ai eu, euh, peu de temps pour lire aujourd'hui.",reviewed,
+Dialogue/GPN5_1_3,"Je vais beaucoup lire ce soir pour me rattraper ! En ce moment, je lis un livre sur des [MEI_PEOPLE] qui pratiquent [TANTI_HOBBY] !",reviewed,Dépassement de 9 caractères.
+Dialogue/GPN5_1_4,"Je sais que je ne devrais pas, mais parfois je n'arrive pas à arrêter de lire juste avant de dormir...",reviewed,
+Dialogue/GPN5_1_5,"Mais ce livre est tellement bon ! La structure, l'écriture, les personnages... Je pense qu'il te plairait aussi, [NAME].",reviewed,
+Dialogue/GPN5_1_6,(J'ai écouté Ume me parler avec passion du livre qu'elle lit.),reviewed,
+Dialogue/GPN5_2_1,Ma mère m'a appelée plus tôt aujourd'hui. Ils cherchent actuellement une variété rare de [JEN_FOOD] qui serait très [SAI_RESULT].,reviewed,Dépassement de 2 caractères.
+Dialogue/GPN5_2_2,"Mais je ne l'entendais pas bien, car il y avait une t-tempête de neige là-bas... Attends, ou était-ce une avalanche ?",reviewed,Dépassement de 5 caractères.
+Dialogue/GPN5_2_3,"M-Mais bref, je suis heureuse d'être ici, à KuloNiku. En sécurité, au chaud et surtout à l'intérieur.",reviewed,
+Dialogue/GPN5_2_4,"Même si, euh, à vrai dire, ça ne me dérange pas de partir en vacances avec eux de temps en temps.",reviewed,Dépassement de 9 caractères.
+Dialogue/GPN5_2_5,"S-Seulement si ce n'est pas trop extrême ! Comme, euh, le saut à l'élastique ou la plongée en cage avec les requins...",reviewed,Dépassement de 9 caractères.
+Dialogue/GPN5_2_6,(Nous avons parlé de nos vacances de rêve. J'ai l'impression de mieux comprendre Ume.),reviewed,
+Dialogue/GPN5_3_1,"[NAME] ! J-Je suis si heureuse, j'ai réussi à acheter la dernière peluche Woon Woon !",reviewed,
+Dialogue/GPN5_3_2,"Elles sont toujours très populaires... La créatrice ne fabrique que quelques peluches chaque mois, pour que chacune soit spéciale.",reviewed,Dépassement de 5 caractères.
+Dialogue/GPN5_3_3,"Woon Woon tout doux est ravi d'être ton ami ! Il adore faire des câlins, même s'ils sont généralement trop doux pour qu'on les remarque !",reviewed,
+Dialogue/GPN5_3_4,L-Les descriptions sont toutes comme ça... Je les adore.,reviewed,Dépassement de 4 caractères.
+Dialogue/GPN5_3_5,"O-Oh, laisse-moi te montrer les photos de ma collection, si ça ne te dérange pas. J'aime beaucoup la peluche [MEI_JOB] [TYRO_DINO] !",reviewed,Dépassement de 14 caractères.
+Dialogue/GPN5_3_6,"(J'ai regardé la collection grandissante de peluches d'Ume, puis le catalogue Woon Woon. Tout est beaucoup trop mignon.)",reviewed,
+Dialogue/GPN5_4_1,"Oh, [NAME], euh, tu t'en sors avec l'inventaire de Bakuso ?",reviewed,
+Dialogue/GPN5_4_2,J'essaie toujours de surveiller les articles qui se vendent bien. C'est p-plutôt fascinant.,reviewed,
+Dialogue/GPN5_4_3,"Par exemple, savais-tu que KuloNiku consomme 38 % de [EMA_INGREDIENT] de plus que la moyenne nationale ?",reviewed,
+Dialogue/GPN5_4_4,"En sachant quels articles se vendent bien, j-j'ai l'impression de mieux connaître les habitants aussi...",reviewed,
+Dialogue/GPN5_4_5,"O-Oh, j'ai justement trouvé un excellent producteur local de [BUYABLE_INGREDIENT]. T-Tu pourrais peut-être en faire des réserves ?",reviewed,
+Dialogue/GPN5_4_6,(Nous avons partagé nos idées et nos difficultés en tant que collègues propriétaires. Je me sens solidaire d'Ume.),reviewed,
+Dialogue/GPN6_1_1,"Tu sais, j'ai encore publié des stories Instayum aujourd'hui. Sur notre journée à Bakuso et tout ça.",reviewed,
+Dialogue/GPN6_1_2,"Mon père ne dit jamais qu'il regarde mes stories, mais je sais qu'il les a vues.",reviewed,
+Dialogue/GPN6_1_3,"Parce qu'ensuite, il publie ses propres stories Instayum. Hier encore, il a posté une photo de mes sœurs cuisinant [CHIL_FOOD2] avec [EMA_INGREDIENT] dessus.",reviewed,Dépassement de 6 caractères.
+Dialogue/GPN6_1_4,J'imagine que c'est sa façon de me dire qu'il va bien.,reviewed,
+Dialogue/GPN6_1_5,"Quel homme maladroit. Enfin, j'imagine que beaucoup de gens de son âge sont comme ça.",reviewed,
+Dialogue/GPN6_1_6,(Cassie m'a raconté des anecdotes amusantes sur sa famille. Je sentais leur affection mutuelle.),reviewed,
+Dialogue/GPN6_2_1,"Devine quoi, [NAME] ? Je suis un nouveau cours de marketing.",reviewed,
+Dialogue/GPN6_2_2,Il est fondé sur les principes les plus [CHARMANT_ADJECTIVE] de [MINNIE_SUBJECT]. Je n'arrête pas de réfléchir à comment l'appliquer à Bakuso.,reviewed,Dépassement de 3 caractères.
+Dialogue/GPN6_2_3,Hum ? Et l'idée de la campagne marketing précédente ?,reviewed,
+Dialogue/GPN6_2_4,"Ç-Ça avance, d'accord ?! J'ai juste besoin de plus de temps pour vraiment la finaliser !",reviewed,Dépassement de 5 caractères.
+Dialogue/GPN6_2_5,"Bref, ils ont une vision vraiment intéressante de l'entonnoir marketing...",reviewed,
+Dialogue/GPN6_2_6,"(Nous avons parlé d'idées marketing possibles. Cassie a surtout parlé, mais j'étais content·e de passer du temps avec elle.)",provisional,Accord neutre à valider en jeu.
+Dialogue/GPN6_3_1,"Ah, je suis épuisée. Mon dos me tue !",reviewed,
+Dialogue/GPN6_3_2,Je vais devoir sortir le grand jeu pour ma routine de soins ce soir !,reviewed,
+Dialogue/GPN6_3_3,"Masque chauffant pour les yeux en [SAI_ITEM1], aromathérapie, beurre corporel, masseur de tête... Tout en écoutant mon artiste indé préféré jouer de [ELIO_INSTRUMENT].",reviewed,Dépassement de 18 caractères.
+Dialogue/GPN6_3_4,"Oui, c'est parfait !",reviewed,
+Dialogue/GPN6_3_5,"J'allais souvent au spa en ville, mais ici il est plus facile de prendre soin de soi. Et moins cher !",reviewed,
+Dialogue/GPN6_3_6,(Nous avons parlé de nos routines de soins. Cassie m'a donné quelques conseils.),reviewed,
+Dialogue/GPN6_4_1,"En nettoyant le restaurant tout à l'heure, j'ai trouvé d'autres petites entailles et taches qu'on avait ratées. Comment est-ce possible ?!",reviewed,Dépassement de 5 caractères.
+Dialogue/GPN6_4_2,Mais ça m'a fait réfléchir. Bakuso est comme un mémorial vivant du temps de ta grand-mère à KuloNiku.,reviewed,
+Dialogue/GPN6_4_3,Elle devait être une femme [MEI_ADJECTIVE]. Les clients plus âgés parlent encore d'elle avec affection. ...Ou parfois avec crainte.,reviewed,
+Dialogue/GPN6_4_4,"Et quand je te vois cuisiner ses recettes, je suis si honorée que nous puissions perpétuer son héritage !",reviewed,
+Dialogue/GPN6_4_5,"À ce propos, que dirais-tu d'ajouter [CRAFTABLE_RECIPE] au menu ? Je suis certaine que ça irait très bien avec notre offre actuelle.",reviewed,
+Dialogue/GPN6_4_6,"(Cassie et moi avons parlé de la façon d'améliorer encore Bakuso. C'est amusant, mais j'aimerais que Grand-mère soit ici aussi...)",reviewed,
+Dialogue/GPN7_1_1,"Comment s'est passée ta journée, Faucon ? Ou, euh, [NAME].",reviewed,Dépassement de 5 caractères.
+Dialogue/GPN7_1_2,Je suis toujours étonné de voir à quel point tu t'es bien adapté·e à une routine quotidienne normale.,provisional,Accord neutre à valider en jeu. Dépassement de 21 caractères.
+Dialogue/GPN7_1_3,"Se lever à une certaine heure, tenir le restaurant toute la journée, fermer... Puis recommencer le lendemain.",reviewed,
+Dialogue/GPN7_1_4,Ce n'est pas terriblement ennuyeux ? Aucun criminel [JAYA_PLACE] à arrêter à [MEI_PLACE]. Et très peu d'explosions aussi.,reviewed,
+Dialogue/GPN7_1_5,"Cela dit, j'imagine que c'est une compétence en soi. S'installer dans une routine stable, je veux dire. Tu dois absolument me dire comment tu fais !",reviewed,Dépassement de 4 caractères.
+Dialogue/GPN7_1_6,"(Je ne savais pas exactement quoi lui dire, mais nous avons tout de même discuté. Nous nous sommes sans doute rapprochés.)",reviewed,
+Dialogue/GPN7_2_1,"Hum, devrais-je l'acheter ? Mais je n'aurai même pas l'occasion de... Hum...",reviewed,Dépassement de 10 caractères.
+Dialogue/GPN7_2_2,"Oh, excuse-moi. Je pensais simplement au dernier gadget d'iSpy.",reviewed,
+Dialogue/GPN7_2_3,C'est vraiment fascinant ! Il est encore plus petit que le modèle précédent. On le voit à peine au microscope !,reviewed,
+Dialogue/GPN7_2_4,"Et pourtant, il a une caméra Ultra HD et un pistolet électrique encore plus puissant. Il peut même [CHARMANT_EFFECT] ! Tu y crois ?!",reviewed,Dépassement de 7 caractères.
+Dialogue/GPN7_2_5,"Oui, je sais bien qu'il n'y aura pas beaucoup d'occasions de l'utiliser ici. Mais si je le précommande maintenant, je peux obtenir un·e [SHUGA_MERCH2] en édition limitée...",provisional,Accord du nom dynamique à valider en jeu. Dépassement de 27 caractères.
+Dialogue/GPN7_2_6,(J'écoute Dan s'enthousiasmer pour les gadgets d'espionnage. Ça rappelait le bon vieux temps.),reviewed,
+Dialogue/GPN7_3_1,Je suis allé aujourd'hui à L'Assiette secrète pour voir comment ça se passe.,reviewed,Dépassement de 11 caractères.
+Dialogue/GPN7_3_2,"Je te l'ai dit ? Elle est toujours à moi officiellement, mais je laisse le personnel la gérer.",reviewed,
+Dialogue/GPN7_3_3,J'ai compris que c'était sans doute mieux ainsi que de la gérer à moitié. Le personnel s'est moqué de mon idée de vendre des [MAMI_DISH1] [JOCKO_FOOD] !,reviewed,
+Dialogue/GPN7_3_4,"Mais attends, ça veut dire qu'on est tous les deux propriétaires de restaurant, non ?",reviewed,
+Dialogue/GPN7_3_5,"Pourquoi ne pas me donner quelques conseils, [NAME] ? Je veux profiter de ta grande expérience. D'un restaurateur à l'autre !",reviewed,
+Dialogue/GPN7_3_6,"(Ses motivations étaient douteuses, mais j'ai quand même partagé ce que je sais avec Dan. Il acquiesçait avec enthousiasme à tout ce que je disais.)",reviewed,Dépassement de 6 caractères.
+Dialogue/GPN7_4_1,"Je viens de terminer, euh, une petite enquête sur l'un des habitants de cette ville. Désolé, les vieilles habitudes ont la vie dure.",reviewed,
+Dialogue/GPN7_4_2,"Personne ne me le demande, évidemment. Mais connaître ces gens, ça me fait me sentir... en sécurité.",reviewed,
+Dialogue/GPN7_4_3,Et j'ai fait des découvertes vraiment fascinantes ! Je soupçonne fortement que [TANTI_RENTER] a un faible pour...,reviewed,
+Dialogue/GPN7_4_4,"Ah, pardonne-moi. Je ne devrais pas utiliser mon expertise pour propager des ragots.",reviewed,Dépassement de 7 caractères.
+Dialogue/GPN7_4_5,"E-Enfin bref ! J'ai aussi appris que les gens cherchent des infos sur [BUYABLE_INGREDIENT] en ce moment. Pas mal, non ?",reviewed,
+Dialogue/GPN7_4_6,"(J'ai reproché à Dan de fourrer son nez dans les affaires des autres. Mais le connaissant, il recommencera la prochaine fois.)",reviewed,
+Dialogue/GPN8_1_1,Oh là là... La nuit va être longue.,reviewed,
+Dialogue/GPN8_1_2,Tu sais ce que sont les fancams ? Ce sont des montages vidéo créés par des fans d'une idole ou d'un musicien.,reviewed,
+Dialogue/GPN8_1_3,Mes amis m'ont envoyé de super images de Stella à Souper Starz. Elle était [MAMI_VIDEO2] avec [SAI_PURSUER] !,reviewed,
+Dialogue/GPN8_1_4,"Il y a de très bons angles, j'ai hâte de les monter ensemble.",reviewed,
+Dialogue/GPN8_1_5,J'ai même bu un de ses shakes au carambole pour tenir toute la nuit !,reviewed,
+Dialogue/GPN8_1_6,"Tiens, je te montre quelques-uns de mes anciens montages ?",reviewed,
+Dialogue/GPN8_1_7,(Shuga semblait si heureux de me montrer ses fancams de Stella que je n'ai pas pu m'empêcher de sourire aussi.),reviewed,
+Dialogue/GPN8_2_1,"Hé, chef [NAME], tu viens de la ville, pas vrai ?",reviewed,
+Dialogue/GPN8_2_2,"La semaine prochaine, j'y retourne pour une autre rencontre du club de fans de Stella !",reviewed,
+Dialogue/GPN8_2_3,"La musique de Stella est géniale, mais partager cet amour avec d'autres fans... Rien de mieux, pas vrai ?",reviewed,
+Dialogue/GPN8_2_4,"La dernière fois, dans un resto au hasard, les gens étaient [BORIS_COMPLAINT] ! J'ai eu [SAI_ITEM2] dans mon plat !",reviewed,
+Dialogue/GPN8_2_5,"Je ne suis pas difficile, alors donne-moi tes meilleures adresses !",reviewed,
+Dialogue/GPN8_2_6,(J'ai parlé à Shuga de mes restaurants et gargotes préférés. Je me suis senti plus proche de lui.),reviewed,
+Dialogue/GPN8_3_1,"Ouf, je suis content d'avoir ma soirée de libre.",reviewed,
+Dialogue/GPN8_3_2,"Avec tous ces petits boulots, c'est dur de trouver du temps libre, pas vrai ?",reviewed,
+Dialogue/GPN8_3_3,"Dis-moi quand tu voudras sortir. Je connais un endroit où on peut regarder [MAMI_VIDEO1] planter [NOKA_PLANT], si ça te tente.",reviewed,
+Dialogue/GPN8_3_4,"Parfois, j'ai peur de ne pas être un bon ami. Je suis toujours occupé par ci, par là.",reviewed,
+Dialogue/GPN8_3_5,Mais je ferai tout mon possible pour passer du bon temps avec mes potes !,reviewed,
+Dialogue/GPN8_3_6,"(Shuga et moi avons passé du temps à faire coïncider nos emplois du temps. C'était difficile, mais on y est arrivés.)",reviewed,
+Dialogue/GPN8_4_1,"Hé, chef, tu manges quoi ce soir ?",reviewed,
+Dialogue/GPN8_4_2,"Moi, je crois que je vais encore prendre des [JOCKO_FOOD]. Ce n'est pas terrible, mais je les ai eus en promo !",reviewed,
+Dialogue/GPN8_4_3,"Pas d'inquiétude ! Moi aussi, je me fais plaisir avec la nourriture ! Souvent chez Souper Starz ou Bakuso.",reviewed,
+Dialogue/GPN8_4_4,"Si tu proposes des [CRAFTABLE_RECIPE] un jour, j'en prendrai à coup sûr ! J'adore ça !",reviewed,
+Dialogue/GPN8_4_5,"Rien que d'en parler, ça me donne faim. Ça fait des mois que je n'en ai pas mangé !",reviewed,
+Dialogue/GPN8_4_6,(J'ai parlé de nos plats préférés avec Shuga. J'ai fini par nous cuisiner quelque chose de simple à partager.),reviewed,
+Dialogue/GPN9_1_1,"Oh oh ! Tu viens pour un duel culinaire, jeune [NAME] ? J'adore cet enthousiasme !",reviewed,
+Dialogue/GPN9_1_2,Mais reviens les [COLOR=ALERT]dimanches[/COLOR] et [COLOR=ALERT]mercredis[/COLOR] ! C'est là que tu trouveras d'autres chefs ambitieux !,reviewed,
+Dialogue/GPN9_1_3,Voici un grand secret : tu peux trouver des adversaires de duel plus vite ! Remplis ta [COLOR=ALERT]jauge de réputation[/COLOR] ou accomplis tes [COLOR=ALERT]objectifs[/COLOR]. Essaie !,reviewed,
+Dialogue/GPN9_2_1,"Tiens donc, le nouveau chef de Bakuso ! Quel plaisir de te voir !",reviewed,
+Dialogue/GPN9_2_2,"Si tu veux défier quelqu'un dans un duel culinaire, reviens [COLOR=ALERT]dimanche[/COLOR] ou [COLOR=ALERT]mercredi[/COLOR] prochain !",reviewed,
+Dialogue/GPN9_2_3,"Ah ! On dit qu'en remplissant ta [COLOR=ALERT]jauge de réputation[/COLOR] ou en accomplissant tes [COLOR=ALERT]objectifs[/COLOR], tu seras aussitôt défié ! Passionnant ! ",reviewed,
+Dialogue/GPN9_3_1,"Oui, c'est moi, Rosso ! Ça te fait plaisir de me voir, n'est-ce pas ?",reviewed,
+Dialogue/GPN9_3_2,Pourquoi ne pas revenir un [COLOR=ALERT]dimanche[/COLOR] ou un [COLOR=ALERT]mercredi[/COLOR] ? C'est là que tu trouveras d'autres chefs en quête d'un duel culinaire !,reviewed,
+Dialogue/GPN9_3_3,"Ou, si tu ne peux pas attendre, remplis ta [COLOR=ALERT]jauge de réputation[/COLOR] ou termine tes [COLOR=ALERT]objectifs[/COLOR]. Un adversaire de taille se présentera sûrement ! ",reviewed,
+Dialogue/VNM87_1,"Te revoilà, [NAME].",reviewed,
+Dialogue/VNM87_2,"Je vois que tu as accompli tes [COLOR=ALERT]objectifs[/COLOR]. Hé, je n'en attendais pas moins de toi.",reviewed,
+Dialogue/VNM87_3,"Moi aussi, je suis prête. Je suis meilleure que jamais, alors tu peux trembler de peur, bwahaha !",reviewed,
+Dialogue/VNM87_4,Parle-moi quand tu seras prêt à me lancer ce [COLOR=ALERT]défi classé[/COLOR]. Tu connais la chanson.,reviewed,
+Dialogue/VNM87_5,"Je donnerai tout ce que j'ai. Mes joies, mes peines, je les utiliserai toutes pour te vaincre !",reviewed,
+Dialogue/VNM85_1,"Oh, bonté divine ! Mais c'est [NAME] ?! Je ne m'attendais pas à te voir ici.",reviewed,
+Dialogue/VNM85_2,"Que deviens-tu, petit ? Ça fait des années que je ne t'ai pas vu ! Pas depuis Marrakech !",reviewed,
+Dialogue/VNM85_3,Tu es encore en... mission ?,reviewed,
+Dialogue/VNM85_CHOICE_1,"En fait, je gère ce restaurant avec un ami.",reviewed,
+Dialogue/VNM85_4,"Tu gères un restaurant ? Ah, donc tu es entrepreneur, comme moi.",reviewed,
+Dialogue/VNM85_CHOICE_2,"C'était avant. Maintenant, je suis chef !",reviewed,
+Dialogue/VNM85_5,Un chef ? Tu m'impressionnes !,reviewed,
+Dialogue/VNM85_6,"Et ne t'inquiète pas, je ne dirai à personne que tu es ici. Ton secret est toujours bien gardé avec Chu !",reviewed,
+Dialogue/VNM85_7,Je suis venu à KuloNiku parce qu'un associé m'a dit que c'était un bon endroit pour vendre mes marchandises.,reviewed,
+Dialogue/VNM85_8,"Ça a l'air très prometteur. Il me suffit de trouver ce qui est recherché, oui, oui.",reviewed,
+Dialogue/VNM85_9,"... Ne t'inquiète pas, je ne vendrai rien de dangereux ou d'illégal. Pas ici.",reviewed,
+Dialogue/VNM85_10,Je sais choisir mes combats. Hé hé.,reviewed,
+Dialogue/VNM85_11,"À ce propos, laisse-moi te confier une sagesse, d'un entrepreneur à l'autre.",reviewed,
+Dialogue/VNM85_12,Il faut te fixer des [COLOR=ALERT]objectifs[/COLOR] !,reviewed,
+Dialogue/VNM85_13,"Ça peut être acheter de nouveaux ingrédients, ajouter des plats au menu ou accroître la réputation de ton restaurant.",reviewed,
+Dialogue/VNM85_14,C'est le meilleur moyen d'avancer vers ton rêve ! Tu peux suivre tes progrès dans l'appli [COLOR=ALERT]Journal[/COLOR].,reviewed,
+Dialogue/VNM85_15,"Pour tes premiers [COLOR=ALERT]objectifs[/COLOR], je conseille d'agrandir le menu et les ingrédients de Bakuso !",reviewed,
+Dialogue/VNM86_1,"Oh, ce vieux est si heureux de te voir tracer ta route.",reviewed,
+Dialogue/VNM86_2,Accomplis simplement tes [COLOR=ALERT]objectifs[/COLOR] à ton rythme.,reviewed,
+Dialogue/VNM86_3,"Ou... allez, pourquoi pas ! Je t'offrirai aussi un petit [COLOR=ALERT]bonus[/COLOR] pour chaque [COLOR=ALERT]objectif[/COLOR] accompli.",reviewed,
+Dialogue/VNM86_4,"J'adore aider les jeunes entrepreneurs comme toi. Tu me rappelles ma jeunesse, oui, oui !",reviewed,
+Dialogue/VNM86_5,"Je passerai à Bakuso la prochaine fois. À bientôt, chu !",reviewed,
+Dialogue/RANDOMEVENT_1_1,(C'est mon jour de repos ! Le bon moment pour faire un grand ménage.),reviewed,
+Dialogue/RANDOMEVENT_1_2,"(Des souvenirs de mon enfance ici m'ont traversé l'esprit... À l'époque, l'endroit me semblait bien plus grand.)",reviewed,
+Dialogue/RANDOMEVENT_1_3,"(Mamie, j'espère que tu es fière de moi.)",reviewed,
+Dialogue/RANDOMEVENT_1_4,(Oh ! Quelque chose est caché au fond d'un tiroir de cuisine. J'ai dû le mettre là et l'oublier.),reviewed,
+Dialogue/RANDOMEVENT_2_1,"(Ah, encore un jour de repos. Avant de nettoyer, je vais continuer un peu ma lecture.)",reviewed,
+Dialogue/RANDOMEVENT_2_2,"(J'ai commencé les livres de développement personnel par ironie, mais ils sont fascinants.)",reviewed,
+Dialogue/RANDOMEVENT_2_3,"(Tant de façons de voir le monde, tant de perspectives. Certaines sont même utiles !)",reviewed,
+Dialogue/RANDOMEVENT_2_4,(Hein... C'est quoi ?),reviewed,
+Dialogue/RANDOMEVENT_2_5,"(Oh, j'ai dû le mettre entre les pages comme marque-page de fortune. Quelle chance !)",reviewed,
+Dialogue/RANDOMEVENT_3_1,(Jour de repos ! Tant de choses à faire !),reviewed,
+Dialogue/RANDOMEVENT_3_2,"(Je crois que je me promènerai au parc plus tard, mais occupons-nous d'abord des corvées.)",reviewed,
+Dialogue/RANDOMEVENT_3_3,"(Voyons, je range les étagères de stockage, puis nettoie les vitres... Oh, j'ai du linge à faire.)",reviewed,
+Dialogue/RANDOMEVENT_3_4,(Ah oui ! Le colis que j'ai acheté en ligne est arrivé. Il faut que je l'ouvre.),reviewed,
+Dialogue/RANDOMEVENT_3_5,(Hum ? Qu'y a-t-il ?),reviewed,
+Dialogue/RANDOMEVENT_3_6,"(Oh, c'est un cadeau de l'enseigne en ligne ! Waouh... Quelle générosité.)",reviewed,
 Dialogue/GENERIC_BRAWL_NOT_ENOUGH_COIN,Je n'ai pas assez d'argent pour les frais d'inscription au duel...,reviewed,
+Dialogue/DAYOFF_HANGOUT_NOT_ENOUGH_COIN,Je n'ai pas assez pour sortir...,reviewed,
+Dialogue/JUDGE_DESC_LADO,"Voici Lado ! Homme de peu de mots, il aime manger ses [COLOR=LIKED]nouilles[/COLOR] tranquillement ! Son palais complexe apprécie le [COLOR=SOUR]acide[/COLOR] et le [COLOR=SWEET]sucré[/COLOR]. Mais pas d'[COLOR=DISLIKED]ail[/COLOR] !",reviewed,
+Dialogue/JUDGE_DESC_LADO_SKEWER,"Une brochette d'[COLOR=LIKED]agneau[/COLOR] savoureuse, s'il vous plaît !",reviewed,
+Dialogue/JUDGE_DESC_LADO_DRINK,"Et comme boisson, il veut un verre de [COLOR=LIKED]cola[/COLOR] froid et pétillant !",reviewed,
+Dialogue/JUDGE_DESC_LADO_RANDOM_TASTE,"Il demande aussi que le plat d'aujourd'hui soit [TASTE], notez-le.",reviewed,
+Dialogue/JUDGE_DESC_MR_CROIS,"Le plus grand gourmet de la ville, Mr. Crois, est là ! C'est un véritable amateur de [COLOR=LIKED]boulettes[/COLOR] ! Il aime les plats [COLOR=SALTY]salés[/COLOR], mais pas la [COLOR=DISLIKED]sauce soja sucrée[/COLOR] !",reviewed,
+Dialogue/JUDGE_DESC_MR_CROIS_SKEWER,Sa brochette : [COLOR=LIKED]tomates[/COLOR] rouges et juteuses !,reviewed,
+Dialogue/JUDGE_DESC_MR_CROIS_DRINK,N'oubliez pas sa boisson : un verre de [COLOR=LIKED]cola[/COLOR] rafraîchissant !,reviewed,
+Dialogue/JUDGE_DESC_MR_CROIS_RANDOM_TASTE,"Aujourd'hui, il propose un défi supplémentaire : cuisinez le plat [TASTE] !",reviewed,
+Dialogue/JUDGE_DESC_MAMI,"La reine des mondanités de la ville, Mami ! Elle adore les saveurs [COLOR=SWEET]sucrées[/COLOR] ! Les [COLOR=LIKED]boulettes de tendon[/COLOR] sont ses préférées, mais elle trouve la [COLOR=DISLIKED]sauce chili[/COLOR] trop gluante !",reviewed,
+Dialogue/JUDGE_DESC_MAMI_SKEWER,Elle aimerait une brochette de [COLOR=LIKED]champignons[/COLOR] en accompagnement !,reviewed,
+Dialogue/JUDGE_DESC_MAMI_DRINK,"Côté boisson, elle voudrait du [COLOR=LIKED]thé[/COLOR] ! Du vrai thé, cette fois.",reviewed,
+Dialogue/JUDGE_DESC_MAMI_RANDOM_TASTE,"Et aujourd'hui, elle veut son plat [TASTE] !",reviewed,
+Dialogue/JUDGE_DESC_JEN,"Jen, la fashionista de la cuisine, est là ! Elle adore le brillant des [COLOR=LIKED]vermicelles de riz[/COLOR], mais trouve les [COLOR=DISLIKED]ananas[/COLOR] trop tape-à-l'œil ! Elle veut son plat [COLOR=SALTY]salé[/COLOR], malgré les ordres du médecin.",reviewed,
+Dialogue/JUDGE_DESC_JEN_SKEWER,"Oh oh ! Pour relever le plat, elle veut une brochette de jolis petits champignons !",reviewed,
+Dialogue/JUDGE_DESC_JEN_DRINK,Et un verre de cola délicieux pour parfaire le tout !,reviewed,
+Dialogue/JUDGE_DESC_JEN_RANDOM_TASTE,"Oh, et assurez-vous qu'il soit [TASTE] !",reviewed,
+Dialogue/JUDGE_DESC_CHU,"Mr. Chu nous rejoint aujourd'hui ! Ce marchand ambulant adore le [COLOR=LIKED]pak choï mariné[/COLOR], mais déteste le [COLOR=DISLIKED]poulet[/COLOR]. Il aime les plats [COLOR=SOUR]acides[/COLOR] et [COLOR=SPICY]épicés[/COLOR].",reviewed,
+Dialogue/JUDGE_DESC_CHU_SKEWER,Il aimerait aussi une brochette de [COLOR=LIKED]tomates[/COLOR] porte-bonheur !,reviewed,
+Dialogue/JUDGE_DESC_CHU_DRINK,Et du [COLOR=LIKED]jus[/COLOR] revigorant comme boisson !,reviewed,
+Dialogue/JUDGE_DESC_CHU_RANDOM_TASTE,Le faire [TASTE] serait encore mieux !,reviewed,
+Dialogue/JUDGE_DESC_NOKA,"Elle aime toutes les plantes, surtout les [COLOR=LIKED]oignons verts[/COLOR] ! Eh oui, c'est Noka ! Pas de [COLOR=DISLIKED]sel[/COLOR] et faites-lui un plat [COLOR=SWEET]sucré[/COLOR] !",reviewed,
+Dialogue/JUDGE_DESC_NOKA_SKEWER,"Comme prévu, elle veut aussi plus de légumes en brochette -- des [COLOR=LIKED]champignons[/COLOR], précisément.",reviewed,
+Dialogue/JUDGE_DESC_NOKA_DRINK,Que diriez-vous d'une plante infusée à boire ? Elle exige votre meilleur [COLOR=LIKED]thé[/COLOR] !,reviewed,
+Dialogue/JUDGE_DESC_NOKA_RANDOM_TASTE,"Cette fois, elle donnera aussi des points bonus pour tout ce qui est [TASTE] !",reviewed,
+Dialogue/JUDGE_DESC_TANTI,"Voici Tanti ! Elle adore tout ce qui est [COLOR=SPICY]épicé[/COLOR], surtout le [COLOR=LIKED]tempeh épicé[/COLOR] ! Mais pas de [COLOR=DISLIKED]narutomaki[/COLOR] !",reviewed,
+Dialogue/JUDGE_DESC_TANTI_SKEWER,Et une brochette d'[COLOR=LIKED]agneau[/COLOR] ! Miam !,reviewed,
+Dialogue/JUDGE_DESC_TANTI_DRINK,"Et la boisson ? Rien ne vaut le [COLOR=LIKED]cola[/COLOR], selon elle !",reviewed,
+Dialogue/JUDGE_DESC_TANTI_RANDOM_TASTE,"Et si vous faites le plat [TASTE], elle sera sûrement généreuse sur les points !",reviewed,
+Dialogue/JUDGE_DESC_ELIO,"C'est Elio ! Ce batteur libre adore le croquant des [COLOR=LIKED]germes de soja[/COLOR], mais ne supporte pas le [COLOR=DISLIKED]chili[/COLOR]. Il aime aussi tout ce qui est [COLOR=SWEET]sucré[/COLOR] !",reviewed,
+Dialogue/JUDGE_DESC_ELIO_SKEWER,Servez-lui une brochette de [COLOR=LIKED]tomate[/COLOR] pour une explosion de jus !,reviewed,
+Dialogue/JUDGE_DESC_ELIO_DRINK,Et un verre de [COLOR=LIKED]jus[/COLOR] frais pour compléter le repas.,reviewed,
+Dialogue/JUDGE_DESC_ELIO_RANDOM_TASTE,"Ouh, il est d'humeur combative aujourd'hui ! Il aimerait aussi son plat [TASTE], les chefs !",reviewed,
+Dialogue/JUDGE_DESC_NEKORA,"Oh là là, c'est Nekora ! Elle ne se lasse pas des [COLOR=LIKED]crevettes[/COLOR] juteuses ! Elle exige un plat [COLOR=SOUR]acide[/COLOR] et [COLOR=SWEET]sucré[/COLOR]. Pas de [COLOR=DISLIKED]pak choï mariné[/COLOR], ou elle vous griffera !",reviewed,
+Dialogue/JUDGE_DESC_NEKORA_SKEWER,Plus de fruits de mer ? Ajoutez une brochette de [COLOR=LIKED]poulpe[/COLOR] !,reviewed,
+Dialogue/JUDGE_DESC_NEKORA_DRINK,"Et comme boisson, un élégant [COLOR=LIKED]thé[/COLOR], bien sûr !",reviewed,
+Dialogue/JUDGE_DESC_NEKORA_RANDOM_TASTE,"Encore une chose ! Elle veut aussi son plat [TASTE], si possible !",reviewed,
+Dialogue/JUDGE_DESC_OTARU,"Voici l'infatigable Otaru ! Donnez-lui beaucoup d'[COLOR=LIKED]ail[/COLOR], son ingrédient préféré ! Mais pas de [COLOR=DISLIKED]crevettes[/COLOR], s'il vous plaît ! Il veut un plat qui envoie : [COLOR=SPICY]épicé[/COLOR] et [COLOR=SALTY]salé[/COLOR] !",reviewed,
+Dialogue/JUDGE_DESC_OTARU_SKEWER,Il aimerait aussi une brochette d'[COLOR=LIKED]agneau[/COLOR] bien charnue !,reviewed,
+Dialogue/JUDGE_DESC_OTARU_DRINK,Il veut un verre de [COLOR=LIKED]jus[/COLOR] doux et rafraîchissant !,reviewed,
+Dialogue/JUDGE_DESC_OTARU_RANDOM_TASTE,"Il est curieux, les amis ! Il veut aussi goûter du [TASTE] !",reviewed,
+Dialogue/JUDGE_DESC_RUNA,"Voici Runa ! Étonnamment, elle apprécie la saveur vive de l'[COLOR=LIKED]ananas[/COLOR]. Elle veut un plat [COLOR=SWEET]sucré[/COLOR] et [COLOR=SOUR]acide[/COLOR]. Mais pas de [COLOR=DISLIKED]boulette de tendon[/COLOR] caoutchouteuse !",reviewed,
+Dialogue/JUDGE_DESC_RUNA_SKEWER,"Elle a faim, alors une brochette de [COLOR=LIKED]champignons[/COLOR] en accompagnement.",reviewed,
+Dialogue/JUDGE_DESC_RUNA_DRINK,"N'oubliez pas la boisson ! Préparez un verre de votre meilleur [COLOR=LIKED]cola[/COLOR], les chefs !",reviewed,
+Dialogue/JUDGE_DESC_RUNA_RANDOM_TASTE,"Les chefs, faites le plat [TASTE] : elle a des points bonus !",reviewed,
 Dialogue/STELLA_CUSTOMER_INTRO_1,Je développe un nouveau plat : [STELLA_DISH1] [STELLA_DISH2]. Il sera meilleur que tout ce qu'il y a ici ! Bwahahaha !,reviewed,
 Dialogue/STELLA_CUSTOMER_INTRO_2,"Pour mon prochain numéro, je pense [STELLA_ACT1] en [STELLA_ACT2]. Je suis hardcore comme ça !",reviewed,
 Dialogue/MAMI_CUSTOMER_INTRO_1,"Youhou, [NAME] ! Tu as vu la vidéo de [MAMI_VIDEO1] [MAMI_VIDEO2] que je t'ai envoyée ?",reviewed,
@@ -4284,7 +4581,7 @@ Shop/SHOP_INGREDIENT_SKEWER_TOMATO_NAME,Tomate,reviewed,
 Shop/SHOP_INGREDIENT_SKEWER_TOMATO_DESC,"Ingrédient pour la table à brochettes.<br>« Ronde, rouge et mûre à point. Pourtant, elle n'est pas faite pour être lancée. »",reviewed,
 Shop/SHOP_INGREDIENT_SKEWER_LAMB_NAME,Agneau,reviewed,
 Shop/SHOP_INGREDIENT_SKEWER_LAMB_DESC,Ingrédient pour la table à brochettes.<br>« Célèbre pour son silence. »,reviewed,
-Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_NAME,Bok choy mariné,reviewed,
+Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné,reviewed,Graphie harmonisée avec l'ingrédient.
 Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SOUR]acide[/COLOR] et moins [COLOR=SWEET]sucré[/COLOR].<br>« Cette légère acidité donne du peps à chaque plat. »,reviewed,
 Shop/SHOP_INGREDIENT_CHILI_NAME,Piment,reviewed,
 Shop/SHOP_INGREDIENT_CHILI_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SALTY]salé[/COLOR].<br>« Ça vous donne chaud. »,reviewed,
@@ -4292,7 +4589,7 @@ Shop/SHOP_INGREDIENT_SPRINGONION_NAME,Cébette,reviewed,
 Shop/SHOP_INGREDIENT_SPRINGONION_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SWEET]sucré[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Fraîche comme une brise de printemps. »,reviewed,
 Shop/SHOP_INGREDIENT_GARLIC_NAME,Ail,reviewed,
 Shop/SHOP_INGREDIENT_GARLIC_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SOUR]acide[/COLOR].<br>« En manger vous immunise contre le vampirisme. »,reviewed,
-Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Gâteau de poisson,reviewed,
+Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Narutomaki,provisional,À confirmer sur le visuel de l'ingrédient.
 Shop/SHOP_INGREDIENT_FISHCAKE_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SALTY]salé[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Un excellent gâteau d'anniversaire pour les amateurs de fruits de mer. »,reviewed,
 Shop/SHOP_SIDEDISH_RICE_NAME,Cuiseur à riz,reviewed,
 Shop/SHOP_SIDEDISH_RICE_DESC,"Outil d'assaisonnement. [/COLOR]Cuit du riz en accompagnement.[/COLOR]<br>« Deux fois plus de glucides, deux fois plus de plaisir ! »",reviewed,
@@ -4302,7 +4599,7 @@ Shop/SHOP_DRINK_JUICE_NAME,Jus,reviewed,
 Shop/SHOP_DRINK_JUICE_DESC,Boisson pour la table à boissons.<br>« Plein de vitamines et de sucre. Surtout de sucre. »,reviewed,
 Shop/SHOP_DRINK_COLA_NAME,Cola,reviewed,
 Shop/SHOP_DRINK_COLA_DESC,Boisson pour la table à boissons.<br>« Vous pétillez de l'intérieur. »,reviewed,
-Shop/SHOP_DRINK_ICE_NAME,Glace,reviewed,
+Shop/SHOP_DRINK_ICE_NAME,Glaçons,reviewed,Évite l'ambiguïté avec une crème glacée.
 Shop/SHOP_DRINK_ICE_DESC,[COLOR=ALERT]Ajoute des glaçons en accompagnement pour la table à boissons.[/COLOR]<br>« Issus des icebergs les plus purs. »,reviewed,
 Shop/SHOP_INGREDIENT_SKEWER_OCTOPUS_NAME,Poulpe,reviewed,
 Shop/SHOP_INGREDIENT_SKEWER_OCTOPUS_DESC,Ingrédient pour la table à brochettes.<br>« Ils attendent en rêvant au fond de la mer. »,reviewed,
@@ -4316,8 +4613,8 @@ Shop/SHOP_PREMIUM_INGREDIENT_TENDON_NAME,Boulette de tendon premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_TENDON_DESC,"Boulettes de tendon premium pour la table de cuisson.<br>""Pleines de goût et agréablement élastiques. Les mâcher fortifie la mâchoire.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_NOODLES_NAME,Nouilles premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_NOODLES_DESC,"Nouilles premium pour la table de cuisson.<br>""Des nouilles dorées étincelantes, très prisées des collectionneurs et des marchands.""",reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_NAME,Vermicelles premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_DESC,"Vermicelles premium pour la table de cuisson.<br>""Délicieux et nourrissants, ces vermicelles seraient filés à partir des nuages du paradis.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_NAME,Vermicelles de riz premium,reviewed,Terme harmonisé avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_DESC,"Vermicelles de riz premium pour la table de cuisson.<br>""Délicieux et nourrissants, ces vermicelles seraient filés à partir des nuages du paradis.""",reviewed,Terme harmonisé avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_SEASONING_CHILISAUCE_NAME,Sauce pimentée premium,reviewed,
 Shop/SHOP_PREMIUM_SEASONING_CHILISAUCE_DESC,"Sauce pimentée premium pour la table d'assaisonnement.<br>""Miraculeusement, son piquant convient toujours à qui la goûte.""",reviewed,
 Shop/SHOP_PREMIUM_SEASONING_SWEETSOYSAUCE_NAME,Sauce soja sucrée premium,reviewed,
@@ -4344,16 +4641,16 @@ Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_TOMATO_NAME,Tomate premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_TOMATO_DESC,"Tomate premium pour la table de friture.<br>""Des tomates anciennes primées, cultivées par une famille de fermiers depuis le VIIIe siècle av. J.-C.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_LAMB_NAME,Agneau premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_LAMB_DESC,"Agneau premium pour la table de friture.<br>""Juteux et fumé au grill, c'est un délice même sans accompagnement.""",reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Bok choy mariné premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Bok choy mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné premium,reviewed,Graphie harmonisée avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_CHILI_NAME,Piment premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_CHILI_DESC,"Piment premium pour la table de découpe.<br>""Un piment récemment découvert, réputé pour son piquant exquis. Sa séquence ADN ne ressemble à aucun autre organisme terrestre.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_NAME,Cébette premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_DESC,"Cébette premium pour la table de découpe.<br>""Si verte et fraîche, cette cébette apporterait la paix en temps de troubles.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_NAME,Ail premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_DESC,"Ail premium pour la table de découpe.<br>""Une variété précieuse, aussi appelée ""perles du Sud"" pour son éclat captivant.""",reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Gâteau de poisson premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Gâteau de poisson premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Narutomaki premium,provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",provisional,À confirmer sur le visuel de l'ingrédient.
 Shop/SHOP_PREMIUM_SIDEDISH_RICE_NAME,Riz premium,reviewed,
 Shop/SHOP_PREMIUM_SIDEDISH_RICE_DESC,"Riz premium en accompagnement pour la table d'assaisonnement.<br>""Chaque grain reçoit un lavage, un rinçage et un massage délicats pour révéler sa saveur.""",reviewed,
 Shop/SHOP_PREMIUM_DRINK_TEA_NAME,Thé premium,reviewed,
