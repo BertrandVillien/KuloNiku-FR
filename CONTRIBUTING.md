@@ -33,7 +33,7 @@ doit rester courte et indiquer :
 Consultez aussi le [glossaire](docs/TERMINOLOGY.md) pour conserver les choix déjà
 harmonisés.
 
-## Proposer des corrections ciblées
+## Relire avec tout le contexte
 
 L’[espace de relecture hors ligne](docs/REVIEW_WORKSPACE.md) réunit les autres
 langues, les clés voisines et le contexte depuis votre propre installation du
@@ -42,6 +42,11 @@ lesquels vous souhaitez intervenir.
 
 L’outil repère automatiquement les clés sans traduction française, propose une
 vue en liste et prépare le résumé à joindre à une issue GitHub.
+
+[Suivre le tutoriel et créer votre espace de relecture](docs/REVIEW_WORKSPACE.md)
+
+Une fois le travail exporté, utilisez le formulaire
+[Transmettre une relecture préparée](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=review.yml).
 
 Ne publiez jamais l’espace HTML généré : il contient les textes sources du jeu.
 

@@ -8,6 +8,8 @@ sélectionnez simplement les passages sur lesquels vous souhaitez intervenir.
 Il est créé hors ligne depuis votre propre installation de KuloNiku. Les textes
 sources restent sur votre ordinateur et ne sont jamais ajoutés au dépôt.
 
+![Espace de relecture KuloNiku FR avec filtres, comparaison des langues et outils d’export](assets/kuloniku-fr-review-workspace.png)
+
 ## Créer l’espace de relecture
 
 Installez d’abord les outils du projet en suivant le guide

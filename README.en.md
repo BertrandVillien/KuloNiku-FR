@@ -84,11 +84,21 @@ some length overages still need visual in-game checks.
 
 ## Contribute
 
-You do not need to know how to code. You can:
+You do not need to know how to code. The local **review workspace** compares all
+eight game languages, nearby keys, and the current French text. It also detects
+missing translations automatically after a game update.
 
+[Discover the review workspace and follow the French tutorial](docs/REVIEW_WORKSPACE.md)
+
+<a href="docs/REVIEW_WORKSPACE.md">
+  <img src="docs/assets/kuloniku-fr-review-workspace.png" alt="KuloNiku FR review workspace with filters, language comparison, and contribution tools">
+</a>
+
+You can also:
+
+- [submit a prepared review](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=review.yml);
 - [suggest a French correction](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml);
 - [report an installation issue](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml);
-- [suggest targeted corrections with multilingual context](docs/REVIEW_WORKSPACE.md) (French guide);
 - attach a screenshot to show the context or an overflowing string.
 
 Never attach a game file or a complete extraction. To contribute with Git,

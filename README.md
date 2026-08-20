@@ -87,11 +87,21 @@ visuellement en jeu.
 
 ## Participer
 
-Pas besoin de savoir programmer. Vous pouvez :
+Pas besoin de savoir programmer. L’**espace de relecture local** affiche les
+huit langues du jeu, les clés voisines et le français actuel. Il repère aussi
+automatiquement les traductions manquantes après une mise à jour du jeu.
 
+[Découvrir l’espace de relecture et suivre le tutoriel](docs/REVIEW_WORKSPACE.md)
+
+<a href="docs/REVIEW_WORKSPACE.md">
+  <img src="docs/assets/kuloniku-fr-review-workspace.png" alt="Espace de relecture KuloNiku FR avec filtres, langues comparées et outils de contribution">
+</a>
+
+Vous pouvez également :
+
+- [transmettre une relecture préparée](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=review.yml) ;
 - [proposer une correction française](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml) ;
 - [signaler un problème d’installation](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml) ;
-- [proposer des corrections ciblées avec le contexte multilingue](docs/REVIEW_WORKSPACE.md) ;
 - joindre une capture pour montrer le contexte ou un texte trop long.
 
 Ne joignez jamais un fichier du jeu ou une extraction complète. Pour contribuer

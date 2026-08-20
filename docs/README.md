@@ -11,7 +11,7 @@
 ## Pour contribuer
 
 - [Guide de contribution](../CONTRIBUTING.md)
-- [Espace de relecture hors ligne](REVIEW_WORKSPACE.md)
+- [Tutoriel : espace de relecture multilingue](REVIEW_WORKSPACE.md)
 - [Qualité de la traduction](QUALITY.md)
 - [Terminologie française](TERMINOLOGY.md)
 - [Traduction assistée par agent](AGENT_WORKFLOW.md)
