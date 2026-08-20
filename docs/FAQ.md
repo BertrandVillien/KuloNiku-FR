@@ -20,8 +20,16 @@ rend immédiatement l’allemand au jeu.
 ## Que se passe-t-il après une mise à jour Steam ?
 
 Steam peut remettre un fichier original ou nouveau. La commande `status`
-signale alors qu’un nouveau patch est nécessaire. L’installateur doit refaire
-une simulation sur la nouvelle version avant toute écriture.
+relit le vrai fichier, contrôle la présence du français et compare son SHA-256 ;
+elle ne se fie pas seulement à une date ou à un numéro enregistré localement.
+L’installateur refait alors une simulation sur la nouvelle version avant toute
+écriture.
+
+## Dois-je retélécharger l’application pour chaque correction française ?
+
+Non. L’application peut télécharger et vérifier le petit lot de traduction
+publié sur GitHub. Elle demande seulement une nouvelle version complète si ce
+lot déclare avoir besoin d’un moteur plus récent.
 
 ## Une nouvelle phrase peut-elle casser le jeu ?
 

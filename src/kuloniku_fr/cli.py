@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import csv
 import hashlib
+import io
 import json
 from pathlib import Path
+import shutil
 import sys
 import tempfile
 
@@ -138,6 +141,37 @@ def reference_hash(english: str, indonesian: str) -> str:
     digest.update(b"\0")
     digest.update(indonesian.encode("utf-8"))
     return digest.hexdigest()
+
+
+def source_profile_hash(source: LanguageSource) -> str:
+    """Fingerprint a complete localization source without publishing its text."""
+    digest = hashlib.sha256()
+    for term in sorted(source.terms, key=lambda item: item.key):
+        english = term.translations[0] if term.translations else ""
+        indonesian = term.translations[1] if len(term.translations) > 1 else ""
+        digest.update(term.key.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(reference_hash(english, indonesian).encode("ascii"))
+        digest.update(b"\0")
+    return digest.hexdigest()
+
+
+def source_recognition(source: LanguageSource, translations_path: Path, edition: str) -> str:
+    """Return known/unknown for the game text set; unknown never blocks patching."""
+    profiles_path = translations_path.with_name("known-sources.json")
+    if not profiles_path.exists():
+        return "unavailable"
+    try:
+        profiles = json.loads(profiles_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return "unavailable"
+    known = profiles.get("editions", {}).get(edition, [])
+    hashes = {
+        item.get("source_profile_sha256")
+        for item in known
+        if isinstance(item, dict)
+    }
+    return "known" if source_profile_hash(source) in hashes else "unknown"
 
 
 def read_source_hashes(path: Path) -> dict[str, str]:
@@ -387,20 +421,51 @@ def command_lint(args) -> int:
 def command_install(args) -> int:
     asset = detect_asset(Path(args.game))
     translations_path = Path(args.translations).resolve()
-    source_hash = sha256(asset.path)
-    _, _, parsed = load_source(asset.path)
-    codes = [language.code for language in parsed.languages]
+    current_hash = sha256(asset.path)
+    _, _, installed_source = load_source(asset.path)
+    codes = [language.code for language in installed_source.languages]
     if "en" not in codes:
         raise RuntimeError("La langue anglaise de repli est absente.")
-    if "fr" in codes:
-        raise RuntimeError("Cette installation contient l’ancien essai fr ajouté. Restaurez-la avant de repatcher.")
-    if "de" in codes:
-        selection = next(
-            (term for term in parsed.terms if term.key == "SETTINGS_LANGUAGESELECTION"),
-            None,
-        )
-        if selection and selection.translations[codes.index("de")] == "Français":
-            raise RuntimeError("Le patch français est déjà installé. Restaurez-le avant de repatcher.")
+    selection = next(
+        (
+            term
+            for term in installed_source.terms
+            if term.key == "SETTINGS_LANGUAGESELECTION"
+        ),
+        None,
+    )
+    french_in_reused_slot = bool(
+        selection
+        and "de" in codes
+        and selection.translations[codes.index("de")] == "Français"
+    )
+    french_appended = "fr" in codes
+    updating = french_in_reused_slot or french_appended
+    source_path = asset.path
+    backup_path = None
+    manifest_path = None
+    manifest = None
+
+    if updating:
+        try:
+            backup_path, manifest = latest_backup_for(asset.path)
+        except FileNotFoundError as error:
+            raise RuntimeError(
+                "Le français est présent, mais sa sauvegarde originale est introuvable. "
+                "Mise à jour refusée pour protéger le jeu."
+            ) from error
+        manifest_path = backup_path.parent / "manifest.json"
+        if manifest.get("patched_sha256") != current_hash:
+            raise RuntimeError(
+                "Le jeu patché diffère du dernier état vérifié. "
+                "Mise à jour automatique refusée pour protéger les fichiers."
+            )
+        if sha256(backup_path) != manifest.get("original_sha256"):
+            raise RuntimeError("La sauvegarde originale ne correspond plus à son manifeste SHA-256.")
+        source_path = backup_path
+
+    source_hash = sha256(source_path)
+    _, _, parsed = load_source(source_path)
     translations, rejected, applied_overrides = load_resolved_french(
         parsed,
         translations_path,
@@ -414,7 +479,8 @@ def command_install(args) -> int:
         raise RuntimeError("Aucune clé française ne correspond à cette version du jeu.")
     print(f"Cible : {asset.path}")
     print(f"Édition : {asset.edition}; plateforme : {asset.platform}")
-    print(f"SHA-256 actuel : {source_hash}")
+    print(f"Mode : {'mise à jour directe' if updating else 'première installation'}")
+    print(f"SHA-256 source : {source_hash}")
     print(f"Clés françaises reconnues : {matched}/{len(translations)}")
     print(f"Nouvelles clés du jeu en repli anglais : {len(game_keys - set(translations))}")
     if rejected:
@@ -425,32 +491,45 @@ def command_install(args) -> int:
         print("Simulation terminée : aucune modification. Relancez avec --apply pour installer.")
         return 0
 
-    backup_path, manifest_path = backup_asset(asset, sha256)
+    if not updating:
+        backup_path, manifest_path = backup_asset(asset, sha256)
+        manifest = json.loads(manifest_path.read_text())
+    assert backup_path is not None
+    assert manifest_path is not None
+    assert manifest is not None
+
     try:
         with tempfile.TemporaryDirectory(prefix="kuloniku-fr-") as temporary_dir:
-            output = Path(temporary_dir) / "resources.assets"
+            temporary = Path(temporary_dir)
+            output = temporary / "resources.assets"
+            rollback = temporary / "resources.assets.before-update"
+            shutil.copy2(asset.path, rollback)
             build_args = argparse.Namespace(
-                assets=str(asset.path), translations=str(translations_path), output=str(output),
+                assets=str(source_path), translations=str(translations_path), output=str(output),
                 force=False, slot_language="de", edition=asset.edition,
                 source_hashes=getattr(args, "source_hashes", None),
                 compatibility_overrides=getattr(args, "compatibility_overrides", None),
             )
             command_build(build_args)
-            atomic_copy(output, asset.path)
-        resign_macos(asset.path)
-        _, _, validation = load_source(asset.path)
-        codes = [language.code for language in validation.languages]
-        target_index = codes.index("de")
-        selection = next(
-            term for term in validation.terms if term.key == "SETTINGS_LANGUAGESELECTION"
-        )
-        if selection.translations[target_index] != "Français":
-            raise RuntimeError("La validation finale de l’emplacement français a échoué.")
+            try:
+                atomic_copy(output, asset.path)
+                resign_macos(asset.path)
+                _, _, validation = load_source(asset.path)
+                codes = [language.code for language in validation.languages]
+                target_index = codes.index("de")
+                selection = next(
+                    term
+                    for term in validation.terms
+                    if term.key == "SETTINGS_LANGUAGESELECTION"
+                )
+                if selection.translations[target_index] != "Français":
+                    raise RuntimeError("La validation finale de l’emplacement français a échoué.")
+            except Exception:
+                atomic_copy(rollback, asset.path)
+                resign_macos(asset.path)
+                raise
     except Exception:
-        atomic_copy(backup_path, asset.path)
-        resign_macos(asset.path)
         raise
-    manifest = json.loads(manifest_path.read_text())
     manifest["patched_sha256"] = sha256(asset.path)
     manifest["translation_keys_matched"] = matched
     manifest["patcher_version"] = __version__
@@ -461,16 +540,20 @@ def command_install(args) -> int:
         compatibility_overrides=getattr(args, "compatibility_overrides", None),
     )
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-    print(f"Installation terminée. Sauvegarde : {backup_path}")
+    if updating:
+        print(f"Mise à jour terminée. Sauvegarde originale conservée : {backup_path}")
+    else:
+        print(f"Installation terminée. Sauvegarde : {backup_path}")
     return 0
 
 
-def command_status(args) -> int:
-    """Report whether Steam or the local translation changed since patching."""
+def status_report(args) -> dict[str, object]:
+    """Build a machine-readable installation and translation status report."""
     asset = detect_asset(Path(args.game))
     translations_path = Path(args.translations).resolve()
     current_hash = sha256(asset.path)
     _, _, source = load_source(asset.path)
+    recognition = source_recognition(source, translations_path, asset.edition)
     codes = [language.code for language in source.languages]
     selection = next(
         (term for term in source.terms if term.key == "SETTINGS_LANGUAGESELECTION"),
@@ -487,17 +570,6 @@ def command_status(args) -> int:
     except FileNotFoundError:
         pass
     state = installation_state(current_hash, french_active, manifest)
-    labels = {
-        "patched": "patch français installé et fichier inchangé",
-        "patched_unknown": "français présent, mais état différent du dernier manifeste",
-        "restored": "fichier original restauré ; installation du patch disponible",
-        "game_updated": "jeu modifié ou mis à jour par Steam ; nouveau patch nécessaire",
-        "unpatched": "aucun patch KuloNiku FR reconnu",
-    }
-    print(f"État : {labels[state]}")
-    print(f"Édition : {asset.edition}; plateforme : {asset.platform}")
-    print(f"SHA-256 actuel : {current_hash}")
-
     bundle_hash = translation_bundle_hash(
         translations_path,
         edition=asset.edition,
@@ -505,14 +577,89 @@ def command_status(args) -> int:
         compatibility_overrides=getattr(args, "compatibility_overrides", None),
     )
     installed_bundle = manifest.get("translation_bundle_sha256") if manifest else None
-    if state == "patched" and installed_bundle and installed_bundle != bundle_hash:
-        print("Traductions locales plus récentes : restauration puis réinstallation conseillée.")
-    elif state == "patched" and installed_bundle == bundle_hash:
+    if state == "patched" and installed_bundle == bundle_hash:
+        translation_state = "current"
+    elif state == "patched" and installed_bundle:
+        translation_state = "update_available"
+    elif state == "patched":
+        # Legacy manifests created before translation bundle hashes existed can
+        # still be identified exactly. Rebuild into a temporary file from the
+        # verified original backup, then compare without touching the game.
+        translation_state = "unknown"
+        if manifest:
+            try:
+                backup_path, _ = latest_backup_for(asset.path)
+                if sha256(backup_path) == manifest.get("original_sha256"):
+                    with tempfile.TemporaryDirectory(prefix="kuloniku-fr-status-") as temporary_dir:
+                        expected = Path(temporary_dir) / "resources.assets"
+                        build_args = argparse.Namespace(
+                            assets=str(backup_path),
+                            translations=str(translations_path),
+                            output=str(expected),
+                            force=False,
+                            slot_language="de",
+                            edition=asset.edition,
+                            source_hashes=getattr(args, "source_hashes", None),
+                            compatibility_overrides=getattr(args, "compatibility_overrides", None),
+                        )
+                        with contextlib.redirect_stdout(io.StringIO()):
+                            command_build(build_args)
+                        translation_state = (
+                            "current" if sha256(expected) == current_hash else "update_available"
+                        )
+            except Exception:
+                translation_state = "unknown"
+    else:
+        translation_state = "not_installed"
+
+    return {
+        "schema_version": 1,
+        "state": state,
+        "translation_state": translation_state,
+        "backup_available": manifest is not None,
+        "edition": asset.edition,
+        "platform": asset.platform,
+        "source_recognition": recognition,
+        "current_sha256": current_hash,
+        "installed_bundle_sha256": installed_bundle,
+        "available_bundle_sha256": bundle_hash,
+        "installed_patcher_version": manifest.get("patcher_version") if manifest else None,
+        "current_patcher_version": __version__,
+    }
+
+
+def command_status(args) -> int:
+    """Report whether Steam or the local translation changed since patching."""
+    report = status_report(args)
+    if getattr(args, "json", False):
+        print(json.dumps(report, ensure_ascii=False, sort_keys=True))
+        return 0
+
+    labels = {
+        "patched": "patch français installé et fichier inchangé",
+        "patched_unknown": "français présent, mais état différent du dernier manifeste",
+        "restored": "fichier original restauré ; installation du patch disponible",
+        "game_updated": "jeu modifié ou mis à jour par Steam ; nouveau patch nécessaire",
+        "unpatched": "aucun patch KuloNiku FR reconnu",
+    }
+    print(f"État : {labels[str(report['state'])]}")
+    print(f"Édition : {report['edition']}; plateforme : {report['platform']}")
+    if report["source_recognition"] == "unknown":
+        print(
+            "Version du jeu non encore répertoriée : le patch reste installable ; "
+            "les textes nouveaux resteront en anglais jusqu'à leur traduction."
+        )
+    print(f"SHA-256 actuel : {report['current_sha256']}")
+
+    if report["translation_state"] == "update_available":
+        print("Traductions embarquées plus récentes : mise à jour directe disponible.")
+    elif report["translation_state"] == "current":
         print("Traductions locales : à jour.")
-    elif state == "patched" and not installed_bundle:
+    elif report["translation_state"] == "unknown":
         print("Version de traduction installée inconnue (ancien manifeste).")
-    if manifest and manifest.get("patcher_version"):
-        print(f"Moteur ayant installé le patch : {manifest['patcher_version']}")
+    installed_version = report["installed_patcher_version"]
+    if installed_version:
+        print(f"Moteur ayant installé le patch : {installed_version}")
     print(f"Moteur actuellement lancé : {__version__}")
     return 0
 
@@ -758,6 +905,7 @@ def command_prepare_backups(args) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="kuloniku-fr")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     inspect_parser = subparsers.add_parser("inspect", help="inspecter resources.assets")
@@ -827,6 +975,7 @@ def build_parser() -> argparse.ArgumentParser:
     status_parser.add_argument("--translations", default="translations/fr.csv")
     status_parser.add_argument("--source-hashes")
     status_parser.add_argument("--compatibility-overrides")
+    status_parser.add_argument("--json", action="store_true", help="sortie structurée pour les interfaces")
     status_parser.set_defaults(handler=command_status)
 
     restore_parser = subparsers.add_parser("restore", help="restaurer la dernière sauvegarde")

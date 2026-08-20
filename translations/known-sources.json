@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "editions": {
+    "full": [
+      {
+        "game_version": "1.1.1",
+        "source_profile_sha256": "04e8f13ab07b32e838ff70509042f9e0b5251d439f0c194a0af5d2465182b25b"
+      }
+    ],
+    "demo": [
+      {
+        "game_version": "0.10.5",
+        "source_profile_sha256": "bf9f4f56158dafea2d03a0e93c8d74e8393171504bbaa822bec9061ce2c74f48"
+      }
+    ]
+  }
+}

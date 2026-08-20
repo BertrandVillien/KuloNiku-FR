@@ -23,6 +23,25 @@ fichier localement depuis la version installée; aucun binaire Unity n’est liv
 7. Sur Mac seulement, il restaure une signature ad hoc valide de l’application.
 8. Un bouton ou une commande « Restaurer » remet le fichier d’origine.
 
+## Contrat commun des interfaces
+
+L’interface macOS ne contient pas la logique de patch. Comme la future
+interface Windows, elle consomme la sortie JSON versionnée de `status --json`
+(`schema_version: 1`) puis lance les mêmes commandes de simulation,
+d’installation et de restauration.
+
+Les deux interfaces doivent partager la même hiérarchie :
+
+1. état principal lisible et illustré ;
+2. une seule action principale adaptée à cet état ;
+3. jeu détecté et changement manuel facultatif ;
+4. détails techniques repliés ;
+5. mises à jour de traduction et d’application nommées séparément.
+
+Une évolution graphique ou une nouvelle version de l’installateur ne doit donc
+pas dupliquer ni modifier les règles de sauvegarde, de compatibilité ou de mise
+à jour du moteur commun.
+
 ## Compatibilité adaptative
 
 Chaque manifeste de release devra identifier au minimum :
@@ -37,6 +56,10 @@ Un hash inconnu n’est pas automatiquement rejeté : le patcher peut accepter u
 version plus récente si la table I2 est intégralement lisible, que l’anglais
 existe et que des clés françaises correspondent. Il affiche les clés nouvelles,
 absentes et le nombre de replis anglais avant de demander `--apply`.
+
+`translations/known-sources.json` ne contient pas les textes du jeu : il recense
+seulement l’empreinte des tables déjà vérifiées. Une empreinte inconnue déclenche
+une information douce dans l’interface, jamais un refus à elle seule.
 
 Il s’arrête sans écriture si la structure est ambiguë, si aucune clé ne
 correspond ou si une validation échoue. Après une erreur d’installation, la

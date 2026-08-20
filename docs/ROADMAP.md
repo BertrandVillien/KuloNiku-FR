@@ -10,8 +10,8 @@
 - installation, apparition et sélection de `Français` validées sur la version
   complète macOS ;
 - CSV de contexte local, contrôle des marqueurs et budget de caractères ;
-- CI macOS/Windows et prototype de fabrication des paquets autonomes sur GitHub
-  Actions ;
+- CI macOS Apple Silicon/Intel et Windows, application native macOS et
+  fabrication des paquets autonomes sur GitHub Actions ;
 - profil de compatibilité de la démo `0.10.5`, sans dupliquer la traduction
   complète et avec repli anglais si le texte source change ;
 - commande d’état locale distinguant patch intact, fichier restauré, mise à
@@ -19,22 +19,31 @@
 - plan public, FAQ, formulaires de contribution, politique de sécurité et
   contrôle CI des artefacts privés/propriétaires ;
 - protocole documenté pour séparer les releases du moteur et des traductions.
+- interface macOS simplifiée avec détection Steam, journal technique repliable,
+  état illustré et mise à jour directe sans restauration ;
+- manifeste de release distinguant une vraie évolution des traductions d’une
+  simple évolution du moteur ;
+- paquet de traduction autonome, téléchargement automatique vérifié et version
+  minimale du moteur déclarée ;
+- détection d’un remplacement Steam par lecture du fichier réel et comparaison
+  SHA-256, indépendamment de la date du manifeste.
 
 ## À valider avant la première release publique
 
 - test réel sur Windows ;
 - comportement après « Vérifier l’intégrité » et après une mise à jour Steam ;
+- parcours réel de téléchargement autonome après publication d’une release ;
 - rendu des accents et couverture de la police ;
-- ouverture des paquets macOS non notariés et ergonomie des lanceurs ;
+- test novice de l’ouverture du paquet macOS non notarié ;
 - autorisation du studio ou formulation finale concernant la traduction non
   officielle ;
-- première release et manifeste vérifié, nécessaires avant d’activer la
-  recherche distante de mises à jour ;
+- première release et manifeste vérifié, nécessaires pour rendre la recherche
+  distante déjà implémentée effectivement observable ;
 - licence ou autorisation explicite couvrant la redistribution du CSV français ;
 - validation réelle des paquets autonomes macOS et Windows, puis publication de
   la première release ;
-- parcours novice des installateurs : détection automatique, simulation lisible,
-  confirmation et restauration sans ligne de commande ;
+- test utilisateur du parcours novice complet sur macOS et conception de son
+  équivalent graphique Windows ;
 - vérification finale du README et des captures sur la page publique du dépôt.
 
 Le workflow de paquetage prépare les artefacts, mais aucune release ne doit être

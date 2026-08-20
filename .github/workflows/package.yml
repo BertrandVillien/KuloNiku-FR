@@ -12,9 +12,15 @@ jobs:
         include:
           - os: macos-latest
             platform: macOS
+            package: macOS-Apple-Silicon
+            executable: KuloNiku-FR
+          - os: macos-15-intel
+            platform: macOS
+            package: macOS-Intel
             executable: KuloNiku-FR
           - os: windows-latest
             platform: Windows
+            package: Windows-x64
             executable: KuloNiku-FR.exe
     runs-on: ${{ matrix.os }}
     steps:
@@ -26,20 +32,62 @@ jobs:
       - run: python -m PyInstaller --clean --onefile --collect-all UnityPy --name KuloNiku-FR packaging/entrypoint.py
       - shell: bash
         run: |
-          mkdir -p "package/translations"
-          cp "dist/${{ matrix.executable }}" package/
-          cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv package/translations/
-          cp README.md LICENSE SECURITY.md THIRD_PARTY_NOTICES.md package/
-          cp translations/NOTICE.md package/translations/
+          mkdir -p package
+          python packaging/create_update_manifest.py
           if [[ "${{ matrix.platform }}" == "macOS" ]]; then
-            cp "packaging/Installer KuloNiku FR.command" package/
-            cp "packaging/Restaurer KuloNiku.command" package/
-            chmod +x package/*.command package/KuloNiku-FR
+            mkdir -p build/macos/dmg
+            bash packaging/build_macos_app.sh "dist/${{ matrix.executable }}" build/macos
+            test -x "build/macos/KuloNiku FR.app/Contents/MacOS/KuloNiku FR"
+            "build/macos/KuloNiku FR.app/Contents/Resources/KuloNiku-FR" --help >/dev/null
+            codesign --verify --deep --strict "build/macos/KuloNiku FR.app"
+            ditto "build/macos/KuloNiku FR.app" "build/macos/dmg/KuloNiku FR.app"
+            ln -s /Applications "build/macos/dmg/Applications"
+            hdiutil create \
+              -volname "KuloNiku FR" \
+              -srcfolder build/macos/dmg \
+              -ov \
+              -format UDZO \
+              "package/KuloNiku-FR-${{ matrix.package }}.dmg"
           else
+            mkdir -p "package/translations"
+            cp "dist/${{ matrix.executable }}" package/
             cp "packaging/Installer KuloNiku FR.bat" package/
             cp "packaging/Restaurer KuloNiku.bat" package/
+            cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv translations/known-sources.json package/translations/
+            cp translations/NOTICE.md package/translations/
+            cp README.md LICENSE SECURITY.md THIRD_PARTY_NOTICES.md package/
+            7z a -tzip "package/KuloNiku-FR-${{ matrix.package }}.zip" \
+              "package/${{ matrix.executable }}" \
+              "package/Installer KuloNiku FR.bat" \
+              "package/Restaurer KuloNiku.bat" \
+              "package/translations" \
+              "package/README.md" \
+              "package/LICENSE" \
+              "package/SECURITY.md" \
+              "package/THIRD_PARTY_NOTICES.md"
           fi
       - uses: actions/upload-artifact@v4
         with:
-          name: KuloNiku-FR-${{ matrix.platform }}
+          name: KuloNiku-FR-${{ matrix.package }}
           path: package/
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - shell: bash
+        run: |
+          mkdir release-files
+          find artifacts -type f \( -name '*.dmg' -o -name '*.zip' -o -name 'update-manifest.json' \) -exec cp {} release-files/ \;
+          cd release-files
+          sha256sum *.dmg *.zip > SHA256SUMS.txt
+          gh release create "${GITHUB_REF_NAME}" --generate-notes --verify-tag ./*
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -17,6 +17,27 @@ KuloNiku FR brings a community-made French localization to both the demo and
 the full game. It is free, unofficial, and intended as a temporary solution
 until an official French localization becomes available.
 
+## Why I made this patch
+
+I wanted to discover KuloNiku, but the number of English ingredient names and
+culinary terms was a real barrier to enjoying it. I first looked for a safe way
+to translate the demo. Once that worked, I bought the full game instead of
+giving up, which also shows how localization can help French-speaking players
+discover and support the game.
+
+I built the project with Codex and kept every operation reversible: text
+extraction, language comparison, simulation, backup, then injection. Because
+the current menu cannot display an extra language, the patch temporarily
+reuses the German slot and keeps English as the safe fallback. Restoring the
+game immediately makes German available again.
+
+The French adaptation was reviewed line by line using all eight languages in
+the game, technical keys, and available scene context. Indonesian was
+especially helpful for respecting the studio’s background and clarifying some
+dishes; difficult terms received additional research. Wording also stays as
+close as possible to the lengths already supported by the game to reduce layout
+issues.
+
 ## Project status
 
 - French translation of every textual entry currently used by the game;
@@ -24,9 +45,6 @@ until an official French localization becomes available.
 - patching engine compatible with macOS and Windows, with a real Windows test still needed;
 - unknown new strings remain in English after an update;
 - no game data or complete game file is distributed.
-
-> The patch currently reuses the German language slot. Restoring the game makes
-> German available again immediately.
 
 ## Simple installation — coming soon
 
@@ -37,6 +55,31 @@ the installer, review the displayed simulation, then confirm.
 
 The first release has not been published yet. Until then, the following method
 lets you test the patch from source.
+
+### First launch on macOS
+
+The application is locally signed by GitHub Actions but is not notarized by
+Apple. It works on Apple Silicon and Intel Macs without a paid developer
+membership. Download it only from the project’s
+[official releases](https://github.com/BertrandVillien/KuloNiku-FR/releases).
+
+If macOS blocks the first launch:
+
+1. try to open **KuloNiku FR** once;
+2. open **System Settings > Privacy & Security**;
+3. scroll to the KuloNiku FR message, then click **Open Anyway**;
+4. confirm **Open**. macOS remembers this choice for the application.
+
+This is the procedure documented by
+[Apple](https://support.apple.com/en-gb/102445). You do not need to disable
+Gatekeeper or enter a Terminal command.
+
+The installer automatically finds Steam, prioritizes the full game over the
+demo, and presents a simple status. The technical log stays collapsed. A French
+update is offered only when the exact translation fingerprint differs. Future
+translation bundles can be downloaded and verified without reinstalling the
+application, unless they require a newer patching engine; the GitHub check will
+become active with the first release.
 
 ## Installation from source
 

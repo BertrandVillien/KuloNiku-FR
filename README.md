@@ -17,6 +17,27 @@ KuloNiku FR permet de jouer en français à la démo et au jeu complet. Le proje
 est gratuit, non officiel et construit par la communauté dans l’attente d’une
 éventuelle localisation française officielle.
 
+## Pourquoi j’ai créé ce patch
+
+Je voulais découvrir KuloNiku, mais la quantité d’ingrédients et de termes
+culinaires en anglais freinait réellement mon expérience. J’ai d’abord cherché
+un moyen sûr de traduire la démo. Le résultat m’a convaincu d’acheter le jeu
+complet au lieu d’abandonner, ce qui illustre aussi l’intérêt d’une localisation
+pour faire connaître le jeu aux francophones.
+
+J’ai construit le projet avec Codex, en gardant chaque opération réversible :
+extraction des textes, comparaison des langues, simulation, sauvegarde puis
+injection. Le menu ne pouvant pas afficher une langue supplémentaire, le patch
+remplace temporairement l’allemand et conserve l’anglais comme solution de
+repli. Restaurer le jeu rend immédiatement l’allemand disponible.
+
+L’adaptation française a été travaillée ligne par ligne avec les huit langues
+du jeu, les clés techniques et le contexte disponible. L’indonésien a été
+particulièrement utile pour respecter l’origine du studio et préciser certains
+plats ; les termes délicats ont fait l’objet de recherches complémentaires.
+Les formulations restent aussi proches que possible des longueurs déjà prévues
+par le jeu afin de limiter les problèmes d’affichage.
+
 ## État du projet
 
 - traduction de toutes les entrées textuelles utilisées par le jeu ;
@@ -24,9 +45,6 @@ est gratuit, non officiel et construit par la communauté dans l’attente d’u
 - moteur compatible macOS et Windows, test réel Windows encore nécessaire ;
 - nouvelles phrases inconnues laissées en anglais après une mise à jour ;
 - aucune donnée ou fichier complet du jeu distribué.
-
-> Le patch utilise actuellement l’emplacement allemand du menu. Restaurer le
-> jeu rend immédiatement l’allemand disponible.
 
 ## Installation simple — bientôt disponible
 
@@ -37,6 +55,32 @@ lancer l’installateur, vérifier la simulation affichée, puis confirmer.
 
 La première release n’est pas encore publiée. En attendant, la méthode suivante
 permet de tester le patch depuis les sources.
+
+### Première ouverture sur macOS
+
+L’application est signée localement par GitHub Actions, mais pas notariée par
+Apple. Elle fonctionne sur les Mac Apple Silicon et Intel sans abonnement
+développeur. Téléchargez-la uniquement depuis les
+[releases officielles du projet](https://github.com/BertrandVillien/KuloNiku-FR/releases).
+
+Si macOS refuse la première ouverture :
+
+1. essayez d’ouvrir **KuloNiku FR** une fois ;
+2. ouvrez **Réglages Système > Confidentialité et sécurité** ;
+3. descendez jusqu’au message concernant KuloNiku FR, puis cliquez sur
+   **Ouvrir quand même** ;
+4. confirmez **Ouvrir**. Ce choix est mémorisé pour l’application.
+
+Cette procédure est celle documentée par
+[Apple](https://support.apple.com/fr-fr/102445). Il n’est pas nécessaire de
+désactiver Gatekeeper ni de saisir une commande dans le Terminal.
+
+L’installateur trouve automatiquement Steam, privilégie le jeu complet à la
+démo et affiche un état simple. Le journal technique reste replié. Il ne propose
+une mise à jour française que si l’empreinte des traductions est réellement
+différente. Les futurs lots de traduction pourront être téléchargés et vérifiés
+sans réinstaller l’application, sauf lorsqu’ils exigent une version plus récente
+du moteur ; la vérification de GitHub sera active dès la première release.
 
 ## Installation depuis les sources
 
