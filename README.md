@@ -7,7 +7,7 @@
 
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS testé](https://img.shields.io/badge/macOS-test%C3%A9-2ea44f)
-![Windows à valider](https://img.shields.io/badge/Windows-%C3%A0%20valider-f0ad4e)
+![Windows testé](https://img.shields.io/badge/Windows-test%C3%A9-2ea44f)
 ![Démo et jeu complet](https://img.shields.io/badge/%C3%A9ditions-d%C3%A9mo%20%7C%20complet-6f42c1)
 
 ![Accueil de KuloNiku: Bowl Up! traduit en français](docs/assets/kuloniku-fr-home.jpg)
@@ -18,8 +18,9 @@ est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 ## État du projet
 
 - **macOS :** préversion disponible et testée sur Apple Silicon et Intel ;
-- **Windows :** moteur compatible, interface simple encore à réaliser et tester ;
-- **jeu :** version complète `1.1.1` et démo `0.10.5` testées sur macOS ;
+- **Windows :** interface graphique testée avec le jeu complet ;
+- **jeu :** version complète `1.1.1` testée sur macOS et Windows, démo `0.10.5`
+  testée sur macOS ;
 - **mises à jour :** les nouvelles phrases inconnues restent en anglais.
 
 ---
@@ -31,15 +32,17 @@ Rendez-vous sur la page des
 La note de chaque version indique clairement quel fichier télécharger et comment
 l’ouvrir.
 
+Sur Windows, téléchargez l’archive **Windows x64**, décompressez-la entièrement,
+puis ouvrez **Installer KuloNiku FR.exe**. L’application détecte Steam et vous
+guide pour installer, mettre à jour ou restaurer le patch. L’exécutable n’est
+pas encore signé numériquement : Windows SmartScreen peut demander une
+confirmation. Ne désactivez jamais votre antivirus pour l’ouvrir.
+
 Sur macOS, téléchargez le DMG adapté à votre Mac, puis glissez **KuloNiku FR**
-dans **Applications**. L’application vous guide ensuite pour installer, mettre à
-jour ou restaurer le patch.
+dans **Applications**. L’application propose les mêmes opérations.
 
 Après l’installation, lancez le jeu depuis Steam et choisissez **Français** dans
 les paramètres.
-
-> La version Windows actuelle reste destinée aux tests techniques. Une interface
-> adaptée aux débutants est encore en préparation.
 
 Vous souhaitez examiner ou modifier le code ? Consultez
 [l’installation depuis les sources](docs/INSTALL_FROM_SOURCE.md).

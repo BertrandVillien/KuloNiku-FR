@@ -15,7 +15,7 @@ from . import __version__
 
 
 REPOSITORY_URL = "https://github.com/BertrandVillien/KuloNiku-FR"
-RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1"
+RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases/latest"
 STEAM_APP_ID = "3357960"
 
 

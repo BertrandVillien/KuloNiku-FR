@@ -7,7 +7,7 @@
 
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS tested](https://img.shields.io/badge/macOS-tested-2ea44f)
-![Windows pending](https://img.shields.io/badge/Windows-real%20test%20pending-f0ad4e)
+![Windows tested](https://img.shields.io/badge/Windows-tested-2ea44f)
 ![Demo and full game](https://img.shields.io/badge/editions-demo%20%7C%20full-6f42c1)
 
 ![KuloNiku: Bowl Up! home screen translated into French](docs/assets/kuloniku-fr-home.jpg)
@@ -18,9 +18,9 @@ unofficial, and does not contain any complete game file.
 ## Project status
 
 - **macOS:** a prerelease is available and tested on Apple Silicon and Intel;
-- **Windows:** the engine is compatible, but the beginner-friendly interface
-  still needs to be built and tested;
-- **game:** full version `1.1.1` and demo `0.10.5` tested on macOS;
+- **Windows:** the graphical interface has been tested with the full game;
+- **game:** full version `1.1.1` tested on macOS and Windows, demo `0.10.5`
+  tested on macOS;
 - **updates:** unknown new strings remain in English.
 
 ---
@@ -31,15 +31,17 @@ Go to the
 [official releases page](https://github.com/BertrandVillien/KuloNiku-FR/releases).
 Each release note explains which file to download and how to open it.
 
+On Windows, download the **Windows x64** archive, extract it completely, then
+open **Installer KuloNiku FR.exe**. The application finds Steam and guides you
+through installation, updates, and restoration. The executable is not digitally
+signed yet, so Windows SmartScreen may ask for confirmation. Never disable your
+antivirus to open it.
+
 On macOS, download the DMG that matches your Mac, then drag **KuloNiku FR** into
-**Applications**. The application guides you through installation, updates, and
-restoration.
+**Applications**. The application provides the same operations.
 
 After installation, launch the game from Steam and select **Français** in the
 settings.
-
-> The current Windows package is still intended for technical testing. A
-> beginner-friendly interface is in preparation.
 
 Want to inspect or modify the code? See the
 [source installation guide](docs/INSTALL_FROM_SOURCE.en.md).

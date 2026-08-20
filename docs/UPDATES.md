@@ -1,8 +1,8 @@
 # Mises à jour du jeu, des traductions et de l’installateur
 
-Ce document couvre l’application macOS, le moteur de patch commun aux paquets
-macOS et Windows, et les petits lots de traduction téléchargeables séparément.
-Le projet distingue trois versions indépendantes.
+Ce document couvre les interfaces macOS et Windows, leur moteur de patch commun
+et les petits lots de traduction téléchargeables séparément. Le projet distingue
+trois versions indépendantes.
 
 | Axe | Exemple | Action |
 |---|---|---|
@@ -31,11 +31,16 @@ lot autonome `KuloNiku-FR-translations.zip` et un petit
 traduction du jeu complet et celle de la démo, l’empreinte du téléchargement et
 la version minimale du moteur capable de l’appliquer.
 
-L’application interroge la dernière release GitHub. Si l’empreinte de
-traduction de l’édition détectée diffère, elle télécharge automatiquement le
-petit lot, contrôle son SHA-256, l’ouvre dans un cache utilisateur puis demande
-au moteur de confirmer son empreinte logique avant de le proposer. Le jeu n’est
-jamais patché sans confirmation.
+Les interfaces interrogent la dernière release stable GitHub sans bloquer leur
+usage. Une version plus récente de l’application ou du moteur est signalée par
+un bouton qui ouvre la release : elle n’est jamais téléchargée ni installée
+silencieusement.
+
+Si l’empreinte de traduction de l’édition détectée diffère, l’application macOS
+télécharge automatiquement le petit lot, contrôle son SHA-256, l’ouvre dans un
+cache utilisateur puis demande au moteur de confirmer son empreinte logique
+avant de le proposer. L’interface Windows signale actuellement le nouveau lot
+et conduit à la release. Le jeu n’est jamais patché sans confirmation.
 
 Si le lot demande un moteur plus récent, aucun fichier n’est appliqué et le
 bouton conduit à la release complète. Une évolution du moteur seul n’est donc

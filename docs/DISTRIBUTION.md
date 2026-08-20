@@ -30,10 +30,10 @@ Le moteur suit toujours le même enchaînement :
 
 ## Moteur commun
 
-L’interface macOS ne contient pas la logique de patch. Elle utilise la sortie
-JSON versionnée de `status --json` (`schema_version: 1`), puis lance les mêmes
-commandes de simulation, d’installation et de restauration que le paquet
-technique Windows.
+Les interfaces macOS et Windows ne contiennent pas la logique de patch. Elles
+utilisent la sortie JSON versionnée de `status --json` (`schema_version: 1`),
+puis lancent les mêmes commandes de simulation, d’installation et de
+restauration.
 
 La sauvegarde, la compatibilité et les mises à jour restent ainsi gérées au même
 endroit, indépendamment de l’interface utilisée.
