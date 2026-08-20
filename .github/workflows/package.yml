@@ -56,23 +56,20 @@ jobs:
               -format UDZO \
               "package/KuloNiku-FR-${{ matrix.package }}.dmg"
           else
-            mkdir -p "package/translations"
-            cp "dist/${{ matrix.executable }}" package/
+            mkdir -p "package/resources/translations"
+            cp "dist/${{ matrix.executable }}" package/resources/
             cp "dist/Installer KuloNiku FR.exe" package/
-            cp "packaging/icons/KuloNikuFR.ico" package/
-            cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv translations/known-sources.json package/translations/
-            cp translations/NOTICE.md package/translations/
-            cp README.md LICENSE SECURITY.md THIRD_PARTY_NOTICES.md package/
+            cp "packaging/icons/KuloNikuFR.ico" package/resources/
+            cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv translations/known-sources.json package/resources/translations/
+            cp translations/NOTICE.md package/resources/translations/
+            cp README.md package/
+            cp LICENSE SECURITY.md THIRD_PARTY_NOTICES.md package/resources/
             "package/Installer KuloNiku FR.exe" --self-test
-            7z a -tzip "package/KuloNiku-FR-${{ matrix.package }}.zip" \
-              "package/${{ matrix.executable }}" \
-              "package/Installer KuloNiku FR.exe" \
-              "package/KuloNikuFR.ico" \
-              "package/translations" \
-              "package/README.md" \
-              "package/LICENSE" \
-              "package/SECURITY.md" \
-              "package/THIRD_PARTY_NOTICES.md"
+            cd package
+            7z a -tzip "KuloNiku-FR-${{ matrix.package }}.zip" \
+              "Installer KuloNiku FR.exe" \
+              README.md \
+              resources
           fi
       - uses: actions/upload-artifact@v4
         with:

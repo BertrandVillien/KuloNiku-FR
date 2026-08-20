@@ -29,28 +29,31 @@ Chaque tag publie les applications macOS/Windows, leurs empreintes SHA-256, un
 lot autonome `KuloNiku-FR-translations.zip` et un petit
 `update-manifest.json`. Celui-ci contient une empreinte distincte pour la
 traduction du jeu complet et celle de la démo, l’empreinte du téléchargement et
-la version minimale du moteur capable de l’appliquer.
+la version minimale du moteur capable de lire ce format de lot. Cette version
+minimale n’augmente pas à chaque nouvelle version de l’application.
 
 Les interfaces interrogent la dernière release publiée sur GitHub sans bloquer
 leur usage. Une version plus récente de l’application ou du moteur est signalée
 par un bouton qui ouvre la release : elle n’est jamais téléchargée ni installée
 silencieusement.
 
-Sous macOS, cette vérification de l’installateur démarre dès l’ouverture de
-l’application, même si le jeu n’a pas été trouvé. Le contrôle des traductions
+Sur macOS comme sur Windows, cette vérification de l’application démarre dès
+l’ouverture, même si le jeu n’a pas été trouvé. Le contrôle des traductions
 reste effectué après l’identification de l’édition installée.
 
-Si l’empreinte de traduction de l’édition détectée diffère, l’application macOS
-télécharge automatiquement le petit lot, contrôle son SHA-256, l’ouvre dans un
-cache utilisateur puis demande au moteur de confirmer son empreinte logique
-avant de le proposer. L’interface Windows signale actuellement le nouveau lot
-et conduit à la release. Le jeu n’est jamais patché sans confirmation.
+Si l’empreinte de traduction de l’édition détectée diffère, les applications
+macOS et Windows téléchargent automatiquement le petit lot, contrôlent son
+SHA-256, l’ouvrent dans un cache utilisateur puis demandent au moteur de
+confirmer son empreinte logique avant de le proposer. Le jeu n’est jamais
+patché sans confirmation.
 
-Si le lot demande un moteur plus récent, aucun fichier n’est appliqué et le
-bouton conduit à la release complète. Une évolution du moteur seul n’est donc
-pas présentée comme une mise à jour française. Lorsque le moteur courant suffit,
-la mise à jour du jeu est directe et conserve la sauvegarde originale ; aucune
-restauration préalable n’est demandée.
+La disponibilité d’une nouvelle application est signalée indépendamment du lot
+de traductions. Si le lot reste compatible avec le moteur courant, il est tout
+de même téléchargé et peut être appliqué immédiatement. S’il demande un moteur
+plus récent, aucun fichier n’est appliqué et le téléchargement de la nouvelle
+application devient prioritaire. Lorsque le moteur courant suffit, la mise à
+jour du jeu conserve la sauvegarde originale ; aucune restauration préalable
+n’est demandée.
 
 ## Versions proposées
 

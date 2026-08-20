@@ -68,6 +68,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var restoreButton: NSButton!
     private var chooseButton: NSButton!
     private var releaseButton: NSButton!
+    private var appUpdateRow: NSStackView!
+    private var appUpdateMessage: NSTextField!
     private var detailsButton: NSButton!
     private var logScroll: NSScrollView!
     private var statusIcon: NSImageView!
@@ -79,6 +81,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var latestReleaseURL: URL?
     private var downloadedTranslationsURL: URL?
     private var translationDownloadInProgress = false
+    private var installerUpdateRequired = false
     private var simulationSucceeded = false
     private var restoreAvailable = false
     private var detailsVisible = false
@@ -226,13 +229,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         installButton = NSButton(title: "Installer le français", target: self, action: #selector(installFrench))
         installButton.keyEquivalent = "\r"
         restoreButton = NSButton(title: "Restaurer l’original…", target: self, action: #selector(restoreOriginal))
-        releaseButton = NSButton(title: "Télécharger la nouvelle version", target: self, action: #selector(openLatestRelease))
+        releaseButton = NSButton(title: "Télécharger", target: self, action: #selector(openLatestRelease))
         installButton.isEnabled = false
         analyzeButton.isEnabled = false
         restoreButton.isEnabled = false
-        releaseButton.isHidden = true
 
-        let buttonRow = NSStackView(views: [installButton, releaseButton, analyzeButton, restoreButton])
+        appUpdateMessage = NSTextField(labelWithString: "Une nouvelle version de KuloNiku FR est disponible.")
+        appUpdateMessage.textColor = .secondaryLabelColor
+        let appUpdateSpacer = NSView()
+        appUpdateSpacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        appUpdateRow = NSStackView(views: [appUpdateMessage, appUpdateSpacer, releaseButton])
+        appUpdateRow.orientation = .horizontal
+        appUpdateRow.alignment = .centerY
+        appUpdateRow.spacing = 10
+        appUpdateRow.isHidden = true
+
+        let buttonRow = NSStackView(views: [installButton, analyzeButton, restoreButton])
         buttonRow.orientation = .horizontal
         buttonRow.spacing = 10
         buttonRow.alignment = .centerY
@@ -270,7 +282,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         footerRow.alignment = .centerY
         footerRow.spacing = 10
 
-        let primaryStack = NSStackView(views: [title, statusBox, gameRow, buttonRow])
+        let primaryStack = NSStackView(views: [title, statusBox, appUpdateRow, gameRow, buttonRow])
         primaryStack.orientation = .vertical
         primaryStack.alignment = .leading
         primaryStack.spacing = 18
@@ -304,6 +316,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             flexibleSpace.heightAnchor.constraint(greaterThanOrEqualToConstant: 20),
             statusBox.widthAnchor.constraint(equalTo: primaryStack.widthAnchor),
             statusBox.heightAnchor.constraint(equalToConstant: 154),
+            appUpdateRow.widthAnchor.constraint(equalTo: primaryStack.widthAnchor),
             gameRow.widthAnchor.constraint(equalTo: primaryStack.widthAnchor),
             logScroll.widthAnchor.constraint(equalTo: utilityStack.widthAnchor),
             logScroll.heightAnchor.constraint(equalToConstant: 210),
@@ -701,16 +714,27 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         message: String,
         cardActionEnabled: Bool = false
     ) {
-        statusTitle.stringValue = title
-        statusMessage.stringValue = message
+        let displayedTitle = installerUpdateRequired
+            ? "Mise à jour de l’application requise"
+            : title
+        let displayedMessage = installerUpdateRequired
+            ? "Le nouveau français demande cette version de KuloNiku FR."
+            : message
+        statusTitle.stringValue = displayedTitle
+        statusMessage.stringValue = displayedMessage
         statusActionButton.isHidden = !cardActionEnabled
         statusActionButton.isEnabled = cardActionEnabled
         statusActionButton.toolTip = installButton.title
         statusActionButton.setAccessibilityLabel(installButton.title)
         statusActionButton.window?.invalidateCursorRects(for: statusActionButton)
         if let symbol {
-            statusIcon.image = NSImage(systemSymbolName: symbol, accessibilityDescription: title)
-            statusIcon.contentTintColor = color
+            statusIcon.image = NSImage(
+                systemSymbolName: installerUpdateRequired
+                    ? "exclamationmark.arrow.triangle.2.circlepath"
+                    : symbol,
+                accessibilityDescription: displayedTitle
+            )
+            statusIcon.contentTintColor = installerUpdateRequired ? .systemOrange : color
             statusIcon.isHidden = false
         } else {
             statusIcon.image = nil
@@ -723,7 +747,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         bundledTranslationHash: String? = nil
     ) {
         latestReleaseURL = nil
-        releaseButton.isHidden = true
+        appUpdateRow.isHidden = true
         guard let apiURL = URL(string: "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1") else { return }
         var request = URLRequest(url: apiURL)
         request.setValue("KuloNiku-FR/\(currentVersion)", forHTTPHeaderField: "User-Agent")
@@ -757,13 +781,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 if engineUpdateAvailable {
                     DispatchQueue.main.async {
                         self.latestReleaseURL = pageURL
-                        self.releaseButton.title = "Nouvel installateur \(manifest.version)"
-                        self.releaseButton.isHidden = false
+                        self.appUpdateMessage.stringValue = "KuloNiku FR \(manifest.version) est disponible."
+                        self.releaseButton.title = "Télécharger"
+                        self.appUpdateRow.isHidden = false
                         self.appendLog(
-                            "\n\nNouvelle version de l’installateur sur GitHub : \(manifest.version)"
+                            "\n\nNouvelle version de l’application disponible : \(manifest.version)."
                         )
                     }
-                    return
                 }
 
                 guard let edition,
@@ -780,9 +804,20 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                         options: .numeric
                     ) == .orderedDescending {
                         DispatchQueue.main.async {
+                            self.installerUpdateRequired = true
                             self.latestReleaseURL = pageURL
-                            self.releaseButton.title = "Mise à jour de l’app requise"
-                            self.releaseButton.isHidden = false
+                            self.appUpdateMessage.stringValue = "KuloNiku FR \(package.minimumPatcherVersion) est requis."
+                            self.releaseButton.title = "Télécharger"
+                            self.appUpdateRow.isHidden = false
+                            self.releaseButton.keyEquivalent = "\r"
+                            self.installButton.isHidden = true
+                            self.installButton.keyEquivalent = ""
+                            self.setStatus(
+                                symbol: "exclamationmark.arrow.triangle.2.circlepath",
+                                color: .systemOrange,
+                                title: "Mise à jour de l’application requise",
+                                message: "Le nouveau français demande cette version de KuloNiku FR."
+                            )
                             self.appendLog(
                                 "\n\nCette traduction demande KuloNiku FR \(package.minimumPatcherVersion) ou plus récent."
                             )
@@ -932,8 +967,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func translationDownloadFailed(releaseURL: URL) {
         translationDownloadInProgress = false
         latestReleaseURL = releaseURL
-        releaseButton.title = "Voir la mise à jour sur GitHub"
-        releaseButton.isHidden = false
+        appUpdateMessage.stringValue = "Le téléchargement automatique est indisponible."
+        releaseButton.title = "Voir sur GitHub"
+        appUpdateRow.isHidden = false
         appendLog("\nLa traduction locale reste inchangée.")
     }
 

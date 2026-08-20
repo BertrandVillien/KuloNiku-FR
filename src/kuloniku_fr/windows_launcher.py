@@ -1,15 +1,19 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import threading
 from typing import Callable
 import urllib.request
 import webbrowser
+from zipfile import BadZipFile, ZipFile
 
 from . import __version__
 
@@ -17,6 +21,12 @@ from . import __version__
 REPOSITORY_URL = "https://github.com/BertrandVillien/KuloNiku-FR"
 RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1"
 STEAM_APP_ID = "3357960"
+TRANSLATION_PACKAGE_FILES = {
+    "fr.csv",
+    "source-hashes.csv",
+    "demo-overrides.csv",
+    "known-sources.json",
+}
 
 
 def engine_environment() -> dict[str, str]:
@@ -45,12 +55,79 @@ def available_update_kind(
     bundled_translation_hash: str,
     current_version: str = __version__,
 ) -> str | None:
-    if version_tuple(str(manifest.get("version", "0"))) > version_tuple(current_version):
+    installer_available, translation_action = available_updates(
+        manifest,
+        edition=edition,
+        bundled_translation_hash=bundled_translation_hash,
+        current_version=current_version,
+    )
+    if installer_available:
         return "engine"
-    remote_hash = manifest.get("translation_bundles", {}).get(edition)
-    if remote_hash and remote_hash != bundled_translation_hash:
+    if translation_action:
         return "translations"
     return None
+
+
+def available_updates(
+    manifest: dict,
+    *,
+    edition: str | None = None,
+    bundled_translation_hash: str | None = None,
+    current_version: str = __version__,
+) -> tuple[bool, str | None]:
+    """Keep application and translation updates as independent decisions."""
+    installer_available = version_tuple(str(manifest.get("version", "0"))) > version_tuple(
+        current_version
+    )
+    if not edition or bundled_translation_hash is None:
+        return installer_available, None
+
+    remote_hash = manifest.get("translation_bundles", {}).get(edition)
+    if not remote_hash or remote_hash == bundled_translation_hash:
+        return installer_available, None
+
+    package = manifest.get("translation_package")
+    if not isinstance(package, dict) or package.get("bundles", {}).get(edition) != remote_hash:
+        return installer_available, "unavailable"
+    if version_tuple(str(package.get("minimum_patcher_version", "0"))) > version_tuple(
+        current_version
+    ):
+        return installer_available, "installer_required"
+    return installer_available, "download"
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def extract_translation_package(archive: Path, destination: Path, expected_sha256: str) -> Path:
+    """Verify and extract only the public translation files from a release archive."""
+    if sha256_file(archive) != expected_sha256.lower():
+        raise ValueError("L’empreinte du paquet de traduction ne correspond pas.")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    temporary = Path(tempfile.mkdtemp(prefix=".download-", dir=destination.parent))
+    try:
+        with ZipFile(archive) as bundle:
+            names = {item.filename for item in bundle.infolist() if not item.is_dir()}
+            if not TRANSLATION_PACKAGE_FILES.issubset(names):
+                raise ValueError("Le paquet de traduction est incomplet.")
+            for name in TRANSLATION_PACKAGE_FILES | {"NOTICE.md"}:
+                if name not in names:
+                    continue
+                target = temporary / name
+                with bundle.open(name) as source, target.open("wb") as output:
+                    shutil.copyfileobj(source, output)
+        if destination.exists():
+            shutil.rmtree(destination)
+        temporary.replace(destination)
+    except (BadZipFile, OSError, ValueError):
+        shutil.rmtree(temporary, ignore_errors=True)
+        raise
+    return destination / "fr.csv"
 
 
 def latest_release_from_payload(payload: object) -> dict | None:
@@ -171,8 +248,10 @@ class LauncherPaths:
         if base is None:
             base = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path.cwd()
         self.base = base
-        self.engine = base / "KuloNiku-FR.exe"
-        self.translations = base / "translations" / "fr.csv"
+        self.resources = base / "resources"
+        self.engine = self.resources / "KuloNiku-FR.exe"
+        self.translations = self.resources / "translations" / "fr.csv"
+        self.icon = self.resources / "KuloNikuFR.ico"
 
     def validate(self) -> list[str]:
         missing = []
@@ -191,19 +270,24 @@ class WindowsLauncher:
         self.tk = tk
         self.ttk = ttk
         self.paths = paths or LauncherPaths()
+        self.active_translations = self.paths.translations
         self.game: Path | None = None
         self.simulation_succeeded = False
         self.restore_available = False
         self.busy = False
         self.release_url: str | None = None
         self.update_check_started = False
+        self.release_data: tuple[dict, dict] | None = None
+        self.pending_translation_context: tuple[str, str] | None = None
+        self.translation_download_in_progress = False
+        self.installer_update_required = False
 
         self.root = tk.Tk()
         self.root.title("KuloNiku FR")
         self.root.geometry("760x480")
         self.root.minsize(680, 440)
         try:
-            self.root.iconbitmap(str(self.paths.base / "KuloNikuFR.ico"))
+            self.root.iconbitmap(str(self.paths.icon))
         except tk.TclError:
             pass
 
@@ -236,11 +320,26 @@ class WindowsLauncher:
         )
         self.status_message.pack(anchor="w", pady=(5, 0))
 
-        game_row = ttk.Frame(outer)
-        game_row.pack(fill="x", pady=(18, 12))
-        self.game_label = ttk.Label(game_row, text="Aucun jeu sélectionné", foreground="#505050")
+        self.update_frame = ttk.LabelFrame(outer, text=" Mise à jour de l’application ", padding=12)
+        self.update_message = ttk.Label(
+            self.update_frame,
+            text="Une nouvelle version de KuloNiku FR est disponible.",
+            foreground="#505050",
+        )
+        self.update_message.pack(side="left", fill="x", expand=True)
+        self.release_button = ttk.Button(
+            self.update_frame,
+            text="Télécharger",
+            style="Primary.TButton",
+            command=self.open_release,
+        )
+        self.release_button.pack(side="right", padx=(12, 0))
+
+        self.game_row = ttk.Frame(outer)
+        self.game_row.pack(fill="x", pady=(18, 12))
+        self.game_label = ttk.Label(self.game_row, text="Aucun jeu sélectionné", foreground="#505050")
         self.game_label.pack(side="left", fill="x", expand=True)
-        self.choose_button = ttk.Button(game_row, text="Changer…", command=self.choose_game)
+        self.choose_button = ttk.Button(self.game_row, text="Changer…", command=self.choose_game)
         self.choose_button.pack(side="right")
 
         actions = ttk.Frame(outer)
@@ -288,13 +387,17 @@ class WindowsLauncher:
         footer = ttk.Frame(outer)
         footer.pack(side="bottom", fill="x", pady=(12, 0))
         ttk.Label(footer, text=f"Version {__version__}", foreground="#707070").pack(side="left")
-        self.release_button = ttk.Button(footer, text="Nouvelle version disponible", command=self.open_release)
         ttk.Button(footer, text="Projet GitHub", command=lambda: webbrowser.open(REPOSITORY_URL)).pack(side="right")
         ttk.Button(footer, text="À propos", command=self.show_about).pack(side="right", padx=(0, 8))
 
         self.root.after(80, self.select_default_installation)
+        self.root.after(120, self.check_latest_release)
 
     def set_status(self, title: str, message: str, kind: str = "warning") -> None:
+        if self.installer_update_required:
+            title = "Mise à jour de l’application requise"
+            message = "Le nouveau français demande cette version de KuloNiku FR."
+            kind = "warning"
         colors = {"good": "#188038", "info": "#1a73e8", "warning": "#c27c0e", "error": "#c5221f"}
         self.status_symbol.configure(foreground=colors[kind])
         self.status_title.configure(text=title)
@@ -326,7 +429,16 @@ class WindowsLauncher:
         if self.release_url:
             webbrowser.open(self.release_url)
 
-    def check_latest_release(self, edition: str, bundled_translation_hash: str) -> None:
+    def check_latest_release(
+        self,
+        edition: str | None = None,
+        bundled_translation_hash: str | None = None,
+    ) -> None:
+        if edition is not None and bundled_translation_hash is not None:
+            self.pending_translation_context = (edition, bundled_translation_hash)
+        if self.release_data is not None:
+            self.process_release_updates()
+            return
         if self.update_check_started:
             return
         self.update_check_started = True
@@ -354,18 +466,10 @@ class WindowsLauncher:
                 )
                 with urllib.request.urlopen(manifest_request, timeout=8) as response:
                     manifest = json.load(response)
-                kind = available_update_kind(
-                    manifest,
-                    edition=edition,
-                    bundled_translation_hash=bundled_translation_hash,
+                self.root.after(
+                    0,
+                    lambda: self.store_release_data(release, manifest),
                 )
-                if kind:
-                    self.root.after(
-                        0,
-                        lambda: self.show_available_update(
-                            kind, str(manifest.get("version", "")), release["html_url"]
-                        ),
-                    )
             except Exception as error:
                 self.root.after(
                     0,
@@ -376,17 +480,197 @@ class WindowsLauncher:
 
         threading.Thread(target=worker, daemon=True).start()
 
-    def show_available_update(self, kind: str, version: str, release_url: str) -> None:
+    def store_release_data(self, release: dict, manifest: dict) -> None:
+        self.release_data = (release, manifest)
+        self.process_release_updates()
+
+    def process_release_updates(self) -> None:
+        if self.release_data is None:
+            return
+        release, manifest = self.release_data
+        context = self.pending_translation_context
+        edition, bundled_hash = context if context else (None, None)
+        installer_available, translation_action = available_updates(
+            manifest,
+            edition=edition,
+            bundled_translation_hash=bundled_hash,
+        )
+        version = str(manifest.get("version", ""))
+        release_url = str(release["html_url"])
+        if installer_available:
+            self.show_available_installer(version, release_url)
+
+        if translation_action == "installer_required":
+            package = manifest.get("translation_package", {})
+            minimum = str(package.get("minimum_patcher_version", version))
+            self.show_available_installer(minimum, release_url, required=True)
+        elif translation_action == "download" and edition is not None:
+            self.download_translation_package(manifest, release, edition)
+        elif translation_action == "unavailable":
+            self.show_available_installer(version, release_url, package_unavailable=True)
+
+    def show_available_installer(
+        self,
+        version: str,
+        release_url: str,
+        *,
+        required: bool = False,
+        package_unavailable: bool = False,
+    ) -> None:
         self.release_url = release_url
-        if kind == "engine":
-            self.release_button.configure(text=f"Nouvel installateur {version}")
-            message = f"Nouvelle version de l’installateur sur GitHub : {version}"
-        else:
-            self.release_button.configure(text="Nouvelles traductions sur GitHub")
-            message = "Un nouveau lot de traductions est disponible sur GitHub."
-        if not self.release_button.winfo_manager():
-            self.release_button.pack(side="left", padx=(12, 0))
-        self.append_log(f"\n\n{message}")
+        self.release_button.configure(text="Télécharger")
+        self.update_message.configure(
+            text=(
+                f"KuloNiku FR {version} est disponible."
+                if version
+                else "Une mise à jour est disponible sur GitHub."
+            )
+        )
+        if not self.update_frame.winfo_manager():
+            self.update_frame.pack(fill="x", pady=(12, 0), before=self.game_row)
+            self.root.geometry("760x540")
+        if required:
+            self.installer_update_required = True
+            self.install_button.pack_forget()
+            self.set_status(
+                "Mise à jour de l’application requise",
+                "Le nouveau français demande cette version de KuloNiku FR.",
+                "warning",
+            )
+        elif package_unavailable:
+            self.set_status(
+                "Mise à jour disponible sur GitHub",
+                "Le lot automatique est indisponible. Utilisez la nouvelle application.",
+                "warning",
+            )
+        self.append_log(f"\n\nNouvelle version de l’application disponible : {version}.")
+
+    def download_translation_package(self, manifest: dict, release: dict, edition: str) -> None:
+        if self.translation_download_in_progress:
+            return
+        package = manifest.get("translation_package", {})
+        asset_name = package.get("asset")
+        expected_archive_hash = package.get("sha256")
+        expected_bundle_hash = package.get("bundles", {}).get(edition)
+        asset = next(
+            (item for item in release.get("assets", []) if item.get("name") == asset_name),
+            None,
+        )
+        if not asset or not expected_archive_hash or not expected_bundle_hash:
+            self.show_available_installer(
+                str(manifest.get("version", "")),
+                str(release["html_url"]),
+                package_unavailable=True,
+            )
+            return
+        self.translation_download_in_progress = True
+        self.append_log("\n\nTéléchargement de la mise à jour française…")
+
+        def worker() -> None:
+            cache_root = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "KuloNiku FR" / "translations"
+            destination = cache_root / str(expected_archive_hash)
+            candidate = destination / "fr.csv"
+            try:
+                cached_files = (
+                    {path.name for path in destination.iterdir()} if destination.is_dir() else set()
+                )
+                if not TRANSLATION_PACKAGE_FILES.issubset(cached_files):
+                    cache_root.mkdir(parents=True, exist_ok=True)
+                    handle, temporary_name = tempfile.mkstemp(
+                        prefix="translation-", suffix=".zip", dir=cache_root
+                    )
+                    os.close(handle)
+                    archive = Path(temporary_name)
+                    try:
+                        request = urllib.request.Request(
+                            asset["browser_download_url"],
+                            headers={"User-Agent": f"KuloNiku-FR/{__version__}"},
+                        )
+                        with urllib.request.urlopen(request, timeout=30) as response, archive.open(
+                            "wb"
+                        ) as output:
+                            shutil.copyfileobj(response, output)
+                        candidate = extract_translation_package(
+                            archive, destination, str(expected_archive_hash)
+                        )
+                    finally:
+                        archive.unlink(missing_ok=True)
+                self.root.after(
+                    0,
+                    lambda: self.validate_downloaded_translations(
+                        candidate,
+                        str(expected_bundle_hash),
+                        edition,
+                        str(release["html_url"]),
+                    ),
+                )
+            except Exception as error:
+                self.root.after(
+                    0,
+                    lambda message=str(error): self.translation_download_failed(
+                        str(release["html_url"]), message
+                    ),
+                )
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def validate_downloaded_translations(
+        self,
+        candidate: Path,
+        expected_bundle_hash: str,
+        edition: str,
+        release_url: str,
+    ) -> None:
+        if self.busy:
+            self.root.after(
+                250,
+                lambda: self.validate_downloaded_translations(
+                    candidate, expected_bundle_hash, edition, release_url
+                ),
+            )
+            return
+        if self.game is None:
+            self.translation_download_in_progress = False
+            return
+        arguments = [
+            str(self.paths.engine),
+            "status",
+            str(self.game),
+            "--translations",
+            str(candidate),
+            "--json",
+        ]
+
+        def validated(code: int, output: str) -> None:
+            self.set_busy(False)
+            try:
+                report = json.loads(output)
+            except json.JSONDecodeError:
+                report = {}
+            if (
+                code != 0
+                or report.get("edition") != edition
+                or report.get("available_bundle_sha256") != expected_bundle_hash
+            ):
+                shutil.rmtree(candidate.parent, ignore_errors=True)
+                self.translation_download_failed(release_url, "validation logique impossible")
+                return
+            self.translation_download_in_progress = False
+            self.active_translations = candidate
+            self.append_log("\nTraduction téléchargée et vérifiée. Elle est prête à être appliquée.")
+            self.analyze()
+
+        self.run_async(arguments, validated)
+
+    def translation_download_failed(self, release_url: str, message: str) -> None:
+        self.translation_download_in_progress = False
+        self.release_url = release_url
+        self.release_button.configure(text="Voir sur GitHub")
+        self.update_message.configure(text="Le téléchargement automatique est indisponible.")
+        if not self.update_frame.winfo_manager():
+            self.update_frame.pack(fill="x", pady=(12, 0), before=self.game_row)
+            self.root.geometry("760x540")
+        self.append_log(f"\nTéléchargement automatique indisponible : {message}.")
 
     def set_busy(self, busy: bool) -> None:
         self.busy = busy
@@ -403,12 +687,12 @@ class WindowsLauncher:
         if self.details_frame.winfo_manager():
             self.details_frame.pack_forget()
             self.details_button.configure(text="Afficher les détails techniques ▸")
-            self.root.geometry("760x480")
+            self.root.geometry("760x540" if self.update_frame.winfo_manager() else "760x480")
         else:
             footer = self.details_button.master.winfo_children()[-1]
             self.details_frame.pack(fill="both", expand=True, before=footer)
             self.details_button.configure(text="Masquer les détails techniques ▾")
-            self.root.geometry("760x680")
+            self.root.geometry("760x740" if self.update_frame.winfo_manager() else "760x680")
 
     def select_default_installation(self) -> None:
         missing = self.paths.validate()
@@ -462,7 +746,7 @@ class WindowsLauncher:
         assert self.game is not None
         arguments = [str(self.paths.engine), action, str(self.game)]
         if action in {"status", "install"}:
-            arguments.extend(["--translations", str(self.paths.translations)])
+            arguments.extend(["--translations", str(self.active_translations)])
         if json_output:
             arguments.append("--json")
         if apply:

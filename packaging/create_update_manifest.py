@@ -7,7 +7,7 @@ import hashlib
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
-from kuloniku_fr import __version__
+from kuloniku_fr import TRANSLATION_PACKAGE_MINIMUM_PATCHER_VERSION, __version__
 from kuloniku_fr.cli import translation_bundle_hash
 
 
@@ -45,7 +45,7 @@ def main() -> None:
             "version": __version__,
             "asset": archive.name,
             "sha256": archive_hash,
-            "minimum_patcher_version": __version__,
+            "minimum_patcher_version": TRANSLATION_PACKAGE_MINIMUM_PATCHER_VERSION,
             "bundles": bundle_hashes,
         },
     }

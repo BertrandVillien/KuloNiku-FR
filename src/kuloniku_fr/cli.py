@@ -320,7 +320,9 @@ def translation_bundle_hash(
             continue
         digest.update(path.name.encode("utf-8"))
         digest.update(b"\0")
-        digest.update(path.read_bytes())
+        # Git may check text files out with CRLF on Windows. The logical bundle
+        # must keep the same identity on every platform.
+        digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
         digest.update(b"\0")
     return digest.hexdigest()
 
