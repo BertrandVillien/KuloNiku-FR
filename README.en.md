@@ -21,18 +21,28 @@ until an official French localization becomes available.
 
 - French translation of every textual entry currently used by the game;
 - full game `1.1.1` and demo `0.10.5` tested on macOS;
-- macOS and Windows patching engine, with a real Windows test still pending;
-- unknown strings safely fall back to English after game updates;
-- no complete game file or extracted multilingual table is distributed.
+- patching engine compatible with macOS and Windows, with a real Windows test still needed;
+- unknown new strings remain in English after an update;
+- no game data or complete game file is distributed.
 
 > The patch currently reuses the German language slot. Restoring the game makes
 > German available again immediately.
 
-## Current installation method
+## Simple installation — coming soon
 
-Standalone installers are being prepared. Installing from source currently
-requires [Python](https://www.python.org/) and
-[uv](https://docs.astral.sh/uv/).
+Standalone **macOS** and **Windows** installers are being validated. This will
+be the recommended method: download the appropriate package from the
+[Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases) page, run
+the installer, review the displayed simulation, then confirm.
+
+The first release has not been published yet. Until then, the following method
+lets you test the patch from source.
+
+## Installation from source
+
+This method requires [Python](https://www.python.org/) and
+[uv](https://docs.astral.sh/uv/). It will remain available for people who want
+to inspect or modify the code.
 
 1. Close the game.
 2. Install dependencies:
@@ -41,7 +51,7 @@ requires [Python](https://www.python.org/) and
    uv sync
    ```
 
-3. Run the read-only simulation first:
+3. Run the simulation first; it makes no changes:
 
    ```sh
    uv run kuloniku-fr install "/path/to/KuloNiku.app"
@@ -64,14 +74,14 @@ To restore the verified backup created automatically:
 uv run kuloniku-fr restore "/path/to/KuloNiku.app" --apply
 ```
 
-## Safety model
+## Why installation remains safe
 
-- mandatory dry run before writing;
-- local SHA-256-verified backup;
-- reconstruction from the player’s own installation;
-- atomic replacement and straightforward rollback;
-- English and Indonesian source checks before each injection;
-- English fallback whenever an update changes or adds a string.
+- mandatory simulation before writing;
+- SHA-256-verified local backup;
+- reconstruction from your own installation;
+- atomic replacement and straightforward restoration;
+- English and Indonesian text checks before each injection;
+- English fallback when an update changes or adds a string.
 
 ## An adaptation, not a word-for-word translation
 
@@ -86,11 +96,22 @@ instead of approximate literal translations.
   <img src="docs/assets/kuloniku-fr-gameplay.jpg" width="49%" alt="A recipe and tutorial translated into French">
 </p>
 
-## Contributing without coding
+## Contributing without knowing how to code
 
-GitHub forms let players propose improved wording, attach a contextual
-screenshot, report text that does not fit, or describe an installation issue.
-The technical key is optional.
+Open the
+[Suggest a French correction](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml)
+form directly to:
+
+- suggest better wording;
+- attach a screenshot and explain the context;
+- report text that is too long or an installation issue.
+
+You must be signed in to a free GitHub account to view the form. The technical
+key is optional. Once the form is complete, click **Submit new issue**: your
+proposal will appear in the project’s issues and can be discussed. For an
+installation issue, use
+[Report an installation issue](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml)
+instead.
 
 Never attach a game file or a complete extraction. See
 [CONTRIBUTING.md](CONTRIBUTING.md) to contribute through Git or with an agent
