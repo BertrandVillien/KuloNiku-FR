@@ -308,15 +308,15 @@ def linux_steam_roots(home: Path | None = None) -> list[Path]:
 
 
 def steam_library_roots() -> list[Path]:
-    if os.name == "nt":
+    if sys.platform.startswith("linux"):
+        roots = linux_steam_roots()
+    elif os.name == "nt":
         roots = _registry_steam_roots()
         program_files = os.environ.get("PROGRAMFILES(X86)")
         if program_files:
             fallback = Path(program_files) / "Steam"
             if fallback not in roots:
                 roots.append(fallback)
-    elif sys.platform.startswith("linux"):
-        roots = linux_steam_roots()
     else:
         roots = []
 
