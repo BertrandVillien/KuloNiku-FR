@@ -1,128 +1,116 @@
 # KuloNiku FR
 
-Projet communautaire de traduction française de **KuloNiku: Bowl Up!**.
+**Patch français communautaire pour _KuloNiku: Bowls Up!_**
 
-## État actuel
+[English version](README.en.md)
 
-- Patch validé techniquement sur la démo macOS `0.10.5` et sur la version
-  complète macOS.
-- Extraction confirmée de la version complète : 13 173 clés, 8 langues.
-- Le menu du jeu n’accepte que huit emplacements codés. Le patch conserve
-  techniquement l’emplacement allemand (`de`), l’affiche comme « Français » et
-  y injecte le français. L’anglais de la version installée sert de repli.
-- Aucun fichier original du jeu ne doit être versionné ou distribué dans ce dépôt.
+![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
+![macOS testé](https://img.shields.io/badge/macOS-test%C3%A9-2ea44f)
+![Windows à valider](https://img.shields.io/badge/Windows-%C3%A0%20valider-f0ad4e)
+![Démo et jeu complet](https://img.shields.io/badge/%C3%A9ditions-d%C3%A9mo%20%7C%20complet-6f42c1)
 
-## Principes
+![Accueil de KuloNiku: Bowls Up! traduit en français](docs/assets/kuloniku-fr-home.jpg)
 
-1. Les traductions françaises communes vivent dans `translations/fr.csv`.
-2. Chaque traduction est relue à partir de toutes les langues disponibles et du
-   contexte donné par sa clé.
-3. Les fichiers Unity produits restent des artefacts locaux ou de publication,
-   jamais des sources Git.
-4. Toute installation doit proposer une sauvegarde et une restauration simples.
+KuloNiku FR permet de jouer en français à la démo et au jeu complet. Le projet
+est gratuit, non officiel et construit par la communauté dans l’attente d’une
+éventuelle localisation française officielle.
 
-## Essai utilisateur sûr
+## État du projet
 
-Fermer le jeu, puis commencer par une simulation :
+- traduction de toutes les entrées textuelles utilisées par le jeu ;
+- version complète `1.1.1` et démo `0.10.5` testées sur macOS ;
+- moteur compatible macOS et Windows, test réel Windows encore nécessaire ;
+- nouvelles phrases inconnues laissées en anglais après une mise à jour ;
+- aucune donnée ou fichier complet du jeu distribué.
 
-```sh
-uv sync
-uv run kuloniku-fr install "/chemin/vers/KuloNiku.app"
-```
+> Le patch utilise actuellement l’emplacement allemand du menu. Restaurer le
+> jeu rend immédiatement l’allemand disponible.
 
-Si le diagnostic est bon, appliquer le patch :
+## Installation actuelle
 
-```sh
-uv run kuloniku-fr install "/chemin/vers/KuloNiku.app" --apply
-```
+Les installateurs autonomes sont en préparation. La méthode depuis les sources
+nécessite pour l’instant [Python](https://www.python.org/) et
+[uv](https://docs.astral.sh/uv/).
 
-Restaurer la dernière sauvegarde vérifiée :
+1. Fermez le jeu.
+2. Installez les dépendances :
+
+   ```sh
+   uv sync
+   ```
+
+3. Lancez d’abord la simulation, qui ne modifie rien :
+
+   ```sh
+   uv run kuloniku-fr install "/chemin/vers/KuloNiku.app"
+   ```
+
+4. Si le diagnostic est correct, installez le patch :
+
+   ```sh
+   uv run kuloniku-fr install "/chemin/vers/KuloNiku.app" --apply
+   ```
+
+5. Relancez le jeu depuis Steam et choisissez **Français** dans les paramètres.
+
+Sous Windows, indiquez le dossier contenant `KuloNiku_Data` à la place de
+l’application macOS.
+
+Pour restaurer la sauvegarde vérifiée créée automatiquement :
 
 ```sh
 uv run kuloniku-fr restore "/chemin/vers/KuloNiku.app" --apply
 ```
 
-Sur Windows, donner le dossier qui contient `KuloNiku_Data`. Le même outil
-détecte automatiquement macOS/Windows et Démo/Complet.
+## Pourquoi l’installation reste sûre
 
-## Commandes de développement
+- simulation obligatoire avant écriture ;
+- sauvegarde locale vérifiée par SHA-256 ;
+- reconstruction depuis votre propre installation ;
+- remplacement atomique et restauration simple ;
+- contrôle des textes anglais et indonésien avant chaque injection ;
+- repli anglais lorsqu’une mise à jour change ou ajoute une phrase.
 
-```sh
-uv sync
-uv run kuloniku-fr inspect /chemin/vers/resources.assets
-uv run kuloniku-fr extract /chemin/vers/resources.assets work/source.csv
-uv run kuloniku-fr context /chemin/vers/resources.assets work/context.csv
-uv run kuloniku-fr lint /chemin/vers/resources.assets translations/fr.csv
-uv run kuloniku-fr build /chemin/vers/resources.assets translations/fr.csv work/resources.assets
-```
+## Une adaptation, pas une traduction mot à mot
 
-`context` produit un tableau de travail avec toutes les langues et la longueur
-maximale observée. Il reste dans `work/` car il contient les textes originaux du
-jeu. Le dépôt public ne distribue que les traductions françaises et les outils.
+Chaque ligne est étudiée avec les huit langues fournies par le jeu, sa clé
+technique, le contexte de la scène et la place disponible à l’écran. L’anglais
+reste la référence pour les faits et les règles ; l’indonésien éclaire la
+culture, les plats et l’intention du studio. Les noms culinaires sont adaptés à
+l’usage français plutôt que traduits par approximation.
 
-Après validation d'une nouvelle version complète, régénérer le garde-fou des
-textes source :
+<p>
+  <img src="docs/assets/kuloniku-fr-settings.jpg" width="49%" alt="Langue française sélectionnée dans les paramètres">
+  <img src="docs/assets/kuloniku-fr-gameplay.jpg" width="49%" alt="Recette et tutoriel traduits en français">
+</p>
 
-```sh
-uv run kuloniku-fr source-hashes --source work/source.csv
-```
+## Participer sans savoir programmer
 
-## Compatibilité avec les mises à jour
+Vous pouvez ouvrir un formulaire GitHub pour :
 
-Le patch est reconstruit depuis le `resources.assets` installé : il n’impose pas
-un fichier provenant d’une ancienne version. Chaque traduction est liée à une
-empreinte de ses sources anglaise et indonésienne. Si une mise à jour change le
-sens d'une clé connue, l'ancienne traduction est écartée et le texte anglais de
-la version installée sert de repli. Les nouvelles clés restent également en
-anglais jusqu'à leur traduction.
+- proposer une meilleure formulation ;
+- joindre une capture et expliquer le contexte ;
+- signaler un texte trop long ou un problème d’installation.
 
-La version complète reste la référence communautaire unique. La démo `0.10.5`
-utilise seulement `translations/demo-overrides.csv`, soit 699 exceptions pour
-les clés dont le sens diffère ou qui n'existent que dans cette ancienne
-version. Il n'y a donc pas de deuxième copie complète à maintenir. Le choix de
-ce profil est automatique lors de l'installation.
+La clé technique est facultative. Ne joignez jamais un fichier du jeu ou une
+extraction complète. Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour contribuer
+avec Git ou avec un agent comme Codex, Claude ou un autre outil.
 
-Projet communautaire non officiel, sans affiliation avec Gambir Studio.
+Les autres communautés peuvent forker le moteur pour préparer leur propre
+langue, sous réserve des droits du jeu et des traductions concernées.
 
-La langue allemande redevient disponible dès la restauration du fichier
-original. Cette contrainte pourra disparaître si le studio ouvre officiellement
-le menu à de nouveaux codes de langue.
+## Documentation
 
-Les futures releases autonomes seront construites pour macOS et Windows avec
-deux lanceurs simples : installer et restaurer. Leur état de validation est suivi
-dans `docs/ROADMAP.md`.
+- [Questions fréquentes](docs/FAQ.md)
+- [Compatibilité et mises à jour](docs/UPDATES.md)
+- [Qualité de la traduction](docs/QUALITY.md)
+- [Terminologie française](docs/TERMINOLOGY.md)
+- [Sécurité](SECURITY.md)
+- [Cadre juridique et attribution](docs/LEGAL.md)
 
-## Traduction complète par lots
+## Projet non officiel
 
-Le générateur exclut les textes déjà traduits et les sauvegardes de dialogues,
-puis crée des lots thématiques limités par un budget de caractères :
-
-```sh
-uv run kuloniku-fr make-batches --character-budget 80000
-```
-
-Chaque sous-agent reçoit seulement `translations/AGENT_BRIEF.md` et un CSV sous
-`work/translation-batches/source/`. Il écrit dans un fichier distinct sous
-`translations/batches/`, ce qui permet deux traductions parallèles sans conflit.
-
-Après validation des sorties :
-
-```sh
-uv run kuloniku-fr merge-batches
-uv run kuloniku-fr lint work/lab/game/resources.assets translations/fr.csv
-```
-
-Après les lots actifs, les sauvegardes de dialogues identiques sont propagées
-depuis leur dialogue principal et seules les variantes réelles deviennent de
-petits lots supplémentaires :
-
-```sh
-uv run kuloniku-fr prepare-backups
-uv run kuloniku-fr merge-batches \
-  --source-dir work/translation-backups/source \
-  --output-dir translations/backup-batches
-```
-
-Les choix culinaires et les validations visuelles restantes sont consignés dans
-`docs/TERMINOLOGY.md`. La couverture et les contrôles sont résumés dans
-`docs/QUALITY.md`.
+_KuloNiku: Bowls Up!_, ses textes, visuels et marques appartiennent à leurs
+ayants droit, notamment Gambir Studio et Raw Fury. Ce projet n’est ni affilié ni
+approuvé par eux. Il ne distribue aucun fichier complet du jeu et sera retiré ou
+archivé à leur demande ou si une traduction française officielle paraît.

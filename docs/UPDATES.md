@@ -46,11 +46,10 @@ Elle ne devra jamais être exécutée ou installée automatiquement.
 
 ## Ce qui reste à brancher
 
-L’interrogation distante n’est volontairement pas codée tant que le compte,
-l’URL finale du dépôt et le mode de publication ne sont pas fixés. Cela évite
-d’inscrire un domaine provisoire dans un mécanisme de confiance. GitHub permet
-ensuite de récupérer la dernière release et expose l’URL ainsi que l’empreinte
-des assets de release.
+Le dépôt de référence est `BertrandVillien/KuloNiku-FR`. L’interrogation
+distante restera désactivée jusqu’à la publication de la première release et de
+son manifeste vérifié. GitHub permettra ensuite de récupérer la dernière
+release et expose l’URL ainsi que l’empreinte des assets de release.
 
 ## Passage à une nouvelle version du jeu
 

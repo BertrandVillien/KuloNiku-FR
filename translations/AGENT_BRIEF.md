@@ -2,7 +2,7 @@
 
 ## Univers et ton
 
-KuloNiku: Bowl Up! est un jeu chaleureux de cuisine et de gestion, avec humour,
+KuloNiku: Bowls Up! est un jeu chaleureux de cuisine et de gestion, avec humour,
 caractères hauts en couleur et moments plus émouvants. Le joueur ou la joueuse
 hérite de **Bakuso**, le restaurant de boulettes de viande autrefois célèbre de
 sa grand-mère, dans la petite ville de **KuloNiku**. Il faut restaurer sa gloire,
@@ -107,6 +107,6 @@ formulation neutre reste naturelle; sinon marquer la ligne `provisional`.
 Le fichier de lot est volontairement le seul contexte textuel détaillé fourni.
 Il contient toutes les traductions officielles disponibles pour ses seules clés.
 
-Synopsis de référence : description officielle de KuloNiku: Bowl Up! publiée par
+Synopsis de référence : description officielle de KuloNiku: Bowls Up! publiée par
 Gambir Studio et Raw Fury sur Steam, complétée par les textes multilingues extraits
 de la version installée.

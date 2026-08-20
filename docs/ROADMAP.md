@@ -26,8 +26,8 @@
 - rendu des accents et couverture de la police ;
 - ouverture des paquets macOS non notariés et ergonomie des lanceurs ;
 - autorisation du studio ou formulation finale concernant la traduction non officielle.
-- URL finale du dépôt, nécessaire avant d’activer la recherche distante de
-  mises à jour ;
+- première release et manifeste vérifié, nécessaires avant d’activer la
+  recherche distante de mises à jour ;
 - licence ou autorisation explicite couvrant la redistribution du CSV français ;
 - identité visuelle et capture française de la version complète pour le README.
 

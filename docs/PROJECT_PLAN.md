@@ -21,8 +21,9 @@ conversation ou avec un autre agent.
 
 ## Priorité 2 — expérience GitHub
 
-- [ ] README français court, illustrable et doté de badges utiles.
-- [ ] README anglais équivalent.
+- [x] README français court, illustré par des captures réelles et doté de badges
+  factuels.
+- [x] README anglais équivalent.
 - [x] FAQ courte : lancement Steam, sauvegarde, mises à jour, allemand remplacé,
   antivirus/macOS, démo et désinstallation.
 - [x] Formulaire GitHub de correction accessible sans compétence technique,
@@ -32,7 +33,7 @@ conversation ou avec un autre agent.
   agent IA.
 - [ ] Demander de l'aide pour améliorer le français jusqu'à une localisation
   officielle et inviter les autres communautés à forker le moteur.
-- [ ] Ajouter une capture de la page d'accueil française de la version complète
+- [x] Ajouter une capture de la page d'accueil française de la version complète
   avant publication. Ne pas utiliser une capture marquée « Demo ».
 
 ## Priorité 3 — maintenance de la traduction
@@ -103,7 +104,8 @@ stockage Windows doit être vérifié avant toute automatisation réversible.
 
 ## Questions à trancher avec le mainteneur
 
-- Nom du compte et URL définitive du dépôt GitHub.
+- [x] Dépôt GitHub privé créé sous `BertrandVillien/KuloNiku-FR` ; passage en
+  public à confirmer après autorisation et validations.
 - Adresse ou canal public à utiliser pour contacter Raw Fury/Gambir Studio.
 - Licence souhaitée pour les traductions françaises si elle doit différer de la
   licence MIT du code.

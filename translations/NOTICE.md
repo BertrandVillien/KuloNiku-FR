@@ -2,7 +2,7 @@
 
 La présence de `fr.csv` dans ce dépôt ne constitue pas une licence accordée sur
 les textes, personnages, noms ou autres éléments préexistants de KuloNiku:
-Bowl Up! La licence MIT à la racine couvre le patcher et la documentation
+Bowls Up! La licence MIT à la racine couvre le patcher et la documentation
 originale, pas les droits détenus par Gambir Studio, Raw Fury ou d’autres ayants
 droit.
 
