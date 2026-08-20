@@ -20,7 +20,7 @@
 ## 3. Install French
 
 1. Wait for **Prêt à installer le français**.
-2. Take the first screenshot of the application.
+2. [Take the first screenshot of the application](#requested-screenshots).
 3. Select **Installer le français** and confirm.
 4. After success, select **Revérifier**. The application should display
    **Installation propre et à jour**.

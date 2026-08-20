@@ -22,7 +22,7 @@
 ## 3. Installer le français
 
 1. Attendez l’état **Prêt à installer le français**.
-2. Prenez une première capture de l’application.
+2. [Prenez une première capture de l’application](#captures-demandées).
 3. Cliquez sur **Installer le français** et confirmez.
 4. Après le message de réussite, cliquez sur **Revérifier**. L’application doit
    afficher **Installation propre et à jour**.
