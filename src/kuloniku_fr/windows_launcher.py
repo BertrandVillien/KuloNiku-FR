@@ -471,15 +471,23 @@ class WindowsLauncher:
         )
         self.analyze_button.pack(side="right")
 
+        self.footer = ttk.Frame(outer)
+        self.footer.pack(side="bottom", fill="x", pady=(12, 0))
+        ttk.Label(self.footer, text=f"Version {__version__}", foreground="#707070").pack(side="left")
+        ttk.Button(self.footer, text="Projet GitHub", command=lambda: webbrowser.open(REPOSITORY_URL)).pack(side="right")
+        ttk.Button(self.footer, text="À propos", command=self.show_about).pack(side="right", padx=(0, 8))
+
         self.advanced_visible = False
         self.log_visible = False
+        self.advanced_area = ttk.Frame(outer)
+        self.advanced_area.pack(side="bottom", fill="x", pady=(8, 0))
         self.advanced_button = ttk.Button(
-            outer,
+            self.advanced_area,
             text="Options avancées ▸",
             command=self.toggle_advanced,
         )
-        self.advanced_button.pack(anchor="w", pady=(8, 0))
-        self.advanced_frame = ttk.Frame(outer)
+        self.advanced_button.pack(anchor="w")
+        self.advanced_frame = ttk.Frame(self.advanced_area)
         utility_row = ttk.Frame(self.advanced_frame)
         utility_row.pack(fill="x")
         self.details_button = ttk.Button(
@@ -510,12 +518,6 @@ class WindowsLauncher:
             background="#f5f5f5",
         )
         self.log.pack(fill="both", expand=True, pady=(6, 0))
-
-        self.footer = ttk.Frame(outer)
-        self.footer.pack(side="bottom", fill="x", pady=(12, 0))
-        ttk.Label(self.footer, text=f"Version {__version__}", foreground="#707070").pack(side="left")
-        ttk.Button(self.footer, text="Projet GitHub", command=lambda: webbrowser.open(REPOSITORY_URL)).pack(side="right")
-        ttk.Button(self.footer, text="À propos", command=self.show_about).pack(side="right", padx=(0, 8))
 
         self.root.after(80, self.select_default_installation)
         self.root.after(120, self.check_latest_release)
@@ -816,19 +818,14 @@ class WindowsLauncher:
             self.restore_button.configure(state="normal" if self.restore_available else "disabled")
 
     def refresh_window_geometry(self) -> None:
-        height = 480
-        if self.update_frame.winfo_manager():
-            height += 60
-        if self.advanced_visible:
-            height += 55
-        if self.advanced_visible and self.log_visible:
-            height += 200
+        self.root.update_idletasks()
+        height = max(480, self.root.winfo_reqheight())
         self.root.geometry(f"760x{height}")
 
     def toggle_advanced(self) -> None:
         self.advanced_visible = not self.advanced_visible
         if self.advanced_visible:
-            self.advanced_frame.pack(fill="x", pady=(8, 0), before=self.footer)
+            self.advanced_frame.pack(fill="x", pady=(8, 0))
             self.advanced_button.configure(text="Options avancées ▾")
         else:
             self.advanced_frame.pack_forget()
