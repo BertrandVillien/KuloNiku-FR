@@ -1,28 +1,85 @@
-# Install KuloNiku FR on Steam Deck
+# Install and test KuloNiku FR on Steam Deck
 
-> **Beta awaiting validation on a real Steam Deck.** The current AppImage is a
-> test artifact and is not included in a stable release yet.
+> **Beta awaiting validation on real Steam Deck hardware.** The current
+> AppImage passed automated checks and a complete Linux VM test with Steam and
+> Proton. It is not part of a stable release yet.
 
-1. Switch to **Desktop Mode**.
-2. Download `KuloNiku-FR-Steam-Deck-x86_64.AppImage` from the latest
-   [Steam Deck build](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/package-steam-deck.yml).
-3. Right-click the file, open **Properties > Permissions**, and enable
-   **Is executable**.
-4. Open the AppImage and choose **Installer le français**.
-5. Return to Gaming Mode, launch KuloNiku, and select **Français** in settings.
+## Download the beta
 
-The application detects internal storage, Steam libraries, and microSD cards.
-If needed, **Changer…** lets you select the folder containing `KuloNiku_Data`.
+- [Download the KuloNiku-FR-Steam-Deck-x86_64 artifact](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32375908790/artifacts/9409065188).
+- [View the successful workflow run](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32375908790).
 
-During beta testing, GitHub automatically wraps the artifact in a download
-archive. Extract it once to get the AppImage. The future stable release will
-provide the AppImage file directly.
+GitHub requires testers to sign in before downloading an Actions artifact. This
+beta artifact expires on **September 3, 2026**. The downloaded ZIP contains the
+AppImage and its `.sha256` file.
 
-Do not use `sudo`, `pacman`, Protontricks, Wine, or disable SteamOS read-only
-mode. The AppImage requires no system installation.
+- GitHub artifact ZIP SHA-256:
+  `f67aa97825007873a7b8a7850ee56974f44ef18e480b52bf912ae8e6bc42a068`
+- AppImage SHA-256:
+  `53abe0fa1cc87e31ab5c7c1aa11722d4947cca9ce3e595a9b383f1acacc510a7`
 
-[Official AppImage guide](https://docs.appimage.org/introduction/quickstart.html)
-· [Official Steam Deck Desktop Mode FAQ](https://help.steampowered.com/es/faqs/view/671A-4453-E8D2-323C)
+## Before patching
 
-After testing on real hardware, report any issue through the
-[installation form](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml).
+1. Use the Stable SteamOS channel and install its updates.
+2. Install a legitimate copy of the demo or full game from Steam, either on
+   internal storage or on a Steam Deck-formatted microSD card.
+3. Let Steam finish downloading the game and its Proton components.
+4. Launch the **unpatched game** once, reach its main menu, and quit normally.
+5. Record the Deck model, SteamOS version, game edition, and storage location.
+
+Do not add Steam launch options. `PROTON_USE_WINED3D=1 %command%` was only a
+VirtualBox workaround and must not be used on Steam Deck hardware.
+
+## Install French
+
+1. Select **Steam > Power > Switch to Desktop**.
+2. Open Firefox, sign in to GitHub, and download the artifact linked above.
+3. Open **Downloads** in Dolphin and extract the ZIP once.
+4. Right-click the extracted AppImage, open **Properties > Permissions**, and
+   enable **Is executable**.
+5. Double-click the AppImage and choose **Launch** if Dolphin asks.
+6. Wait for the automatic detection and simulation to finish.
+7. Confirm that the correct Steam edition is detected and that the status says
+   **Prêt à installer le français**.
+8. Select **Installer le français** and confirm. A SHA-256-verified backup is
+   created before the local game file is replaced.
+9. After success, select **Revérifier** and confirm that the installation is
+   clean and current.
+
+![Linux installer ready to apply the patch](assets/kuloniku-fr-linux-installer.png)
+
+If automatic detection fails, use **Changer…** and select the game directory
+that contains `KuloNiku_Data`. Do not select `resources.assets` itself.
+
+## Test in game
+
+1. Close the AppImage and return to Gaming Mode.
+2. Launch KuloNiku normally from Steam.
+3. Select **Français** in the language settings.
+4. Check the main menu, settings, one tutorial, one recipe, and one dialogue.
+5. Quit and relaunch the game to confirm that the language remains selected.
+
+The patch does not run in the background and does not change Proton, so it
+should not reduce performance on actual hardware. Severe VM slowdown came from
+VirtualBox software rendering.
+
+## Test restore and reinstall
+
+1. Quit the game and switch back to Desktop Mode.
+2. Reopen the AppImage and wait for verification.
+3. Select **Restaurer l’original** and confirm.
+4. Select **Revérifier**; installation should be offered again.
+5. Launch the restored game briefly and confirm that it still works.
+6. Quit, reinstall French with the AppImage, and verify French in game again.
+
+Keep the AppImage during beta testing so the patch can be checked, updated, or
+restored.
+
+Do not use `sudo`, `pacman`, Protontricks, or Wine, and do not disable SteamOS
+read-only mode. Never attach game files, patch backups, Steam credentials, or
+crash reports containing personal data to an issue.
+
+[Report a Steam Deck issue](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml)
+· [Official Steam Deck Desktop Mode FAQ](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C)
+· [Official SteamOS and Proton overview](https://www.steamdeck.com/en/software)
+· [Download GitHub Actions artifacts](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)
