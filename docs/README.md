@@ -19,5 +19,4 @@
 
 - [Cycle de maintenance](MAINTAINER_WORKFLOW.md)
 - [Architecture des installateurs](DISTRIBUTION.md)
-- [Feuille de route](ROADMAP.md)
 - [Cadre juridique et attribution](LEGAL.md)
