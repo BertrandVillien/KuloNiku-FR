@@ -50,7 +50,9 @@ une capture. Le code et la fabrication des paquets sont publics.
 
 ## Comment proposer une meilleure formulation ?
 
-Utilisez le formulaire GitHub « Proposer une correction française ». Aucune
+Utilisez le formulaire GitHub
+[« Proposer une correction française »](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml).
+Aucune
 connaissance de Git n’est nécessaire. Indiquez le contexte et, si possible, une
 capture limitée à l’écran concerné.
 

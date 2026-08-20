@@ -9,7 +9,7 @@ Objet : Demande d’autorisation — patch français communautaire pour KuloNiku
 
 Bonjour,
 
-Je prépare bénévolement un patch français non officiel pour KuloNiku: Bowls Up!
+Je prépare bénévolement un patch français non officiel pour KuloNiku: Bowl Up!
 La traduction de la démo m’a permis de découvrir le jeu et m’a directement
 conduit à acheter la version complète.
 
@@ -36,7 +36,7 @@ Subject: Permission request — community French patch for KuloNiku
 
 Hello,
 
-I am volunteering on an unofficial French patch for KuloNiku: Bowls Up! Being
+I am volunteering on an unofficial French patch for KuloNiku: Bowl Up! Being
 able to translate and play the demo is what convinced me to purchase the full
 game.
 

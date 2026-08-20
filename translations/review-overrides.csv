@@ -1,5 +1,5 @@
 key,fr,status,notes
-TOOLS_TOPPING,Table de découpe,reviewed,Terme harmonisé avec les tutoriels et la boutique.
+TOOLS_TOPPING,Zone de découpe,reviewed,Arbitrage utilisateur : zone de jeu et catégorie d'ingrédients.
 TOOLS_SEASONING,Assaisonnement,reviewed,Nom de station couvrant sauces et condiments.
 Dialogue/FOODREVIEW_NO_ICE,Vous n'avez pas mis de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
 Dialogue/FOODREVIEW_WRONG_ICE,Je ne voulais pas de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
@@ -9,9 +9,9 @@ Shop/SHOP_DRINK_ICE_NAME,Glaçons,reviewed,Évite l'ambiguïté avec une crème 
 Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_NAME,Vermicelles de riz premium,reviewed,Terme harmonisé avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_DESC,"Vermicelles de riz premium pour la table de cuisson.<br>""Délicieux et nourrissants, ces vermicelles seraient filés à partir des nuages du paradis.""",reviewed,Terme harmonisé avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné premium,reviewed,Graphie harmonisée avec l'ingrédient standard.
-Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium de la zone de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard et la terminologie de la station.
 Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki premium,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Surimi Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Surimi Narutomaki premium de la zone de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,Arbitrages utilisateur : terme japonais conservé et station nommée zone de découpe.
 INGREDIENT_SKEWER_OCTOPUS,Poulpe,reviewed,Les six autres langues désignent le poulpe ; thaï et allemand divergent.
 NOTIFICATION_UNLOCK_MESSAGE,"Débloqué : [X]",reviewed,Formulation neutre pour tout élément déverrouillé.
 Dialogue/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « A fond les boulettes », je ne dois pas laisser les revers me définir !",reviewed,Arbitrage utilisateur du titre de chanson ; A majuscule sans accent pour compatibilité de police.
@@ -76,7 +76,7 @@ Dialogue/VNC0_35,"Oh, on a un nouvel article au menu. C'est un gâteau aux frais
 Festival/DESC_FES_MEAT_DAY,Au moins 2 ingrédients carnés par commande,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_SPICE_MANIA,Au moins 2 ingrédients de la table d'assaisonnement par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_DEEPLY_FRIED,Au moins 2 ingrédients de la table de friture par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
-Festival/DESC_FES_FLASHY_SLASH,Au moins 2 ingrédients de la table de découpe par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_FLASHY_SLASH,Chaque commande doit utiliser au moins 2 ingrédients de la zone de découpe.,reviewed,Anglais et indonésien concordent sur la quantité 2 ; terminologie harmonisée.
 Festival/DESC_FES_BROTH_FOCUSED,Au moins 2 ingrédients de la table de cuisson par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_FARM_HARVEST,Au moins 2 légumes par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Tutorial/GPN10_3,"Voici ta liste d'[COLOR=ALERT]objectifs[/COLOR]. Commence par créer une recette et obtenir quelques ingrédients !",reviewed,Formulation neutre.
@@ -268,7 +268,7 @@ Dialogue/MEI_JOB_5,briller,reviewed,Fragment verbal neutre.
 Dialogue/MEI_JOB_6,faire le show,reviewed,Fragment verbal neutre.
 Dialogue/MEI_JOB_7,dominer,reviewed,Fragment verbal neutre.
 Dialogue/MEI_JOB_8,régner,reviewed,Fragment verbal neutre.
-TUTORIAL_BASIC_BOWL_TO_CUTTING,Amène le bol à la zone GARNITURES.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_BOWL_TO_CUTTING,Amène le bol dans la zone de découpe.,reviewed,Tutoiement harmonisé avec Cassie ; terminologie de la station validée par l'utilisateur.
 TUTORIAL_BASIC_SELECT_CUTTING_INGREDIENT,Sélectionne l'ingrédient à couper.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
 TUTORIAL_BASIC_CUT_INGREDIENT,"Coupe l'ingrédient. Quand tu as fini, relâche le couteau.",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
 TUTORIAL_BASIC_COLLECT_SLICED,Récupère l'ingrédient coupé.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
@@ -530,3 +530,17 @@ Dialogue/VND6_32,"Personne ne devinerait que tu es un espion de haut niveau. Tu 
 Dialogue/VND6_36,"Tu as raison. Pour tout étranger, nous ressemblons à des amis se promenant dans le parc.",reviewed,Audit résiduel : tutoiement.
 Dialogue/VNST6_13,"Ce sera plus facile de te le montrer. Asseyons-nous là-bas !",reviewed,Audit résiduel : tutoiement.
 Dialogue/VNST6_31,"Bien sûr, je suis sûr que nous pouvons trouver un moyen de t'impliquer.",reviewed,Audit résiduel : tutoiement.
+TUTORIAL_CUTTING_OPENING,"On a maintenant une zone de découpe, super ! Essayons-la.",reviewed,Terminologie de la station validée par l'utilisateur.
+Dialogue/UMEINTRO_6,"Oh, euh... et comme cadeau de bienvenue, nous aimerions t'offrir ce [COLOR=ALERT]poste de découpe[/COLOR].",reviewed,Poste désigne ici l'équipement complet ; tutoiement harmonisé.
+Dialogue/VNU1_42,"Mais quand je t'ai donné ce poste de découpe, j'ai compris.",reviewed,Poste désigne ici l'équipement complet.
+Dialogue/CEM12_START_12,J'ai constaté une hausse considérable des ventes de postes de découpe et de poêles.,reviewed,Poste désigne ici l'équipement complet.
+Shop/IMPROVED_CUTTING_BOARD_NAME,Planche à découper améliorée,reviewed,Nom précis de l'objet physique.
+Shop/IMPROVED_CUTTING_BOARD_DESC,[COLOR=ALERT]Augmente la capacité de la zone de découpe de 1.[/COLOR]<br>« Une planche à découper capable de trancher le temps et le destin (à ce qu'il paraît). »,reviewed,Distinction entre la zone de jeu et l'objet physique.
+Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SOUR]acide[/COLOR] et moins [COLOR=SWEET]sucré[/COLOR].<br>« Cette légère acidité donne du peps à chaque plat. »,reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_INGREDIENT_CHILI_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SALTY]salé[/COLOR].<br>« Ça vous donne chaud. »,reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_INGREDIENT_SPRINGONION_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SWEET]sucré[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Fraîche comme une brise de printemps. »,reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_INGREDIENT_GARLIC_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SOUR]acide[/COLOR].<br>« En manger vous immunise contre le vampirisme. »,reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_INGREDIENT_FISHCAKE_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SALTY]salé[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Un excellent gâteau d'anniversaire pour les amateurs de fruits de mer. »,reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_PREMIUM_INGREDIENT_CHILI_DESC,"Piment premium de la zone de découpe.<br>""Un piment récemment découvert, réputé pour son piquant exquis. Sa séquence ADN ne ressemble à aucun autre organisme terrestre.""",reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_DESC,"Cébette premium de la zone de découpe.<br>""Si verte et fraîche, cette cébette apporterait la paix en temps de troubles.""",reviewed,Terminologie de la catégorie harmonisée.
+Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_DESC,"Ail premium de la zone de découpe.<br>""Une variété précieuse, aussi appelée ""perles du Sud"" pour son éclat captivant.""",reviewed,Terminologie de la catégorie harmonisée.

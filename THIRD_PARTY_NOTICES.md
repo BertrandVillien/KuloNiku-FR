@@ -1,6 +1,6 @@
 # Mentions de tiers
 
-KuloNiku: Bowls Up!, ses marques, textes, personnages, visuels et autres assets
+KuloNiku: Bowl Up!, ses marques, textes, personnages, visuels et autres assets
 appartiennent à leurs ayants droit, notamment Gambir Studio et Raw Fury. Ce
 projet communautaire n’est ni officiel ni affilié à ces sociétés.
 

@@ -55,7 +55,7 @@ TOOLS_LADDLE,Louche,reviewed,
 TOOLS_STOVE,Plaque,reviewed,
 TOOLS_HOTPOT,Marmite,reviewed,
 TOOLS_FRYING,Poêle,reviewed,
-TOOLS_TOPPING,Table de découpe,reviewed,Terme harmonisé avec les tutoriels et la boutique.
+TOOLS_TOPPING,Zone de découpe,reviewed,Terme harmonisé avec la zone de jeu et la catégorie d'ingrédients.
 TOOLS_SEASONING,Assaisonnement,reviewed,Nom de station couvrant sauces et condiments.
 TOOLS_KNIFE,Couteau,reviewed,
 TOOLS_WASHING,Évier,reviewed,
@@ -206,8 +206,8 @@ TUTORIAL_DISCARD_END,Pas d’inquiétude si tu dois recommencer : l’erreur est
 TUTORIAL_REMAKE_OPENING,Oups ! On dirait que le client a renvoyé le plat.,reviewed,
 TUTORIAL_REMAKE_EXPLANATION,Cela arrive si le plat ne lui plaît pas ou s'il manque des ingrédients.,reviewed,
 TUTORIAL_REMAKE_END,Ne te décourage pas. Lis bien la commande et refais le plat. Tu y arriveras.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
-TUTORIAL_CUTTING_OPENING,"On a maintenant une table de découpe, super ! Essayons-la.",reviewed,
-TUTORIAL_BASIC_BOWL_TO_CUTTING,Amène le bol à la zone GARNITURES.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_CUTTING_OPENING,"On a maintenant une zone de découpe, super ! Essayons-la.",reviewed,
+TUTORIAL_BASIC_BOWL_TO_CUTTING,Amène le bol dans la zone de découpe.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
 TUTORIAL_BASIC_SELECT_CUTTING_INGREDIENT,Sélectionne l'ingrédient à couper.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
 TUTORIAL_BASIC_CUT_INGREDIENT,"Coupe l'ingrédient. Quand tu as fini, relâche le couteau.",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
 TUTORIAL_BASIC_COLLECT_SLICED,Récupère l'ingrédient coupé.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
@@ -708,7 +708,7 @@ Dialogue/UMEINTRO_3,Je m'appelle Ume. C'est euh... un plaisir de faire votre con
 Dialogue/UMEINTRO_4,M-Ma famille tient l'épicerie du coin. Elle s'appelle [COLOR=ALERT]Ume Shop[/COLOR]. ,reviewed,
 Dialogue/UMEINTRO_4B,Elle était fermée un temps. Nous avons fait une sortie p-parachute... Aïe.,reviewed,
 Dialogue/UMEINTRO_5,E-En tout cas nous sommes ouverts maintenant. Nous avons de tout un peu : outils produits frais et même déco.,reviewed,
-Dialogue/UMEINTRO_6,Oh euh... et comme cadeau de bienvenue nous aimerions vous offrir ce [COLOR=ALERT]set de table de découpe[/COLOR].,reviewed,
+Dialogue/UMEINTRO_6,"Oh, euh... et comme cadeau de bienvenue, nous aimerions t'offrir ce [COLOR=ALERT]poste de découpe[/COLOR].",reviewed,
 Dialogue/UMEINTRO_7,"""Libérez le ninja qui est en vous ! Piquez tranchez et émincez tout sur votre chemin grâce à notre technologie Blade 3.0 de pointe !""",reviewed,
 Dialogue/UMEINTRO_8,... C-C'est écrit sur la brochure.,reviewed,
 Dialogue/UMEINTRO_9,Ça devrait vous aider à préparer plus de plats. Euh... Peut-être voulez-vous essayer ?,reviewed,
@@ -1725,7 +1725,7 @@ Dialogue/VNU1_CHOICE_11,Mais tu te débrouilles déjà bien !,reviewed,
 Dialogue/VNU1_39,V-Vraiment ? Tu le penses ?,reviewed,
 Dialogue/VNU1_40,Tu n'avais pas besoin de dire ça par politesse. Mais... merci.,reviewed,
 Dialogue/VNU1_41,"À vrai dire, inventaire et compta me plaisent parfois. Mais les clients... pas mon truc.",reviewed,
-Dialogue/VNU1_42,"Mais quand je t'ai donné cette table de découpe, j'ai compris.",reviewed,
+Dialogue/VNU1_42,"Mais quand je t'ai donné ce poste de découpe, j'ai compris.",reviewed,
 Dialogue/VNU1_43,Je peux très bien parler si je lis. Comme quand je lisais cette brochure.,reviewed,
 Dialogue/VNU1_44,"A-Alors, je pense préparer des scripts pour parler aux gens.",reviewed,
 Dialogue/VNU1_45,"Qu'en penses-tu, [NAME] ?",reviewed,
@@ -2209,7 +2209,7 @@ Dialogue/CEM12_START_9,Ce serait peut-être un peu trop. Quelques mots d'encoura
 Dialogue/CEM12_START_CHOICE_3,Qu'est-ce que j'y gagne ?,reviewed,
 Dialogue/CEM12_START_10,Je t'en prie ! Tu comptes beaucoup pour elle.,reviewed,
 Dialogue/CEM12_START_11,Hum. J'ai autre chose à te dire.,reviewed,
-Dialogue/CEM12_START_12,J'ai constaté une hausse considérable des ventes du Set de table de découpe et du Set de poêles.,reviewed,
+Dialogue/CEM12_START_12,J'ai constaté une hausse considérable des ventes de postes de découpe et de poêles.,reviewed,
 Dialogue/CEM12_START_13,J'émets l'hypothèse que c'est dû à l'influence de Bakuso. À ton influence.,reviewed,
 Dialogue/CEM12_START_14,Veux-tu accepter ce [COLOR=ALERT]Set de table à brochettes[/COLOR] et l'ajouter à ton arsenal ?,reviewed,
 Dialogue/CEM12_START_15,"Si les ventes montent encore, tu auras prouvé ton influence ici.",reviewed,
@@ -7138,7 +7138,7 @@ Dialogue (Backup)/UMEINTRO_3,Je m'appelle Ume. C'est euh... un plaisir de faire 
 Dialogue (Backup)/UMEINTRO_4,M-Ma famille tient l'épicerie du coin. Elle s'appelle [COLOR=ALERT]Ume Shop[/COLOR]. ,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/UMEINTRO_4B,Elle était fermée un temps. Nous avons fait une sortie p-parachute... Aïe.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/UMEINTRO_5,E-En tout cas nous sommes ouverts maintenant. Nous avons de tout un peu : outils produits frais et même déco.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/UMEINTRO_6,Oh euh... et comme cadeau de bienvenue nous aimerions vous offrir ce [COLOR=ALERT]set de table de découpe[/COLOR].,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/UMEINTRO_6,"Oh, euh... et comme cadeau de bienvenue, nous aimerions t'offrir ce [COLOR=ALERT]poste de découpe[/COLOR].",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/UMEINTRO_7,"""Libérez le ninja qui est en vous ! Piquez tranchez et émincez tout sur votre chemin grâce à notre technologie Blade 3.0 de pointe !""",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/UMEINTRO_8,... C-C'est écrit sur la brochure.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/UMEINTRO_9,Ça devrait vous aider à préparer plus de plats. Euh... Peut-être voulez-vous essayer ?,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8435,7 +8435,7 @@ Dialogue (Backup)/CEM12_START_9,Ce serait peut-être un peu trop. Quelques mots 
 Dialogue (Backup)/CEM12_START_CHOICE_3,Qu'est-ce que j'y gagne ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM12_START_10,Je t'en prie ! Tu comptes beaucoup pour elle.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM12_START_11,Hum. J'ai autre chose à te dire.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/CEM12_START_12,J'ai constaté une hausse considérable des ventes du Set de table de découpe et du Set de poêles.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/CEM12_START_12,J'ai constaté une hausse considérable des ventes de postes de découpe et de poêles.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM12_START_13,J'émets l'hypothèse que c'est dû à l'influence de Bakuso. À ton influence.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM12_START_14,Veux-tu accepter ce [COLOR=ALERT]Set de table à brochettes[/COLOR] et l'ajouter à ton arsenal ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM12_START_15,"Si les ventes montent encore, tu auras prouvé ton influence ici.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11960,7 +11960,7 @@ Dialogue (Backup)/VNU1_CHOICE_11,Mais tu te débrouilles déjà bien !,reviewed,
 Dialogue (Backup)/VNU1_39,V-Vraiment ? Tu le penses ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU1_40,Tu n'avais pas besoin de dire ça par politesse. Mais... merci.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU1_41,"À vrai dire, inventaire et compta me plaisent parfois. Mais les clients... pas mon truc.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNU1_42,"Mais quand je t'ai donné cette table de découpe, j'ai compris.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNU1_42,"Mais quand je t'ai donné ce poste de découpe, j'ai compris.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU1_43,Je peux très bien parler si je lis. Comme quand je lisais cette brochure.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU1_44,"A-Alors, je pense préparer des scripts pour parler aux gens.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU1_45,"Qu'en penses-tu, [NAME] ?",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -12500,7 +12500,7 @@ Shop/DECOR_CASHIER,Caisse,reviewed,
 Shop/IMPROVED_BOILING_POT_NAME,Marmite améliorée,reviewed,
 Shop/IMPROVED_FRYING_TABLE_NAME,Table de friture améliorée,reviewed,
 Shop/IMPROVED_SKEWER_TABLE_NAME,Gril amélioré,reviewed,
-Shop/IMPROVED_CUTTING_BOARD_NAME,Planche améliorée,reviewed,
+Shop/IMPROVED_CUTTING_BOARD_NAME,Planche à découper améliorée,reviewed,
 Shop/IMPROVED_KITCHEN_SINK_NAME,Évier amélioré,reviewed,
 Shop/EXTRA_BOWL_NAME,Bol supplémentaire,reviewed,
 Shop/EXTRA_SKEWER_PLATE_NAME,Assiette à brochettes,reviewed,
@@ -12511,7 +12511,7 @@ Shop/UPGRADED_BOWL_NAME,Grand bol,reviewed,
 Shop/IMPROVED_BOILING_POT_DESC,[COLOR=ALERT]Réduit le temps de cuisson à l'eau de 15 %.<br>Augmente la capacité de cuisson de 1.[/COLOR]<br>« Une marmite légendaire capable de faire fondre les diamants (paraît-il). »,reviewed,
 Shop/IMPROVED_FRYING_TABLE_DESC,[COLOR=ALERT]Augmente la vitesse de friture de 25 %.<br>Augmente la capacité de la poêle de 1.[/COLOR]<br>« Un set de friture fabriqué avec une technologie interstellaire (soi-disant). »,reviewed,
 Shop/IMPROVED_SKEWER_TABLE_DESC,[COLOR=ALERT]Réduit le temps de cuisson des brochettes de 50 %.[/COLOR]<br>« Un gril utilisant les flammes draconiques de l'âge des légendes (prétendument). »,reviewed,Audit terminologie : valeur corrigée.
-Shop/IMPROVED_CUTTING_BOARD_DESC,[COLOR=ALERT]Augmente la capacité de la table de découpe de 1.[/COLOR]<br>« Un set de découpe capable de trancher le temps et le destin (à ce qu'il paraît). »,reviewed,
+Shop/IMPROVED_CUTTING_BOARD_DESC,[COLOR=ALERT]Augmente la capacité de la zone de découpe de 1.[/COLOR]<br>« Une planche à découper capable de trancher le temps et le destin (à ce qu'il paraît). »,reviewed,
 Shop/IMPROVED_KITCHEN_SINK_DESC,[COLOR=ALERT]Réduit le temps de lavage de 25 %[/COLOR]<br>« Un évier récupéré dans la cité engloutie d'Atlantide (en théorie). »,reviewed,
 Shop/EXTRA_BOWL_DESC,[COLOR=ALERT]Augmente le nombre de bols.[/COLOR]<br>« Qui aurait cru qu'un restaurant nécessiterait plus de deux bols ? »,reviewed,
 Shop/EXTRA_SKEWER_PLATE_DESC,[COLOR=ALERT]Augmente le nombre d'assiettes à brochettes.[/COLOR]<br>« Conçue pour tenir toute brochette avec style et dignité. »,reviewed,
@@ -12566,15 +12566,15 @@ Shop/SHOP_INGREDIENT_SKEWER_TOMATO_DESC,"Ingrédient pour la table à brochettes
 Shop/SHOP_INGREDIENT_SKEWER_LAMB_NAME,Agneau,reviewed,
 Shop/SHOP_INGREDIENT_SKEWER_LAMB_DESC,Ingrédient pour la table à brochettes.<br>« Célèbre pour son silence. »,reviewed,
 Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné,reviewed,Graphie harmonisée avec l'ingrédient.
-Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SOUR]acide[/COLOR] et moins [COLOR=SWEET]sucré[/COLOR].<br>« Cette légère acidité donne du peps à chaque plat. »,reviewed,
+Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SOUR]acide[/COLOR] et moins [COLOR=SWEET]sucré[/COLOR].<br>« Cette légère acidité donne du peps à chaque plat. »,reviewed,
 Shop/SHOP_INGREDIENT_CHILI_NAME,Piment,reviewed,
-Shop/SHOP_INGREDIENT_CHILI_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SALTY]salé[/COLOR].<br>« Ça vous donne chaud. »,reviewed,
+Shop/SHOP_INGREDIENT_CHILI_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SALTY]salé[/COLOR].<br>« Ça vous donne chaud. »,reviewed,
 Shop/SHOP_INGREDIENT_SPRINGONION_NAME,Cébette,reviewed,
-Shop/SHOP_INGREDIENT_SPRINGONION_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SWEET]sucré[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Fraîche comme une brise de printemps. »,reviewed,
+Shop/SHOP_INGREDIENT_SPRINGONION_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SWEET]sucré[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Fraîche comme une brise de printemps. »,reviewed,
 Shop/SHOP_INGREDIENT_GARLIC_NAME,Ail,reviewed,
-Shop/SHOP_INGREDIENT_GARLIC_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SOUR]acide[/COLOR].<br>« En manger vous immunise contre le vampirisme. »,reviewed,
+Shop/SHOP_INGREDIENT_GARLIC_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SOUR]acide[/COLOR].<br>« En manger vous immunise contre le vampirisme. »,reviewed,
 Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
-Shop/SHOP_INGREDIENT_FISHCAKE_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SALTY]salé[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Un excellent gâteau d'anniversaire pour les amateurs de fruits de mer. »,reviewed,
+Shop/SHOP_INGREDIENT_FISHCAKE_DESC,Ingrédient de la zone de découpe. Rend le plat plus [COLOR=SALTY]salé[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Un excellent gâteau d'anniversaire pour les amateurs de fruits de mer. »,reviewed,
 Shop/SHOP_SIDEDISH_RICE_NAME,Cuiseur à riz,reviewed,
 Shop/SHOP_SIDEDISH_RICE_DESC,"Outil pour le poste d'assaisonnement. [COLOR=ALERT]Cuit du riz en accompagnement.[/COLOR]<br>« Deux fois plus de glucides, deux fois plus de plaisir ! »",reviewed,Dépasse max source ; à vérifier.
 Shop/SHOP_DRINK_TEA_NAME,Thé,reviewed,
@@ -12626,15 +12626,15 @@ Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_TOMATO_DESC,"Tomate premium pour la table de
 Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_LAMB_NAME,Agneau premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SKEWER_LAMB_DESC,"Agneau premium pour la table de friture.<br>""Juteux et fumé au grill, c'est un délice même sans accompagnement.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné premium,reviewed,Graphie harmonisée avec l'ingrédient standard.
-Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
+Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium de la zone de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_CHILI_NAME,Piment premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_CHILI_DESC,"Piment premium pour la table de découpe.<br>""Un piment récemment découvert, réputé pour son piquant exquis. Sa séquence ADN ne ressemble à aucun autre organisme terrestre.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_CHILI_DESC,"Piment premium de la zone de découpe.<br>""Un piment récemment découvert, réputé pour son piquant exquis. Sa séquence ADN ne ressemble à aucun autre organisme terrestre.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_NAME,Cébette premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_DESC,"Cébette premium pour la table de découpe.<br>""Si verte et fraîche, cette cébette apporterait la paix en temps de troubles.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_DESC,"Cébette premium de la zone de découpe.<br>""Si verte et fraîche, cette cébette apporterait la paix en temps de troubles.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_NAME,Ail premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_DESC,"Ail premium pour la table de découpe.<br>""Une variété précieuse, aussi appelée ""perles du Sud"" pour son éclat captivant.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_DESC,"Ail premium de la zone de découpe.<br>""Une variété précieuse, aussi appelée ""perles du Sud"" pour son éclat captivant.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki premium,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Surimi Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Surimi Narutomaki premium de la zone de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
 Shop/SHOP_PREMIUM_SIDEDISH_RICE_NAME,Riz premium,reviewed,
 Shop/SHOP_PREMIUM_SIDEDISH_RICE_DESC,"Riz premium en accompagnement pour la table d'assaisonnement.<br>""Chaque grain reçoit un lavage, un rinçage et un massage délicats pour révéler sa saveur.""",reviewed,
 Shop/SHOP_PREMIUM_DRINK_TEA_NAME,Thé premium,reviewed,
@@ -12860,7 +12860,7 @@ Festival/DESC_FES_DEEPLY_FRIED,Au moins 2 ingrédients de la table de friture pa
 Festival/TITLE_FES_SKEWER_PROMO,Gala du grill,reviewed,
 Festival/DESC_FES_SKEWER_PROMO,Chaque commande doit avoir une brochette.,reviewed,
 Festival/TITLE_FES_FLASHY_SLASH,Découpe à gogo,reviewed,
-Festival/DESC_FES_FLASHY_SLASH,Au moins 2 ingrédients de la table de découpe par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
+Festival/DESC_FES_FLASHY_SLASH,Chaque commande doit utiliser au moins 2 ingrédients de la zone de découpe.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_BROTH_FOCUSED,Fête de la cuisson,reviewed,
 Festival/DESC_FES_BROTH_FOCUSED,Au moins 2 ingrédients de la table de cuisson par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/TITLE_FES_MEATY_MEAT,Carnaval carnivore,reviewed,

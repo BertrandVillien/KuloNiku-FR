@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Permettre aux francophones de découvrir puis jouer à _KuloNiku: Bowls Up!_ en
+Permettre aux francophones de découvrir puis jouer à _KuloNiku: Bowl Up!_ en
 français grâce à un patch communautaire gratuit, sûr et facile à restaurer.
 
 ## Public principal
@@ -31,5 +31,5 @@ et le jeu complet, sans redistribuer les fichiers du jeu.
 - nom principal : **KuloNiku FR** ;
 - sous-titre français : **Patch français communautaire** ;
 - nom complet du jeu utilisé dans le texte et les métadonnées :
-  **KuloNiku: Bowls Up!** ;
+  **KuloNiku: Bowl Up!** ;
 - nom court officiel **KuloNiku** conservé pour les formulations courantes.

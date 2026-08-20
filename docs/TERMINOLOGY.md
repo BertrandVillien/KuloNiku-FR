@@ -23,11 +23,14 @@ cohérentes. Il ne reproduit pas les textes source du jeu.
 
 | Concept | Français retenu |
 |---|---|
-| cutting/topping station | table de découpe |
+| cutting/topping station | zone de découpe |
 | seasoning station | table d'assaisonnement |
 | skewer station | gril |
 | Meatball Brawl / Brawl | duel culinaire |
 | Cozy Mode | mode détente |
+
+« Poste de découpe » désigne l'équipement complet offert ou vendu, tandis que
+« planche à découper » désigne l'objet physique et son amélioration.
 
 ## Points à vérifier en jeu
 

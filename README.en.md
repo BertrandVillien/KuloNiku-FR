@@ -1,6 +1,8 @@
 # KuloNiku FR
 
-**Community French patch for _KuloNiku: Bowls Up!_**
+**Community French patch for _KuloNiku: Bowl Up!_**
+
+[View or buy KuloNiku: Bowl Up! on Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
 
 [Version française](README.md)
 
@@ -9,7 +11,7 @@
 ![Windows pending](https://img.shields.io/badge/Windows-real%20test%20pending-f0ad4e)
 ![Demo and full game](https://img.shields.io/badge/editions-demo%20%7C%20full-6f42c1)
 
-![KuloNiku: Bowls Up! home screen translated into French](docs/assets/kuloniku-fr-home.jpg)
+![KuloNiku: Bowl Up! home screen translated into French](docs/assets/kuloniku-fr-home.jpg)
 
 KuloNiku FR brings a community-made French localization to both the demo and
 the full game. It is free, unofficial, and intended as a temporary solution
@@ -108,7 +110,7 @@ that apply to the game and their translations.
 
 ## Unofficial project
 
-_KuloNiku: Bowls Up!_, its text, visuals, and trademarks belong to their
+_KuloNiku: Bowl Up!_, its text, visuals, and trademarks belong to their
 respective rights holders, including Gambir Studio and Raw Fury. This project is
 not affiliated with or endorsed by them. It distributes no complete game file
 and will be removed or archived upon request or when an official French

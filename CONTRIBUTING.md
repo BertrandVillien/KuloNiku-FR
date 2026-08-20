@@ -6,10 +6,11 @@ versionnées.
 
 ## Sans savoir programmer
 
-Le moyen le plus simple est d’ouvrir le formulaire GitHub « Proposer une
-correction française ». Il suffit d’indiquer le texte vu, le contexte et une
-proposition. Une capture est recommandée pour montrer la place disponible et
-le personnage qui parle. La clé technique est facultative.
+Le moyen le plus simple est d’ouvrir le formulaire GitHub
+[Proposer une correction française](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml).
+Il suffit d’indiquer le texte vu, le contexte et une proposition, puis de
+cliquer sur **Submit new issue**. Une capture est recommandée pour montrer la
+place disponible et le personnage qui parle. La clé technique est facultative.
 
 Ne joignez jamais `resources.assets`, un fichier du jeu ou une extraction
 complète. Une capture limitée à l’écran concerné et une courte citation sont
