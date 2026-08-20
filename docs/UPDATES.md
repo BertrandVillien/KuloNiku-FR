@@ -26,7 +26,7 @@ et repatcher, jamais comme une invitation à écraser silencieusement le jeu.
 ## Contrat de release
 
 Chaque tag publie les applications macOS/Windows, leurs empreintes SHA-256, un
-lot autonome `KuloNiku-FR-translations.zip` et un petit
+lot autonome `translations.zip` et un petit
 `update-manifest.json`. Celui-ci contient une empreinte distincte pour la
 traduction du jeu complet et celle de la démo, l’empreinte du téléchargement et
 la version minimale du moteur capable de lire ce format de lot. Cette version

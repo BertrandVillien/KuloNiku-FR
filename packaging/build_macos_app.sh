@@ -31,12 +31,17 @@ cp packaging/icons/KuloNikuFR.icns "$resources/KuloNikuFR.icns"
 version="$($patcher --version | awk '{print $2}')"
 plutil -replace CFBundleShortVersionString -string "$version" "$contents/Info.plist"
 plutil -replace CFBundleVersion -string "$version" "$contents/Info.plist"
-cp "$patcher" "$resources/KuloNiku-FR"
+case "$(uname -m)" in
+  arm64) patcher_name="KuloNiku-FR-arm64" ;;
+  x86_64) patcher_name="KuloNiku-FR-x86_64" ;;
+  *) echo "Architecture macOS non prise en charge : $(uname -m)" >&2; exit 1 ;;
+esac
+cp "$patcher" "$resources/$patcher_name"
 cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv translations/known-sources.json "$resources/translations/"
 cp translations/NOTICE.md "$resources/translations/"
 cp README.md LICENSE SECURITY.md THIRD_PARTY_NOTICES.md "$resources/"
 
-chmod +x "$macos/KuloNiku FR" "$resources/KuloNiku-FR"
+chmod +x "$macos/KuloNiku FR" "$resources/$patcher_name"
 codesign --force --deep --sign - "$app"
 codesign --verify --deep --strict "$app"
 

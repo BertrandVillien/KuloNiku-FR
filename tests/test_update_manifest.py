@@ -57,6 +57,7 @@ def test_translation_release_is_standalone_and_declares_its_required_engine(
     assert manifest["version"] == "1.0.0"
     assert package["minimum_patcher_version"] == TRANSLATION_PACKAGE_MINIMUM_PATCHER_VERSION
     assert package["minimum_patcher_version"] != manifest["version"]
+    assert package["asset"] == "translations.zip"
     assert package["bundles"] == manifest["translation_bundles"]
     archive_path = tmp_path / "package" / package["asset"]
     assert hashlib.sha256(archive_path.read_bytes()).hexdigest() == package["sha256"]

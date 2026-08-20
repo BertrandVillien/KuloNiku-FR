@@ -13,16 +13,19 @@ jobs:
           - os: macos-latest
             platform: macOS
             package: macOS-Apple-Silicon
+            architecture: arm64
             executable: KuloNiku-FR
             icon: KuloNikuFR.icns
           - os: macos-15-intel
             platform: macOS
             package: macOS-Intel
+            architecture: x86_64
             executable: KuloNiku-FR
             icon: KuloNikuFR.icns
           - os: windows-latest
             platform: Windows
             package: Windows-x64
+            architecture: x86_64
             executable: KuloNiku-FR.exe
             icon: KuloNikuFR.ico
     runs-on: ${{ matrix.os }}
@@ -40,22 +43,8 @@ jobs:
       - shell: bash
         run: |
           mkdir -p package
-          uv run --locked --no-dev --group package python packaging/create_update_manifest.py
-          if [[ "${{ matrix.platform }}" == "macOS" ]]; then
-            mkdir -p build/macos/dmg
-            bash packaging/build_macos_app.sh "dist/${{ matrix.executable }}" build/macos
-            test -x "build/macos/KuloNiku FR.app/Contents/MacOS/KuloNiku FR"
-            "build/macos/KuloNiku FR.app/Contents/Resources/KuloNiku-FR" --help >/dev/null
-            codesign --verify --deep --strict "build/macos/KuloNiku FR.app"
-            ditto "build/macos/KuloNiku FR.app" "build/macos/dmg/KuloNiku FR.app"
-            ln -s /Applications "build/macos/dmg/Applications"
-            hdiutil create \
-              -volname "KuloNiku FR" \
-              -srcfolder build/macos/dmg \
-              -ov \
-              -format UDZO \
-              "package/KuloNiku-FR-${{ matrix.package }}.dmg"
-          else
+          if [[ "${{ matrix.platform }}" == "Windows" ]]; then
+            uv run --locked --no-dev --group package python packaging/create_update_manifest.py
             mkdir -p "package/resources/translations"
             cp "dist/${{ matrix.executable }}" package/resources/
             cp "dist/Installer KuloNiku FR.exe" package/
@@ -70,22 +59,75 @@ jobs:
               "Installer KuloNiku FR.exe" \
               README.md \
               resources
+          else
+            chmod +x "dist/${{ matrix.executable }}"
+            lipo "dist/${{ matrix.executable }}" -verify_arch "${{ matrix.architecture }}"
           fi
-      - uses: actions/upload-artifact@v4
+      - if: matrix.platform == 'Windows'
+        uses: actions/upload-artifact@v4
         with:
           name: KuloNiku-FR-${{ matrix.package }}
           path: package/KuloNiku-FR-${{ matrix.package }}.*
-      - if: matrix.package == 'macOS-Apple-Silicon'
+      - if: matrix.platform == 'macOS'
+        uses: actions/upload-artifact@v4
+        with:
+          name: KuloNiku-FR-engine-${{ matrix.package }}
+          path: dist/${{ matrix.executable }}
+      - if: matrix.platform == 'Windows'
         uses: actions/upload-artifact@v4
         with:
           name: KuloNiku-FR-release-data
           path: |
-            package/KuloNiku-FR-translations.zip
+            package/translations.zip
             package/update-manifest.json
+
+  package-macos-universal:
+    needs: package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: KuloNiku-FR-engine-macOS-Apple-Silicon
+          path: build/engines/arm64
+      - uses: actions/download-artifact@v4
+        with:
+          name: KuloNiku-FR-engine-macOS-Intel
+          path: build/engines/x86_64
+      - shell: bash
+        run: |
+          if ! arch -x86_64 /usr/bin/true 2>/dev/null; then
+            sudo softwareupdate --install-rosetta --agree-to-license
+          fi
+          chmod +x build/engines/arm64/KuloNiku-FR build/engines/x86_64/KuloNiku-FR
+          lipo build/engines/arm64/KuloNiku-FR -verify_arch arm64
+          lipo build/engines/x86_64/KuloNiku-FR -verify_arch x86_64
+          bash packaging/build_macos_universal_app.sh \
+            build/engines/arm64/KuloNiku-FR \
+            build/engines/x86_64/KuloNiku-FR \
+            build/macos
+          test -x "build/macos/KuloNiku FR.app/Contents/MacOS/KuloNiku FR"
+          lipo "build/macos/KuloNiku FR.app/Contents/MacOS/KuloNiku FR" -verify_arch arm64 x86_64
+          arch -arm64 "build/macos/KuloNiku FR.app/Contents/MacOS/KuloNiku FR" --self-test
+          arch -x86_64 "build/macos/KuloNiku FR.app/Contents/MacOS/KuloNiku FR" --self-test
+          codesign --verify --deep --strict "build/macos/KuloNiku FR.app"
+          mkdir -p build/macos/dmg package
+          ditto "build/macos/KuloNiku FR.app" "build/macos/dmg/KuloNiku FR.app"
+          ln -s /Applications "build/macos/dmg/Applications"
+          hdiutil create \
+            -volname "KuloNiku FR" \
+            -srcfolder build/macos/dmg \
+            -ov \
+            -format UDZO \
+            package/KuloNiku-FR-macOS-Universal.dmg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KuloNiku-FR-macOS-Universal
+          path: package/KuloNiku-FR-macOS-Universal.dmg
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: package
+    needs: [package, package-macos-universal]
     runs-on: ubuntu-latest
     permissions:
       contents: write

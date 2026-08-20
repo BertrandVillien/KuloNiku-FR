@@ -38,8 +38,9 @@ guide pour installer, mettre à jour ou restaurer le patch. L’exécutable n’
 pas encore signé numériquement : Windows SmartScreen peut demander une
 confirmation. Ne désactivez jamais votre antivirus pour l’ouvrir.
 
-Sur macOS, téléchargez le DMG adapté à votre Mac, puis glissez **KuloNiku FR**
-dans **Applications**. L’application propose les mêmes opérations.
+Sur macOS, téléchargez le DMG universel, puis glissez **KuloNiku FR** dans
+**Applications**. La même application fonctionne sur les Mac Apple Silicon et
+Intel et propose les mêmes opérations.
 
 ![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)
 

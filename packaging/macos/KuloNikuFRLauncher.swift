@@ -104,6 +104,47 @@ private func isPrereleaseVersion(_ version: String) -> Bool {
     comparableVersion(version)[3] < 3
 }
 
+private var bundledPatcherExecutable: String {
+    #if arch(arm64)
+    return "KuloNiku-FR-arm64"
+    #elseif arch(x86_64)
+    return "KuloNiku-FR-x86_64"
+    #else
+    #error("Architecture macOS non prise en charge")
+    #endif
+}
+
+private func runLauncherSelfTest() -> Int32 {
+    let launcher = URL(fileURLWithPath: CommandLine.arguments[0]).standardizedFileURL
+    let resources = launcher
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+        .appendingPathComponent("Resources", isDirectory: true)
+    let patcher = resources.appendingPathComponent(bundledPatcherExecutable)
+    guard FileManager.default.isExecutableFile(atPath: patcher.path) else {
+        fputs("Moteur intégré introuvable : \(patcher.path)\n", stderr)
+        return 1
+    }
+
+    let task = Process()
+    let pipe = Pipe()
+    task.executableURL = patcher
+    task.arguments = ["--version"]
+    task.standardOutput = pipe
+    task.standardError = pipe
+    task.currentDirectoryURL = resources
+    do {
+        try task.run()
+        task.waitUntilExit()
+        let output = pipe.fileHandleForReading.readDataToEndOfFile()
+        FileHandle.standardOutput.write(output)
+        return task.terminationStatus
+    } catch {
+        fputs("Impossible de lancer le moteur intégré : \(error.localizedDescription)\n", stderr)
+        return 1
+    }
+}
+
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private let repositoryURL = URL(string: "https://github.com/BertrandVillien/KuloNiku-FR")!
     private var window: NSWindow!
@@ -1039,7 +1080,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private var patcherURL: URL {
-        Bundle.main.resourceURL!.appendingPathComponent("KuloNiku-FR")
+        Bundle.main.resourceURL!.appendingPathComponent(bundledPatcherExecutable)
     }
 
     private var translationsURL: URL {
@@ -1124,7 +1165,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
-let application = NSApplication.shared
-let applicationDelegate = AppDelegate()
-application.delegate = applicationDelegate
-application.run()
+if CommandLine.arguments.contains("--self-test") {
+    exit(runLauncherSelfTest())
+} else {
+    let application = NSApplication.shared
+    let applicationDelegate = AppDelegate()
+    application.delegate = applicationDelegate
+    application.run()
+}

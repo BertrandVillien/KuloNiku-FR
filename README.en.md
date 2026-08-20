@@ -37,8 +37,9 @@ through installation, updates, and restoration. The executable is not digitally
 signed yet, so Windows SmartScreen may ask for confirmation. Never disable your
 antivirus to open it.
 
-On macOS, download the DMG that matches your Mac, then drag **KuloNiku FR** into
-**Applications**. The application provides the same operations.
+On macOS, download the universal DMG, then drag **KuloNiku FR** into
+**Applications**. The same application works on Apple Silicon and Intel Macs
+and provides the same operations.
 
 ![macOS installer ready to install the French translation](docs/assets/kuloniku-fr-installer-macos.png)
 

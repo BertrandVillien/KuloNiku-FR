@@ -19,7 +19,7 @@ def main() -> None:
     notice = Path("translations/NOTICE.md")
     package_dir = Path("package")
     package_dir.mkdir(parents=True, exist_ok=True)
-    archive = package_dir / "KuloNiku-FR-translations.zip"
+    archive = package_dir / "translations.zip"
     with ZipFile(archive, "w", compression=ZIP_DEFLATED, compresslevel=9) as bundle:
         for path in (translations, source_hashes, overrides, known_sources, notice):
             info = ZipInfo(path.name, date_time=(1980, 1, 1, 0, 0, 0))

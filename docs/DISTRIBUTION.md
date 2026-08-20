@@ -35,6 +35,10 @@ utilisent la sortie JSON versionnée de `status --json` (`schema_version: 1`),
 puis lancent les mêmes commandes de simulation, d’installation et de
 restauration.
 
+L’application macOS distribuée est universelle. Son lanceur contient les
+architectures Apple Silicon et Intel, puis choisit automatiquement le moteur
+correspondant inclus dans le même paquet.
+
 La sauvegarde, la compatibilité et les mises à jour restent ainsi gérées au même
 endroit, indépendamment de l’interface utilisée.
 
