@@ -106,6 +106,7 @@ pour :
 - joindre une capture et expliquer le contexte ;
 - signaler un texte trop long ou un problème d’installation.
 
+Il faut être connecté à un compte GitHub gratuit pour afficher le formulaire.
 La clé technique est facultative. Une fois le formulaire rempli, cliquez sur
 **Submit new issue** : la proposition apparaîtra dans les tickets du projet et
 pourra être discutée. Pour un problème d’installation, utilisez plutôt
