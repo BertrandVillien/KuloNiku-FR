@@ -6,15 +6,14 @@
 
 ## Download the beta
 
-- [Download the KuloNiku-FR-Steam-Deck-x86_64 artifact](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308/artifacts/9413342469).
+- [Download KuloNiku-FR-Steam-Deck-x86_64.AppImage directly](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/steam-deck-1.3.0-beta.1/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
+- [Download its SHA-256 checksum file](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/steam-deck-1.3.0-beta.1/KuloNiku-FR-Steam-Deck-x86_64.AppImage.sha256).
+- [View the prerelease notes](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/steam-deck-1.3.0-beta.1).
 - [View the successful workflow run](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308).
 
-GitHub requires testers to sign in before downloading an Actions artifact. This
-beta artifact expires on **September 3, 2026**. The downloaded ZIP contains the
-AppImage and its `.sha256` file.
+The prerelease is public and the direct downloads do not require a GitHub
+account.
 
-- GitHub artifact ZIP SHA-256:
-  `cda936d35914523737e1c4762e97028ceb44d8f34b9e75c06ba2be74e6a7a974`
 - AppImage SHA-256:
   `dc1454bc235652265f7b0336c2d26683312da511c55f6977c78ac5d2773baa8d`
 
@@ -33,9 +32,10 @@ VirtualBox workaround and must not be used on Steam Deck hardware.
 ## Install French
 
 1. Select **Steam > Power > Switch to Desktop**.
-2. Open Firefox, sign in to GitHub, and download the artifact linked above.
-3. Open **Downloads** in Dolphin and extract the ZIP once.
-4. Right-click the extracted AppImage, open **Properties > Permissions**, and
+2. Open Firefox and use the direct download link above. No GitHub account is
+   required.
+3. Open **Downloads** in Dolphin.
+4. Right-click the AppImage, open **Properties > Permissions**, and
    enable **Is executable**.
 5. Double-click the AppImage and choose **Launch** if Dolphin asks.
 6. Wait for the automatic detection and simulation to finish.
@@ -82,4 +82,3 @@ crash reports containing personal data to an issue.
 [Report a Steam Deck issue](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml)
 · [Official Steam Deck Desktop Mode FAQ](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C)
 · [Official SteamOS and Proton overview](https://www.steamdeck.com/en/software)
-· [Download GitHub Actions artifacts](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)

@@ -6,26 +6,19 @@
 
 ## Télécharger la bêta
 
-Le paquet testé est disponible dans le run GitHub Actions du 20 août 2026 :
+La préversion est publique et ne demande pas de compte GitHub :
 
-- [télécharger l’artefact KuloNiku-FR-Steam-Deck-x86_64](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308/artifacts/9413342469) ;
-- [consulter le run et ses contrôles](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308).
+- [télécharger directement KuloNiku-FR-Steam-Deck-x86_64.AppImage](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/steam-deck-1.3.0-beta.1/KuloNiku-FR-Steam-Deck-x86_64.AppImage) ;
+- [télécharger son fichier de contrôle SHA-256](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/steam-deck-1.3.0-beta.1/KuloNiku-FR-Steam-Deck-x86_64.AppImage.sha256) ;
+- [consulter la préversion et ses notes](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/steam-deck-1.3.0-beta.1) ;
+- [consulter la fabrication et ses contrôles](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308).
 
-GitHub demande d’être connecté pour télécharger un artefact Actions. Ce lien de
-bêta expire le **3 septembre 2026**. Après cette date, utilisez la
-[dernière fabrication Steam Deck](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/package-steam-deck.yml)
-ou demandez une nouvelle fabrication au mainteneur.
-
-Le téléchargement est une archive ZIP. Extrayez-la une seule fois. Elle contient
-l’AppImage et son fichier `.sha256`.
-
-- SHA-256 de l’archive ZIP GitHub :
-  `cda936d35914523737e1c4762e97028ceb44d8f34b9e75c06ba2be74e6a7a974`
-- SHA-256 de `KuloNiku-FR-Steam-Deck-x86_64.AppImage` :
+SHA-256 de `KuloNiku-FR-Steam-Deck-x86_64.AppImage` :
   `dc1454bc235652265f7b0336c2d26683312da511c55f6977c78ac5d2773baa8d`
 
 La vérification de l’empreinte est facultative pour le parcours sans Terminal.
-Un testeur qui souhaite la faire peut ouvrir Konsole dans le dossier extrait et
+Un testeur qui souhaite la faire peut placer les deux téléchargements dans le
+même dossier, ouvrir Konsole dans ce dossier et
 lancer `sha256sum -c KuloNiku-FR-Steam-Deck-x86_64.AppImage.sha256`.
 
 ## Avant d’installer le patch
@@ -47,10 +40,10 @@ la VM VirtualBox et ne doit pas être utilisé sur un Steam Deck.
 ## Installer le français
 
 1. Appuyez sur **Steam > Marche/Arrêt > Passer en mode Bureau**.
-2. Ouvrez Firefox, connectez-vous à GitHub et téléchargez l’artefact indiqué plus
-   haut.
-3. Dans Dolphin, ouvrez **Téléchargements** et extrayez l’archive ZIP.
-4. Faites un clic droit sur l’AppImage extraite, ouvrez **Propriétés >
+2. Ouvrez Firefox et utilisez le lien de téléchargement direct indiqué plus
+   haut. Aucun compte GitHub n’est nécessaire.
+3. Dans Dolphin, ouvrez **Téléchargements**.
+4. Faites un clic droit sur l’AppImage, ouvrez **Propriétés >
    Permissions** et cochez **Est exécutable**.
 5. Double-cliquez sur l’AppImage. Si Dolphin demande une confirmation, choisissez
    **Lancer**.
@@ -107,8 +100,7 @@ restauration intégré.
 
 ## Si quelque chose ne fonctionne pas
 
-- **L’AppImage ne s’ouvre pas :** vérifiez qu’elle a été extraite du ZIP et que
-  **Est exécutable** est coché.
+- **L’AppImage ne s’ouvre pas :** vérifiez que **Est exécutable** est coché.
 - **Le jeu n’est pas détecté :** vérifiez qu’il est entièrement installé, puis
   utilisez **Changer…** pour sélectionner le dossier contenant
   `KuloNiku_Data`.
@@ -117,8 +109,9 @@ restauration intégré.
   message.
 - **Le jeu ne démarre plus :** restaurez l’original avec l’AppImage. Indiquez
   aussi si le jeu non patché avait réussi le contrôle préalable.
-- **Le lien a expiré :** ne téléchargez pas une copie depuis un site tiers ;
-  demandez une nouvelle fabrication GitHub Actions.
+- **Le téléchargement échoue :** ouvrez la page de la préversion et utilisez
+  l’asset qui se termine par `.AppImage`. Ne téléchargez pas une copie depuis un
+  site tiers.
 
 N’utilisez pas `sudo`, `pacman`, Protontricks ou Wine et ne désactivez pas le
 mode lecture seule de SteamOS. L’AppImage ne demande aucune installation système.
@@ -141,4 +134,3 @@ identifiants Steam.
 [Signaler un problème Steam Deck](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml)
 · [FAQ officielle du mode Bureau Steam Deck](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C)
 · [Informations officielles sur SteamOS et Proton](https://www.steamdeck.com/fr/software)
-· [Télécharger un artefact GitHub Actions](https://docs.github.com/fr/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)

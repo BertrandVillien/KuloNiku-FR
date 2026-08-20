@@ -44,7 +44,7 @@ endroit, indépendamment de l’interface utilisée.
 
 Sur Steam Deck, le moteur et l’interface PyInstaller sont réunis dans une
 AppImage x86-64 autonome. La première bêta est fabriquée séparément par GitHub
-Actions et reste un artefact de test. Elle ne sera ajoutée aux releases stables
+Actions et publiée comme préversion. Elle ne sera ajoutée aux releases stables
 qu’après validation sur un véritable Deck.
 
 L’AppImage ne demande ni installation système ni privilège administrateur. Les
