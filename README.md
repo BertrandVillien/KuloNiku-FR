@@ -1,9 +1,9 @@
 # KuloNiku FR
 
-**Patch français communautaire pour _KuloNiku: Bowl Up!_**
+**Mod de traduction français communautaire pour _KuloNiku: Bowl Up!_**
 
 [Voir KuloNiku: Bowl Up! sur Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
-· [English version](README.en.md)
+· [README English version](README.en.md)
 
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS testé](https://img.shields.io/badge/macOS-test%C3%A9-2ea44f)
