@@ -91,6 +91,7 @@ Pas besoin de savoir programmer. Vous pouvez :
 
 - [proposer une correction française](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml) ;
 - [signaler un problème d’installation](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml) ;
+- [proposer des corrections ciblées avec le contexte multilingue](docs/REVIEW_WORKSPACE.md) ;
 - joindre une capture pour montrer le contexte ou un texte trop long.
 
 Ne joignez jamais un fichier du jeu ou une extraction complète. Pour contribuer

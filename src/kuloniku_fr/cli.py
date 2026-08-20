@@ -10,6 +10,7 @@ from pathlib import Path
 import shutil
 import sys
 import tempfile
+import webbrowser
 
 import UnityPy
 
@@ -33,6 +34,12 @@ from .installation import (
     installation_state,
     latest_backup_for,
     resign_macos,
+)
+from .review_workspace import (
+    build_review_payload,
+    ensure_unpatched_source,
+    read_translation_rows,
+    write_review_workspace,
 )
 from .translation import apply_french, lint_translation, source_character_limit
 
@@ -119,6 +126,49 @@ def command_context(args) -> int:
             writer.writerow(row)
     print(f"Contexte de {len(source.terms)} termes extrait vers {destination}")
     print("Ce fichier contient les textes du jeu : gardez-le dans work/ et ne le publiez pas.")
+    return 0
+
+
+def command_review_workspace(args) -> int:
+    game_asset = detect_asset(Path(args.game))
+    source_path = game_asset.path
+    edition = game_asset.edition
+    _, _, source = load_source(source_path)
+    try:
+        ensure_unpatched_source(source)
+    except ValueError as patched_error:
+        try:
+            source_path, manifest = latest_backup_for(game_asset.path)
+        except FileNotFoundError:
+            raise patched_error
+        _, _, source = load_source(source_path)
+        ensure_unpatched_source(source)
+        edition = manifest.get("edition", edition)
+        print("KuloNiku FR est installé : utilisation de la sauvegarde originale vérifiée.")
+    translations_path = Path(args.translations).resolve()
+    review_notes_path = Path(args.review_notes).resolve()
+    terminology_path = Path(args.terminology).resolve()
+    brief_path = Path(args.brief).resolve()
+    output_path = Path(args.output).resolve()
+    translations = read_translation_rows(translations_path)
+    review_notes = (
+        read_translation_rows(review_notes_path) if review_notes_path.exists() else {}
+    )
+    payload = build_review_payload(
+        source,
+        translations,
+        review_notes,
+        terminology_markdown=terminology_path.read_text(encoding="utf-8"),
+        agent_brief_markdown=brief_path.read_text(encoding="utf-8"),
+        edition=edition,
+        asset_sha256=sha256(source_path),
+    )
+    destination = write_review_workspace(payload, output_path)
+    print(f"Espace de relecture créé : {destination}")
+    print(f"{len(payload['rows'])} clés et {len(payload['languages'])} langues disponibles.")
+    print("Ce fichier contient les textes du jeu : gardez-le dans work/ et ne le publiez pas.")
+    if args.open:
+        webbrowser.open(destination.as_uri())
     return 0
 
 
@@ -925,6 +975,25 @@ def build_parser() -> argparse.ArgumentParser:
     context_parser.add_argument("assets")
     context_parser.add_argument("output")
     context_parser.set_defaults(handler=command_context)
+
+    review_parser = subparsers.add_parser(
+        "review-workspace",
+        help="explorer les textes et préparer des corrections ciblées",
+    )
+    review_parser.add_argument(
+        "game", help="application, dossier du jeu ou resources.assets original"
+    )
+    review_parser.add_argument("--translations", default="translations/fr.csv")
+    review_parser.add_argument(
+        "--review-notes", default="translations/review-overrides.csv"
+    )
+    review_parser.add_argument("--terminology", default="docs/TERMINOLOGY.md")
+    review_parser.add_argument("--brief", default="translations/AGENT_BRIEF.md")
+    review_parser.add_argument("--output", default="work/review-workspace/index.html")
+    review_parser.add_argument(
+        "--open", action="store_true", help="ouvrir l’espace dans le navigateur"
+    )
+    review_parser.set_defaults(handler=command_review_workspace)
 
     build_parser = subparsers.add_parser("build", help="construire un resources.assets français")
     build_parser.add_argument("assets")

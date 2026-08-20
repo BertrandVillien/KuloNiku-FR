@@ -3,6 +3,7 @@
 .vscode/
 .codex/
 .agents/
+.playwright-cli/
 /PRODUCT.md
 /DESIGN.md
 /docs/MAINTAINER_WORKFLOW.md

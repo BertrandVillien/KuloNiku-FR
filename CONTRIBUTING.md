@@ -33,6 +33,18 @@ doit rester courte et indiquer :
 Consultez aussi le [glossaire](docs/TERMINOLOGY.md) pour conserver les choix déjà
 harmonisés.
 
+## Proposer des corrections ciblées
+
+L’[espace de relecture hors ligne](docs/REVIEW_WORKSPACE.md) réunit les autres
+langues, les clés voisines et le contexte depuis votre propre installation du
+jeu. Explorez librement les textes et exportez uniquement les passages sur
+lesquels vous souhaitez intervenir.
+
+L’outil repère automatiquement les clés sans traduction française, propose une
+vue en liste et prépare le résumé à joindre à une issue GitHub.
+
+Ne publiez jamais l’espace HTML généré : il contient les textes sources du jeu.
+
 ## Règles communes
 
 - Ne modifiez jamais les clés, variables (`{0}`, `{PLAYER_COLOR}`, etc.), balises,

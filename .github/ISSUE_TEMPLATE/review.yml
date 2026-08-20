@@ -1,0 +1,36 @@
+name: Transmettre une relecture préparée
+description: Envoyer une sélection ou plusieurs propositions préparées avec l’espace de relecture.
+title: "[Relecture] "
+labels: ["traduction", "à relire"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Exportez vos propositions depuis l’espace de relecture, puis joignez-les ci-dessous. Ne joignez jamais l’espace HTML ni un fichier du jeu.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Résumé de la relecture
+      description: Collez ici le résumé copié par l’espace de relecture.
+      placeholder: Passages sélectionnés, corrections proposées et vérifications restantes.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Fichiers exportés
+      description: Glissez ici kuloniku-fr-propositions.csv et, si utile, kuloniku-fr-selection.json.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Informations complémentaires
+      description: Ajoutez seulement les captures ou précisions utiles.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vérification
+      options:
+        - label: Je n’ai joint ni fichier du jeu, ni extraction multilingue, ni espace HTML généré.
+          required: true

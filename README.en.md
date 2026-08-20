@@ -88,6 +88,7 @@ You do not need to know how to code. You can:
 
 - [suggest a French correction](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml);
 - [report an installation issue](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml);
+- [suggest targeted corrections with multilingual context](docs/REVIEW_WORKSPACE.md) (French guide);
 - attach a screenshot to show the context or an overflowing string.
 
 Never attach a game file or a complete extraction. To contribute with Git,
