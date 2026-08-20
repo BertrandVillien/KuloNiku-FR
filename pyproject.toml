@@ -14,6 +14,7 @@ dependencies = [
 
 [dependency-groups]
 dev = ["pytest>=8.3,<9"]
+package = ["pyinstaller>=6.16,<7"]
 
 [project.scripts]
 kuloniku-fr = "kuloniku_fr.cli:main"

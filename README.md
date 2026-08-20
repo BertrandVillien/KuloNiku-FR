@@ -17,27 +17,6 @@ KuloNiku FR est un mod de traduction qui permet de jouer en français à la dém
 et au jeu complet. Le projet est gratuit, non officiel et construit par la
 communauté dans l’attente d’une éventuelle localisation française officielle.
 
-## Pourquoi j’ai créé ce patch
-
-Je voulais découvrir KuloNiku, mais la quantité d’ingrédients et de termes
-culinaires en anglais freinait réellement mon expérience. J’ai d’abord cherché
-un moyen sûr de traduire la démo. Le résultat m’a convaincu d’acheter le jeu
-complet au lieu d’abandonner, ce qui illustre aussi l’intérêt d’une localisation
-pour faire connaître le jeu aux francophones.
-
-J’ai construit le projet avec Codex, en gardant chaque opération réversible :
-extraction des textes, comparaison des langues, simulation, sauvegarde puis
-injection. Le menu ne pouvant pas afficher une langue supplémentaire, le patch
-remplace temporairement l’allemand et conserve l’anglais comme solution de
-repli. Restaurer le jeu rend immédiatement l’allemand disponible.
-
-L’adaptation française a été travaillée ligne par ligne avec les huit langues
-du jeu, les clés techniques et le contexte disponible. L’indonésien a été
-particulièrement utile pour respecter l’origine du studio et préciser certains
-plats ; les termes délicats ont fait l’objet de recherches complémentaires.
-Les formulations restent aussi proches que possible des longueurs déjà prévues
-par le jeu afin de limiter les problèmes d’affichage.
-
 ## État du projet
 
 - traduction de toutes les entrées textuelles utilisées par le jeu ;
@@ -181,10 +160,33 @@ comme Codex, Claude ou un autre outil.
 Les autres communautés peuvent forker le moteur pour préparer leur propre
 langue, sous réserve des droits du jeu et des traductions concernées.
 
+## Pourquoi j’ai créé ce patch
+
+Je voulais découvrir KuloNiku, mais la quantité d’ingrédients et de termes
+culinaires en anglais freinait réellement mon expérience. J’ai d’abord cherché
+un moyen sûr de traduire la démo. Le résultat m’a convaincu d’acheter le jeu
+complet au lieu d’abandonner, ce qui illustre aussi l’intérêt d’une localisation
+pour faire connaître le jeu aux francophones.
+
+J’ai construit le projet avec Codex, en gardant chaque opération réversible :
+extraction des textes, comparaison des langues, simulation, sauvegarde puis
+injection. Le menu ne pouvant pas afficher une langue supplémentaire, le patch
+remplace temporairement l’allemand et conserve l’anglais comme solution de
+repli. Restaurer le jeu rend immédiatement l’allemand disponible.
+
+L’adaptation française a été travaillée ligne par ligne avec les huit langues
+du jeu, les clés techniques et le contexte disponible. L’indonésien a été
+particulièrement utile pour respecter l’origine du studio et préciser certains
+plats ; les termes délicats ont fait l’objet de recherches complémentaires.
+Les formulations restent aussi proches que possible des longueurs déjà prévues
+par le jeu afin de limiter les problèmes d’affichage.
+
 ## Documentation
 
 - [Questions fréquentes](docs/FAQ.md)
 - [Compatibilité et mises à jour](docs/UPDATES.md)
+- [Architecture des installateurs](docs/DISTRIBUTION.md)
+- [Feuille de route](docs/ROADMAP.md)
 - [Qualité de la traduction](docs/QUALITY.md)
 - [Terminologie française](docs/TERMINOLOGY.md)
 - [Sécurité](SECURITY.md)

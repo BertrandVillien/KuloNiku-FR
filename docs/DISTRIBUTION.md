@@ -12,6 +12,11 @@ Les fichiers complets du jeu ne doivent pas être publiés. Une release contient
 le patcher, `translations/fr.csv` et la documentation. Le patcher reconstruit le
 fichier localement depuis la version installée; aucun binaire Unity n’est livré.
 
+L’icône utilisée par les installateurs se trouve dans
+`packaging/icons/KuloNikuFR.png`. Sa source vectorielle publique
+`packaging/icons/KuloNikuFR.svg` peut servir de base aux adaptations du mod dans
+d’autres langues.
+
 ## Parcours utilisateur visé
 
 1. Télécharger le paquet « KuloNiku FR » correspondant à Windows ou macOS.
@@ -71,6 +76,10 @@ Le test d’ajout d’une neuvième entrée `French (fr)` a montré que le menu 
 la masque. Le mode compatible conserve donc l’emplacement reconnu `German (de)`
 et remplace uniquement son contenu et son libellé visible. Les textes absents de
 `translations/fr.csv` utilisent l’anglais de la version locale comme repli.
+
+La raison pour laquelle la première release laisse l’utilisateur choisir
+manuellement « Français » est détaillée dans
+[Sélection de la langue française](LANGUAGE_SELECTION.md).
 
 ## Inspiration et choix retenus
 

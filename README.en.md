@@ -18,27 +18,6 @@ localization to both the demo and the full game. It is free, unofficial, and
 intended as a temporary solution until an official French localization becomes
 available.
 
-## Why I made this patch
-
-I wanted to discover KuloNiku, but the number of English ingredient names and
-culinary terms was a real barrier to enjoying it. I first looked for a safe way
-to translate the demo. Once that worked, I bought the full game instead of
-giving up, which also shows how localization can help French-speaking players
-discover and support the game.
-
-I built the project with Codex and kept every operation reversible: text
-extraction, language comparison, simulation, backup, then injection. Because
-the current menu cannot display an extra language, the patch temporarily
-reuses the German slot and keeps English as the safe fallback. Restoring the
-game immediately makes German available again.
-
-The French adaptation was reviewed line by line using all eight languages in
-the game, technical keys, and available scene context. Indonesian was
-especially helpful for respecting the studio’s background and clarifying some
-dishes; difficult terms received additional research. Wording also stays as
-close as possible to the lengths already supported by the game to reduce layout
-issues.
-
 ## Project status
 
 - French translation of every textual entry currently used by the game;
@@ -181,10 +160,33 @@ such as Codex, Claude, or another tool.
 Other language communities may fork the patching engine, subject to the rights
 that apply to the game and their translations.
 
+## Why I made this patch
+
+I wanted to discover KuloNiku, but the number of English ingredient names and
+culinary terms was a real barrier to enjoying it. I first looked for a safe way
+to translate the demo. Once that worked, I bought the full game instead of
+giving up, which also shows how localization can help French-speaking players
+discover and support the game.
+
+I built the project with Codex and kept every operation reversible: text
+extraction, language comparison, simulation, backup, then injection. Because
+the current menu cannot display an extra language, the patch temporarily
+reuses the German slot and keeps English as the safe fallback. Restoring the
+game immediately makes German available again.
+
+The French adaptation was reviewed line by line using all eight languages in
+the game, technical keys, and available scene context. Indonesian was
+especially helpful for respecting the studio’s background and clarifying some
+dishes; difficult terms received additional research. Wording also stays as
+close as possible to the lengths already supported by the game to reduce layout
+issues.
+
 ## Documentation
 
 - [FAQ in French](docs/FAQ.md)
 - [Compatibility and updates](docs/UPDATES.md)
+- [Installer architecture](docs/DISTRIBUTION.md)
+- [Roadmap](docs/ROADMAP.md)
 - [Translation quality](docs/QUALITY.md)
 - [French terminology](docs/TERMINOLOGY.md)
 - [Security policy](SECURITY.md)
