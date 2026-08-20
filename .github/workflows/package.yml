@@ -64,17 +64,17 @@ jobs:
             lipo "dist/${{ matrix.executable }}" -verify_arch "${{ matrix.architecture }}"
           fi
       - if: matrix.platform == 'Windows'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: KuloNiku-FR-${{ matrix.package }}
           path: package/KuloNiku-FR-${{ matrix.package }}.*
       - if: matrix.platform == 'macOS'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: KuloNiku-FR-engine-${{ matrix.package }}
           path: dist/${{ matrix.executable }}
       - if: matrix.platform == 'Windows'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: KuloNiku-FR-release-data
           path: |
@@ -120,7 +120,7 @@ jobs:
             -ov \
             -format UDZO \
             package/KuloNiku-FR-macOS-Universal.dmg
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: KuloNiku-FR-macOS-Universal
           path: package/KuloNiku-FR-macOS-Universal.dmg
