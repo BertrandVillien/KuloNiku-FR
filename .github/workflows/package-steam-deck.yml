@@ -2,6 +2,9 @@ name: AppImage Steam Deck (test)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - codex/steam-deck-support
 
 jobs:
   package-steam-deck:
