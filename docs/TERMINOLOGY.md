@@ -13,7 +13,7 @@ cohérentes. Il ne reproduit pas les textes source du jeu.
 | bakso telur | boulette à l'œuf |  |
 | bihun / rice vermicelli | vermicelles de riz |  |
 | pangsit | ravioli | Forme courte adaptée à l'interface. |
-| fish cake | narutomaki | À confirmer visuellement : spirale rose attendue. |
+| fish cake | Surimi Narutomaki | Terme japonais conservé et explicité pour le public français. |
 | pickled bok choy | pak choï mariné | Graphie française cohérente. |
 | fried shallots | échalotes frites |  |
 | vinegar powder | poudre de vinaigre |  |
@@ -31,15 +31,16 @@ cohérentes. Il ne reproduit pas les textes source du jeu.
 
 ## Points à vérifier en jeu
 
-- Le visuel de `fish cake` doit correspondre à un narutomaki. Si ce n'est pas
-  le cas, employer « gâteau de poisson » partout.
 - « Soupe aux boulettes de tendon » est plus exacte que « soupe aux tendons »,
   mais sa largeur doit être validée dans la liste des recettes.
 - Les accords concernant le personnage joueur doivent rester neutres tant que
   le genre et la personnalisation disponibles ne sont pas confirmés.
+- Les tutoriels tutoient le joueur, comme les personnages et les versions
+  espagnole et allemande.
+- Écrire `oe` à la place de la ligature `œ` dans les textes injectés : la police
+  des bulles change visiblement pour ce glyphe.
 
 ## Références publiques
 
 - [Office québécois de la langue française — pak-choï](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2082790/pak-choi)
 - [Le Marché Japonais — narutomaki](https://www.lemarchejaponais.fr/fiche-lexique/320/narutomaki.html)
-

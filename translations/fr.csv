@@ -3,7 +3,7 @@ ACTION_STARTCOOKING,Cuisiner !,reviewed,
 ACTION_SERVE,Servir,reviewed,
 INGREDIENT_MEATBALL,Boulette,reviewed,
 INGREDIENT_TENDON,Boulette de tendon,reviewed,Bakso urat
-INGREDIENT_EGGBALL,Boulette à l'œuf,reviewed,Bakso telur
+INGREDIENT_EGGBALL,Boulette à l'oeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 INGREDIENT_FISHBALLS,Boulettes de poisson,reviewed,Forme complète nécessaire
 INGREDIENT_NOODLES,Nouilles,reviewed,
 INGREDIENT_VERMICELLI,Vermicelles de riz,reviewed,Bihun : riz nécessaire
@@ -19,7 +19,7 @@ INGREDIENT_PICKLEDBOKCHOY,Pak choï mariné,reviewed,
 INGREDIENT_CHILI,Piment,reviewed,
 INGREDIENT_SPRINGONION,Cébette,reviewed,
 INGREDIENT_GARLIC,Ail,reviewed,
-INGREDIENT_FISHCAKE,Narutomaki,reviewed,Spécialité japonaise
+INGREDIENT_FISHCAKE,Surimi Narutomaki,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité.
 DRINK_COLA,Cola,reviewed,
 DRINK_TEA,Thé,reviewed,
 DRINK_JUICE,Jus,reviewed,
@@ -179,59 +179,59 @@ BLOCKEDACTION_NO_SHOP_CONTENT_POOL,Épuisé !,reviewed,
 BLOCKEDACTION_ON_COOLDOWN,Trop vite !,reviewed,
 BLOCKEDACTION_LOCKED,Bloqué !,reviewed,
 BLOCKEDACTION_DECORATIONSKIN_LOCKED,Nécessite [CHARACTER] niv. d'amitié [LEVEL],reviewed,
-TUTORIAL_WASH_GRABBOWL,Prenez un bol sale.,reviewed,
-TUTORIAL_WASH_RELEASEBOWL,Bien joué. Relâchez le bol pour finir de le nettoyer.,reviewed,
-TUTORIAL_WASH_SELECTWASHING,"Oups, il n'y a plus de bols propres. <nobr>Allez vers l'évier</nobr>.",reviewed,
-TUTORIAL_WASH_WASHBOWL,Lavez le bol en le remuant dans l'eau.,reviewed,
+TUTORIAL_WASH_GRABBOWL,Prends un bol sale.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_RELEASEBOWL,Bien joué. Relâche le bol pour finir de le nettoyer.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_SELECTWASHING,"Oups, il n’y a plus de bols propres. <nobr>Va vers l’évier</nobr>.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_WASHBOWL,Lave le bol en le remuant dans l’eau.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_TASTE_INTRODUCTION,"Parfois, les clients veulent un certain [COLOR=ALERT]profil de saveur[/COLOR] pour leur plat. Aucun souci !",reviewed,
-TUTORIAL_TASTE_OPEN_TASTE_RECIPE,"Ouvrez le livre, puis la page Saveurs.",reviewed,
+TUTORIAL_TASTE_OPEN_TASTE_RECIPE,"Ouvre le livre, puis la page Saveurs.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_TASTE_BOOK_LOOK,Voici les [COLOR=ALERT]profils de saveur[/COLOR] qu'un client peut demander.,reviewed,
-TUTORIAL_TASTE_BOOK_CLOSE,Fermez le livre quand vous avez fini.,reviewed,
-TUTORIAL_TASTE_HOVER_BOWL,Survolez le bol pour voir sa saveur actuelle.,reviewed,
-TUTORIAL_TASTE_HOVER_INGREDIENT,Survolez un ingrédient ou un assaisonnement pour voir son profil de saveur.,reviewed,
+TUTORIAL_TASTE_BOOK_CLOSE,Ferme le livre quand tu as fini.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_HOVER_BOWL,Survole le bol pour voir sa saveur actuelle.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_HOVER_INGREDIENT,Survole un ingrédient ou un assaisonnement pour voir son profil de saveur.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_TASTE_EXPLANATION,Les ingrédients ont des saveurs différentes. Les ajouter augmente ou diminue le profil de saveur du plat. Certains ont une saveur neutre.,reviewed,
-TUTORIAL_TASTE_SEASON,Ajoutez maintenant l'assaisonnement.,reviewed,
-TUTORIAL_TASTE_CHECK_UPDATED_TASTE,Vérifiez à nouveau le profil de saveur du bol. Voyez comme il a changé.,reviewed,
-TUTORIAL_TASTE_MULTIPLE_SEASON,Vous pouvez ajouter plusieurs fois un ingrédient pour intensifier davantage sa saveur.,reviewed,
-TUTORIAL_TASTE_END,"En résumé, utilisez vos ingrédients pour adapter le plat à la commande du client !",reviewed,
-TUTORIAL_DISCARD_OPENING,"Videz maintenant votre bol, pour pouvoir repartir de zéro.",reviewed,
-TUTORIAL_DISCARD_ACTION,Maintenez le clic sur le bol pour jeter tous les ingrédients qu'il contient.,reviewed,
-TUTORIAL_DISCARD_COIN_REFUND,En jetant des ingrédients vous récupérez une partie de leur coût.,reviewed,
-TUTORIAL_DISCARD_END,Pas d'inquiétude si vous devez recommencer : l'erreur est humaine !,reviewed,
+TUTORIAL_TASTE_SEASON,Ajoute maintenant l’assaisonnement.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_CHECK_UPDATED_TASTE,Vérifie à nouveau le profil de saveur du bol. Regarde comme il a changé.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_MULTIPLE_SEASON,Tu peux ajouter plusieurs fois un ingrédient pour intensifier davantage sa saveur.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_END,"En résumé, utilise tes ingrédients pour adapter le plat à la commande du client !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_OPENING,"Vide maintenant ton bol, pour pouvoir repartir de zéro.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_ACTION,Maintiens le clic sur le bol pour jeter tous les ingrédients qu’il contient.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_COIN_REFUND,"En jetant des ingrédients, tu récupères une partie de leur coût.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_END,Pas d’inquiétude si tu dois recommencer : l’erreur est humaine !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_REMAKE_OPENING,Oups ! On dirait que le client a renvoyé le plat.,reviewed,
 TUTORIAL_REMAKE_EXPLANATION,Cela arrive si le plat ne lui plaît pas ou s'il manque des ingrédients.,reviewed,
-TUTORIAL_REMAKE_END,Ne vous découragez pas. Lisez bien la commande et refaites le plat. Vous y arriverez.,reviewed,
+TUTORIAL_REMAKE_END,Ne te décourage pas. Lis bien la commande et refais le plat. Tu y arriveras.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_CUTTING_OPENING,"On a maintenant une table de découpe, super ! Essayons-la.",reviewed,
-TUTORIAL_BASIC_BOWL_TO_CUTTING,Amenez le bol à la zone GARNITURES.,reviewed,
-TUTORIAL_BASIC_SELECT_CUTTING_INGREDIENT,Sélectionnez l'ingrédient à couper.,reviewed,
-TUTORIAL_BASIC_CUT_INGREDIENT,"Coupez l'ingrédient. Quand vous avez fini, relâchez le couteau.",reviewed,
-TUTORIAL_BASIC_COLLECT_SLICED,Récupérez l'ingrédient coupé.,reviewed,
-TUTORIAL_CUTTING_END,Et voilà. Préparez maintenant le reste de la commande.,reviewed,
-TUTORIAL_BASIC_BOWL_TO_BOIL,Amenez le bol à la zone MARMITE.,reviewed,
-TUTORIAL_BASIC_BOWL_TO_PACKAGING,Amenez le bol à la zone ASSAISONNEMENT.,reviewed,
-TUTORIAL_BASIC_CLOSE_BOIL_LID,Fermez le couvercle de la marmite pour cuire les ingrédients.,reviewed,
-TUTORIAL_BASIC_COLLECT_BOIL,Récupérez les ingrédients cuits.,reviewed,
-TUTORIAL_BASIC_EATING_TOOLS,N'oubliez pas ! Le client a besoin de couverts pour manger.,reviewed,
-TUTORIAL_BASIC_GRAB_BOWL,Prenez un bol.,reviewed,
-TUTORIAL_BASIC_OPEN_BOIL_LID,Ouvrez le couvercle.,reviewed,
-TUTORIAL_BASIC_OPEN_BOIL_LID_ON_BOIL,C'est prêt : ouvrez le couvercle.,reviewed,
-TUTORIAL_BASIC_OPEN_RECIPE,Ouvrez le livre.,reviewed,
-TUTORIAL_BASIC_POUR_SOUP,Versez ensuite la soupe.,reviewed,
-TUTORIAL_BASIC_MESSAGE_SOUP,"N'oubliez pas : sauf si le client le veut sec, ajoutez toujours la soupe !",reviewed,
-TUTORIAL_BASIC_SELECT_BOIL_INGREDIENT,Sélectionnez les ingrédients à faire bouillir.,reviewed,
-TUTORIAL_BASIC_INGREDIENT_COST,N'oubliez pas qu'ajouter un ingrédient coûte de l'argent.,reviewed,
-TUTORIAL_BASIC_SERVE_BOWL,"Le bol doit être dans la zone ASSAISONNEMENT avant d'être servi. Enfin, [COLOR=ALERT]sonnez la cloche[/COLOR] pour servir le plat !",reviewed,
-TUTORIAL_BASIC_WAIT_BOIL,Attendez que la cuisson soit terminée.,reviewed,
-TUTORIAL_BASIC_WAIT_RECIPE,"Mémorisez la recette, puis fermez le livre.",reviewed,
-TUTORIAL_BASIC_OPEN_ORDERNOTES,Regardons encore la commande du client. Ouvrez les notes de commande.,reviewed,
-TUTORIAL_BASIC_WAIT_ORDERNOTES,Voici la commande du client ! Fermez-la quand vous avez fini.,reviewed,
+TUTORIAL_BASIC_BOWL_TO_CUTTING,Amène le bol à la zone GARNITURES.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_SELECT_CUTTING_INGREDIENT,Sélectionne l'ingrédient à couper.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_CUT_INGREDIENT,"Coupe l'ingrédient. Quand tu as fini, relâche le couteau.",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_COLLECT_SLICED,Récupère l'ingrédient coupé.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_CUTTING_END,Et voilà. Prépare maintenant le reste de la commande.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_BASIC_BOWL_TO_BOIL,Amène le bol à la zone MARMITE.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_BOWL_TO_PACKAGING,Amène le bol à la zone ASSAISONNEMENT.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_CLOSE_BOIL_LID,Ferme le couvercle de la marmite pour cuire les ingrédients.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_COLLECT_BOIL,Récupère les ingrédients cuits.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_EATING_TOOLS,N'oublie pas ! Le client a besoin de couverts pour manger.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_GRAB_BOWL,Prends un bol.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_BOIL_LID,Ouvre le couvercle.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_BOIL_LID_ON_BOIL,C'est prêt : ouvre le couvercle.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_RECIPE,Ouvre le livre de recettes.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_POUR_SOUP,Verse ensuite la soupe.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_MESSAGE_SOUP,"N'oublie pas : sauf si le client le veut sec, ajoute toujours la soupe !",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_SELECT_BOIL_INGREDIENT,Sélectionne les ingrédients à faire bouillir.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_INGREDIENT_COST,N'oublie pas qu'ajouter un ingrédient coûte de l'argent.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_SERVE_BOWL,"Le bol doit être dans la zone ASSAISONNEMENT avant le service. Enfin, [COLOR=ALERT]sonne la cloche[/COLOR] pour servir le plat !",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_WAIT_BOIL,Attends la fin de la cuisson.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_WAIT_RECIPE,"Mémorise la recette, puis ferme le livre.",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_ORDERNOTES,Regardons la commande du client. Ouvre les notes de commande.,reviewed,Suppression de encore car il s’agit de la première consultation en jeu ; tutoiement harmonisé.
+TUTORIAL_BASIC_WAIT_ORDERNOTES,Voici la commande du client ! Ferme-la quand tu as fini.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
 TUTORIAL_MANUALORDER_MESSAGE_1,Il arrive que des clients passent une commande personnalisée absente du menu.,reviewed,
-TUTORIAL_MANUALORDER_MESSAGE_2,Lisez bien leur commande et ajoutez les ingrédients demandés.,reviewed,
-TUTORIAL_CONTEST_TURN,Faites attention à vos tours restants.,reviewed,
-TUTORIAL_CONTEST_ACTION,"À chaque tour, vous avez un nombre limité d'actions. Chaque étape de cuisine coûte une action.",reviewed,
-TUTORIAL_CONTEST_BELL,"Dans les duels de boulettes, les chefs préparent leur plat chacun leur tour. Sonnez la cloche pour finir votre tour.",reviewed,
-TUTORIAL_CONTEST_TASTECHAIN,"Pour augmenter la jauge du public, suivez cette séquence. Survolez ceci pour voir quoi ajouter ou faire à chaque action.",reviewed,
-TUTORIAL_CONTEST_CROWDSMETER,Remplir une jauge du public vous donne un point bonus à la fin du duel culinaire.,reviewed,
+TUTORIAL_MANUALORDER_MESSAGE_2,Lis bien leur commande et ajoute les ingrédients demandés.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_TURN,Fais attention à tes tours restants.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_ACTION,"À chaque tour, tu as un nombre limité d’actions. Chaque étape de cuisine coûte une action.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_BELL,"Dans les duels de boulettes, les chefs préparent leur plat chacun leur tour. Sonne la cloche pour finir ton tour.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_TASTECHAIN,"Pour augmenter la jauge du public, suis cette séquence. Survole ceci pour voir quoi ajouter ou faire à chaque action.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_CROWDSMETER,Remplir une jauge du public te donne un point bonus à la fin du duel culinaire.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 UI_DAY_INDEX,Jour [X],reviewed,
 DAY_SUNDAY,dim.,reviewed,
 DAY_MONDAY,lun.,reviewed,
@@ -431,7 +431,7 @@ GALLERY_TAB_GENERAL,Général,reviewed,
 GALLERY_TITLE,Galerie,reviewed,
 ACTION_HIDEUI,Masquer,reviewed,
 NEWGAME_CONFIRMATION,Commencer une nouvelle partie ?<br>(la sauvegarde actuelle sera perdue),reviewed,
-MAINMENU_CONFIRMATION,Retourner au menu principal ?<br>(la progression non sauvegardée sera perdue),reviewed,
+MAINMENU_CONFIRMATION,Retourner au menu principal ?<br>La progression en cours sera perdue.,reviewed,Formulation raccourcie pour éviter une ligne orpheline.
 RANDOMDAYOFF_REWARD_COIN,+[X] pièce(s),reviewed,
 RANDOMDAYOFF_REWARD_VOUCHER,+[X] bon(s),reviewed,
 REWARD_REPUTATION,+[X] réputation,reviewed,
@@ -531,7 +531,7 @@ Dialogue/MAMI_GOOD_REVIEW_1,Oui ! C'est bon !,reviewed,
 Dialogue/MAMI_GOOD_REVIEW_2,"Super, j'ai hâte de goûter.",reviewed,
 Dialogue/MAMI_GOOD_REVIEW_3,Ça a l'air très bon. Mercii.,reviewed,
 Dialogue/MAMI_HAPPY_REVIEW_1,"Waouh, c'est un autre niveau ! Les chefs des grandes villes, c'est autre chose ! À table !",reviewed,
-Dialogue/MAMI_HAPPY_REVIEW_2,"Trop boooon !! Tu es la meilleure, [NAME] !",reviewed,
+Dialogue/MAMI_HAPPY_REVIEW_2,"Trop boooon !! Tu assures vraiment, [NAME] !",reviewed,Formulation neutre ; les autres langues ne genrent pas le personnage joueur.
 Dialogue/MAMI_HAPPY_REVIEW_3,"Oh là là, ça a l'air délicieux ! Comment tu as fait ça ?",reviewed,
 Dialogue/MAMI_SAD_REVIEW_1,"Oui... bon, je mange.",reviewed,
 Dialogue/MAMI_SAD_REVIEW_2,"Euh... Tout le monde a de mauvais jours. Ne t'inquiète pas, je prends.",reviewed,
@@ -616,7 +616,7 @@ Dialogue/FOODREVIEW_OVERFLOW_MESSAGE,Et bien d'autres erreurs...,reviewed,
 Dialogue/FOODREVIEW_WRONG_SKEWER_COOKLEVEL,J'avais demandé [X] mais j'ai reçu [Y].,reviewed,
 Dialogue/TUTORIALCOOKINGSTART_1,Aïe ! Ouille ! Regarde où tu vas !,reviewed,
 Dialogue/TUTORIALCOOKINGSTART_2,Toi ! T'es qui bordel ?,reviewed,
-Dialogue/TUTORIALCOOKINGSTART_CHOICE_1,Je m'appelle [NAME]. Plaisir de te rencontrer !,reviewed,
+Dialogue/TUTORIALCOOKINGSTART_CHOICE_1,Je m'appelle [NAME]. Quel plaisir de te rencontrer !,reviewed,Formulation française naturelle et neutre pour les deux personnages joueurs.
 Dialogue/TUTORIALCOOKINGSTART_3,[NAME] ? Et qu'est-ce que tu fais ici... ?,reviewed,
 Dialogue/TUTORIALCOOKINGSTART_4,Oh. Vu ta tenue tu es aux commandes ici ?,reviewed,
 Dialogue/TUTORIALCOOKINGSTART_CHOICE_2,Je suis [NAME]. En cuisine et copropriétaire de Bakuso.,reviewed,
@@ -941,11 +941,11 @@ Dialogue/CONTEST_PARTNER_INTRO_CHU,Voici le toujours retors Mr. Chu ! N'oubliez 
 Dialogue/CONTEST_PARTNER_INTRO_RUNA,"C'est Runa ! Elle garde toujours son sang-froid, en musique comme en cuisine. Une partenaire de duel vraiment fiable !",reviewed,
 Dialogue/CONTEST_PARTNER_INTRO_ELIO,Et voici Elio ! Son sourire radieux peut illuminer les duels les plus intenses !,reviewed,
 Dialogue/CONTEST_PARTNER_INTRO_CHIL,"C'est le mec le plus cool : Chil ! Mais ne vous fiez pas à son air décontracté, il est toujours prêt à aider !",reviewed,
-Dialogue/CONTEST_PARTNER_INTRO_CHARMANT,"Applaudissez Charmant ! Sa prestance et son bagout ont brisé bien des cœurs ! Méfiez-vous, les amis !",reviewed,
+Dialogue/CONTEST_PARTNER_INTRO_CHARMANT,"Applaudissez Charmant ! Sa prestance et son bagout ont brisé bien des coeurs ! Méfiez-vous, les amis !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/CONTEST_PARTNER_INTRO_NEKORA,"Mignonne et imprévisible comme un vrai chat, c'est Nekora ! Elle est prête à griffer son chemin vers la victoire pour son équipe !",reviewed,
 Dialogue/CONTEST_PARTNER_INTRO_SOPHIE,"Oo la la, c'est Sophie ! Même dans le feu d'un Duel culinaire, elle ne transpire jamais ! Une cheffe pleine de classe !",reviewed,
 Dialogue/CONTEST_PARTNER_INTRO_MINNIE,"C'est Minnie ! Ne la sous-estimez pas parce qu'elle est petite ! Elle n'a que des A, même en Cuisine 101 !",reviewed,
-Dialogue/CONTEST_PARTNER_INTRO_EMA,"Douce mais ferme, c'est Ema ! Aussi appelée la reine de la cuisine familiale, ses plats chauds font fondre les cœurs gelés !",reviewed,
+Dialogue/CONTEST_PARTNER_INTRO_EMA,"Douce mais ferme, c'est Ema ! Aussi appelée la reine de la cuisine familiale, ses plats chauds font fondre les coeurs gelés !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/CONTEST_PARTNER_INTRO_JEN,"Certains la disent géniale, d'autres excentrique : c'est Jen ! Elle sait inspirer sa partenaire durant les duels !",reviewed,
 Dialogue/CONTEST_PARTNER_INTRO_NENE,"Avec plus de 80 ans d'expérience en cuisine, c'est Nene ! Son immense sagesse est un véritable trésor !",reviewed,
 Dialogue/CONTEST_PARTNER_INTRO_TANTI,"Attention, les amis, c'est Tanti ! Son tempérament de feu va faire monter la température !",reviewed,
@@ -965,7 +965,7 @@ Dialogue/OPPONENT_INTRO_RUNA,"Toujours calme et imperturbable, voici Runa des Ga
 Dialogue/OPPONENT_INTRO_CHU,"Mr. Chu est là ! En tant que marchand ambulant, il a sûrement appris diverses techniques de cuisine ! Voyons ce qu'il sait faire !",reviewed,
 Dialogue/OPPONENT_INTRO_OTARU,"C'est Otaru ! Son amour pour Migu est sans limites ! Il a regardé des centaines d'animes de cuisine, voyons ce qu'il vaut aux fourneaux !",reviewed,
 Dialogue/OPPONENT_INTRO_TYRO,"C'est Tyro ! Attention, tout le monde ! Il est petit, mais sa morsure est redoutable ! Tout comme sa cuisine !",reviewed,
-Dialogue/OPPONENT_INTRO_NEKORA,"Nyan nyan, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les œufs, mais aussi les cœurs !",reviewed,
+Dialogue/OPPONENT_INTRO_NEKORA,"Nyan nyan, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les oeufs, mais aussi les coeurs !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/OPPONENT_INTRO_JEN,Faites du bruit pour Jen ! Cette icône de mode s'est récemment lancée dans les vêtements comestibles ! Tout ce qu'elle porte aujourd'hui se mange !,reviewed,
 Dialogue/OPPONENT_INTRO_SAI,"Oh là là, c'est Sai ! Rejeté par la communauté scientifique pour ses idées folles, il se tourne désormais vers la cuisine ! Quelle expérience allons-nous voir aujourd'hui ?!",reviewed,
 Dialogue/OPPONENT_INTRO_LADO,"Voici Lado ! Ce jeune homme consacre sa vie à étudier les restaurants de KuloNiku ! Aujourd'hui, place à la recherche de terrain en cuisine !",reviewed,
@@ -1245,7 +1245,7 @@ Dialogue/VNLOCATION_AQUARIUM_DESC,Un aquarium populaire avec des poissons tropic
 Dialogue/VNLOCATION_ARCADE_DESC,"Une salle d'arcade animée, pleine de machines amusantes et flashy, avec un choix éclectique de lots.",reviewed,
 Dialogue/VNLOCATION_BEACH_DESC,"Sable blanc, eau bleue limpide. Les parasols colorés et les poufs en font un coin détente idéal.",reviewed,
 Dialogue/VNLOCATION_MALL_DESC,"Un centre commercial classique à l'ambiance rétro, restauré depuis les années 1920 avec une touche moderne.",reviewed,
-Dialogue/VNLOCATION_PARK_DESC,"Un paisible parc urbain rempli de bancs, de fleurs et d'une fontaine historique : une pause fraîche au cœur de la ville.",reviewed,
+Dialogue/VNLOCATION_PARK_DESC,"Un paisible parc urbain rempli de bancs, de fleurs et d'une fontaine historique : une pause fraîche au coeur de la ville.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNLOCATION_ART_STUDIO_DESC,"Un atelier d'art bien équipé, avec des cours de peinture, de poterie et d'artisanat pour les esprits créatifs.",reviewed,
 Dialogue/VNLOCATION_THEME_PARK_DESC,Un parc d'attractions joyeux avec des manèges pour tous les âges. On vient de partout pour ses feux d'artifice.,reviewed,
 Dialogue/TOWNLOCATION_STORE,Bakuso,reviewed,
@@ -1316,8 +1316,8 @@ Dialogue/VNM20_PLAYERLOSE_3,"[NAME], merci beaucoup pour le Duel. Si tu veux une
 Dialogue/VNM20_PLAYERWIN_1,Hein ?! J'ai perdu ?!,reviewed,
 Dialogue/VNM20_PLAYERWIN_2,"Oh là là, tu es du sérieux.",reviewed,
 Dialogue/VNM20_PLAYERWIN_3,"Je pensais pouvoir te battre au Duel culinaire pour remonter le moral de Stella, mais je suis encore trop faible. Mon dévouement est trop faible...",reviewed,
-Dialogue/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « Meatballs to the Wall », je ne dois pas laisser les revers me définir !",provisional,Titre de chanson à confirmer en jeu.
-Dialogue/VNM20_PLAYERWIN_5,"Tu as mérité ce huitième rang, [NAME]. Je suis de tout cœur avec toi !",reviewed,
+Dialogue/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « A fond les boulettes », je ne dois pas laisser les revers me définir !",reviewed,Arbitrage utilisateur du titre de chanson ; A majuscule sans accent pour compatibilité de police.
+Dialogue/VNM20_PLAYERWIN_5,"Tu as mérité ce huitième rang, [NAME]. Je suis de tout coeur avec toi !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM20_PLAYERWIN_6,Tu sais quoi ? J'ai une super idée pour faire passer Bakuso au niveau supérieur.,reviewed,Dépasse max_source_chars de 3 caractères.
 Dialogue/VNM20_PLAYERWIN_7,Et si on en parlait chez toi ?,reviewed,
 Dialogue/VNM20_PLAYERWIN_8,Voilà. Mon idée : des [COLOR=ALERT]Festivals[/COLOR] !,reviewed,
@@ -1381,7 +1381,7 @@ Dialogue/VNM13_END_8,"Mais dernièrement, les gens voient la cuisine comme un si
 Dialogue/VNM13_END_9,"Alors, on fricote avec la petite main de Bakuso ?",reviewed,
 Dialogue/VNM13_END_10,(Mr. Crois !),reviewed,
 Dialogue/VNM13_END_11,"Oui, tout à fait. Je crois qu'il est important de connaître les talents culinaires de demain !",reviewed,
-Dialogue/VNM13_END_12,"Ha ha ha, en effet, c'est très satisfaisant de les voir cuisiner avec tant de cœur à chaque duel !",reviewed,
+Dialogue/VNM13_END_12,"Ha ha ha, en effet, c'est très satisfaisant de les voir cuisiner avec tant de coeur à chaque duel !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM13_END_13,"Je crois que nous n'avons jamais parlé hors de l'arène, [NAME]. Tout le plaisir est pour moi.",reviewed,
 Dialogue/VNM13_END_14,"Si ce n'est pas indiscret, quel est ton rêve en cuisine ?",reviewed,
 Dialogue/VNM13_END_CHOICE_3,Je veux être n° 1 en ville !,reviewed,
@@ -1402,7 +1402,7 @@ Dialogue/VNM13_END_26,"Et tout le monde prendra le [COLOR=ALERT]restaurant le mi
 Dialogue/VNM13_END_27,"(Cela veut dire que si Bakuso atteint le rang 1, je pourrai rappeler à tous le véritable sens de la cuisine...)",reviewed,
 Dialogue/VNM13_END_28,(Voilà pourquoi je suis ici ! Rien de mieux pour honorer l'[COLOR=ALERT]héritage[/COLOR] de grand-mère !),reviewed,
 Dialogue/VNM13_START_1,Te voilà ! Je t'attends depuis ce matin !,reviewed,
-Dialogue/VNM13_START_2,"Regarde le [COLOR=ALERT]panneau d'affichage[/COLOR] et prépare-toi à une vision des plus palpitantes ! Oh, mon cœur ne va pas tenir !",reviewed,
+Dialogue/VNM13_START_2,"Regarde le [COLOR=ALERT]panneau d'affichage[/COLOR] et prépare-toi à une vision des plus palpitantes ! Oh, mon coeur ne va pas tenir !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM13_RESTBLOCKER_1,(Rosso a dit de le retrouver devant la [COLOR=ALERT]chaîne de télévision[/COLOR]. Peut-être veut-il des conseils de mode ?),reviewed,
 Dialogue/VNM25_1,"Je vois la détermination dans tes yeux... Tu es ici pour une revanche, Faucon ?",reviewed,
 Dialogue/VNM25_B_1,Très bien. Je te ferai comprendre où est vraiment ta place !,reviewed,
@@ -1614,7 +1614,7 @@ Dialogue/GH_CASSIE_OUTDOOR_1_6,Je ne dirais jamais non à une pause-café.,revie
 Dialogue/GH_CASSIE_OUTDOOR_1_CHOICE_3,On peut marcher sous la pluie !,reviewed,
 Dialogue/GH_CASSIE_OUTDOOR_1_7,"Euh, je préfère éviter.",reviewed,
 Dialogue/GH_CASSIE_OUTDOOR_1_8,Mes vêtements et mon maquillage ne sont pas étanches.,reviewed,
-Dialogue/GH_CASSIE_CLOSING_BEST_1,Je me suis amusée [NAME]. Mes sœurs seront si jalouses ! Invite-moi encore quand tu veux !,reviewed,
+Dialogue/GH_CASSIE_CLOSING_BEST_1,Je me suis amusée [NAME]. Mes soeurs seront si jalouses ! Invite-moi encore quand tu veux !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/GH_CASSIE_CLOSING_GOOD_1,Merci pour aujourd'hui [NAME]. À demain.,reviewed,
 Dialogue/GH_CASSIE_CLOSING_NEUTRAL_1,"Bon, je dois y aller. À la boutique.",reviewed,
 Dialogue/GH_SHUGA_OPENING_1_1,Salut Chef ! Je suis prêt pour notre sortie !,reviewed,
@@ -1812,7 +1812,7 @@ Dialogue/VNM27_17,Elle a dit avoir été espionne et être venue à KuloNiku fil
 Dialogue/VNM27_18,"J'ai cru à une blague, mais avant de partir se faire soigner, elle a dit...",reviewed,
 Dialogue/VNM27_19,"Qu'un jour, son petit-enfant, [NAME], viendrait.",reviewed,
 Dialogue/VNM27_20,Et que tu fermerais le restaurant comme espion ou le dirigerais comme chef.,reviewed,
-Dialogue/VNM27_21,Elle m'a demandé de garder un œil sur toi.,reviewed,
+Dialogue/VNM27_21,Elle m'a demandé de garder un oeil sur toi.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM27_22,"Si tu étais venu pour le fermer, je t'aurais arrêté par tous les moyens !",reviewed,
 Dialogue/VNM27_23,"Aujourd'hui, je veux dire...",reviewed,
 Dialogue/VNM27_24,"M-Merci d'être resté et de prendre ça au sérieux. Enfin, voilà. Je crois.",reviewed,
@@ -1990,7 +1990,7 @@ Dialogue/CEM13_1,"Alors, petit ? Les affaires ?",reviewed,
 Dialogue/CEM13_2,Moi ? Je suis heureux comme tout ! Les affaires n'ont jamais aussi bien marché !,reviewed,
 Dialogue/CEM13_3,"Tous ces duels poussent les restaurateurs à se ruer sur de nouveaux outils, de nouveaux ingrédients. Tout ce qui peut leur donner le moindre avantage.",reviewed,
 Dialogue/CEM13_4,"Bien sûr que ça me fait de la peine pour ceux qui doivent fermer... Mais c'est la nature même des affaires, tu ne crois pas ?",reviewed,
-Dialogue/CEM13_5,Ne pense pas que je suis sans cœur. Nous devons tous survivre.,reviewed,
+Dialogue/CEM13_5,Ne pense pas que je suis sans coeur. Nous devons tous survivre.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/CEM13_6,"Et toi, tu sembles bien t'en sortir. Je veux dire, déjà [COLOR=ALERT]rang 5[/COLOR] ?",reviewed,
 Dialogue/CEM13_7,Félicitations ! Tiens : un [COLOR=ALERT]Set de table à boissons[/COLOR] tout neuf.,reviewed,
 Dialogue/CEM13_8,"Alors, pourquoi ne pas l'essayer tout de suite, oui oui ?",reviewed,
@@ -2220,7 +2220,7 @@ Dialogue/VNM51_7,"C'est radical. Mais si quelqu'un peut le faire, je crois que c
 Dialogue/VNM51_8,Le problème...,reviewed,
 Dialogue/VNM51_9,Je ne sais pas s'il fait ce qu'il faut. C'est mon mentor et mon patron. Je sais de première main que son sens des affaires est inégalé.,reviewed,
 Dialogue/VNM51_10,"Pourtant... il peut parfois être imprudent. J'ai vu comment son plan fait du mal à Stella, à toi et à tant d'autres.",reviewed,
-Dialogue/VNM51_11,"On ne fait pas d'omelette sans casser des œufs, dit-il.",reviewed,
+Dialogue/VNM51_11,"On ne fait pas d'omelette sans casser des oeufs, dit-il.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM51_12,"Je sais qu'il est bien plus expérimenté que moi, mais ça ne me semble pas juste.",reviewed,
 Dialogue/VNM51_13,"Alors, s'il te plaît, affrontons-nous en Duel culinaire ! C'est mon [COLOR=ALERT]Défi classé[/COLOR] pour toi, [NAME] !",reviewed,
 Dialogue/VNM51_14,Alors cela dissipera peut-être tous ces doutes dans ma tête !,reviewed,
@@ -2242,7 +2242,7 @@ Dialogue/VNM54_PLAYERWIN_2,"Alors, peut-être-- contrairement à mes calculs, tu
 Dialogue/VNM54_PLAYERWIN_3,Parlons dans un endroit plus privé.,reviewed,
 Dialogue/VNM54_PLAYERWIN_4,"À vrai dire, je savais que ce qu'il fait est mal.",reviewed,
 Dialogue/VNM54_PLAYERWIN_5,Je ne voulais simplement pas l'admettre. Le plus raisonnable serait de suivre ses plans. Ma future carrière serait assurée.,reviewed,
-Dialogue/VNM54_PLAYERWIN_6,Mais tu m'as ouvert les yeux. Je vais suivre mon cœur et en accepter les conséquences !,reviewed,
+Dialogue/VNM54_PLAYERWIN_6,Mais tu m'as ouvert les yeux. Je vais suivre mon coeur et en accepter les conséquences !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM54_PLAYERWIN_7,Voici son plan : il développe la Boulette Premium Radieuse Irisée Meaty Originale -- la Boulette PRIMO en abrégé.,reviewed,
 Dialogue/VNM54_PLAYERWIN_8,C'est pour cela qu'il rachète des restaurants -- et leurs recettes -- et achète toutes sortes d'ingrédients.,reviewed,
 Dialogue/VNM54_PLAYERWIN_9,"S'il réussit, la Boulette PRIMO sera délicieuse et dangereusement addictive !",reviewed,
@@ -2428,9 +2428,9 @@ Dialogue/VNU4_21,"(Waouh, elle ne bégaie même pas une seule fois. En fait, ell
 Dialogue/VNU4_22,(Un enfant a demandé sur les requins. Elle a parfaitement répondu. Bravo !),reviewed,
 Dialogue/VNU4_23,J-Je suis revenue.,reviewed,
 Dialogue/VNU4_24,"Comment ai-je fait, [NAME] ?",reviewed,
-Dialogue/VNU4_CHOICE_4,Je ne savais pas que les œufs de requin avaient autant de formes.,reviewed,
+Dialogue/VNU4_CHOICE_4,Je ne savais pas que les oeufs de requin avaient autant de formes.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNU4_25,"Oh, tu écoutais !",reviewed,
-Dialogue/VNU4_26,"Oui, la forme de leur étui d'œuf dépend de leur habitat.",reviewed,
+Dialogue/VNU4_26,"Oui, la forme de leur étui d'oeuf dépend de leur habitat.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNU4_CHOICE_5,Tu as été super !,reviewed,
 Dialogue/VNU4_27,"Ehehe, merci.",reviewed,
 Dialogue/VNU4_28,J'étais nerveuse mais ravie que tout se soit bien passé.,reviewed,
@@ -2457,7 +2457,7 @@ Dialogue/VNU4_44,"Je-- Je voudrais juste que tu apprécies les efforts que je fa
 Dialogue/VNU4_45,Au revoir pour le moment.,reviewed,
 Dialogue/VNU4_46,.....,reviewed,
 Dialogue/VNU4_47,Ehe-- Ehehe !,reviewed,
-Dialogue/VNU4_48,"Ah, mon cœur bat si vite.",reviewed,
+Dialogue/VNU4_48,"Ah, mon coeur bat si vite.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNU4_49,"Mais je l'ai fait, [NAME] ! Je-- Je leur ai dit ce que je ressentais vraiment !",reviewed,
 Dialogue/VNU4_50,"C'était effrayant, mais--",reviewed,
 Dialogue/VNU4_51,"Te voir m'a donné le courage nécessaire, [NAME].",reviewed,
@@ -2591,7 +2591,7 @@ Dialogue/VNS5_34,"Elle parle de notre amitié, de mes doutes, de ta gentillesse.
 Dialogue/VNS5_35,"Bon, faire tenir tout ça dans une chanson était plus dur que prévu, mais j'ai fait de mon mieux.",reviewed,
 Dialogue/VNS5_36,"Bref, j'ai assez bavardé. Écoute-la-- Écoute-la d'abord.",reviewed,
 Dialogue/VNS5_37,"(La chanson est entraînante et frénétique, mais chaleureuse.)",reviewed,
-Dialogue/VNS5_38,"(Elle n'est pas très aboutie, mais on sent que Shuga y a mis tout son cœur.)",reviewed,
+Dialogue/VNS5_38,"(Elle n'est pas très aboutie, mais on sent que Shuga y a mis tout son coeur.)",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNS5_39,"Euh, tu en penses quoi ?",reviewed,
 Dialogue/VNS5_CHOICE_7,C'est super. Merci.,reviewed,
 Dialogue/VNS5_40,Vraiment ? Ouf.,reviewed,
@@ -2617,7 +2617,7 @@ Dialogue/VND2_2,Je suis sûr qu'aujourd'hui est le jour où je te convaincrai de
 Dialogue/VND2_3,"L'Organisation a besoin que tu reviennes. Sans ton talent si particulier, c'est le chaos.",reviewed,
 Dialogue/VND2_4,"Et pour le prouver, j'ai apporté les lettres de tes parents.",reviewed,
 Dialogue/VND2_5,"Tiens, je vais t'en lire une.",reviewed,
-Dialogue/VND2_6,"Hum. « Cher [NAME], mon cœur. Ton père et moi nous ennuyons terriblement de toi. »",reviewed,
+Dialogue/VND2_6,"Hum. « Cher [NAME], mon coeur. Ton père et moi nous ennuyons terriblement de toi. »",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VND2_7,"Nous ne comprenons pas ton départ, mais reviens et nous pourrons en parler.",reviewed,
 Dialogue/VND2_8,"« Je te préparerai ton plat préféré. Avec un amour sans fin, Maman. »",reviewed,
 Dialogue/VND2_9,"Tu vois ? Maintenant, rentrons, Faucon. Tout le monde t'attend.",reviewed,
@@ -2654,10 +2654,10 @@ Dialogue/VND2_33,Plus que tu ne crois...,reviewed,
 Dialogue/VND2_34,Mais je suis désolé pour les lettres. Je n'aurais pas dû recourir à une ruse aussi mesquine.,reviewed,
 Dialogue/VND2_35,Je comprends maintenant que je m'y prends mal.,reviewed,
 Dialogue/VND2_36,"Tu n'es plus le Faucon que je connaissais. Tu es [NAME], la personne aux fourneaux de Bakuso.",reviewed,
-Dialogue/VND2_37,"Si tu fais ça avec sincérité, je ferais mieux d'y mettre tout mon cœur aussi.",reviewed,
+Dialogue/VND2_37,"Si tu fais ça avec sincérité, je ferais mieux d'y mettre tout mon coeur aussi.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VND2_38,...Même si c'est effrayant.,reviewed,
 Dialogue/VND2_39,"Alors, tu veux bien me donner une autre chance, juste pour te parler ?",reviewed,
-Dialogue/VND2_CHOICE_7,"Tu marches sur des œufs, monsieur.",reviewed,
+Dialogue/VND2_CHOICE_7,"Tu marches sur des oeufs, monsieur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VND2_40,Je comprends. C'est juste.,reviewed,
 Dialogue/VND2_41,Je-- Je ferai de mon mieux pour gagner ta confiance.,reviewed,
 Dialogue/VND2_CHOICE_8,D'accord.,reviewed,
@@ -2782,7 +2782,7 @@ Dialogue/VND4_CHOICE_4,Tu dois vraiment demander ?,reviewed,
 Dialogue/VND4_36,"Haha, j'imagine que non.",reviewed,
 Dialogue/VND4_CHOICE_5,"Envole-toi, Dan !",reviewed,
 Dialogue/VND4_37,Oui!,reviewed,
-Dialogue/VND4_CHOICE_6,"Ah, tu as donc un cœur, finalement.",reviewed,
+Dialogue/VND4_CHOICE_6,"Ah, tu as donc un coeur, finalement.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VND4_38,Pardon ?!,reviewed,
 Dialogue/VND4_39,"Enfin, je vais prendre ça pour un oui.",reviewed,
 Dialogue/VND4_40,Objectifs et paramètres de mission mis à jour.,reviewed,
@@ -3199,8 +3199,8 @@ Dialogue/GH_UME_GENERIC_3_6,M-Mais peut-être à Bakuso...? Hum...,reviewed,
 Dialogue/GH_UME_GENERIC_3_CHOICE_2,Je peux tenir la boutique pour toi !,reviewed,
 Dialogue/GH_UME_GENERIC_3_7,"C-C'est vraiment gentil, merci.",reviewed,
 Dialogue/GH_UME_GENERIC_3_8,Mais je ne veux pas te déranger. Tu as déjà ton propre commerce à gérer...,reviewed,
-Dialogue/GH_UME_GENERIC_3_CHOICE_3,Suis ton cœur !,reviewed,
-Dialogue/GH_UME_GENERIC_3_9,Suivre... mon cœur ?,reviewed,
+Dialogue/GH_UME_GENERIC_3_CHOICE_3,Suis ton coeur !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/GH_UME_GENERIC_3_9,Suivre... mon coeur ?,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/GH_UME_GENERIC_3_10,"O-Oui, être si insouciante pourrait changer un peu... Je vais y réfléchir.",reviewed,
 Dialogue/GH_UME_INDOOR_1_1,O-Oh !,reviewed,
 Dialogue/GH_UME_INDOOR_1_2,"Mes lunettes s'embuent... Et j'ai oublié mon, euh, chiffon d'essuyage.",reviewed,
@@ -3568,7 +3568,7 @@ Dialogue/VNM56_15,"...Pourtant, les autres me manquent un peu.",reviewed,
 Dialogue/VNM56_16,"Enfin, montrons à Crois qu'on est à sa hauteur ! Nous ne le laisserons pas faire de mal à nos amis !",reviewed,
 Dialogue/VNM57_1,[NAME] ! Crois est là !,reviewed,
 Dialogue/VNM57_2,Vous pouvez le faire. Ne vous laissez pas marcher dessus. Souvenez-vous : Bakuso est le deuxième restaurant de KuloNiku !,reviewed,
-Dialogue/VNM57_3,"Humph, cet endroit est toujours aussi écœurant.",reviewed,
+Dialogue/VNM57_3,"Humph, cet endroit est toujours aussi écoeurant.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM57_4,"Ah, mais une fois que je vous aurai chassés, l'endroit sera parfait pour une station-service ! Ha ha ha !",reviewed,
 Dialogue/VNM57_CHOICE_1,Je ne vous laisserai pas !,reviewed,
 Dialogue/VNM57_5,"Ha ha ha, vraiment ?",reviewed,
@@ -3920,7 +3920,7 @@ Dialogue/VNM70_53,C’est pour ça que je t’ai proposé le parc. Être épuis�
 Dialogue/VNM70_54,"D’abord, je ne me suis jamais excusée d’avoir été rude quand on s’est rencontrés. Et de tout ce que j’ai pu te dire.",reviewed,
 Dialogue/VNM70_55,Pardon. C’est ma faute.,reviewed,
 Dialogue/VNM70_CHOICE_9,Excuses acceptées.,reviewed,
-Dialogue/VNM70_56,M-Merci. Vraiment. Ça me pesait sur le cœur.,reviewed,
+Dialogue/VNM70_56,M-Merci. Vraiment. Ça me pesait sur le coeur.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM70_CHOICE_10,J’avais déjà tout oublié.,reviewed,
 Dialogue/VNM70_57,Vraiment ?,reviewed,
 Dialogue/VNM70_58,"Je suppose que ça te ressemble, toujours à regarder vers l’avenir.",reviewed,
@@ -3942,7 +3942,7 @@ Dialogue/VNM70_70,"Mouahaha ! Très bien, je l'autorise !",reviewed,
 Dialogue/VNM70_71,Je chercherai des activités de meilleures amies à faire ensemble.,reviewed,
 Dialogue/VNM70_72,"Bref, j'ai aussi quelque chose pour toi.",reviewed,Dépassement de 2 caractères.
 Dialogue/VNM70_73,C'est le vieux livre de recettes de ta grand-mère.,reviewed,Dépassement de 10 caractères.
-Dialogue/VNM70_74,"Tu devrais l'avoir. De toute façon, je sais tout par cœur.",reviewed,
+Dialogue/VNM70_74,"Tu devrais l'avoir. De toute façon, je sais tout par coeur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM70_75,"Et il restait, euh, des pages vierges. Alors je me disais, peut-être...",reviewed,
 Dialogue/VNM70_76,On pourrait créer de nouvelles recettes ensemble.,reviewed,Dépassement de 9 caractères.
 Dialogue/VNM70_77,J'ai entendu dire que les collaborations sont très à la mode.,reviewed,
@@ -3959,7 +3959,7 @@ Dialogue/VNM70_85,M-Mignon ?! Tu veux dire que je--,reviewed,
 Dialogue/VNM70_86,"Enfin, chacun a droit à son opinion.",reviewed,
 Dialogue/VNM70_87,"Il m'a fallu du temps pour que ce soit parfait, mais ça en valait la peine.",reviewed,Dépassement de 7 caractères.
 Dialogue/VNM70_88,"Ta grand-mère m'a montré que la cuisine peut rendre les gens heureux. Je le sais, je l'ai vécu.",reviewed,
-Dialogue/VNM70_89,C'est pourquoi je cuisine : réchauffer les cœurs et rendre les gens heureux. Comme quand ta grand-mère m'a offert ce bol de boulettes et nouilles.,reviewed,Raccourci naturel ; intention et souvenir conservés.
+Dialogue/VNM70_89,C'est pourquoi je cuisine : réchauffer les coeurs et rendre les gens heureux. Comme quand ta grand-mère m'a offert ce bol de boulettes et nouilles.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM70_90,Mais Crois m'a égarée. J'ai fini par promouvoir son idéologie.,reviewed,
 Dialogue/VNM70_91,Puis... tu m'as ramenée. Tu m'as rappelé ce qui compte vraiment. Je ne l'oublierai jamais.,reviewed,
 Dialogue/VNM70_92,"M-Mais bref, comme c'est un menu collaboratif, je pensais ajouter quelque chose qui te représente aussi.",reviewed,
@@ -4068,7 +4068,7 @@ Dialogue/GPN5_4_5,"O-Oh, j'ai justement trouvé un excellent producteur local de
 Dialogue/GPN5_4_6,(Nous avons partagé nos idées et nos difficultés en tant que collègues propriétaires. Je me sens solidaire d'Ume.),reviewed,
 Dialogue/GPN6_1_1,"Tu sais, j'ai encore publié des stories Instayum aujourd'hui. Sur notre journée à Bakuso et tout ça.",reviewed,
 Dialogue/GPN6_1_2,"Mon père ne dit jamais qu'il regarde mes stories, mais je sais qu'il les a vues.",reviewed,
-Dialogue/GPN6_1_3,"Parce qu'ensuite, il publie ses propres stories Instayum. Hier encore, il a posté une photo de mes sœurs cuisinant [CHIL_FOOD2] avec [EMA_INGREDIENT] dessus.",reviewed,Dépassement de 6 caractères.
+Dialogue/GPN6_1_3,"Parce qu'ensuite, il publie ses propres stories Instayum. Hier encore, il a posté une photo de mes soeurs cuisinant [CHIL_FOOD2] avec [EMA_INGREDIENT] dessus.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/GPN6_1_4,J'imagine que c'est sa façon de me dire qu'il va bien.,reviewed,
 Dialogue/GPN6_1_5,"Quel homme maladroit. Enfin, j'imagine que beaucoup de gens de son âge sont comme ça.",reviewed,
 Dialogue/GPN6_1_6,(Cassie m'a raconté des anecdotes amusantes sur sa famille. Je sentais leur affection mutuelle.),reviewed,
@@ -4204,7 +4204,7 @@ Dialogue/JUDGE_DESC_MAMI,"La reine des mondanités de la ville, Mami ! Elle ador
 Dialogue/JUDGE_DESC_MAMI_SKEWER,Elle aimerait une brochette de [COLOR=LIKED]champignons[/COLOR] en accompagnement !,reviewed,
 Dialogue/JUDGE_DESC_MAMI_DRINK,"Côté boisson, elle voudrait du [COLOR=LIKED]thé[/COLOR] ! Du vrai thé, cette fois.",reviewed,
 Dialogue/JUDGE_DESC_MAMI_RANDOM_TASTE,"Et aujourd'hui, elle veut son plat [TASTE] !",reviewed,
-Dialogue/JUDGE_DESC_JEN,"Jen, la fashionista de la cuisine, est là ! Elle adore le brillant des [COLOR=LIKED]vermicelles de riz[/COLOR], mais trouve les [COLOR=DISLIKED]ananas[/COLOR] trop tape-à-l'œil ! Elle veut son plat [COLOR=SALTY]salé[/COLOR], malgré les ordres du médecin.",reviewed,
+Dialogue/JUDGE_DESC_JEN,"Jen, la fashionista de la cuisine, est là ! Elle adore le brillant des [COLOR=LIKED]vermicelles de riz[/COLOR], mais trouve les [COLOR=DISLIKED]ananas[/COLOR] trop tape-à-l'oeil ! Elle veut son plat [COLOR=SALTY]salé[/COLOR], malgré les ordres du médecin.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/JUDGE_DESC_JEN_SKEWER,"Oh oh ! Pour relever le plat, elle veut une brochette de jolis petits champignons !",reviewed,
 Dialogue/JUDGE_DESC_JEN_DRINK,Et un verre de cola délicieux pour parfaire le tout !,reviewed,
 Dialogue/JUDGE_DESC_JEN_RANDOM_TASTE,"Oh, et assurez-vous qu'il soit [TASTE] !",reviewed,
@@ -4354,7 +4354,7 @@ Dialogue/UME_CUSTOMER_INTRO_1,"B-Bonjour, [NAME]. Je viens de trier notre livrai
 Dialogue/UME_CUSTOMER_INTRO_2,C-Comment vas-tu ? Je lis en ce moment « [UME_BOOK1] [UME_BOOK2] ». C'est fascinant...,reviewed,
 Dialogue/SHUGA_CUSTOMER_INTRO_1,Yo ?! Je viens de finir un boulot à [SHUGA_JOB1] [SHUGA_JOB2]. J'ai trop faim !,reviewed,
 Dialogue/SHUGA_CUSTOMER_INTRO_2,"Yo, chef ! The Galaxies sortent un nouveau [SHUGA_MERCH1] [SHUGA_MERCH2], alors j'économise !",reviewed,
-Dialogue/DAN_CUSTOMER_INTRO_1,"Bien le bonjour, Faucon. Encore une journée paisible sans [DAN_INCIDENT1] [DAN_INCIDENT2], je présume ?",reviewed,
+Dialogue/DAN_CUSTOMER_INTRO_1,"Bien le bonjour, Faucon. Encore une journée paisible, sans [DAN_INCIDENT1] de [DAN_INCIDENT2], je suppose ?",reviewed,Construction nominale neutre et courte pour tous les fragments dynamiques.
 Dialogue/DAN_CUSTOMER_INTRO_2,Bonjour. Je regardais nos photos de cette mission à [DAN_MISSION1]. Quelle époque [DAN_MISSION2] nous avons vécue.,reviewed,
 Dialogue/LADO_CUSTOMER_INTRO_1,Bonjour [NAME]. Je viens prélever un échantillon de ta cuisine. C'est pour mon rapport sur [LADO_REPORT1] [LADO_REPORT2].,reviewed,
 Dialogue/LADO_CUSTOMER_INTRO_2,Bonjour. Connais-tu cette tendance marketing : [LADO_TREND1] [LADO_TREND2] ? Pittoresque.,reviewed,
@@ -4381,10 +4381,10 @@ Dialogue/EMA_CUSTOMER_INTRO_2,"""Tu sais ? [EMA_FAMILY] vient de [EMA_ACTION]. Q
 Dialogue/JEN_CUSTOMER_INTRO_1,"""Pff. Le dernier [NPC_ITEM_FANCY] de [SOPHIE_STORE] est totalement fade ! [JEN_CURSE]""",reviewed,
 Dialogue/JEN_CUSTOMER_INTRO_2,"""Peut-être un [JEN_ITEM2] ? En [JEN_FOOD] ? La perfection ! Hum, je suis prête à commander.""",reviewed,
 Dialogue/NENE_CUSTOMER_INTRO_1,"""Oh, tu ressembles tant à [NENE_PERSON]... Ça me rappelle [NENE_MEMORY].""",reviewed,
-Dialogue/NENE_CUSTOMER_INTRO_2,"""J'ai été [NPC_JOB_FANCY], je te l'ai déjà dit ? Une époque vraiment [DAN_MISSION2] de ma vie, mon chou.""",provisional,Accord du fragment dynamique [NPC_JOB_FANCY] à valider en jeu.
+Dialogue/NENE_CUSTOMER_INTRO_2,"""J'ai été [NPC_JOB_FANCY], je te l'ai déjà dit ? Une époque vraiment [DAN_MISSION2] de ma vie, mon chou.""",reviewed,Les métiers variables sont féminisés pour Nene.
 Dialogue/TANTI_CUSTOMER_INTRO_1,"""Je n'ai pas reçu le loyer de [TANTI_RENTER] ce mois-ci. J'ai donc dû saisir [NPC_ITEM] en paiement ! Tu te rends compte ?!""",reviewed,Formulation neutre.
 Dialogue/TANTI_CUSTOMER_INTRO_2,"""Je trouve [TANTI_HOBBY] très relaxant, tu sais ? Mais tu es peut-être trop [TANTI_ADJECTIVE] pour ça...""",reviewed,
-Dialogue/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça et un jour tu seras un [MEI_ADJECTIVE] [MEI_JOB], comme moi.""",provisional,Accord des fragments dynamiques à valider en jeu.
+Dialogue/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça : un jour tu sauras [MEI_JOB] et tu seras [MEI_ADJECTIVE], comme moi.""",reviewed,Construction dynamique neutre quel que soit le genre du personnage joueur.
 Dialogue/MEI_CUSTOMER_INTRO_2,"""J'ai dû montrer à ces [MEI_PEOPLE] à [MEI_PLACE] qui est la patronne. Ça ne me plaisait pas, mais il le fallait.""",reviewed,
 Dialogue/OTARU_CUSTOMER_INTRO_1,"""Konnichiwa ! Tu as regardé [OTARU_TITLE1] [OTARU_TITLE2], Chef-san ? C'est trop sugoi.""",reviewed,
 Dialogue/OTARU_CUSTOMER_INTRO_2,"""J'aimerais que Stella reprenne une chanson de Migu un jour ! Comme [OTARU_SONG1] [OTARU_SONG2] ! Tu ne trouves pas ?""",reviewed,
@@ -4532,7 +4532,7 @@ Dialogue/MAMI_DISH1_5,cérémoniel,reviewed,
 Dialogue/MAMI_DISH1_6,bio,reviewed,
 Dialogue/MAMI_DISH1_7,sans gluten,reviewed,
 Dialogue/MAMI_DISH1_8,gourmet,reviewed,
-Dialogue/MAMI_DISH2_1,bœuf,reviewed,
+Dialogue/MAMI_DISH2_1,boeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/MAMI_DISH2_2,poulet,reviewed,
 Dialogue/MAMI_DISH2_3,poireaux,reviewed,
 Dialogue/MAMI_DISH2_4,oignons rouges,reviewed,
@@ -4809,14 +4809,14 @@ Dialogue/SOPHIE_MATERIAL_5,diamant,reviewed,
 Dialogue/SOPHIE_MATERIAL_6,or pur,reviewed,
 Dialogue/SOPHIE_MATERIAL_7,argent,reviewed,
 Dialogue/SOPHIE_MATERIAL_8,rubis et saphir,reviewed,
-Dialogue/DAN_INCIDENT1_1,faux,provisional,Accord du fragment dynamique à valider en jeu.
-Dialogue/DAN_INCIDENT1_2,surchauffées,reviewed,
-Dialogue/DAN_INCIDENT1_3,illégales,reviewed,
-Dialogue/DAN_INCIDENT1_4,étrangement tic-tacantes,provisional,Accord du fragment dynamique à valider en jeu.
-Dialogue/DAN_INCIDENT1_5,pointues,reviewed,
-Dialogue/DAN_INCIDENT1_6,toxiques,reviewed,
-Dialogue/DAN_INCIDENT1_7,compromises,reviewed,
-Dialogue/DAN_INCIDENT1_8,du marché noir,reviewed,
+Dialogue/DAN_INCIDENT1_1,contrefaçon,reviewed,Construction nominale neutre dans la phrase dynamique de Dan.
+Dialogue/DAN_INCIDENT1_2,surchauffe,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_3,commerce illégal,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_4,tic-tac suspect,reviewed,Construction nominale neutre dans la phrase dynamique de Dan.
+Dialogue/DAN_INCIDENT1_5,pointes acérées,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_6,toxicité,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_7,sécurité compromise,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_8,marché noir,reviewed,Construction nominale neutre.
 Dialogue/DAN_INCIDENT2_1,joyaux royaux,reviewed,
 Dialogue/DAN_INCIDENT2_2,documents historiques,reviewed,
 Dialogue/DAN_INCIDENT2_3,sculptures en bronze,reviewed,
@@ -4895,7 +4895,7 @@ Dialogue/ELIO_PRAISE_5,excellent,reviewed,
 Dialogue/ELIO_PRAISE_6,ça déchire,reviewed,dépassement justifié : formulation française naturelle
 Dialogue/ELIO_PRAISE_7,radical,reviewed,
 Dialogue/ELIO_PRAISE_8,hardcore,reviewed,
-Dialogue/ELIO_ACTION_1,lancer un bœuf,reviewed,
+Dialogue/ELIO_ACTION_1,lancer un boeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/ELIO_ACTION_2,sauter partout,reviewed,
 Dialogue/ELIO_ACTION_3,faire du rock,reviewed,
 Dialogue/ELIO_ACTION_4,taper sur les tambours,reviewed,
@@ -4922,9 +4922,9 @@ Dialogue/MINNIE_THOUGHT_7,sympa et relaxant,reviewed,
 Dialogue/MINNIE_THOUGHT_8,une journée tranquille,reviewed,
 Dialogue/NPC_JOB_FANCY_1,astronaute,reviewed,
 Dialogue/NPC_JOB_FANCY_2,biochimiste,reviewed,
-Dialogue/NPC_JOB_FANCY_3,footballeur américain,reviewed,
-Dialogue/NPC_JOB_FANCY_4,gouverneur,provisional,Accord du fragment dynamique à valider en jeu.
-Dialogue/NPC_JOB_FANCY_5,ingénieur data,reviewed,
+Dialogue/NPC_JOB_FANCY_3,footballeuse américaine,reviewed,Métier féminisé pour Nene et Minnie.
+Dialogue/NPC_JOB_FANCY_4,gouverneure,reviewed,Métier féminisé pour Nene et Minnie.
+Dialogue/NPC_JOB_FANCY_5,ingénieure data,reviewed,Métier féminisé pour Nene et Minnie.
 Dialogue/NPC_JOB_FANCY_6,artiste d'environnement,reviewed,Formulation neutre.
 Dialogue/NPC_JOB_FANCY_7,architecte,reviewed,
 Dialogue/NPC_JOB_FANCY_8,musicothérapeute,reviewed,
@@ -4941,7 +4941,7 @@ Dialogue/EMA_FOOD_2,steak-frites,reviewed,
 Dialogue/EMA_FOOD_3,lasagnes,reviewed,
 Dialogue/EMA_FOOD_4,poisson grillé,reviewed,
 Dialogue/EMA_FOOD_5,poulet à l'orange,reviewed,
-Dialogue/EMA_FOOD_6,bœuf au poivre noir,reviewed,
+Dialogue/EMA_FOOD_6,boeuf au poivre noir,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/EMA_FOOD_7,pizzas maison,reviewed,
 Dialogue/EMA_FOOD_8,salade de papaye,reviewed,
 Dialogue/EMA_FOOD_9,agneau rôti,reviewed,
@@ -4953,7 +4953,7 @@ Dialogue/EMA_INGREDIENT_5,haricots puants,reviewed,
 Dialogue/EMA_INGREDIENT_6,gelée de citron,reviewed,
 Dialogue/EMA_INGREDIENT_7,menthe poivrée,reviewed,
 Dialogue/EMA_INGREDIENT_8,farine de soja,reviewed,
-Dialogue/EMA_FAMILY_1,grande sœur,reviewed,
+Dialogue/EMA_FAMILY_1,grande soeur,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/EMA_FAMILY_2,fils par alliance du voisin,reviewed,
 Dialogue/EMA_FAMILY_3,cousin au troisième degré,reviewed,Parenté volontairement absurde conservée.
 Dialogue/EMA_FAMILY_4,beau-frère,reviewed,
@@ -4980,13 +4980,13 @@ Dialogue/JEN_CURSE_8,Lâches !,reviewed,
 Dialogue/JEN_ITEM2_1,paire de sandales,reviewed,
 Dialogue/JEN_ITEM2_2,boucle de ceinture,reviewed,
 Dialogue/JEN_ITEM2_3,bonnet,reviewed,
-Dialogue/JEN_ITEM2_4,nœud papillon,reviewed,
+Dialogue/JEN_ITEM2_4,noeud papillon,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/JEN_ITEM2_5,voile de mariée,reviewed,
 Dialogue/JEN_ITEM2_6,épingle de revers,reviewed,
 Dialogue/JEN_ITEM2_7,smoking,reviewed,
 Dialogue/JEN_ITEM2_8,combinaison de plongée,reviewed,dépassement justifié : formulation française naturelle
 Dialogue/JEN_FOOD_1,réglisse,reviewed,
-Dialogue/JEN_FOOD_2,nouilles aux œufs,reviewed,dépassement justifié : formulation française naturelle
+Dialogue/JEN_FOOD_2,nouilles aux oeufs,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/JEN_FOOD_3,méduse,reviewed,
 Dialogue/JEN_FOOD_4,salade de thon,reviewed,
 Dialogue/JEN_FOOD_5,mochi,reviewed,
@@ -5033,22 +5033,22 @@ Dialogue/TANTI_ADJECTIVE_5,sérieux,reviewed,
 Dialogue/TANTI_ADJECTIVE_6,occupé,reviewed,
 Dialogue/TANTI_ADJECTIVE_7,concentré sur la cuisine,reviewed,
 Dialogue/TANTI_ADJECTIVE_8,gentil,reviewed,
-Dialogue/MEI_ADJECTIVE_1,dur à cuire,reviewed,
-Dialogue/MEI_ADJECTIVE_2,génial,reviewed,
-Dialogue/MEI_ADJECTIVE_3,respecté,reviewed,
-Dialogue/MEI_ADJECTIVE_4,cool,reviewed,
-Dialogue/MEI_ADJECTIVE_5,craint de tous,reviewed,
-Dialogue/MEI_ADJECTIVE_6,badass,reviewed,
-Dialogue/MEI_ADJECTIVE_7,sensationnel,reviewed,
-Dialogue/MEI_ADJECTIVE_8,totalement hardcore,reviewed,dépassement justifié : formulation française naturelle
-Dialogue/MEI_JOB_1,boss,reviewed,
-Dialogue/MEI_JOB_2,grand chef,reviewed,
-Dialogue/MEI_JOB_3,leader suprême,reviewed,
-Dialogue/MEI_JOB_4,gamin,reviewed,
-Dialogue/MEI_JOB_5,diva,reviewed,
-Dialogue/MEI_JOB_6,superstar,reviewed,
-Dialogue/MEI_JOB_7,chef de meute,reviewed,dépassement justifié : formulation française naturelle
-Dialogue/MEI_JOB_8,princesse,reviewed,
+Dialogue/MEI_ADJECTIVE_1,à toute épreuve,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_2,au top,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_3,respectable,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_4,cool,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_5,redoutable,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_6,badass,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_7,hors pair,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_8,hardcore,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_JOB_1,commander,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_2,diriger,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_3,mener les autres,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_4,t'imposer,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_5,briller,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_6,faire le show,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_7,dominer,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_8,régner,reviewed,Fragment verbal neutre.
 Dialogue/MEI_PEOPLE_1,vauriens,reviewed,
 Dialogue/MEI_PEOPLE_2,loubards,reviewed,
 Dialogue/MEI_PEOPLE_3,brutes,reviewed,
@@ -5124,7 +5124,7 @@ Dialogue/BORIS_ACTION_8,aller à une soirée pyjama,reviewed,dépassement justif
 Dialogue/JOCKO_FOOD_1,riz nature,reviewed,Appellation culinaire naturelle et concise.
 Dialogue/JOCKO_FOOD_2,soupe de glace,reviewed,dépassement justifié : formulation française naturelle
 Dialogue/JOCKO_FOOD_3,blancs de poulet nature,reviewed,
-Dialogue/JOCKO_FOOD_4,œufs durs,reviewed,
+Dialogue/JOCKO_FOOD_4,oeufs durs,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/JOCKO_FOOD_5,céleri blanchi,reviewed,
 Dialogue/JOCKO_FOOD_6,barres protéinées molles,reviewed,
 Dialogue/JOCKO_FOOD_7,mini-carottes,reviewed,
@@ -5195,7 +5195,7 @@ Dialogue/LIN_GAME1_3,Contes d'un,reviewed,
 Dialogue/LIN_GAME1_4,Le doré,reviewed,
 Dialogue/LIN_GAME1_5,Crypte du,reviewed,
 Dialogue/LIN_GAME1_6,Wombat timbré et le,reviewed,
-Dialogue/LIN_GAME1_7,Cœurs du,reviewed,
+Dialogue/LIN_GAME1_7,Coeurs du,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/LIN_GAME1_8,Longue vie au,reviewed,
 Dialogue/GERI_WISDOM1_1,sincérité,reviewed,
 Dialogue/GERI_WISDOM1_2,courage,reviewed,
@@ -5211,7 +5211,7 @@ Dialogue/GERI_WISDOM2_5,mieux que rien,reviewed,
 Dialogue/GERI_WISDOM2_6,bonne pour l'âme,reviewed,
 Dialogue/VNC0_1,"D'accord, 12 degrés antihoraire, vitesse d'obturation divisée par deux et... voilà !",reviewed,
 Dialogue/VNC0_2,"Hum... Presque, mais...",reviewed,
-Dialogue/VNC0_3,Cette photo doit faire mouche ! Mes sœurs vont en baver !,reviewed,
+Dialogue/VNC0_3,Cette photo doit faire mouche ! Mes soeurs vont en baver !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC0_CHOICE_1,"Désolé, je tombe mal ? Je repasse plus tard ?",reviewed,
 Dialogue/VNC0_4,Oh ! [NAME] ! Je ne t'avais pas vu.,reviewed,
 Dialogue/VNC0_5,"Pas du tout, j'étais juste trop absorbée. Assieds-toi !",reviewed,
@@ -5222,13 +5222,13 @@ Dialogue/VNC0_8,"Super, tu es très bien. Installe-toi donc.",reviewed,
 Dialogue/VNC0_9,"Désolée, je faisais juste des selfies avec les gâteaux. Pour les envoyer sur le groupe familial, tu vois ?",reviewed,
 Dialogue/VNC0_10,"Ils s'inquiètent toujours pour moi, alors je veux leur montrer que tout va bien !",reviewed,
 Dialogue/VNC0_11,"Au début, je voulais commander tous les gâteaux. Ils sont trop mignons ! Mais bon, je me contenterai de ces douze-là.",reviewed,
-Dialogue/VNC0_12,"Mes petites sœurs vont être tellement jalouses, hé hé.",reviewed,
+Dialogue/VNC0_12,"Mes petites soeurs vont être tellement jalouses, hé hé.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC0_13,"Pour être honnête, j'ai été surprise quand tu m'as proposé de gérer Bakuso avec toi.",reviewed,
 Dialogue/VNC0_14,"Oui, on a suivi quelques cours ensemble à la fac, mais je pensais qu'on s'était un peu perdues de vue.",reviewed,
 Dialogue/VNC0_15,"Désolée aussi, je ne t'écrivais pas assez. J'étais juste occupée avec... des trucs.",reviewed,
 Dialogue/VNC0_16,Je suis contente que tu m'aies convaincue. Ça change de rythme. Et il y a bien l'électricité et Internet ici.,reviewed,
 Dialogue/VNC0_17,"Tu as l'air bien plus à l'aise ici. En ville, tu semblais toujours sous tension.",reviewed,
-Dialogue/VNC0_18,Te voir prendre tes marques ici m'a rappelé mes sœurs !,reviewed,
+Dialogue/VNC0_18,Te voir prendre tes marques ici m'a rappelé mes soeurs !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC0_19,"Elles me manquent parfois, même si on se disputait beaucoup à la maison.",reviewed,
 Dialogue/VNC0_20,"Mais bon, je peux toujours discuter avec elles. La technologie, c'est incroyable, non ?",reviewed,
 Dialogue/VNC0_21,Et on va aussi apprendre à connaître les gens de KuloNiku. Ils ont vraiment l'air... intéressants ?,reviewed,
@@ -5253,7 +5253,7 @@ Dialogue/VNC0_36,Tu veux goûter une cuillerée ?,reviewed,
 Dialogue/VNC0_37,"Tiens, ouvre grand la bouche ! Aah~",reviewed,
 Dialogue/VNC0_CHOICE_6,"H-Hé, ce n'est pas excessif ?",reviewed,
 Dialogue/VNC0_38,"Oups, désolée ! ",reviewed,
-Dialogue/VNC0_39,Toutes ces histoires sur mes sœurs ont dû me replonger dans le passé. J'aidais Maman à les nourrir.,reviewed,
+Dialogue/VNC0_39,Toutes ces histoires sur mes soeurs ont dû me replonger dans le passé. J'aidais Maman à les nourrir.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC0_40,"Merci de m'avoir ramenée à la raison, [NAME].",reviewed,
 Dialogue/VNC0_41,"Parfois, je vais trop loin, c'est une mauvaise habitude chez moi.",reviewed,
 Dialogue/VNC0_CHOICE_7,Youpi ! Avec plaisir !,reviewed,
@@ -5262,12 +5262,12 @@ Dialogue/VNC0_43,"Hé hé, tu ferais mieux de le savourer.",reviewed,
 Dialogue/VNC0_44,"Pour cinq parts achetées, la sixième est offerte !",reviewed,
 Dialogue/VNC0_45,"Et si tu t'inscris à notre programme de fidélité, tu as 50 % de réduction sur ton premier achat !",reviewed,
 Dialogue/VNC0_46,"O-Oh ! Désolée, je me suis un peu emballée avec la cuillère.",reviewed,
-Dialogue/VNC0_47,Ça m'a rappelé quand j'aidais mes petites sœurs. Mais je ne devrais pas faire ça avec la clientèle.,reviewed,
+Dialogue/VNC0_47,Ça m'a rappelé quand j'aidais mes petites soeurs. Mais je ne devrais pas faire ça avec la clientèle.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC0_48,"Mais ça ne m'a pas dérangée, une fois, hé hé.",reviewed,
 Dialogue/VNC0_49,"Bon, assez d'entraînement. Je crois que j'ai compris !",reviewed,
 Dialogue/VNC0_50,"Aide-moi à finir ces gâteaux, d'accord ? On peut y arriver !",reviewed,
 Dialogue/VNC0_51,"Ah, je n'ai plus faim. J'ai trop mangé...",reviewed,
-Dialogue/VNC0_52,"Mais je ne regrette rien ! Hé hé, mes sœurs ont aussi envoyé des photos. Elles ne veulent pas perdre.",reviewed,
+Dialogue/VNC0_52,"Mais je ne regrette rien ! Hé hé, mes soeurs ont aussi envoyé des photos. Elles ne veulent pas perdre.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC0_53,"Merci d'avoir cédé à mes caprices, [NAME]. Je n'aurais pas fini cette petite montagne de gâteaux sans toi.",reviewed,
 Dialogue/VNC0_54,"À demain au restaurant, [NAME] !",reviewed,
 Dialogue/VNC1_HANGOUT_1,"Salut, [NAME]. Te voilà.",reviewed,
@@ -5279,10 +5279,10 @@ Dialogue/VNC1_HANGOUT_6,Je me souviens de l'époque où on allait au centre comm
 Dialogue/VNC1_HANGOUT_7,"Oh, regarde, Bluberry a une boutique éphémère ici ! Ils font la promo d'une nouvelle gamme de parfums.",reviewed,
 Dialogue/VNC1_HANGOUT_8,"« Parfums exclusifs de KuloNiku : Poulet printanier, Brin de romarin, Tartine du matin. »",reviewed,
 Dialogue/VNC1_HANGOUT_9,"Des produits hyper locaux, hein ? Je ne sais pas s'ils sentent bon, mais j'en prends un de chaque !",reviewed,
-Dialogue/VNC1_HANGOUT_10,"Si je ne les aime pas, je les enverrai à mes sœurs.",reviewed,
+Dialogue/VNC1_HANGOUT_10,"Si je ne les aime pas, je les enverrai à mes soeurs.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC1_HANGOUT_11,"Et ce sera LEUR problème ! Hé hé, je plaisante.",reviewed,
 Dialogue/VNC1_HANGOUT_CHOICE_1,Tu ne devrais pas.,reviewed,
-Dialogue/VNC1_HANGOUT_12,Ce n'est rien ! C'est un truc entre sœurs.,reviewed,
+Dialogue/VNC1_HANGOUT_12,Ce n'est rien ! C'est un truc entre soeurs.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC1_HANGOUT_CHOICE_2,Tu pourrais peut-être me les donner plutôt ?,reviewed,
 Dialogue/VNC1_HANGOUT_13,"Hein, tu les voudrais ?",reviewed,
 Dialogue/VNC1_HANGOUT_14,"Enfin, oui. S'ils ne sont pas mon style, ils sont à toi.",reviewed,
@@ -5331,7 +5331,7 @@ Dialogue/VNC3_6,"Hein ? Tu parles comme mes parents, [NAME]. Toujours à t'inqui
 Dialogue/VNC3_7,"Je vais bien ! Bien sûr que je vais bien, pourquoi je n'irais pas bien ? Tu es drôle parfois.",reviewed,
 Dialogue/VNC3_8,"J'en suis à mon troisième café, alors je me sens pétillante, bizarre et BIEN !",reviewed,
 Dialogue/VNC3_CHOICE_2,Calmons-nous et allons à notre rythme.,reviewed,
-Dialogue/VNC3_9,D-D'accord. C'est une bonne idée. Mes sœurs l'ont dit aussi.,reviewed,
+Dialogue/VNC3_9,D-D'accord. C'est une bonne idée. Mes soeurs l'ont dit aussi.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC3_10,Je suis trop enthousiaste. C'est ma spécialité.,reviewed,
 Dialogue/VNC3_CHOICE_3,On ne peut pas au moins faire un tour de manège ?,reviewed,
 Dialogue/VNC3_11,[NAME] ! Ce n'est pas le moment de jouer !,reviewed,
@@ -5398,8 +5398,8 @@ Dialogue/VNC4_CHOICE_3,"Ça va, prends ton temps.",reviewed,
 Dialogue/VNC4_12,...Merci.,reviewed,
 Dialogue/VNC4_13,Je peux le dire.,reviewed,
 Dialogue/VNC4_14,Parce que j'ai raté mes cours quand j'étais en filière cuisine. C'était avant même que tu n'entres à la fac.,reviewed,
-Dialogue/VNC4_15,"Tu vois, [NAME], j'ai toujours été une bonne élève. Et une bonne grande sœur aussi, si je puis me permettre.",reviewed,
-Dialogue/VNC4_16,"Mais la fac, c'était si différent. Je vivais loin de ma famille. ...Je n'avais plus à être un modèle ni à m'occuper de mes petites sœurs.",reviewed,
+Dialogue/VNC4_15,"Tu vois, [NAME], j'ai toujours été une bonne élève. Et une bonne grande soeur aussi, si je puis me permettre.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC4_16,"Mais la fac, c'était si différent. Je vivais loin de ma famille. ...Je n'avais plus à être un modèle ni à m'occuper de mes petites soeurs.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC4_17,Je ne savais pas gérer toute cette liberté. Je séchais les cours et faisais beaucoup la fête. Je faisais tout sauf étudier.,reviewed,
 Dialogue/VNC4_18,"J'ai peut-être fondé une secte et réintroduit une espèce presque éteinte, mais cette période reste floue.",reviewed,
 Dialogue/VNC4_19,"Le fait est que... après deux ans, il était évident que mes notes dégringolaient.",reviewed,
@@ -5421,7 +5421,7 @@ Dialogue/VNC4_31,"Désolée-- Oh, attends, je recommence,",reviewed,
 Dialogue/VNC4_32,"Hahaha, tu as raison, je le fais trop souvent.",reviewed,
 Dialogue/VNC4_33,Ouf. Il fallait que ça sorte.,reviewed,
 Dialogue/VNC4_34,"Oh, attends, j'ai une notification.",reviewed,
-Dialogue/VNC4_35,"...Encore mes sœurs. Elles voulaient faire du pain perdu, mais ont obtenu un seau de pâte grisâtre. Allez savoir comment.",reviewed,
+Dialogue/VNC4_35,"...Encore mes soeurs. Elles voulaient faire du pain perdu, mais ont obtenu un seau de pâte grisâtre. Allez savoir comment.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC4_36,"Bon sang ! Qu'elles mangent des céréales, ou autre !",reviewed,
 Dialogue/VNC4_37,Pourquoi m'envoient-elles chaque bêtise ? Pas besoin de savoir que Cammie a mis son t-shirt à l'envers.,reviewed,
 Dialogue/VNC4_CHOICE_7,Pour te montrer qu'on a le droit de faire des erreurs.,reviewed,
@@ -5482,7 +5482,7 @@ Dialogue/VNC5_28,"Tu es toujours si fiable, [NAME].",reviewed,
 Dialogue/VNC5_29,"Ah, ça me rappelle que je dois en parler à ma famille.",reviewed,
 Dialogue/VNC5_30,« C'était troooop effrayant ! Il faut essayer quand vous viendrez me voir ! »,reviewed,
 Dialogue/VNC5_31,Elles ont répondu ? C'était rapide.,reviewed,
-Dialogue/VNC5_32,"« Alors, grande sœur, quel trouillard ! lol », puis : « Je parie que tu t'es accrochée à [NAME] comme si ta vie en dépendait. »",reviewed,
+Dialogue/VNC5_32,"« Alors, grande soeur, quel trouillard ! lol », puis : « Je parie que tu t'es accrochée à [NAME] comme si ta vie en dépendait. »",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNC5_33,"Pff, ces petites pestes ! Je devrais leur dire deux mots !",reviewed,
 Dialogue/VNC5_34,"...Hahaha, ça fait du bien de partager mes moments de faiblesse.",reviewed,
 Dialogue/VNC5_35,Faisons les montagnes russes ensuite !,reviewed,
@@ -5602,7 +5602,7 @@ Dialogue/VNU5_16,"Tes conseils et ton aide ont été précieux, bien sûr. Mais 
 Dialogue/VNU5_17,"Je peux faire tout ça parce que tu m'acceptes telle que je suis, [NAME].",reviewed,
 Dialogue/VNU5_18,"Quand je suis timide, quand je suis excitée, tu es toujours là. Tu acceptes chaque part de moi.",reviewed,
 Dialogue/VNU5_19,J'ai tellement de chance de t'avoir dans ma vie.,reviewed,
-Dialogue/VNU5_20,"Tu es la seule personne avec qui je peux être parfaitement à l'aise, [NAME]. Alors... merci encore. Du fond du cœur.",reviewed,
+Dialogue/VNU5_20,"Tu es la seule personne avec qui je peux être parfaitement à l'aise, [NAME]. Alors... merci encore. Du fond du coeur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNU5_21,"Cela dit, ce n'est que le début.",reviewed,
 Dialogue/VNU5_22,"Maintenant que j'ai tout le soutien de ma famille, j'ai, euh, de grands projets pour la boutique.",reviewed,
 Dialogue/VNU5_23,"Cette fois, je le fais parce que je le veux. Pas pour faire mes preuves.",reviewed,
@@ -5796,7 +5796,7 @@ Dialogue/VNS2_60,"Désolé, [NAME]. Après ça, je dois y aller.",reviewed,
 Dialogue/VNS2_61,"Tu peux rester et rejoindre le cours d'art, d'accord ? Ne t'inquiète pas pour moi.",reviewed,
 Dialogue/VNS2_62,"Je... je te verrai plus tard, d'accord ? Merci pour aujourd'hui.",reviewed,
 Dialogue/VNS4_1,"... Salut, [NAME]. Merci de m'avoir invité.",reviewed,
-Dialogue/VNS4_2,"Désolé, je suis vaseux. Je n'ai pas fermé l'œil.",reviewed,
+Dialogue/VNS4_2,"Désolé, je suis vaseux. Je n'ai pas fermé l'oeil.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNS4_3,"Mais profitons au mieux d'aujourd'hui, d'accord ? Il fait si beau et si ensoleillé, après tout.",reviewed,
 Dialogue/VNS4_4,Tu veux nager ou quoi ?,reviewed,
 Dialogue/VNS4_CHOICE_1,Peut-être plus tard. Asseyons-nous.,reviewed,
@@ -5870,7 +5870,7 @@ Dialogue/VNS4_63,Tu veux aller nager ?,reviewed,
 Dialogue/VNS4_64,(J'ai joué avec Shuga à la plage le reste du jour.),reviewed,
 Dialogue/VNM62_1,"Ha ha ha ha, j'ai du mal à croire que ce jour soit enfin arrivé !",reviewed,
 Dialogue/VNM62_2,Cet air vaincu sur ton visage est plus doux que tout nectar !,reviewed,
-Dialogue/VNM62_3,C'en est presque dommage de briser dans l'œuf une si prometteuse carrière.,reviewed,
+Dialogue/VNM62_3,C'en est presque dommage de briser dans l'oeuf une si prometteuse carrière.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM62_4,"Mais bientôt, tout le monde ne mangera plus que ma Boulette PRIMO !",reviewed,
 Dialogue/VNM62_5,Mon restaurant sera le seul encore debout ! Ha ha ha ha !,reviewed,
 Dialogue/VNM62_6,Héh. Je regrette presque que cette vieille carne ne soit plus là pour le lui jeter à la figure.,reviewed,
@@ -5886,7 +5886,7 @@ Dialogue/VNM62_13,"Nouveaux venus tous les deux, on traînait souvent ensemble. 
 Dialogue/VNM62_14,Je l'ai même-- je l'ai même considérée comme une amie.,reviewed,
 Dialogue/VNM62_15,"Puis ma formule de bormaline a rapporté des millions. C'était magnifique. Si peu chère, si rentable. Elle pouvait conserver des boulettes pendant des années !",reviewed,
 Dialogue/VNM62_16,"Et alors, si quelques personnes en sont tombées malades ?! Des gens tombent malades tous les jours, partout dans le monde !",reviewed,
-Dialogue/VNM62_17,"Elle tentait sans cesse de m'en dissuader. À l'époque, je la prenais pour une idiote myope au cœur tendre.",reviewed,
+Dialogue/VNM62_17,"Elle tentait sans cesse de m'en dissuader. À l'époque, je la prenais pour une idiote myope au coeur tendre.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM62_18,Comment aurais-je pu savoir que c'était une agente infiltrée ?! Elle ne s'est approchée de moi que pour obtenir des infos !,reviewed,
 Dialogue/VNM62_19,"Après tout, quelle sorte d'amie démantèle l'empire criminel de son amie ?!",reviewed,
 Dialogue/VNM62_20,J'ai tout juste réussi à m'échapper. Mais ça m'a coûté des millions.,reviewed,
@@ -6177,7 +6177,7 @@ Dialogue (Backup)/MAMI_GOOD_REVIEW_1,Oui ! C'est bon !,reviewed,Propagé depuis 
 Dialogue (Backup)/MAMI_GOOD_REVIEW_2,"Super, j'ai hâte de goûter.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_GOOD_REVIEW_3,Ça a l'air très bon. Mercii.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_HAPPY_REVIEW_1,"Waouh, c'est un autre niveau ! Les chefs des grandes villes, c'est autre chose ! À table !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MAMI_HAPPY_REVIEW_2,"Trop boooon !! Tu es la meilleure, [NAME] !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MAMI_HAPPY_REVIEW_2,"Trop boooon !! Tu assures vraiment, [NAME] !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_HAPPY_REVIEW_3,"Oh là là, ça a l'air délicieux ! Comment tu as fait ça ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_SAD_REVIEW_1,"Oui... bon, je mange.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_SAD_REVIEW_2,"Euh... Tout le monde a de mauvais jours. Ne t'inquiète pas, je prends.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -6571,11 +6571,11 @@ Dialogue (Backup)/CONTEST_PARTNER_INTRO_CHU,Voici le toujours retors Mr. Chu ! N
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_RUNA,"C'est Runa ! Elle garde toujours son sang-froid, en musique comme en cuisine. Une partenaire de duel vraiment fiable !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_ELIO,Et voici Elio ! Son sourire radieux peut illuminer les duels les plus intenses !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_CHIL,"C'est le mec le plus cool : Chil ! Mais ne vous fiez pas à son air décontracté, il est toujours prêt à aider !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/CONTEST_PARTNER_INTRO_CHARMANT,"Applaudissez Charmant ! Sa prestance et son bagout ont brisé bien des cœurs ! Méfiez-vous, les amis !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/CONTEST_PARTNER_INTRO_CHARMANT,"Applaudissez Charmant ! Sa prestance et son bagout ont brisé bien des coeurs ! Méfiez-vous, les amis !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_NEKORA,"Mignonne et imprévisible comme un vrai chat, c'est Nekora ! Elle est prête à griffer son chemin vers la victoire pour son équipe !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_SOPHIE,"Oo la la, c'est Sophie ! Même dans le feu d'un Duel culinaire, elle ne transpire jamais ! Une cheffe pleine de classe !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_MINNIE,"C'est Minnie ! Ne la sous-estimez pas parce qu'elle est petite ! Elle n'a que des A, même en Cuisine 101 !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/CONTEST_PARTNER_INTRO_EMA,"Douce mais ferme, c'est Ema ! Aussi appelée la reine de la cuisine familiale, ses plats chauds font fondre les cœurs gelés !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/CONTEST_PARTNER_INTRO_EMA,"Douce mais ferme, c'est Ema ! Aussi appelée la reine de la cuisine familiale, ses plats chauds font fondre les coeurs gelés !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_JEN,"Certains la disent géniale, d'autres excentrique : c'est Jen ! Elle sait inspirer sa partenaire durant les duels !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_NENE,"Avec plus de 80 ans d'expérience en cuisine, c'est Nene ! Son immense sagesse est un véritable trésor !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CONTEST_PARTNER_INTRO_TANTI,"Attention, les amis, c'est Tanti ! Son tempérament de feu va faire monter la température !",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -6594,7 +6594,7 @@ Dialogue (Backup)/OPPONENT_INTRO_RUNA,"Toujours calme et imperturbable, voici Ru
 Dialogue (Backup)/OPPONENT_INTRO_CHU,"Mr. Chu est là ! En tant que marchand ambulant, il a sûrement appris diverses techniques de cuisine ! Voyons ce qu'il sait faire !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OPPONENT_INTRO_OTARU,"C'est Otaru ! Son amour pour Migu est sans limites ! Il a regardé des centaines d'animes de cuisine, voyons ce qu'il vaut aux fourneaux !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OPPONENT_INTRO_TYRO,"C'est Tyro ! Attention, tout le monde ! Il est petit, mais sa morsure est redoutable ! Tout comme sa cuisine !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/OPPONENT_INTRO_NEKORA,"Nyan nyan, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les œufs, mais aussi les cœurs !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/OPPONENT_INTRO_NEKORA,"Nyan nyan, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les oeufs, mais aussi les coeurs !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OPPONENT_INTRO_JEN,Faites du bruit pour Jen ! Cette icône de mode s'est récemment lancée dans les vêtements comestibles ! Tout ce qu'elle porte aujourd'hui se mange !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OPPONENT_INTRO_SAI,"Oh là là, c'est Sai ! Rejeté par la communauté scientifique pour ses idées folles, il se tourne désormais vers la cuisine ! Quelle expérience allons-nous voir aujourd'hui ?!",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OPPONENT_INTRO_LADO,"Voici Lado ! Ce jeune homme consacre sa vie à étudier les restaurants de KuloNiku ! Aujourd'hui, place à la recherche de terrain en cuisine !",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -6889,7 +6889,7 @@ Dialogue (Backup)/VNLOCATION_AQUARIUM_DESC,Un aquarium populaire avec des poisso
 Dialogue (Backup)/VNLOCATION_ARCADE_DESC,"Une salle d'arcade animée, pleine de machines amusantes et flashy, avec un choix éclectique de lots.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNLOCATION_BEACH_DESC,"Sable blanc, eau bleue limpide. Les parasols colorés et les poufs en font un coin détente idéal.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNLOCATION_MALL_DESC,"Un centre commercial classique à l'ambiance rétro, restauré depuis les années 1920 avec une touche moderne.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNLOCATION_PARK_DESC,"Un paisible parc urbain rempli de bancs, de fleurs et d'une fontaine historique : une pause fraîche au cœur de la ville.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNLOCATION_PARK_DESC,"Un paisible parc urbain rempli de bancs, de fleurs et d'une fontaine historique : une pause fraîche au coeur de la ville.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNLOCATION_ART_STUDIO_DESC,"Un atelier d'art bien équipé, avec des cours de peinture, de poterie et d'artisanat pour les esprits créatifs.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNLOCATION_THEME_PARK_DESC,Un parc d'attractions joyeux avec des manèges pour tous les âges. On vient de partout pour ses feux d'artifice.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/TOWNLOCATION_STORE,Bakuso,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -6957,7 +6957,7 @@ Dialogue (Backup)/VNM20_PLAYERLOSE_3,"[NAME], merci beaucoup pour le Duel. Si tu
 Dialogue (Backup)/VNM20_PLAYERWIN_1,Hein ?! J'ai perdu ?!,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM20_PLAYERWIN_2,"Oh là là, tu es du sérieux.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM20_PLAYERWIN_3,"Je pensais pouvoir te battre au Duel culinaire pour remonter le moral de Stella, mais je suis encore trop faible. Mon dévouement est trop faible...",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « Meatballs to the Wall », je ne dois pas laisser les revers me définir !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « A fond les boulettes », je ne dois pas laisser les revers me définir !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM20_PLAYERWIN_5,"Ça veut dire que tu assures aux fourneaux et que tu travailles dur, [NAME]. Je te soutiens !",reviewed,Formulation neutre ; encouragement conservé.
 Dialogue (Backup)/VNM20_PLAYERWIN_6,Tu sais quoi ? J'ai une super idée pour faire passer Bakuso au niveau supérieur.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM20_PLAYERWIN_7,Et si on en parlait chez toi ?,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7002,7 +7002,7 @@ Dialogue (Backup)/VNM24_PLAYERWIN_2,"Je croyais vraiment avoir une chance. Je t'
 Dialogue (Backup)/VNM24_PLAYERWIN_3,"Mais comme toujours, tu as fait mieux que moi. Tu me surpasses.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM24_PLAYERWIN_4,"C'est pour ça que je-- Non, nous avons besoin de toi ! Le monde de l'espionnage ne peut pas se passer de toi !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM24_PLAYERWIN_5,Cela dit...,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM24_PLAYERWIN_6,On voit que ça te plaît ici. Tu cuisines de tout ton cœur.,reviewed,Formulation neutre ; bonheur et dévouement conservés.
+Dialogue (Backup)/VNM24_PLAYERWIN_6,On voit que ça te plaît ici. Tu cuisines de tout ton coeur.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue (Backup)/VNM24_PLAYERWIN_7,"Tu es devenu une vraie pointure en cuisine, Faucon...",reviewed,Formulation neutre ; compliment conservé.
 Dialogue (Backup)/VNM24_PLAYERWIN_8,"Ça me coûte, mais tu es peut-être bien à ta place ici.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM24_PLAYERWIN_9,"Très bien. Reste ici, pour l'instant.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7022,7 +7022,7 @@ Dialogue (Backup)/VNM13_END_8,"Et je vois le même potentiel en toi, jeune perso
 Dialogue (Backup)/VNM13_END_9,"Alors, on fricote avec la petite main de Bakuso ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_END_10,(Mr. Crois !),reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_END_11,"Oui, tout à fait. Je crois qu'il est important de connaître les talents culinaires de demain !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM13_END_12,"Ha ha ha, en effet, c'est très satisfaisant de les voir cuisiner avec tant de cœur à chaque duel !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM13_END_12,"Ha ha ha, en effet, c'est très satisfaisant de les voir cuisiner avec tant de coeur à chaque duel !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_END_13,"Je crois que nous n'avons jamais parlé hors de l'arène, [NAME]. Tout le plaisir est pour moi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_END_14,"Si ce n'est pas indiscret, quel est ton rêve en cuisine ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_END_CHOICE_3,Je veux être n° 1 en ville !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7039,7 +7039,7 @@ Dialogue (Backup)/VNM13_END_22,"Enfin, je dois vous laisser. J'ai un gala de cha
 Dialogue (Backup)/VNM13_END_23,"Ce Mr. Crois... Il dit parfois les choses les plus étranges ! C'est sans doute ça, les riches !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_END_24,"Bien, je m'en vais. À bientôt au duel culinaire, [NAME] ! Ciao ! Adieu !",reviewed,dépassement : formulation naturelle et intention préservées.
 Dialogue (Backup)/VNM13_START_1,Te voilà ! Je t'attends depuis ce matin !,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM13_START_2,"Regarde le [COLOR=ALERT]panneau d'affichage[/COLOR] et prépare-toi à une vision des plus palpitantes ! Oh, mon cœur ne va pas tenir !",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM13_START_2,"Regarde le [COLOR=ALERT]panneau d'affichage[/COLOR] et prépare-toi à une vision des plus palpitantes ! Oh, mon coeur ne va pas tenir !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM13_RESTBLOCKER_1,(Rosso a dit de le retrouver devant la [COLOR=ALERT]chaîne de télévision[/COLOR]. Peut-être veut-il des conseils de mode ?),reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM25_1,"Je vois la détermination dans tes yeux... Tu es ici pour une revanche, Faucon ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM25_B_1,Très bien. Je te ferai comprendre où est vraiment ta place !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7248,7 +7248,7 @@ Dialogue (Backup)/GH_CASSIE_OUTDOOR_1_6,Je ne dirais jamais non à une pause-caf
 Dialogue (Backup)/GH_CASSIE_OUTDOOR_1_CHOICE_3,On peut marcher sous la pluie !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_CASSIE_OUTDOOR_1_7,"Euh, je préfère éviter.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_CASSIE_OUTDOOR_1_8,Mes vêtements et mon maquillage ne sont pas étanches.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/GH_CASSIE_CLOSING_BEST_1,Je me suis amusée [NAME]. Mes sœurs seront si jalouses ! Invite-moi encore quand tu veux !,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/GH_CASSIE_CLOSING_BEST_1,Je me suis amusée [NAME]. Mes soeurs seront si jalouses ! Invite-moi encore quand tu veux !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_CASSIE_CLOSING_GOOD_1,Merci pour aujourd'hui [NAME]. À demain.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_CASSIE_CLOSING_NEUTRAL_1,"Bon, je dois y aller. À la boutique.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_SHUGA_OPENING_1_1,Salut Chef ! Je suis prêt pour notre sortie !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7446,7 +7446,7 @@ Dialogue (Backup)/VNM27_17,Elle a dit avoir été espionne et être venue à Kul
 Dialogue (Backup)/VNM27_18,"J'ai cru à une blague, mais avant de partir se faire soigner, elle a dit...",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM27_19,"Qu'un jour, son petit-enfant, [NAME], viendrait.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM27_20,Et que tu fermerais le restaurant comme espion ou le dirigerais comme chef.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM27_21,Elle m'a demandé de garder un œil sur toi.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM27_21,Elle m'a demandé de garder un oeil sur toi.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM27_22,"Si tu étais venu pour le fermer, je t'aurais arrêté par tous les moyens !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM27_23,"Aujourd'hui, je veux dire...",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM27_24,"M-Merci d'être resté et de prendre ça au sérieux. Enfin, voilà. Je crois.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7616,7 +7616,7 @@ Dialogue (Backup)/CEM13_1,"Quoi de neuf, petit ? Les affaires ?",reviewed,Raccou
 Dialogue (Backup)/CEM13_2,Moi ? Je suis heureux comme tout ! Les affaires n'ont jamais aussi bien marché !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM13_3,"Tous ces duels poussent les restaurateurs à se ruer sur de nouveaux outils, de nouveaux ingrédients. Tout ce qui peut leur donner le moindre avantage.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM13_4,"Bien sûr que ça me fait de la peine pour ceux qui doivent fermer... Mais c'est la nature même des affaires, tu ne crois pas ?",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/CEM13_5,Ne pense pas que je suis sans cœur. Nous devons tous survivre.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/CEM13_5,Ne pense pas que je suis sans coeur. Nous devons tous survivre.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/CEM13_6,"Cela dit, je te soutiens toujours, tu sais.",reviewed,
 Dialogue (Backup)/CEM13_7,"Oui, les temps difficiles sont pleins de risques, mais aussi d'occasions à saisir. Tu peux gagner gros si tu joues bien tes cartes !",reviewed,
 Dialogue (Backup)/CEM13_8,"Alors tiens, je t'envoie une liste d'[COLOR=ALERT]objectifs[/COLOR] pour te guider. Gratuitement, bien sûr !",reviewed,
@@ -7835,7 +7835,7 @@ Dialogue (Backup)/VNM51_7,"C'est radical. Mais si quelqu'un peut le faire, je cr
 Dialogue (Backup)/VNM51_8,Le problème...,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM51_9,Je ne sais pas s'il fait ce qu'il faut. C'est mon mentor et mon patron. Je sais de première main que son sens des affaires est inégalé.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM51_10,"Pourtant... il peut parfois être imprudent. J'ai vu comment son plan fait du mal à Stella, à toi et à tant d'autres.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM51_11,"On ne fait pas d'omelette sans casser des œufs, dit-il.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM51_11,"On ne fait pas d'omelette sans casser des oeufs, dit-il.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM51_12,"Je sais qu'il est bien plus expérimenté que moi, mais ça ne me semble pas juste.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM51_13,"Alors, affronte-moi dans un duel culinaire !",reviewed,Raccourci naturel ; demande conservée.
 Dialogue (Backup)/VNM51_14,Alors cela dissipera peut-être tous ces doutes dans ma tête !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -7857,7 +7857,7 @@ Dialogue (Backup)/VNM54_PLAYERWIN_2,"Alors, peut-être-- contrairement à mes ca
 Dialogue (Backup)/VNM54_PLAYERWIN_3,Parlons dans un endroit plus privé.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM54_PLAYERWIN_4,"À vrai dire, je savais que ce qu'il fait est mal.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM54_PLAYERWIN_5,Je ne voulais simplement pas l'admettre. Le plus raisonnable serait de suivre ses plans. Ma future carrière serait assurée.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM54_PLAYERWIN_6,Mais tu m'as ouvert les yeux. Je vais suivre mon cœur et en accepter les conséquences !,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM54_PLAYERWIN_6,Mais tu m'as ouvert les yeux. Je vais suivre mon coeur et en accepter les conséquences !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM54_PLAYERWIN_7,Voici son plan : il développe la Boulette Premium Radieuse Irisée Meaty Originale -- la Boulette PRIMO en abrégé.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM54_PLAYERWIN_8,C'est pour cela qu'il rachète des restaurants -- et leurs recettes -- et achète toutes sortes d'ingrédients.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM54_PLAYERWIN_9,"S'il réussit, la Boulette PRIMO sera délicieuse et dangereusement addictive !",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8043,9 +8043,9 @@ Dialogue (Backup)/VNU4_21,"(Waouh, elle ne bégaie même pas une seule fois. En 
 Dialogue (Backup)/VNU4_22,(Un enfant a demandé sur les requins. Elle a parfaitement répondu. Bravo !),reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_23,J-Je suis revenue.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_24,"Comment ai-je fait, [NAME] ?",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNU4_CHOICE_4,Je ne savais pas que les œufs de requin avaient autant de formes.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNU4_CHOICE_4,Je ne savais pas que les oeufs de requin avaient autant de formes.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_25,"Oh, tu écoutais !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNU4_26,"Oui, la forme de leur étui d'œuf dépend de leur habitat.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNU4_26,"Oui, la forme de leur étui d'oeuf dépend de leur habitat.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_CHOICE_5,Tu as été super !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_27,"Ehehe, merci.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_28,J'étais nerveuse mais ravie que tout se soit bien passé.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8072,7 +8072,7 @@ Dialogue (Backup)/VNU4_44,"Je-- Je voudrais juste que tu apprécies les efforts 
 Dialogue (Backup)/VNU4_45,Au revoir pour le moment.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_46,.....,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_47,Ehe-- Ehehe !,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNU4_48,"Ah, mon cœur bat si vite.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNU4_48,"Ah, mon coeur bat si vite.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_49,"Mais je l'ai fait, [NAME] ! Je-- Je leur ai dit ce que je ressentais vraiment !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_50,"C'était effrayant, mais--",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU4_51,"Te voir m'a donné le courage nécessaire, [NAME].",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8206,7 +8206,7 @@ Dialogue (Backup)/VNS5_34,"Elle parle de notre amitié, de mes doutes, de ta gen
 Dialogue (Backup)/VNS5_35,"Bon, faire tenir tout ça dans une chanson était plus dur que prévu, mais j'ai fait de mon mieux.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS5_36,"Bref, j'ai assez bavardé. Écoute-la-- Écoute-la d'abord.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS5_37,"(La chanson est entraînante et frénétique, mais chaleureuse.)",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNS5_38,"(Elle n'est pas très aboutie, mais on sent que Shuga y a mis tout son cœur.)",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNS5_38,"(Elle n'est pas très aboutie, mais on sent que Shuga y a mis tout son coeur.)",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS5_39,"Euh, tu en penses quoi ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS5_CHOICE_7,C'est super. Merci.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS5_40,Vraiment ? Ouf.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8232,7 +8232,7 @@ Dialogue (Backup)/VND2_2,Je suis sûr qu'aujourd'hui est le jour où je te conva
 Dialogue (Backup)/VND2_3,"L'Organisation a besoin que tu reviennes. Sans ton talent si particulier, c'est le chaos.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_4,"Et pour le prouver, j'ai apporté les lettres de tes parents.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_5,"Tiens, je vais t'en lire une.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VND2_6,"Hum. « Cher [NAME], mon cœur. Ton père et moi nous ennuyons terriblement de toi. »",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VND2_6,"Hum. « Cher [NAME], mon coeur. Ton père et moi nous ennuyons terriblement de toi. »",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_7,"Nous ne comprenons pas ton départ, mais reviens et nous pourrons en parler.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_8,"« Je te préparerai ton plat préféré. Avec un amour sans fin, Maman. »",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_9,"Tu vois ? Maintenant, rentrons, Faucon. Tout le monde t'attend.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8269,10 +8269,10 @@ Dialogue (Backup)/VND2_33,Plus que tu ne crois...,reviewed,Propagé depuis le di
 Dialogue (Backup)/VND2_34,Mais je suis désolé pour les lettres. Je n'aurais pas dû recourir à une ruse aussi mesquine.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_35,Je comprends maintenant que je m'y prends mal.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_36,"Tu n'es plus le Faucon que je connaissais. Tu es [NAME], la personne aux fourneaux de Bakuso.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VND2_37,"Si tu fais ça avec sincérité, je ferais mieux d'y mettre tout mon cœur aussi.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VND2_37,"Si tu fais ça avec sincérité, je ferais mieux d'y mettre tout mon coeur aussi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_38,...Même si c'est effrayant.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_39,"Alors, tu veux bien me donner une autre chance, juste pour te parler ?",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VND2_CHOICE_7,"Tu marches sur des œufs, monsieur.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VND2_CHOICE_7,"Tu marches sur des oeufs, monsieur.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_40,Je comprends. C'est juste.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_41,Je-- Je ferai de mon mieux pour gagner ta confiance.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND2_CHOICE_8,D'accord.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8397,7 +8397,7 @@ Dialogue (Backup)/VND4_CHOICE_4,Tu dois vraiment demander ?,reviewed,Propagé de
 Dialogue (Backup)/VND4_36,"Haha, j'imagine que non.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND4_CHOICE_5,"Envole-toi, Dan !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND4_37,Oui!,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VND4_CHOICE_6,"Ah, tu as donc un cœur, finalement.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VND4_CHOICE_6,"Ah, tu as donc un coeur, finalement.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND4_38,Pardon ?!,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND4_39,"Enfin, je vais prendre ça pour un oui.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VND4_40,Objectifs et paramètres de mission mis à jour.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8732,7 +8732,7 @@ Dialogue (Backup)/GH_UME_AQUARIUM_1_4,"N-Non, « Teenage Mutant Ninja Sharks ».
 Dialogue (Backup)/GH_UME_AQUARIUM_1_5,"J'aime bien « Orgueil, préjugés et requins », mais la fin est un peu faible...",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_AQUARIUM_1_CHOICE_3,Teenage Mutant Ninja Sharks ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_AQUARIUM_1_6,"Oui, c'est ça !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/GH_UME_AQUARIUM_1_7,"Petite, je voulais être un requin ninja... Mais mes dents pointues n'ont jamais poussé.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/GH_UME_AQUARIUM_1_7,"Euh, finalement, pas besoin de me le dire.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_ARCADE_1_1,L-La borne « Dino May Cry » a l'air très amusante... et intense...,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_ARCADE_1_2,"T-Tu veux essayer d'y jouer avec moi, [NAME] ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_ARCADE_1_CHOICE_1,C'est trop violent pour toi.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -8814,8 +8814,8 @@ Dialogue (Backup)/GH_UME_GENERIC_3_6,M-Mais peut-être à Bakuso...? Hum...,revi
 Dialogue (Backup)/GH_UME_GENERIC_3_CHOICE_2,Je peux tenir la boutique pour toi !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_GENERIC_3_7,"C-C'est vraiment gentil, merci.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_GENERIC_3_8,Mais je ne veux pas te déranger. Tu as déjà ton propre commerce à gérer...,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/GH_UME_GENERIC_3_CHOICE_3,Suis ton cœur !,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/GH_UME_GENERIC_3_9,Suivre... mon cœur ?,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/GH_UME_GENERIC_3_CHOICE_3,Suis ton coeur !,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/GH_UME_GENERIC_3_9,Suivre... mon coeur ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_GENERIC_3_10,"O-Oui, être si insouciante pourrait changer un peu... Je vais y réfléchir.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_INDOOR_1_1,O-Oh !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GH_UME_INDOOR_1_2,"Mes lunettes s'embuent... Et j'ai oublié mon, euh, chiffon d'essuyage.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9183,7 +9183,7 @@ Dialogue (Backup)/VNM56_15,Il n'y a rien à faire. Retroussons nos manches et me
 Dialogue (Backup)/VNM56_16,Nous ferons tomber Crois ! Il n'aura pas l'occasion de faire du mal à nos amis !,reviewed,dépassement : formulation naturelle et intention préservées.
 Dialogue (Backup)/VNM57_1,[NAME] ! Crois est là !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM57_2,Tu peux le faire. Ne le laisse pas te marcher dessus.,reviewed,dépassement : formulation naturelle et intention préservées.
-Dialogue (Backup)/VNM57_3,"Humph, cet endroit est toujours aussi écœurant.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM57_3,"Humph, cet endroit est toujours aussi écoeurant.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM57_4,"Ah, mais une fois que je vous aurai chassés, l'endroit sera parfait pour une station-service ! Ha ha ha !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM57_CHOICE_1,Je ne vous laisserai pas !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM57_5,"Ha ha ha, vraiment ?",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9523,7 +9523,7 @@ Dialogue (Backup)/VNM70_53,C’est pour ça que je t’ai proposé le parc. Êtr
 Dialogue (Backup)/VNM70_54,"D’abord, je ne me suis jamais excusée d’avoir été rude quand on s’est rencontrés. Et de tout ce que j’ai pu te dire.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_55,Pardon. C’est ma faute.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_CHOICE_9,Excuses acceptées.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM70_56,M-Merci. Vraiment. Ça me pesait sur le cœur.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM70_56,M-Merci. Vraiment. Ça me pesait sur le coeur.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_CHOICE_10,J’avais déjà tout oublié.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_57,Vraiment ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_58,"Je suppose que ça te ressemble, toujours à regarder vers l’avenir.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9545,7 +9545,7 @@ Dialogue (Backup)/VNM70_70,"Mouahaha ! Très bien, je l'autorise !",reviewed,Pro
 Dialogue (Backup)/VNM70_71,Je vais chercher des idées d'activités entre amis.,reviewed,Formulation neutre ; amitié conservée.
 Dialogue (Backup)/VNM70_72,"Bref, j'ai aussi quelque chose pour toi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_73,C'est le vieux livre de recettes de ta grand-mère.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM70_74,"Tu devrais l'avoir. De toute façon, je sais tout par cœur.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM70_74,"Tu devrais l'avoir. De toute façon, je sais tout par coeur.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_75,"Et il restait, euh, des pages vierges. Alors je me disais, peut-être...",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_76,On pourrait créer de nouvelles recettes ensemble.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM70_77,J'ai entendu dire que les collaborations sont très à la mode.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9661,7 +9661,7 @@ Dialogue (Backup)/GPN5_3_5,"O-Oh, ça ne te dérange pas si je te montre les pho
 Dialogue (Backup)/GPN5_3_6,"(J'ai regardé la collection grandissante de peluches d'Ume, puis le catalogue Woon Woon. Tout est beaucoup trop mignon.)",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GPN6_1_1,"Tu sais, j'ai encore publié des stories Instayum aujourd'hui. Sur notre journée à Bakuso et tout ça.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GPN6_1_2,"Mon père ne dit jamais qu'il regarde mes stories, mais je sais qu'il les a vues.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/GPN6_1_3,"Parce qu'ensuite, il publie ses propres stories Instayum. Hier encore, il a posté une photo de mes sœurs cuisinant [CHIL_FOOD2] avec [EMA_INGREDIENT] dessus.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/GPN6_1_3,"Parce qu'ensuite, il publie ses propres stories Instayum. Hier encore, il a posté une photo de mes soeurs cuisinant [CHIL_FOOD2] avec [EMA_INGREDIENT] dessus.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GPN6_1_4,J'imagine que c'est sa façon de me dire qu'il va bien.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GPN6_1_5,"Quel homme maladroit. Enfin, j'imagine que beaucoup de gens de son âge sont comme ça.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GPN6_1_6,(Cassie m'a raconté des anecdotes amusantes sur sa famille. Je sentais leur affection mutuelle.),reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9775,7 +9775,7 @@ Dialogue (Backup)/JUDGE_DESC_MAMI,"La reine des mondanités de la ville, Mami ! 
 Dialogue (Backup)/JUDGE_DESC_MAMI_SKEWER,Elle aimerait une brochette de [COLOR=LIKED]champignons[/COLOR] en accompagnement !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JUDGE_DESC_MAMI_DRINK,"Côté boisson, elle voudrait du [COLOR=LIKED]thé[/COLOR] ! Du vrai thé, cette fois.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JUDGE_DESC_MAMI_RANDOM_TASTE,"Et aujourd'hui, elle veut son plat [TASTE] !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/JUDGE_DESC_JEN,"Jen, la fashionista de la cuisine, est là ! Elle adore le brillant des [COLOR=LIKED]vermicelles de riz[/COLOR], mais trouve les [COLOR=DISLIKED]ananas[/COLOR] trop tape-à-l'œil ! Elle veut son plat [COLOR=SALTY]salé[/COLOR], malgré les ordres du médecin.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/JUDGE_DESC_JEN,"Jen, la fashionista de la cuisine, est là ! Elle adore le brillant des [COLOR=LIKED]vermicelles de riz[/COLOR], mais trouve les [COLOR=DISLIKED]ananas[/COLOR] trop tape-à-l'oeil ! Elle veut son plat [COLOR=SALTY]salé[/COLOR], malgré les ordres du médecin.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JUDGE_DESC_JEN_SKEWER,"Oh oh ! Pour relever le plat, elle veut une brochette de jolis petits champignons !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JUDGE_DESC_JEN_DRINK,Et un verre de cola délicieux pour parfaire le tout !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JUDGE_DESC_JEN_RANDOM_TASTE,"Oh, et assurez-vous qu'il soit [TASTE] !",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9921,7 +9921,7 @@ Dialogue (Backup)/UME_CUSTOMER_INTRO_1,"B-Bonjour, [NAME]. Je viens de trier not
 Dialogue (Backup)/UME_CUSTOMER_INTRO_2,C-Comment vas-tu ? Je lis en ce moment « [UME_BOOK1] [UME_BOOK2] ». C'est fascinant...,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/SHUGA_CUSTOMER_INTRO_1,Yo ?! Je viens de finir un boulot à [SHUGA_JOB1] [SHUGA_JOB2]. J'ai trop faim !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/SHUGA_CUSTOMER_INTRO_2,"Yo, chef ! The Galaxies sortent un nouveau [SHUGA_MERCH1] [SHUGA_MERCH2], alors j'économise !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_CUSTOMER_INTRO_1,"Bien le bonjour, Faucon. Encore une journée paisible sans [DAN_INCIDENT1] [DAN_INCIDENT2], je présume ?",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_CUSTOMER_INTRO_1,"Bien le bonjour, Faucon. Encore une journée paisible, sans [DAN_INCIDENT1] de [DAN_INCIDENT2], je suppose ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/DAN_CUSTOMER_INTRO_2,Bonjour. Je regardais nos photos de cette mission à [DAN_MISSION1]. Quelle époque [DAN_MISSION2] nous avons vécue.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/LADO_CUSTOMER_INTRO_1,Bonjour [NAME]. Je viens prélever un échantillon de ta cuisine. C'est pour mon rapport sur [LADO_REPORT1] [LADO_REPORT2].,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/LADO_CUSTOMER_INTRO_2,Bonjour. Connais-tu cette tendance marketing : [LADO_TREND1] [LADO_TREND2] ? Pittoresque.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -9951,7 +9951,7 @@ Dialogue (Backup)/NENE_CUSTOMER_INTRO_1,"""Oh, tu ressembles tant à [NENE_PERSO
 Dialogue (Backup)/NENE_CUSTOMER_INTRO_2,"""J'ai été [NPC_JOB_FANCY], je te l'ai déjà dit ? Une époque vraiment [DAN_MISSION2] de ma vie, mon chou.""",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/TANTI_CUSTOMER_INTRO_1,"""Je n'ai pas reçu le loyer de [TANTI_RENTER] ce mois-ci. J'ai donc dû saisir [NPC_ITEM] en paiement ! Tu te rends compte ?!""",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/TANTI_CUSTOMER_INTRO_2,"""Je trouve [TANTI_HOBBY] très relaxant, tu sais ? Mais tu es peut-être trop [TANTI_ADJECTIVE] pour ça...""",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça et un jour tu seras un [MEI_ADJECTIVE] [MEI_JOB], comme moi.""",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça : un jour tu sauras [MEI_JOB] et tu seras [MEI_ADJECTIVE], comme moi.""",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_CUSTOMER_INTRO_2,"""J'ai dû montrer à ces [MEI_PEOPLE] à [MEI_PLACE] qui est la patronne. Ça ne me plaisait pas, mais il le fallait.""",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OTARU_CUSTOMER_INTRO_1,"""Konnichiwa ! Tu as regardé [OTARU_TITLE1] [OTARU_TITLE2], Chef-san ? C'est trop sugoi.""",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/OTARU_CUSTOMER_INTRO_2,"""J'aimerais que Stella reprenne une chanson de Migu un jour ! Comme [OTARU_SONG1] [OTARU_SONG2] ! Tu ne trouves pas ?""",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10099,7 +10099,7 @@ Dialogue (Backup)/MAMI_DISH1_5,cérémoniel,reviewed,Propagé depuis le dialogue
 Dialogue (Backup)/MAMI_DISH1_6,bio,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_DISH1_7,sans gluten,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_DISH1_8,gourmet,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MAMI_DISH2_1,bœuf,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MAMI_DISH2_1,boeuf,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_DISH2_2,poulet,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_DISH2_3,poireaux,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMI_DISH2_4,oignons rouges,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10376,14 +10376,14 @@ Dialogue (Backup)/SOPHIE_MATERIAL_5,diamant,reviewed,Propagé depuis le dialogue
 Dialogue (Backup)/SOPHIE_MATERIAL_6,or pur,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/SOPHIE_MATERIAL_7,argent,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/SOPHIE_MATERIAL_8,rubis et saphir,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_1,faux,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_2,surchauffées,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_3,illégales,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_4,étrangement tic-tacantes,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_5,pointues,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_6,toxiques,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_7,compromises,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/DAN_INCIDENT1_8,du marché noir,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_1,contrefaçon,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_2,surchauffe,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_3,commerce illégal,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_4,tic-tac suspect,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_5,pointes acérées,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_6,toxicité,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_7,sécurité compromise,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/DAN_INCIDENT1_8,marché noir,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/DAN_INCIDENT2_1,joyaux royaux,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/DAN_INCIDENT2_2,documents historiques,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/DAN_INCIDENT2_3,sculptures en bronze,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10462,7 +10462,7 @@ Dialogue (Backup)/ELIO_PRAISE_5,excellent,reviewed,Propagé depuis le dialogue p
 Dialogue (Backup)/ELIO_PRAISE_6,ça déchire,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/ELIO_PRAISE_7,radical,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/ELIO_PRAISE_8,hardcore,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/ELIO_ACTION_1,lancer un bœuf,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/ELIO_ACTION_1,lancer un boeuf,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/ELIO_ACTION_2,sauter partout,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/ELIO_ACTION_3,faire du rock,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/ELIO_ACTION_4,taper sur les tambours,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10489,9 +10489,9 @@ Dialogue (Backup)/MINNIE_THOUGHT_7,sympa et relaxant,reviewed,Propagé depuis le
 Dialogue (Backup)/MINNIE_THOUGHT_8,une journée tranquille,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/NPC_JOB_FANCY_1,astronaute,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/NPC_JOB_FANCY_2,biochimiste,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/NPC_JOB_FANCY_3,footballeur américain,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/NPC_JOB_FANCY_4,gouverneur,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/NPC_JOB_FANCY_5,ingénieur data,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/NPC_JOB_FANCY_3,footballeuse américaine,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/NPC_JOB_FANCY_4,gouverneure,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/NPC_JOB_FANCY_5,ingénieure data,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/NPC_JOB_FANCY_6,artiste d'environnement,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/NPC_JOB_FANCY_7,architecte,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/NPC_JOB_FANCY_8,musicothérapeute,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10508,7 +10508,7 @@ Dialogue (Backup)/EMA_FOOD_2,steak-frites,reviewed,Propagé depuis le dialogue p
 Dialogue (Backup)/EMA_FOOD_3,lasagnes,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FOOD_4,poisson grillé,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FOOD_5,poulet à l'orange,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/EMA_FOOD_6,bœuf au poivre noir,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/EMA_FOOD_6,boeuf au poivre noir,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FOOD_7,pizzas maison,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FOOD_8,salade de papaye,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FOOD_9,agneau rôti,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10520,7 +10520,7 @@ Dialogue (Backup)/EMA_INGREDIENT_5,haricots puants,reviewed,Propagé depuis le d
 Dialogue (Backup)/EMA_INGREDIENT_6,gelée de citron,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_INGREDIENT_7,menthe poivrée,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_INGREDIENT_8,farine de soja,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/EMA_FAMILY_1,grande sœur,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/EMA_FAMILY_1,grande soeur,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FAMILY_2,fils par alliance du voisin,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FAMILY_3,cousin au troisième degré,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/EMA_FAMILY_4,beau-frère,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10547,13 +10547,13 @@ Dialogue (Backup)/JEN_CURSE_8,Lâches !,reviewed,Propagé depuis le dialogue pri
 Dialogue (Backup)/JEN_ITEM2_1,paire de sandales,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_ITEM2_2,boucle de ceinture,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_ITEM2_3,bonnet,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/JEN_ITEM2_4,nœud papillon,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/JEN_ITEM2_4,noeud papillon,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_ITEM2_5,voile de mariée,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_ITEM2_6,épingle de revers,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_ITEM2_7,smoking,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_ITEM2_8,combinaison de plongée,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_FOOD_1,réglisse,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/JEN_FOOD_2,nouilles aux œufs,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/JEN_FOOD_2,nouilles aux oeufs,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_FOOD_3,méduse,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_FOOD_4,salade de thon,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JEN_FOOD_5,mochi,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10600,22 +10600,22 @@ Dialogue (Backup)/TANTI_ADJECTIVE_5,sérieux,reviewed,Propagé depuis le dialogu
 Dialogue (Backup)/TANTI_ADJECTIVE_6,occupé,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/TANTI_ADJECTIVE_7,concentré sur la cuisine,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/TANTI_ADJECTIVE_8,gentil,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_ADJECTIVE_1,dur à cuire,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_ADJECTIVE_2,génial,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_ADJECTIVE_3,respecté,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_ADJECTIVE_1,à toute épreuve,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_ADJECTIVE_2,au top,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_ADJECTIVE_3,respectable,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_ADJECTIVE_4,cool,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_ADJECTIVE_5,craint de tous,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_ADJECTIVE_5,redoutable,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_ADJECTIVE_6,badass,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_ADJECTIVE_7,sensationnel,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_ADJECTIVE_8,totalement hardcore,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_1,boss,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_2,grand chef,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_3,leader suprême,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_4,gamin,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_5,diva,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_6,superstar,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_7,chef de meute,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_JOB_8,princesse,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_ADJECTIVE_7,hors pair,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_ADJECTIVE_8,hardcore,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_1,commander,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_2,diriger,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_3,mener les autres,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_4,t'imposer,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_5,briller,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_6,faire le show,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_7,dominer,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_JOB_8,régner,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_1,vauriens,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_2,loubards,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_3,brutes,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10691,7 +10691,7 @@ Dialogue (Backup)/BORIS_ACTION_8,aller à une soirée pyjama,reviewed,Propagé d
 Dialogue (Backup)/JOCKO_FOOD_1,riz nature,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JOCKO_FOOD_2,soupe de glace,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JOCKO_FOOD_3,blancs de poulet nature,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/JOCKO_FOOD_4,œufs durs,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/JOCKO_FOOD_4,oeufs durs,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JOCKO_FOOD_5,céleri blanchi,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JOCKO_FOOD_6,barres protéinées molles,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/JOCKO_FOOD_7,mini-carottes,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10762,7 +10762,7 @@ Dialogue (Backup)/LIN_GAME1_3,Contes d'un,reviewed,Propagé depuis le dialogue p
 Dialogue (Backup)/LIN_GAME1_4,Le doré,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/LIN_GAME1_5,Crypte du,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/LIN_GAME1_6,Wombat timbré et le,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/LIN_GAME1_7,Cœurs du,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/LIN_GAME1_7,Coeurs du,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/LIN_GAME1_8,Longue vie au,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GERI_WISDOM1_1,sincérité,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/GERI_WISDOM1_2,courage,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10778,7 +10778,7 @@ Dialogue (Backup)/GERI_WISDOM2_5,mieux que rien,reviewed,Propagé depuis le dial
 Dialogue (Backup)/GERI_WISDOM2_6,bonne pour l'âme,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_1,"D'accord, 12 degrés antihoraire, vitesse d'obturation divisée par deux et... voilà !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_2,"Hum... Presque, mais...",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC0_3,Cette photo doit faire mouche ! Mes sœurs vont en baver !,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC0_3,Cette photo doit faire mouche ! Mes soeurs vont en baver !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_CHOICE_1,"Désolé, je tombe mal ? Je repasse plus tard ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_4,Oh ! [NAME] ! Je ne t'avais pas vu.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_5,"Pas du tout, j'étais juste trop absorbée. Assieds-toi !",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10789,13 +10789,13 @@ Dialogue (Backup)/VNC0_8,"Super, tu es très bien. Installe-toi donc.",reviewed,
 Dialogue (Backup)/VNC0_9,"Désolée, je faisais juste des selfies avec les gâteaux. Pour les envoyer sur le groupe familial, tu vois ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_10,"Ils s'inquiètent toujours pour moi, alors je veux leur montrer que tout va bien !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_11,"Au début, je voulais commander tous les gâteaux. Ils sont trop mignons ! Mais bon, je me contenterai de ces douze-là.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC0_12,"Mes petites sœurs vont être tellement jalouses, hé hé.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC0_12,"Mes petites soeurs vont être tellement jalouses, hé hé.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_13,"Pour être honnête, j'ai été surprise quand tu m'as proposé de gérer Bakuso avec toi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_14,"Oui, on a suivi quelques cours ensemble à la fac, mais je pensais qu'on s'était un peu perdues de vue.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_15,"Désolée aussi, je ne t'écrivais pas assez. J'étais juste occupée avec... des trucs.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_16,Je suis contente que tu m'aies convaincue. Ça change de rythme. Et il y a bien l'électricité et Internet ici.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_17,"Tu as l'air bien plus à l'aise ici. En ville, tu semblais toujours sous tension.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC0_18,Te voir prendre tes marques ici m'a rappelé mes sœurs !,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC0_18,Te voir prendre tes marques ici m'a rappelé mes soeurs !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_19,"Elles me manquent parfois, même si on se disputait beaucoup à la maison.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_20,"Mais bon, je peux toujours discuter avec elles. La technologie, c'est incroyable, non ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_21,Et on va aussi apprendre à connaître les gens de KuloNiku. Ils ont vraiment l'air... intéressants ?,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10820,7 +10820,7 @@ Dialogue (Backup)/VNC0_36,Tu veux goûter une cuillerée ?,reviewed,Propagé dep
 Dialogue (Backup)/VNC0_37,"Tiens, ouvre grand la bouche ! Aah~",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_CHOICE_6,"H-Hé, ce n'est pas excessif ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_38,"Oups, désolée ! ",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC0_39,Toutes ces histoires sur mes sœurs ont dû me replonger dans le passé. J'aidais Maman à les nourrir.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC0_39,Toutes ces histoires sur mes soeurs ont dû me replonger dans le passé. J'aidais Maman à les nourrir.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_40,"Merci de m'avoir ramenée à la raison, [NAME].",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_41,"Parfois, je vais trop loin, c'est une mauvaise habitude chez moi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_CHOICE_7,Youpi ! Avec plaisir !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10829,12 +10829,12 @@ Dialogue (Backup)/VNC0_43,"Hé hé, tu ferais mieux de le savourer.",reviewed,Pr
 Dialogue (Backup)/VNC0_44,"Pour cinq parts achetées, la sixième est offerte !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_45,"Et si tu t'inscris à notre programme de fidélité, tu as 50 % de réduction sur ton premier achat !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_46,"O-Oh ! Désolée, je me suis un peu emballée avec la cuillère.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC0_47,Ça m'a rappelé quand j'aidais mes petites sœurs. Mais je ne devrais pas faire ça avec la clientèle.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC0_47,Ça m'a rappelé quand j'aidais mes petites soeurs. Mais je ne devrais pas faire ça avec la clientèle.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_48,"Mais ça ne m'a pas dérangée, une fois, hé hé.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_49,"Bon, assez d'entraînement. Je crois que j'ai compris !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_50,"Aide-moi à finir ces gâteaux, d'accord ? On peut y arriver !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_51,"Ah, je n'ai plus faim. J'ai trop mangé...",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC0_52,"Mais je ne regrette rien ! Hé hé, mes sœurs ont aussi envoyé des photos. Elles ne veulent pas perdre.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC0_52,"Mais je ne regrette rien ! Hé hé, mes soeurs ont aussi envoyé des photos. Elles ne veulent pas perdre.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_53,"Merci d'avoir cédé à mes caprices, [NAME]. Je n'aurais pas fini cette petite montagne de gâteaux sans toi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC0_54,"À demain au restaurant, [NAME] !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_1,"Salut, [NAME]. Te voilà.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10846,10 +10846,10 @@ Dialogue (Backup)/VNC1_HANGOUT_6,Je me souviens de l'époque où on allait au ce
 Dialogue (Backup)/VNC1_HANGOUT_7,"Oh, regarde, Bluberry a une boutique éphémère ici ! Ils font la promo d'une nouvelle gamme de parfums.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_8,"« Parfums exclusifs de KuloNiku : Poulet printanier, Brin de romarin, Tartine du matin. »",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_9,"Des produits hyper locaux, hein ? Je ne sais pas s'ils sentent bon, mais j'en prends un de chaque !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC1_HANGOUT_10,"Si je ne les aime pas, je les enverrai à mes sœurs.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC1_HANGOUT_10,"Si je ne les aime pas, je les enverrai à mes soeurs.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_11,"Et ce sera LEUR problème ! Hé hé, je plaisante.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_CHOICE_1,Tu ne devrais pas.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC1_HANGOUT_12,Ce n'est rien ! C'est un truc entre sœurs.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC1_HANGOUT_12,Ce n'est rien ! C'est un truc entre soeurs.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_CHOICE_2,Tu pourrais peut-être me les donner plutôt ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_13,"Hein, tu les voudrais ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC1_HANGOUT_14,"Enfin, oui. S'ils ne sont pas mon style, ils sont à toi.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10898,7 +10898,7 @@ Dialogue (Backup)/VNC3_6,"Hein ? Tu parles comme mes parents, [NAME]. Toujours �
 Dialogue (Backup)/VNC3_7,"Je vais bien ! Bien sûr que je vais bien, pourquoi je n'irais pas bien ? Tu es drôle parfois.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC3_8,"J'en suis à mon troisième café, alors je me sens pétillante, bizarre et BIEN !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC3_CHOICE_2,Calmons-nous et allons à notre rythme.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC3_9,D-D'accord. C'est une bonne idée. Mes sœurs l'ont dit aussi.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC3_9,D-D'accord. C'est une bonne idée. Mes soeurs l'ont dit aussi.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC3_10,Je suis trop enthousiaste. C'est ma spécialité.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC3_CHOICE_3,On ne peut pas au moins faire un tour de manège ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC3_11,[NAME] ! Ce n'est pas le moment de jouer !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10965,8 +10965,8 @@ Dialogue (Backup)/VNC4_CHOICE_3,"Ça va, prends ton temps.",reviewed,Propagé de
 Dialogue (Backup)/VNC4_12,...Merci.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_13,Je peux le dire.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_14,Parce que j'ai raté mes cours quand j'étais en filière cuisine. C'était avant même que tu n'entres à la fac.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC4_15,"Tu vois, [NAME], j'ai toujours été une bonne élève. Et une bonne grande sœur aussi, si je puis me permettre.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC4_16,"Mais la fac, c'était si différent. Je vivais loin de ma famille. ...Je n'avais plus à être un modèle ni à m'occuper de mes petites sœurs.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC4_15,"Tu vois, [NAME], j'ai toujours été une bonne élève. Et une bonne grande soeur aussi, si je puis me permettre.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC4_16,"Mais la fac, c'était si différent. Je vivais loin de ma famille. ...Je n'avais plus à être un modèle ni à m'occuper de mes petites soeurs.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_17,Je ne savais pas gérer toute cette liberté. Je séchais les cours et faisais beaucoup la fête. Je faisais tout sauf étudier.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_18,"J'ai peut-être fondé une secte et réintroduit une espèce presque éteinte, mais cette période reste floue.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_19,"Le fait est que... après deux ans, il était évident que mes notes dégringolaient.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -10988,7 +10988,7 @@ Dialogue (Backup)/VNC4_31,"Désolée-- Oh, attends, je recommence,",reviewed,Pro
 Dialogue (Backup)/VNC4_32,"Hahaha, tu as raison, je le fais trop souvent.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_33,Ouf. Il fallait que ça sorte.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_34,"Oh, attends, j'ai une notification.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC4_35,"...Encore mes sœurs. Elles voulaient faire du pain perdu, mais ont obtenu un seau de pâte grisâtre. Allez savoir comment.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC4_35,"...Encore mes soeurs. Elles voulaient faire du pain perdu, mais ont obtenu un seau de pâte grisâtre. Allez savoir comment.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_36,"Bon sang ! Qu'elles mangent des céréales, ou autre !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_37,Pourquoi m'envoient-elles chaque bêtise ? Pas besoin de savoir que Cammie a mis son t-shirt à l'envers.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC4_CHOICE_7,Pour te montrer qu'on a le droit de faire des erreurs.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11049,7 +11049,7 @@ Dialogue (Backup)/VNC5_28,"Tu es toujours si fiable, [NAME].",reviewed,Propagé 
 Dialogue (Backup)/VNC5_29,"Ah, ça me rappelle que je dois en parler à ma famille.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC5_30,« C'était troooop effrayant ! Il faut essayer quand vous viendrez me voir ! »,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC5_31,Elles ont répondu ? C'était rapide.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNC5_32,"« Alors, grande sœur, quel trouillard ! lol », puis : « Je parie que tu t'es accrochée à [NAME] comme si ta vie en dépendait. »",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNC5_32,"« Alors, grande soeur, quel trouillard ! lol », puis : « Je parie que tu t'es accrochée à [NAME] comme si ta vie en dépendait. »",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC5_33,"Pff, ces petites pestes ! Je devrais leur dire deux mots !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC5_34,"...Hahaha, ça fait du bien de partager mes moments de faiblesse.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNC5_35,Faisons les montagnes russes ensuite !,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11169,7 +11169,7 @@ Dialogue (Backup)/VNU5_16,"Tes conseils et ton aide ont été précieux, bien s�
 Dialogue (Backup)/VNU5_17,"Je peux faire tout ça parce que tu m'acceptes telle que je suis, [NAME].",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU5_18,"Quand je suis timide, quand je suis excitée, tu es toujours là. Tu acceptes chaque part de moi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU5_19,J'ai tellement de chance de t'avoir dans ma vie.,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNU5_20,"Tu es la seule personne avec qui je peux être parfaitement à l'aise, [NAME]. Alors... merci encore. Du fond du cœur.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNU5_20,"Tu es la seule personne avec qui je peux être parfaitement à l'aise, [NAME]. Alors... merci encore. Du fond du coeur.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU5_21,"Cela dit, ce n'est que le début.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU5_22,"Maintenant que j'ai tout le soutien de ma famille, j'ai, euh, de grands projets pour la boutique.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNU5_23,"Cette fois, je le fais parce que je le veux. Pas pour faire mes preuves.",reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11363,7 +11363,7 @@ Dialogue (Backup)/VNS2_60,"Désolé, [NAME]. Après ça, je dois y aller.",revie
 Dialogue (Backup)/VNS2_61,"Tu peux rester et rejoindre le cours d'art, d'accord ? Ne t'inquiète pas pour moi.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS2_62,"Je... je te verrai plus tard, d'accord ? Merci pour aujourd'hui.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS4_1,"... Salut, [NAME]. Merci de m'avoir invité.",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNS4_2,"Désolé, je suis vaseux. Je n'ai pas fermé l'œil.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNS4_2,"Désolé, je suis vaseux. Je n'ai pas fermé l'oeil.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS4_3,"Mais profitons au mieux d'aujourd'hui, d'accord ? Il fait si beau et si ensoleillé, après tout.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS4_4,Tu veux nager ou quoi ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNS4_CHOICE_1,Peut-être plus tard. Asseyons-nous.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11437,7 +11437,7 @@ Dialogue (Backup)/VNS4_63,Tu veux aller nager ?,reviewed,Propagé depuis le dial
 Dialogue (Backup)/VNS4_64,(J'ai joué avec Shuga à la plage le reste du jour.),reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_1,"Ha ha ha ha, j'ai du mal à croire que ce jour soit enfin arrivé !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_2,Cet air vaincu sur ton visage est plus doux que tout nectar !,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM62_3,C'en est presque dommage de briser dans l'œuf une si prometteuse carrière.,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM62_3,C'en est presque dommage de briser dans l'oeuf une si prometteuse carrière.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_4,"Mais bientôt, tout le monde ne mangera plus que ma Boulette PRIMO !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_5,Mon restaurant sera le seul encore debout ! Ha ha ha ha !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_6,Héh. Je regrette presque que cette vieille carne ne soit plus là pour le lui jeter à la figure.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11453,7 +11453,7 @@ Dialogue (Backup)/VNM62_13,"Nouveaux venus tous les deux, on traînait souvent e
 Dialogue (Backup)/VNM62_14,Je l'ai même-- je l'ai même considérée comme une amie.,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_15,"Puis ma formule de bormaline a rapporté des millions. C'était magnifique. Si peu chère, si rentable. Elle pouvait conserver des boulettes pendant des années !",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_16,"Et alors, si quelques personnes en sont tombées malades ?! Des gens tombent malades tous les jours, partout dans le monde !",reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/VNM62_17,"Elle tentait sans cesse de m'en dissuader. À l'époque, je la prenais pour une idiote myope au cœur tendre.",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/VNM62_17,"Elle tentait sans cesse de m'en dissuader. À l'époque, je la prenais pour une idiote myope au coeur tendre.",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_18,Comment aurais-je pu savoir que c'était une agente infiltrée ?! Elle ne s'est approchée de moi que pour obtenir des infos !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_19,"Après tout, quelle sorte d'amie démantèle l'empire criminel de son amie ?!",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/VNM62_20,J'ai tout juste réussi à m'échapper. Mais ça m'a coûté des millions.,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -11705,7 +11705,7 @@ Shop/SERVED_FRYING_DISH_COUNT_NAME,Bol frit,reviewed,
 Shop/SERVED_SKEWER_COUNT_NAME,Brochette,reviewed,
 Shop/SERVED_DRINK_COUNT_NAME,Boisson,reviewed,
 Shop/SHOP_INGREDIENT_MEATBALL_NAME,Boulette,reviewed,
-Shop/SHOP_INGREDIENT_MEATBALL_DESC,Ingrédient pour la table de cuisson à l'eau.<br>« Boulettes indonésiennes au bœuf haché et à la farine de tapioca. Leur texture rebondie les rend amusantes à manger ! »,reviewed,
+Shop/SHOP_INGREDIENT_MEATBALL_DESC,Ingrédient pour la table de cuisson à l'eau.<br>« Boulettes indonésiennes au boeuf haché et à la farine de tapioca. Leur texture rebondie les rend amusantes à manger ! »,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Shop/SHOP_INGREDIENT_TENDON_NAME,Boulette de tendon,reviewed,
 Shop/SHOP_INGREDIENT_TENDON_DESC,"Ingrédient pour la table de cuisson à l'eau. Rend le plat moins [COLOR=SPICY]épicé[/COLOR].<br>« Une boulette de tendons. Plus on la mâche, plus elle a de goût. »",reviewed,
 Shop/SHOP_INGREDIENT_NOODLES_NAME,Nouilles,reviewed,
@@ -11746,7 +11746,7 @@ Shop/SHOP_INGREDIENT_SPRINGONION_NAME,Cébette,reviewed,
 Shop/SHOP_INGREDIENT_SPRINGONION_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SWEET]sucré[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Fraîche comme une brise de printemps. »,reviewed,
 Shop/SHOP_INGREDIENT_GARLIC_NAME,Ail,reviewed,
 Shop/SHOP_INGREDIENT_GARLIC_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SPICY]épicé[/COLOR] et moins [COLOR=SOUR]acide[/COLOR].<br>« En manger vous immunise contre le vampirisme. »,reviewed,
-Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Narutomaki,provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
 Shop/SHOP_INGREDIENT_FISHCAKE_DESC,Ingrédient pour la table de découpe. Rend le plat plus [COLOR=SALTY]salé[/COLOR] et moins [COLOR=SPICY]épicé[/COLOR].<br>« Un excellent gâteau d'anniversaire pour les amateurs de fruits de mer. »,reviewed,
 Shop/SHOP_SIDEDISH_RICE_NAME,Cuiseur à riz,reviewed,
 Shop/SHOP_SIDEDISH_RICE_DESC,"Outil d'assaisonnement. [/COLOR]Cuit du riz en accompagnement.[/COLOR]<br>« Deux fois plus de glucides, deux fois plus de plaisir ! »",reviewed,
@@ -11765,7 +11765,7 @@ Shop/SHOP_INGREDIENT_DUMPLING_DESC,Ingrédient pour la table de cuisson à l'eau
 Shop/SHOP_INGREDIENT_WHITETOFU_NAME,Tofu blanc,reviewed,
 Shop/SHOP_INGREDIENT_WHITETOFU_DESC,"Ingrédient pour la table de cuisson à l'eau. Rend le plat moins [COLOR=SALTY]salé[/COLOR] et moins [COLOR=SOUR]acide[/COLOR].<br>« Blanc, tendre et délicieusement fade. »",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_MEATBALL_NAME,Boulette premium,reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_MEATBALL_DESC,"Boulettes premium pour la table de cuisson.<br>""Des boulettes délicieuses, faites de bœuf d'exception et de farine de tapioca de qualité cérémonielle.""",reviewed,
+Shop/SHOP_PREMIUM_INGREDIENT_MEATBALL_DESC,"Boulettes premium pour la table de cuisson.<br>""Des boulettes délicieuses, faites de boeuf d'exception et de farine de tapioca de qualité cérémonielle.""",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Shop/SHOP_PREMIUM_INGREDIENT_TENDON_NAME,Boulette de tendon premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_TENDON_DESC,"Boulettes de tendon premium pour la table de cuisson.<br>""Pleines de goût et agréablement élastiques. Les mâcher fortifie la mâchoire.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_NOODLES_NAME,Nouilles premium,reviewed,
@@ -11806,8 +11806,8 @@ Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_NAME,Cébette premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_SPRINGONION_DESC,"Cébette premium pour la table de découpe.<br>""Si verte et fraîche, cette cébette apporterait la paix en temps de troubles.""",reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_NAME,Ail premium,reviewed,
 Shop/SHOP_PREMIUM_INGREDIENT_GARLIC_DESC,"Ail premium pour la table de découpe.<br>""Une variété précieuse, aussi appelée ""perles du Sud"" pour son éclat captivant.""",reviewed,
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Narutomaki premium,provisional,À confirmer sur le visuel de l'ingrédient.
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki premium,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Surimi Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
 Shop/SHOP_PREMIUM_SIDEDISH_RICE_NAME,Riz premium,reviewed,
 Shop/SHOP_PREMIUM_SIDEDISH_RICE_DESC,"Riz premium en accompagnement pour la table d'assaisonnement.<br>""Chaque grain reçoit un lavage, un rinçage et un massage délicats pour révéler sa saveur.""",reviewed,
 Shop/SHOP_PREMIUM_DRINK_TEA_NAME,Thé premium,reviewed,
@@ -11883,7 +11883,7 @@ Contest/MODIFIER_POSITIVE_1,Gagnez 1 point d'action au premier tour.,reviewed,
 Contest/MODIFIER_POSITIVE_2,Ajouter tous les ingrédients bonus remplit la jauge de foule (une fois par duel).,reviewed,
 Contest/MODIFIER_POSITIVE_3,Remplir la jauge de foule rend aussi 1 point d'action (une fois par duel).,reviewed,
 Contest/MODIFIER_POSITIVE_4,Ajouter un ingrédient détesté par un juge ne réduit pas son score (une fois par tour).,reviewed,
-Contest/MODIFIER_POSITIVE_5,Ajouter un ingrédient aimé d'un juge lui donne 2 cœurs (une fois par tour).,reviewed,
+Contest/MODIFIER_POSITIVE_5,Ajouter un ingrédient aimé d'un juge lui donne 2 coeurs (une fois par tour).,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Contest/MODIFIER_POSITIVE_6,Gagnez 1 point d'action au dernier tour.,reviewed,
 Contest/MODIFIER_POSITIVE_7,Satisfaire la demande du public rend 1 point d'action (une fois par duel).,reviewed,
 Contest/MODIFIER_POSITIVE_8,Satisfaire la demande du public augmente la jauge de foule de 10 (une fois par tour).,reviewed,
@@ -11893,15 +11893,15 @@ Contest/MODIFIER_REDUCE_ACTION,Vos points d'action sont limités à 2 par tour.,
 Contest/MODIFIER_CHAIN_ONCE_PER_TURN,Une demande du public par tour.,reviewed,
 Contest/MODIFIER_LOCK_RANDOM_TABLE,Verrouille tous les ingrédients d'une table de cuisine (aléatoire à chaque tour).,reviewed,
 Contest/MODIFIER_DISLIKE_REDUCES_APPLAUSE,Ajouter un ingrédient détesté réduit la jauge de foule de 10 (une fois par tour).,reviewed,
-Contest/MODIFIER_DISLIKE_REDUCES_HEART,Ajouter un ingrédient détesté retire 1 cœur à tous les juges (une fois par tour).,reviewed,
+Contest/MODIFIER_DISLIKE_REDUCES_HEART,Ajouter un ingrédient détesté retire 1 coeur à tous les juges (une fois par tour).,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Contest/MODIFIER_REDUCE_BOWL_CAPACITY,Réduit la capacité du bol de 1.,reviewed,
 Contest/MODIFIER_NO_MINIGAME_APPLAUSE,Finir parfaitement un mini-jeu n'augmente pas la jauge de foule.,reviewed,
-Contest/MODIFIER_INCREASE_DISLIKE_PENALTY,Ajouter un ingrédient détesté par un juge lui retire 2 cœurs.,reviewed,
+Contest/MODIFIER_INCREASE_DISLIKE_PENALTY,Ajouter un ingrédient détesté par un juge lui retire 2 coeurs.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Contest/MODIFIER_WRONG_CHAIN_REDUCES_APPLAUSE,Ajouter un ingrédient qui ne satisfait pas la demande du public réduit la jauge de foule de 15 (une fois par tour).,reviewed,
 Contest/MODIFIER_REDUCES_APPLAUSE_BONUS,Réduit de 5 le gain de jauge de foule de toutes les actions.,reviewed,
 Contest/MODIFIER_LOCK_RANDOM_INGREDIENT,Verrouille 1 ingrédient de toutes les tables de cuisine (aléatoire à chaque tour).,reviewed,
-Contest/MODIFIER_STARTING_OPPONENT_HEART_SINGLE,L'adversaire commence avec 3 cœurs d'un juge aléatoire.,reviewed,
-Contest/MODIFIER_STARTING_OPPONENT_HEART_ALL,L'adversaire commence avec 1 cœur de tous les juges.,reviewed,
+Contest/MODIFIER_STARTING_OPPONENT_HEART_SINGLE,L'adversaire commence avec 3 coeurs d'un juge aléatoire.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Contest/MODIFIER_STARTING_OPPONENT_HEART_ALL,L'adversaire commence avec 1 coeur de tous les juges.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Contest/CONTEST_SUMMARY_TITLE_WIN_1,[NAME] GAGNE LE DUEL CULINAIRE,reviewed,
 Contest/CONTEST_SUMMARY_TITLE_WIN_2,[NAME] TRIOMPHE DE [OPPONENT],reviewed,
 Contest/CONTEST_SUMMARY_TITLE_WIN_3,[NAME] GOÛTE À LA VICTOIRE,reviewed,
@@ -12062,62 +12062,62 @@ Tutorial/REPUTATION_2,"Plus nos plats et notre service sont bons, plus la [COLOR
 Tutorial/REPUTATION_2B,"Mais ce n'est pas tout ! Une fois la [COLOR=ALERT]jauge de réputation[/COLOR] pleine, nous pourrons augmenter notre [COLOR=ALERT]niveau de réputation[/COLOR].",reviewed,
 Tutorial/REPUTATION_3,"Il existe ici un moyen spécial d'augmenter notre [COLOR=ALERT]niveau de réputation[/COLOR] ! Pour être le meilleur restaurant, enquêtons.",reviewed,
 Tutorial/REPUTATION_4,"Pour l'instant, remplissons juste la [COLOR=ALERT]jauge de réputation[/COLOR] !",reviewed,
-Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essayez différentes approches. Mais surtout, amusez-vous !",reviewed,Formulation sûre malgré la clé générique.
-Tutorial/GPD1_1,"Dans la cuisine, vous pouvez réorganiser les tables à votre guise. Pratique, non ?",reviewed,
+Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essaie différentes approches. Mais surtout, amuse-toi !",reviewed,Tutoiement harmonisé dans tous les tutoriels.
+Tutorial/GPD1_1,"Dans la cuisine, tu peux réorganiser les tables à ta guise. Pratique, non ?",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPD1_2,Passons maintenant à la caisse.,reviewed,
-Tutorial/GPD1_3,Et c'est là que je travaille ! Vous pouvez poser ici vos petits objets.,reviewed,
+Tutorial/GPD1_3,Et c’est là que je travaille ! Tu peux poser ici tes petits objets.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPD1_4,J'ai entendu dire que certains objets rendent les clients plus patients ou leur font laisser plus de pourboires. Génial !,reviewed,
 Tutorial/GPD1_5,Regardons maintenant la salle.,reviewed,
-Tutorial/GPD2_1,Vous pouvez changer ici l'intérieur et le mobilier !,reviewed,
+Tutorial/GPD2_1,Tu peux changer ici l’intérieur et le mobilier !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPD2_2,Essayons de changer le sol.,reviewed,
-Tutorial/GPD2_3,Cliquez sur le sol pour voir les [COLOR=ALERT]modèles[/COLOR] disponibles.,reviewed,
-Tutorial/GPD2_4,"Cliquez longuement sur un nouveau sol pour le déverrouiller. Celui-ci est gratuit, mais vous pouvez acheter d'autres [COLOR=ALERT]modèles[/COLOR].",reviewed,
+Tutorial/GPD2_3,Clique sur le sol pour voir les [COLOR=ALERT]modèles[/COLOR] disponibles.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD2_4,"Maintiens le clic sur un nouveau sol pour le déverrouiller. Celui-ci est gratuit, mais tu peux acheter d’autres [COLOR=ALERT]modèles[/COLOR].",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPD2_5,"C'est prêt, quelle classe !",reviewed,
-Tutorial/GPD2_6,"Vous pouvez aussi changer le plafond et le papier peint. Quand vous avez fini, fermez le menu.",reviewed,
-Tutorial/GPD4_1,"Oh, vous venez d'acheter un objet de décoration. Génial !",reviewed,
-Tutorial/GPD4_2,"Selon l'objet, vous le trouverez déjà installé à la caisse ou dans la salle.",reviewed,
-Tutorial/GPD4_3,"Un sacré service après-vente, non ? Ne leur demandez pas comment ils entrent dans Bakuso sans les clés.",reviewed,
+Tutorial/GPD2_6,"Tu peux aussi changer le plafond et le papier peint. Quand tu as fini, ferme le menu.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD4_1,"Oh, tu viens d’acheter un objet de décoration. Génial !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD4_2,"Selon l’objet, tu le trouveras déjà installé à la caisse ou dans la salle.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD4_3,"Un sacré service après-vente, non ? Ne leur demande pas comment ils entrent dans Bakuso sans les clés.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPD4_4,Allons à Bakuso [NAME] !,reviewed,
 Tutorial/COOKING_UI_FIXED_SHORTCUT,Besoin de revoir vite la commande ? Les raccourcis du livre de recettes et des notes de commande sont ici.,reviewed,
-Tutorial/COOKING_UI_NAVIGATION,"Et cliquez ici pour aller vite à n'importe quelle table. <nobr>À vous de jouer, [NAME] !</nobr>",reviewed,
-Tutorial/CONTEST_T1_1_MAMIGREET,Youpi ! C'est excitant ! Je vous montre.,reviewed,
+Tutorial/COOKING_UI_NAVIGATION,"Et clique ici pour aller vite à n’importe quelle table. <nobr>À toi de jouer, [NAME] !</nobr>",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_1_MAMIGREET,Youpi ! C’est excitant ! Je te montre.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T1_1A_OPENING,"Dans les duels de boulettes, les chefs s'affrontent pour montrer leurs plats ET leur talent culinaire !",reviewed,
-Tutorial/CONTEST_T1_1B_TURNINTRO,Nous cuisinons en [COLOR=ALERT]tours[/COLOR] pour montrer notre préparation. Consultez ici vos [COLOR=ALERT]tours[/COLOR] restants.,reviewed,
-Tutorial/CONTEST_T1_1C_ACTIONINTRO,Ajouter un ingrédient coûte [COLOR=ALERT]un point d'action[/COLOR]. Consultez ici vos points d'action restants pour ce tour !,reviewed,
-Tutorial/CONTEST_T1_2A_OPENBRAWLINFO,Voyons les détails de ce duel. Ouvrez ici les notes [COLOR=ALERT]Infos du duel[/COLOR].,reviewed,
-Tutorial/CONTEST_T1_2B_CLOSEBRAWLINFO,Voici les [COLOR=ALERT]ingrédients bonus de score[/COLOR] du duel. Utilisez-les pour bien noter auprès du jury. Fermez les notes.,reviewed,
-Tutorial/CONTEST_T1_2C_BOWLTOHOTPOT,Amenez le bol à la zone Marmite.,reviewed,
+Tutorial/CONTEST_T1_1B_TURNINTRO,Nous cuisinons en [COLOR=ALERT]tours[/COLOR] pour montrer notre préparation. Consulte ici tes [COLOR=ALERT]tours[/COLOR] restants.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_1C_ACTIONINTRO,Ajouter un ingrédient coûte [COLOR=ALERT]un point d’action[/COLOR]. Consulte ici tes points d’action restants pour ce tour !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_2A_OPENBRAWLINFO,Voyons les détails de ce duel. Ouvre ici les notes [COLOR=ALERT]Infos du duel[/COLOR].,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_2B_CLOSEBRAWLINFO,Voici les [COLOR=ALERT]ingrédients bonus de score[/COLOR] du duel. Utilise-les pour obtenir une bonne note du jury. Ferme les notes.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_2C_BOWLTOHOTPOT,Amène le bol à la zone Marmite.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T1_3A_MINIGAME_SELECTNONLIKEDINGREDIENT,"Les nouilles sont des ingrédients bonus de score, alors ajoutons-les. Attention, la marmite ici a une plus petite capacité.",reviewed,
-Tutorial/CONTEST_T1_3B_MINIGAME_START,Fermez maintenant le couvercle pour lancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Préparez-vous !,reviewed,
-Tutorial/CONTEST_T1_4A_HEARTEXPLANATION,"Bien joué. Les nouilles sont des ingrédients bonus de score, vous avez donc fait plaisir à tout le jury !",reviewed,
-Tutorial/CONTEST_T1_4B_JUDGEINFOINTRO,Chaque juge a aussi ses propres préférences. Ouvrez ici les [COLOR=ALERT]Infos du juge[/COLOR].,reviewed,
-Tutorial/CONTEST_T1_4C_CLOSEJUDGEINFO,Il est écrit que M. Crois aime les boulettes. Il a aussi plusieurs préférences de saveur. Refermez les notes.,reviewed,
+Tutorial/CONTEST_T1_3B_MINIGAME_START,Ferme maintenant le couvercle pour lancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Prépare-toi !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_4A_HEARTEXPLANATION,Bien joué. Les nouilles sont des ingrédients bonus de score : tu as donc fait plaisir à tout le jury !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_4B_JUDGEINFOINTRO,Chaque juge a aussi ses propres préférences. Ouvre ici les [COLOR=ALERT]Infos du juge[/COLOR].,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_4C_CLOSEJUDGEINFO,Il est écrit que M. Crois aime les boulettes. Il a aussi plusieurs préférences de saveur. Referme les notes.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T1_5A_MINIGAME_SELECTLIKEDINGREDIENT,"Comme M. Crois aime les [COLOR=ALERT]boulettes[/COLOR], ajoutons-en deux.",reviewed,
-Tutorial/CONTEST_T1_5B_MINIGAME_STARTMINIGAME,Fermez ensuite le couvercle pour relancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Vous y arriverez !,reviewed,
-Tutorial/CONTEST_T1_5E_MINIGAME_HEARTEXPLANATION,"Avec des boulettes, M. Crois est ravi. Vous voyez les [COLOR=ALERT]cœurs[/COLOR] ? Il vous donnera sûrement une bonne note !",reviewed,
+Tutorial/CONTEST_T1_5B_MINIGAME_STARTMINIGAME,Ferme ensuite le couvercle pour relancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Tu y arriveras !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_5E_MINIGAME_HEARTEXPLANATION,"Avec des boulettes, M. Crois est ravi. Tu vois les [COLOR=ALERT]coeurs[/COLOR] ? Il te donnera sûrement une bonne note !",reviewed,Tutoiement harmonisé et graphie oe compatible avec la police du jeu.
 Tutorial/CONTEST_T1_5F_MINIGAME_JUDGEPREF,Les juges ont des goûts et des dégoûts différents : les ingrédients donnent donc des résultats différents.,reviewed,
-Tutorial/CONTEST_T1_5G_MINIGAME_POURSOUP,N'oubliez pas d'ajouter la soupe. Pas d'inquiétude : elle ne compte pas comme ingrédient. Aucun point d'action requis.,reviewed,
-Tutorial/CONTEST_T1_6B_INGREDIENTANDJUDGEEXPLANATION,Tenez compte des ingrédients demandés et des préférences du jury pour marquer des points ! Sonnez maintenant la cloche pour finir votre tour.,reviewed,
-Tutorial/CONTEST_T2_1_CROWDCHAININTRO,"Pour plus d'ambiance, il y a aussi une [COLOR=ALERT]jauge du public[/COLOR] ! Si vous remplissez la [COLOR=ALERT]jauge du public[/COLOR], chaque juge vous donne un point de plus.",reviewed,
-Tutorial/CONTEST_T2_2A_SELECTWRONGINGREDIENT,Réussir un [COLOR=ALERT]mini-jeu parfait[/COLOR] augmente la jauge du public. Faites bouillir une boulette de tendon et un ravioli.,reviewed,
-Tutorial/CONTEST_T2_3_MINIGAMEAPPLAUSEINTRO,"Bien joué ! Comme c'était parfait, vous avez [COLOR=ALERT]augmenté la jauge du public.[/COLOR]",reviewed,
-Tutorial/CONTEST_T2_4_CHAINEXPLANATION,Vous pouvez aussi l'augmenter en satisfaisant la [COLOR=ALERT]demande du public[/COLOR]. La demande actuelle est affichée ici.,reviewed,
-Tutorial/CONTEST_T2_5A_SELECTCHAININGREDIENT,Le public veut quelque chose d'[COLOR=SOUR]acide[/COLOR] ! Ajoutez la poudre de vinaigre. Préparez-vous au mini-jeu.,reviewed,
+Tutorial/CONTEST_T1_5G_MINIGAME_POURSOUP,N’oublie pas d’ajouter la soupe. Pas d’inquiétude : elle ne compte pas comme ingrédient. Aucun point d’action requis.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_6B_INGREDIENTANDJUDGEEXPLANATION,Tiens compte des ingrédients demandés et des préférences du jury pour marquer des points ! Sonne maintenant la cloche pour finir ton tour.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_1_CROWDCHAININTRO,"Pour plus d’ambiance, il y a aussi une [COLOR=ALERT]jauge du public[/COLOR] ! Si tu la remplis, chaque juge te donne un point de plus.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_2A_SELECTWRONGINGREDIENT,Réussir un [COLOR=ALERT]mini-jeu parfait[/COLOR] augmente la jauge du public. Fais bouillir une boulette de tendon et un ravioli.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_3_MINIGAMEAPPLAUSEINTRO,"Bien joué ! Comme c’était parfait, tu as [COLOR=ALERT]augmenté la jauge du public.[/COLOR]",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_4_CHAINEXPLANATION,Tu peux aussi l’augmenter en satisfaisant la [COLOR=ALERT]demande du public[/COLOR]. La demande actuelle est affichée ici.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_5A_SELECTCHAININGREDIENT,Le public veut quelque chose d’[COLOR=SOUR]acide[/COLOR] ! Ajoute la poudre de vinaigre. Prépare-toi au mini-jeu.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T2_6_APPLAUSEBONUSEXPLANATION,"Super ! Satisfaire la demande du public a augmenté la [COLOR=ALERT]jauge du public[/COLOR]. Le mini-jeu était parfait aussi, alors elle a encore plus monté !",reviewed,
-Tutorial/CONTEST_T2_7_WAITENDTURN,Sonner maintenant la cloche pour finir votre tour.,reviewed,
+Tutorial/CONTEST_T2_7_WAITENDTURN,Sonne maintenant la cloche pour finir ton tour.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T2_8B_BONUSPOINTEXPLANATION,Youpi ! J'ai rempli la [COLOR=ALERT]jauge du public[/COLOR] ! M. Crois est aussi ravi par l'ambiance ! Sa note pour moi [COLOR=ALERT]augmente[/COLOR] !,reviewed,
 Tutorial/CONTEST_T2_8C_SHAREDCROWDEXPLANATION,C'est parce que la jauge du public est [COLOR=ALERT]partagée entre les concurrents[/COLOR]. Celui qui la remplit obtient les points bonus de chaque juge.,reviewed,
-Tutorial/CONTEST_T3_1_CHAINRESETEXPLANATION,"Regardez ! La [COLOR=ALERT]demande du public[/COLOR] a changé. Elle change à chaque tour, pensez à la vérifier régulièrement.",reviewed,
-Tutorial/CONTEST_T3_2_FREECOOKING,"C'est tout ! Pour un bon score, ajoutez les [COLOR=ALERT]ingrédients demandés[/COLOR], suivez les [COLOR=ALERT]préférences des juges[/COLOR] et essayez de remplir la [COLOR=ALERT]jauge du public[/COLOR].",reviewed,
-Tutorial/CONTEST_T3_3_SCORINGEXPLANATION,Votre score final est la somme des notes du jury. N'oubliez pas qu'un duel peut compter plusieurs juges.,reviewed,
-Tutorial/GPN1B_1,"À Kuloniku, nous aimons nous promener le soir. Vous pouvez faire pareil !",reviewed,
-Tutorial/GPN1B_2,"Pour redécorer votre restaurant, faites-le le soir. Sélectionnez Bakuso pour entrer.",reviewed,
+Tutorial/CONTEST_T3_1_CHAINRESETEXPLANATION,"Regarde ! La [COLOR=ALERT]demande du public[/COLOR] a changé. Elle change à chaque tour, pense à la vérifier régulièrement.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T3_2_FREECOOKING,"C’est tout ! Pour un bon score, ajoute les [COLOR=ALERT]ingrédients demandés[/COLOR], suis les [COLOR=ALERT]préférences des juges[/COLOR] et essaie de remplir la [COLOR=ALERT]jauge du public[/COLOR].",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T3_3_SCORINGEXPLANATION,Ton score final est la somme des notes du jury. N’oublie pas qu’un duel peut compter plusieurs juges.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_1,"À Kuloniku, nous aimons nous promener le soir. Tu peux faire pareil !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_2,"Pour redécorer ton restaurant, fais-le le soir. Sélectionne Bakuso pour entrer.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPN1B_3,Voici l'épicerie Ume Shop. La gérante est une amie d'enfance !,reviewed,
-Tutorial/GPN1B_4,"C'est là que vous logez, non ? Sélectionnez le bâtiment pour passer la nuit.",reviewed,
-Tutorial/GPN1B_6,"Vous pouvez aussi aller ici pour visiter le centre-ville ! Allez, allons voir !",reviewed,
+Tutorial/GPN1B_4,"C’est là que tu loges, non ? Sélectionne le bâtiment pour passer la nuit.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_6,"Tu peux aussi aller ici pour visiter le centre-ville ! Allez, allons voir !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPN1B_7,Voici la chaîne de télévision locale. Ce serait super de faire passer Bakuso à l'antenne !,reviewed,
 Tutorial/GPN1B_8,Rentrons maintenant.,reviewed,
-Tutorial/GPN1B_9,"Enfin, s'il y a des gens dans les environs, vous pouvez leur parler. Essayez de me parler.",reviewed,
+Tutorial/GPN1B_9,"Enfin, s’il y a des gens dans les environs, tu peux leur parler. Essaie de me parler.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPR1_1,"Oh, un ensemble de poêles ! Bien plus simple que celui de l'école, mais il fera tout aussi bien l'affaire.",reviewed,
 Tutorial/GPR1_2,Essayons-le. Amène le bol à la table de friture.,reviewed,
 Tutorial/GPR1_3,Sélectionne l'ingrédient à frire.,reviewed,
@@ -12165,7 +12165,7 @@ Tutorial/GPB13_3,"Pour utiliser nos compétences, notre [COLOR=PARTNER]jauge de 
 Tutorial/GPB13_4,"Pour remplir la [COLOR=PARTNER]jauge de motivation[/COLOR] d'un partenaire, passe du temps avec lui. Invite-le à une [COLOR=PARTNER]sortie[/COLOR] !",reviewed,
 Tutorial/GPB13_5,Nous pouvons t'accompagner même sans jauge de motivation pleine. Mais nous ne pourrons pas utiliser nos compétences.,reviewed,
 Tutorial/GPB13_6,Choisis maintenant le partenaire de duel que tu veux pour ce duel !,reviewed,
-Tutorial/GPN10_1,"Et si on jetait un œil à ces [COLOR=ALERT]objectifs[/COLOR], hein hein ?",reviewed,
+Tutorial/GPN10_1,"Et si on jetait un oeil à ces [COLOR=ALERT]objectifs[/COLOR], hein hein ?",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Tutorial/GPN10_2,Clique ici pour ouvrir ton appli [COLOR=ALERT]journal[/COLOR].,reviewed,
 Tutorial/GPN10_3,Voici ta liste d'[COLOR=ALERT]objectifs[/COLOR]. Commence par créer une recette et obtenir quelques ingrédients !,reviewed,Formulation neutre.
 Tutorial/GPN10_4,La plupart des [COLOR=ALERT]objectifs[/COLOR] sont cumulatifs : ils comptent même si tu les as accomplis auparavant.,reviewed,
@@ -12192,7 +12192,7 @@ Tutorial/GPL8_5,Tu peux en ajouter autant que tu veux mais surveille tes stocks.
 Tutorial/GPL8_6,"Si tu fais une erreur et vides ton plateau, l'[COLOR=ALERT]ingrédient premium[/COLOR] te sera rendu.",reviewed,
 Tutorial/GPL8_7,"C'est à peu près tout. Je te laisse faire, [NAME] !",reviewed,
 Tutorial/GPL7_1,"Salut [NAME], euh… nous avons des [COLOR=ALERT]ingrédients premium[/COLOR].",reviewed,
-Tutorial/GPL7_2,"""Ces ingrédients super ultra délicieux et merveilleux impressionneront vos clients à coup sûr ! Empochez ces juteux pourboires !""",reviewed,
+Tutorial/GPL7_2,« Ces ingrédients super ultra délicieux et merveilleux impressionneront tes clients à coup sûr ! Empoche ces juteux pourboires ! »,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPL7_3,... C'est écrit sur la brochure.,reviewed,
 Tutorial/GPL7_4,"Ils sont en quantité limitée. Euh, je te conseille d'en faire des réserves.",reviewed,
 Tutorial/GPL7_5,"Si je n'ai pas celui que tu veux, repasse chaque [COLOR=ALERT]vendredi[/COLOR]. C'est ce jour-là que je réapprovisionne.",reviewed,

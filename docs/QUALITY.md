@@ -41,15 +41,11 @@ caractères. Les dépassements conservés nécessiteraient de perdre du sens, un
 voix de personnage, une relation ou un marqueur dynamique. Le test en jeu reste
 la mesure décisive.
 
-## Neuf validations en jeu restantes
+## Arbitrages éditoriaux
 
-- titre de chanson : `Dialogue/VNM20_PLAYERWIN_4` ;
-- fragments dynamiques et accords : `Dialogue/NENE_CUSTOMER_INTRO_2`,
-  `Dialogue/MEI_CUSTOMER_INTRO_1`, `Dialogue/DAN_INCIDENT1_1`,
-  `Dialogue/DAN_INCIDENT1_4`, `Dialogue/NPC_JOB_FANCY_4` ;
-- visuel narutomaki : `Shop/SHOP_INGREDIENT_FISHCAKE_NAME`,
-  `Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME`,
-  `Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC` ;
+Les neuf entrées auparavant provisoires ont été arbitrées après le premier test
+en jeu. Il ne reste plus aucune traduction marquée `provisional`. Les contrôles
+visuels et les retours de partie restent néanmoins indispensables.
 
 Les six règles de festival suivent désormais l'anglais et l'indonésien, qui
 concordent sur deux ingrédients.

@@ -4,17 +4,17 @@ TOOLS_SEASONING,Assaisonnement,reviewed,Nom de station couvrant sauces et condim
 Dialogue/FOODREVIEW_NO_ICE,Vous n'avez pas mis de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
 Dialogue/FOODREVIEW_WRONG_ICE,Je ne voulais pas de glaçons.,reviewed,Terme harmonisé avec l'ingrédient.
 Shop/SHOP_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné,reviewed,Graphie harmonisée avec l'ingrédient.
-Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Narutomaki,provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
 Shop/SHOP_DRINK_ICE_NAME,Glaçons,reviewed,Évite l'ambiguïté avec une crème glacée.
 Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_NAME,Vermicelles de riz premium,reviewed,Terme harmonisé avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_VERMICELLI_DESC,"Vermicelles de riz premium pour la table de cuisson.<br>""Délicieux et nourrissants, ces vermicelles seraient filés à partir des nuages du paradis.""",reviewed,Terme harmonisé avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_NAME,Pak choï mariné premium,reviewed,Graphie harmonisée avec l'ingrédient standard.
 Shop/SHOP_PREMIUM_INGREDIENT_PICKLEDBOKCHOY_DESC,"Pak choï mariné premium pour la table de découpe.<br>""Préparé avec une technique de marinade magistrale qui lui apporte une harmonie complexe de saveurs.""",reviewed,Graphie harmonisée avec l'ingrédient standard.
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Narutomaki premium,provisional,À confirmer sur le visuel de l'ingrédient.
-Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",provisional,À confirmer sur le visuel de l'ingrédient.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_NAME,Surimi Narutomaki premium,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
+Shop/SHOP_PREMIUM_INGREDIENT_FISHCAKE_DESC,"Surimi Narutomaki premium pour la table de découpe.<br>""Une saveur étonnamment délicate et pure, mais indéniablement délicieuse.""",reviewed,Arbitrage utilisateur : terme japonais conservé et explicité pour le public français.
 INGREDIENT_SKEWER_OCTOPUS,Poulpe,reviewed,Les six autres langues désignent le poulpe ; thaï et allemand divergent.
 NOTIFICATION_UNLOCK_MESSAGE,"Débloqué : [X]",reviewed,Formulation neutre pour tout élément déverrouillé.
-Dialogue/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « Meatballs to the Wall », je ne dois pas laisser les revers me définir !",provisional,Titre de chanson à confirmer en jeu.
+Dialogue/VNM20_PLAYERWIN_4,"Non ! Je ne dois pas penser comme ça ! Comme dans sa chanson « A fond les boulettes », je ne dois pas laisser les revers me définir !",reviewed,Arbitrage utilisateur du titre de chanson ; A majuscule sans accent pour compatibilité de police.
 Dialogue/GH_CASSIE_AQUARIUM_1_7,"Eh bien, quelle motivation !",reviewed,Formulation neutre.
 Dialogue/GH_CASSIE_INDOOR_2_5,"Tu penses à tout, [NAME].",reviewed,Formulation neutre.
 Dialogue/GH_CASSIE_OUTDOOR_1_4,"Si ça arrive, marchons doucement pour éviter la pluie.",reviewed,Formulation neutre.
@@ -52,15 +52,15 @@ Dialogue/GPN7_2_5,"Je sais qu'ici, je n'aurai guère l'occasion de l'utiliser. M
 Dialogue/CHARMANT_CUSTOMER_INTRO_1,"Bonjour, [CHARMANT_NICKNAME]. Tu es [CHARMANT_ADJECTIVE], presque aussi sublime que moi ! ...Presque.",reviewed,Formulation neutre.
 Dialogue/MINNIE_CUSTOMER_INTRO_2,"""Quand je serai grande, je veux être [NPC_JOB_FANCY] et aussi [MINNIE_HOBBY]. Je vais beaucoup étudier !""",reviewed,Les fragments dynamiques s'insèrent sans accord ajouté.
 Dialogue/EMA_CUSTOMER_INTRO_2,"""Tu sais ? [EMA_FAMILY] vient de [EMA_ACTION]. Quelle bénédiction !""",reviewed,Formulation neutre.
-Dialogue/NENE_CUSTOMER_INTRO_2,"""J'ai été [NPC_JOB_FANCY], je te l'ai déjà dit ? Une époque vraiment [DAN_MISSION2] de ma vie, mon chou.""",provisional,Accord du fragment dynamique [NPC_JOB_FANCY] à valider en jeu.
+Dialogue/NENE_CUSTOMER_INTRO_2,"""J'ai été [NPC_JOB_FANCY], je te l'ai déjà dit ? Une époque vraiment [DAN_MISSION2] de ma vie, mon chou.""",reviewed,Les métiers variables sont féminisés pour Nene.
 Dialogue/TANTI_CUSTOMER_INTRO_1,"""Je n'ai pas reçu le loyer de [TANTI_RENTER] ce mois-ci. J'ai donc dû saisir [NPC_ITEM] en paiement ! Tu te rends compte ?!""",reviewed,Formulation neutre.
-Dialogue/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça et un jour tu seras un [MEI_ADJECTIVE] [MEI_JOB], comme moi.""",provisional,Accord des fragments dynamiques à valider en jeu.
+Dialogue/MEI_CUSTOMER_INTRO_1,"""Hé, larbin. Continue comme ça : un jour tu sauras [MEI_JOB] et tu seras [MEI_ADJECTIVE], comme moi.""",reviewed,Construction dynamique neutre quel que soit le genre du personnage joueur.
 Dialogue/SHUGA_JOB1_1,tricot de chaussettes pour,reviewed,+4 caractères : sens complet conservé.
 Dialogue/SHUGA_JOB1_7,faire un direct sur LickTok pour,reviewed,+2 caractères : sens complet conservé.
 Dialogue/SHUGA_JOB2_7,plantes en pot de Noka,reviewed,Terme complet conservé.
 Dialogue/NPC_ITEM_8,fourchettes,reviewed,+2 caractères : terme usuel.
-Dialogue/DAN_INCIDENT1_1,faux,provisional,Accord du fragment dynamique à valider en jeu.
-Dialogue/DAN_INCIDENT1_4,étrangement tic-tacantes,provisional,Accord du fragment dynamique à valider en jeu.
+Dialogue/DAN_INCIDENT1_1,contrefaçon,reviewed,Construction nominale neutre dans la phrase dynamique de Dan.
+Dialogue/DAN_INCIDENT1_4,tic-tac suspect,reviewed,Construction nominale neutre dans la phrase dynamique de Dan.
 Dialogue/CHARMANT_NICKNAME_3,mon as de Bakuso,reviewed,Formulation neutre.
 Dialogue/CHARMANT_NICKNAME_5,as des nouilles,reviewed,Formulation neutre.
 Dialogue/CHARMANT_NICKNAME_6,as de la cuisine,reviewed,Formulation neutre.
@@ -70,7 +70,7 @@ Dialogue/CHARMANT_ADJECTIVE_3,céleste,reviewed,Formulation neutre.
 Dialogue/CHARMANT_ADJECTIVE_4,adorable,reviewed,Formulation neutre.
 Dialogue/CHARMANT_ADJECTIVE_6,classe,reviewed,Formulation neutre.
 Dialogue/CHARMANT_ADJECTIVE_7,magnétique,reviewed,Formulation neutre.
-Dialogue/NPC_JOB_FANCY_4,gouverneur,provisional,Accord du fragment dynamique à valider en jeu.
+Dialogue/NPC_JOB_FANCY_4,gouverneure,reviewed,Métier féminisé pour Nene et Minnie.
 Dialogue/NPC_JOB_FANCY_6,artiste d'environnement,reviewed,Formulation neutre.
 Dialogue/EMA_FAMILY_3,cousin au troisième degré,reviewed,Parenté volontairement absurde conservée.
 Dialogue/VNC0_35,"Oh, on a un nouvel article au menu. C'est un gâteau aux fraises préparé par [NAME], aux fourneaux !",reviewed,Formulation neutre.
@@ -80,7 +80,7 @@ Festival/DESC_FES_DEEPLY_FRIED,Au moins 2 ingrédients de la table de friture pa
 Festival/DESC_FES_FLASHY_SLASH,Au moins 2 ingrédients de la table de découpe par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_BROTH_FOCUSED,Au moins 2 ingrédients de la table de cuisson par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_FARM_HARVEST,Au moins 2 légumes par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
-Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essayez différentes approches. Mais surtout, amusez-vous !",reviewed,Formulation sûre malgré la clé générique.
+Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essaie différentes approches. Mais surtout, amuse-toi !",reviewed,Tutoiement harmonisé dans tous les tutoriels.
 Tutorial/GPN10_3,"Voici ta liste d'[COLOR=ALERT]objectifs[/COLOR]. Commence par créer une recette et obtenir quelques ingrédients !",reviewed,Formulation neutre.
 Shop/SHOP_SEASONING_VINEGARPOWDER_NAME,Poudre de vinaigre,reviewed,Appellation culinaire harmonisée.
 BUTTON_SHOP,Boutique,reviewed,Libellé d'interface harmonisé.
@@ -105,7 +105,7 @@ Dialogue/CEM6_18,"Pense à acheter de nouveaux ingrédients, d'accord ? C'est si
 Dialogue/VNM15_5,"Ne me sous-estime pas, mon pote ! J'ai fait des dizaines de petits boulots en resto !",reviewed,Raccourci naturel ; registre et emploi à temps partiel conservés.
 Dialogue/VNM16_B_1,"D'accord ! Je vais te montrer de quoi les fans sont capables !",reviewed,Raccourci naturel ; enthousiasme conservé.
 Dialogue/VNM70_CHOICE_14,C'est tout toi !,reviewed,Raccourci naturel ; sens conservé.
-Dialogue/VNM70_89,"C'est pourquoi je cuisine : réchauffer les cœurs et rendre les gens heureux. Comme quand ta grand-mère m'a offert ce bol de boulettes et nouilles.",reviewed,Raccourci naturel ; intention et souvenir conservés.
+Dialogue/VNM70_89,"C'est pourquoi je cuisine : réchauffer les coeurs et rendre les gens heureux. Comme quand ta grand-mère m'a offert ce bol de boulettes et nouilles.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM82_3,"Tiens, je te montre !",reviewed,Raccourci naturel ; ton spontané conservé.
 Dialogue/VNM84_2,"Non ! Je suis là pour VOUS VOIR TOUS DEUX !",reviewed,Raccourci naturel ; emphase conservée.
 Dialogue/GPN5_3_5,"O-Oh, ça ne te dérange pas si je te montre les photos de ma collection ? J'adore la peluche [MEI_JOB] [TYRO_DINO] !",reviewed,Raccourci naturel ; hésitation et variables conservées.
@@ -166,7 +166,7 @@ Dialogue (Backup)/VNM21_22,"Quoi ? Qu'est-ce qui te retient ici ?",reviewed,Racc
 Dialogue (Backup)/VNM21_32,"Je vais juste-- Il me faut du temps pour tout assimiler. Désolée.",reviewed,Raccourci naturel ; interruption et excuse conservées.
 Dialogue (Backup)/VNM21_33,"...Ne t'inquiète pas, je ferai mon travail comme d'habitude, si tu fais le tien.",reviewed,Raccourci naturel ; réciprocité et travail conservés.
 Dialogue (Backup)/CEM4_17,"Continue de rouler ces boulettes !",reviewed,Formulation neutre ; encouragement conservé.
-Dialogue (Backup)/VNM24_PLAYERWIN_6,"On voit que ça te plaît ici. Tu cuisines de tout ton cœur.",reviewed,Formulation neutre ; bonheur et dévouement conservés.
+Dialogue (Backup)/VNM24_PLAYERWIN_6,"On voit que ça te plaît ici. Tu cuisines de tout ton coeur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue (Backup)/VNM24_PLAYERWIN_7,"Tu es devenu une vraie pointure en cuisine, Faucon...",reviewed,Formulation neutre ; compliment conservé.
 Dialogue (Backup)/VNM56_14,"Mais les autres me manquent un peu.",reviewed,Formulation neutre ; solitude conservée.
 Dialogue (Backup)/CEM17_START_1,"Hé, [NAME]. Déjà au travail ? Tu ne lâches rien.",reviewed,Formulation neutre ; ton admiratif conservé.
@@ -179,3 +179,178 @@ Dialogue (Backup)/VNM21_15,"Tu fais de l'espionnage ? Alors tout ça n'est qu'un
 Dialogue (Backup)/VNM21_18,"Mais je comprends. Tu as dû demander à Faucon de cuisiner pour toi ! Je ne sais pas ce que tu as dit, mais ça doit s'arrêter !",reviewed,Formulation neutre ; accusation conservée.
 Dialogue (Backup)/VNM21_26,"Si tu insistes à te faire passer pour spécialiste en cuisine, j'écraserai moi-même ce rêve stupide.",reviewed,Formulation neutre ; accusation conservée.
 Dialogue (Backup)/VNM21_29,"Parle-moi quand tu voudras affronter à nouveau la réalité.",reviewed,Formulation neutre ; condition conservée.
+TUTORIAL_TASTE_OPEN_TASTE_RECIPE,"Ouvre le livre, puis la page Saveurs.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_BOOK_CLOSE,Ferme le livre quand tu as fini.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_MULTIPLE_SEASON,Tu peux ajouter plusieurs fois un ingrédient pour intensifier davantage sa saveur.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_END,"En résumé, utilise tes ingrédients pour adapter le plat à la commande du client !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_OPENING,"Vide maintenant ton bol, pour pouvoir repartir de zéro.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_ACTION,Maintiens le clic sur le bol pour jeter tous les ingrédients qu’il contient.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_COIN_REFUND,"En jetant des ingrédients, tu récupères une partie de leur coût.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_END,Pas d’inquiétude si tu dois recommencer : l’erreur est humaine !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_REMAKE_END,Ne te décourage pas. Lis bien la commande et refais le plat. Tu y arriveras.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_TURN,Fais attention à tes tours restants.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_ACTION,"À chaque tour, tu as un nombre limité d’actions. Chaque étape de cuisine coûte une action.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_BELL,"Dans les duels de boulettes, les chefs préparent leur plat chacun leur tour. Sonne la cloche pour finir ton tour.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_CROWDSMETER,Remplir une jauge du public te donne un point bonus à la fin du duel culinaire.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD1_1,"Dans la cuisine, tu peux réorganiser les tables à ta guise. Pratique, non ?",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD1_3,Et c’est là que je travaille ! Tu peux poser ici tes petits objets.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD2_1,Tu peux changer ici l’intérieur et le mobilier !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD2_4,"Maintiens le clic sur un nouveau sol pour le déverrouiller. Celui-ci est gratuit, mais tu peux acheter d’autres [COLOR=ALERT]modèles[/COLOR].",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD2_6,"Tu peux aussi changer le plafond et le papier peint. Quand tu as fini, ferme le menu.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD4_1,"Oh, tu viens d’acheter un objet de décoration. Génial !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD4_2,"Selon l’objet, tu le trouveras déjà installé à la caisse ou dans la salle.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/COOKING_UI_NAVIGATION,"Et clique ici pour aller vite à n’importe quelle table. <nobr>À toi de jouer, [NAME] !</nobr>",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_1_MAMIGREET,Youpi ! C’est excitant ! Je te montre.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_1B_TURNINTRO,Nous cuisinons en [COLOR=ALERT]tours[/COLOR] pour montrer notre préparation. Consulte ici tes [COLOR=ALERT]tours[/COLOR] restants.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_1C_ACTIONINTRO,Ajouter un ingrédient coûte [COLOR=ALERT]un point d’action[/COLOR]. Consulte ici tes points d’action restants pour ce tour !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_2A_OPENBRAWLINFO,Voyons les détails de ce duel. Ouvre ici les notes [COLOR=ALERT]Infos du duel[/COLOR].,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_2B_CLOSEBRAWLINFO,Voici les [COLOR=ALERT]ingrédients bonus de score[/COLOR] du duel. Utilise-les pour obtenir une bonne note du jury. Ferme les notes.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_3B_MINIGAME_START,Ferme maintenant le couvercle pour lancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Prépare-toi !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_4A_HEARTEXPLANATION,Bien joué. Les nouilles sont des ingrédients bonus de score : tu as donc fait plaisir à tout le jury !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_4B_JUDGEINFOINTRO,Chaque juge a aussi ses propres préférences. Ouvre ici les [COLOR=ALERT]Infos du juge[/COLOR].,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_5B_MINIGAME_STARTMINIGAME,Ferme ensuite le couvercle pour relancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Tu y arriveras !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_6B_INGREDIENTANDJUDGEEXPLANATION,Tiens compte des ingrédients demandés et des préférences du jury pour marquer des points ! Sonne maintenant la cloche pour finir ton tour.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_1_CROWDCHAININTRO,"Pour plus d’ambiance, il y a aussi une [COLOR=ALERT]jauge du public[/COLOR] ! Si tu la remplis, chaque juge te donne un point de plus.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_2A_SELECTWRONGINGREDIENT,Réussir un [COLOR=ALERT]mini-jeu parfait[/COLOR] augmente la jauge du public. Fais bouillir une boulette de tendon et un ravioli.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_3_MINIGAMEAPPLAUSEINTRO,"Bien joué ! Comme c’était parfait, tu as [COLOR=ALERT]augmenté la jauge du public.[/COLOR]",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_4_CHAINEXPLANATION,Tu peux aussi l’augmenter en satisfaisant la [COLOR=ALERT]demande du public[/COLOR]. La demande actuelle est affichée ici.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_5A_SELECTCHAININGREDIENT,Le public veut quelque chose d’[COLOR=SOUR]acide[/COLOR] ! Ajoute la poudre de vinaigre. Prépare-toi au mini-jeu.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_7_WAITENDTURN,Sonne maintenant la cloche pour finir ton tour.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T3_1_CHAINRESETEXPLANATION,"Regarde ! La [COLOR=ALERT]demande du public[/COLOR] a changé. Elle change à chaque tour, pense à la vérifier régulièrement.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T3_2_FREECOOKING,"C’est tout ! Pour un bon score, ajoute les [COLOR=ALERT]ingrédients demandés[/COLOR], suis les [COLOR=ALERT]préférences des juges[/COLOR] et essaie de remplir la [COLOR=ALERT]jauge du public[/COLOR].",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T3_3_SCORINGEXPLANATION,Ton score final est la somme des notes du jury. N’oublie pas qu’un duel peut compter plusieurs juges.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_1,"À Kuloniku, nous aimons nous promener le soir. Tu peux faire pareil !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_2,"Pour redécorer ton restaurant, fais-le le soir. Sélectionne Bakuso pour entrer.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_4,"C’est là que tu loges, non ? Sélectionne le bâtiment pour passer la nuit.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_6,"Tu peux aussi aller ici pour visiter le centre-ville ! Allez, allons voir !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPN1B_9,"Enfin, s’il y a des gens dans les environs, tu peux leur parler. Essaie de me parler.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPL7_2,« Ces ingrédients super ultra délicieux et merveilleux impressionneront tes clients à coup sûr ! Empoche ces juteux pourboires ! »,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_GRABBOWL,Prends un bol sale.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_RELEASEBOWL,Bien joué. Relâche le bol pour finir de le nettoyer.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_SELECTWASHING,"Oups, il n’y a plus de bols propres. <nobr>Va vers l’évier</nobr>.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_WASH_WASHBOWL,Lave le bol en le remuant dans l’eau.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_HOVER_BOWL,Survole le bol pour voir sa saveur actuelle.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_HOVER_INGREDIENT,Survole un ingrédient ou un assaisonnement pour voir son profil de saveur.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_SEASON,Ajoute maintenant l’assaisonnement.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_TASTE_CHECK_UPDATED_TASTE,Vérifie à nouveau le profil de saveur du bol. Regarde comme il a changé.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CUTTING_END,Et voilà. Prépare maintenant le reste de la commande.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_MANUALORDER_MESSAGE_2,Lis bien leur commande et ajoute les ingrédients demandés.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_CONTEST_TASTECHAIN,"Pour augmenter la jauge du public, suis cette séquence. Survole ceci pour voir quoi ajouter ou faire à chaque action.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD2_3,Clique sur le sol pour voir les [COLOR=ALERT]modèles[/COLOR] disponibles.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/GPD4_3,"Un sacré service après-vente, non ? Ne leur demande pas comment ils entrent dans Bakuso sans les clés.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_2C_BOWLTOHOTPOT,Amène le bol à la zone Marmite.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_4C_CLOSEJUDGEINFO,Il est écrit que M. Crois aime les boulettes. Il a aussi plusieurs préférences de saveur. Referme les notes.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T1_5G_MINIGAME_POURSOUP,N’oublie pas d’ajouter la soupe. Pas d’inquiétude : elle ne compte pas comme ingrédient. Aucun point d’action requis.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+INGREDIENT_FISHCAKE,Surimi Narutomaki,reviewed,Arbitrage utilisateur : terme japonais conservé et explicité.
+Dialogue/TUTORIALCOOKINGSTART_CHOICE_1,Je m'appelle [NAME]. Quel plaisir de te rencontrer !,reviewed,Formulation française naturelle et neutre pour les deux personnages joueurs.
+Dialogue/MAMI_HAPPY_REVIEW_2,"Trop boooon !! Tu assures vraiment, [NAME] !",reviewed,Formulation neutre ; les autres langues ne genrent pas le personnage joueur.
+MAINMENU_CONFIRMATION,Retourner au menu principal ?<br>La progression en cours sera perdue.,reviewed,Formulation raccourcie pour éviter une ligne orpheline.
+Dialogue/NPC_JOB_FANCY_3,footballeuse américaine,reviewed,Métier féminisé pour Nene et Minnie.
+Dialogue/NPC_JOB_FANCY_5,ingénieure data,reviewed,Métier féminisé pour Nene et Minnie.
+Dialogue/DAN_CUSTOMER_INTRO_1,"Bien le bonjour, Faucon. Encore une journée paisible, sans [DAN_INCIDENT1] de [DAN_INCIDENT2], je suppose ?",reviewed,Construction nominale neutre et courte pour tous les fragments dynamiques.
+Dialogue/DAN_INCIDENT1_2,surchauffe,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_3,commerce illégal,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_5,pointes acérées,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_6,toxicité,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_7,sécurité compromise,reviewed,Construction nominale neutre.
+Dialogue/DAN_INCIDENT1_8,marché noir,reviewed,Construction nominale neutre.
+Dialogue/MEI_ADJECTIVE_1,à toute épreuve,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_2,au top,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_3,respectable,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_4,cool,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_5,redoutable,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_6,badass,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_7,hors pair,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_ADJECTIVE_8,hardcore,reviewed,Fragment invariant pour le genre du personnage joueur.
+Dialogue/MEI_JOB_1,commander,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_2,diriger,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_3,mener les autres,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_4,t'imposer,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_5,briller,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_6,faire le show,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_7,dominer,reviewed,Fragment verbal neutre.
+Dialogue/MEI_JOB_8,régner,reviewed,Fragment verbal neutre.
+TUTORIAL_BASIC_BOWL_TO_CUTTING,Amène le bol à la zone GARNITURES.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_SELECT_CUTTING_INGREDIENT,Sélectionne l'ingrédient à couper.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_CUT_INGREDIENT,"Coupe l'ingrédient. Quand tu as fini, relâche le couteau.",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_COLLECT_SLICED,Récupère l'ingrédient coupé.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_BOWL_TO_BOIL,Amène le bol à la zone MARMITE.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_BOWL_TO_PACKAGING,Amène le bol à la zone ASSAISONNEMENT.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_CLOSE_BOIL_LID,Ferme le couvercle de la marmite pour cuire les ingrédients.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_COLLECT_BOIL,Récupère les ingrédients cuits.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_EATING_TOOLS,N'oublie pas ! Le client a besoin de couverts pour manger.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_GRAB_BOWL,Prends un bol.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_BOIL_LID,Ouvre le couvercle.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_BOIL_LID_ON_BOIL,C'est prêt : ouvre le couvercle.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_RECIPE,Ouvre le livre de recettes.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_POUR_SOUP,Verse ensuite la soupe.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_MESSAGE_SOUP,"N'oublie pas : sauf si le client le veut sec, ajoute toujours la soupe !",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_SELECT_BOIL_INGREDIENT,Sélectionne les ingrédients à faire bouillir.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_INGREDIENT_COST,N'oublie pas qu'ajouter un ingrédient coûte de l'argent.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_SERVE_BOWL,"Le bol doit être dans la zone ASSAISONNEMENT avant le service. Enfin, [COLOR=ALERT]sonne la cloche[/COLOR] pour servir le plat !",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_WAIT_BOIL,Attends la fin de la cuisson.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_WAIT_RECIPE,"Mémorise la recette, puis ferme le livre.",reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+TUTORIAL_BASIC_OPEN_ORDERNOTES,Regardons la commande du client. Ouvre les notes de commande.,reviewed,Suppression de encore car il s’agit de la première consultation en jeu ; tutoiement harmonisé.
+TUTORIAL_BASIC_WAIT_ORDERNOTES,Voici la commande du client ! Ferme-la quand tu as fini.,reviewed,Tutoiement harmonisé avec Cassie et les versions espagnole et allemande.
+INGREDIENT_EGGBALL,Boulette à l'oeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/CONTEST_PARTNER_INTRO_CHARMANT,"Applaudissez Charmant ! Sa prestance et son bagout ont brisé bien des coeurs ! Méfiez-vous, les amis !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/CONTEST_PARTNER_INTRO_EMA,"Douce mais ferme, c'est Ema ! Aussi appelée la reine de la cuisine familiale, ses plats chauds font fondre les coeurs gelés !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/OPPONENT_INTRO_NEKORA,"Nyan nyan, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les oeufs, mais aussi les coeurs !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNLOCATION_PARK_DESC,"Un paisible parc urbain rempli de bancs, de fleurs et d'une fontaine historique : une pause fraîche au coeur de la ville.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM20_PLAYERWIN_5,"Tu as mérité ce huitième rang, [NAME]. Je suis de tout coeur avec toi !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM13_END_12,"Ha ha ha, en effet, c'est très satisfaisant de les voir cuisiner avec tant de coeur à chaque duel !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM13_START_2,"Regarde le [COLOR=ALERT]panneau d'affichage[/COLOR] et prépare-toi à une vision des plus palpitantes ! Oh, mon coeur ne va pas tenir !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/GH_CASSIE_CLOSING_BEST_1,Je me suis amusée [NAME]. Mes soeurs seront si jalouses ! Invite-moi encore quand tu veux !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM27_21,Elle m'a demandé de garder un oeil sur toi.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/CEM13_5,Ne pense pas que je suis sans coeur. Nous devons tous survivre.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM51_11,"On ne fait pas d'omelette sans casser des oeufs, dit-il.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM54_PLAYERWIN_6,Mais tu m'as ouvert les yeux. Je vais suivre mon coeur et en accepter les conséquences !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNU4_CHOICE_4,Je ne savais pas que les oeufs de requin avaient autant de formes.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNU4_26,"Oui, la forme de leur étui d'oeuf dépend de leur habitat.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNU4_48,"Ah, mon coeur bat si vite.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNS5_38,"(Elle n'est pas très aboutie, mais on sent que Shuga y a mis tout son coeur.)",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VND2_6,"Hum. « Cher [NAME], mon coeur. Ton père et moi nous ennuyons terriblement de toi. »",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VND2_37,"Si tu fais ça avec sincérité, je ferais mieux d'y mettre tout mon coeur aussi.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VND2_CHOICE_7,"Tu marches sur des oeufs, monsieur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VND4_CHOICE_6,"Ah, tu as donc un coeur, finalement.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/GH_UME_GENERIC_3_CHOICE_3,Suis ton coeur !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/GH_UME_GENERIC_3_9,Suivre... mon coeur ?,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM57_3,"Humph, cet endroit est toujours aussi écoeurant.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM70_56,M-Merci. Vraiment. Ça me pesait sur le coeur.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM70_74,"Tu devrais l'avoir. De toute façon, je sais tout par coeur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/GPN6_1_3,"Parce qu'ensuite, il publie ses propres stories Instayum. Hier encore, il a posté une photo de mes soeurs cuisinant [CHIL_FOOD2] avec [EMA_INGREDIENT] dessus.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/JUDGE_DESC_JEN,"Jen, la fashionista de la cuisine, est là ! Elle adore le brillant des [COLOR=LIKED]vermicelles de riz[/COLOR], mais trouve les [COLOR=DISLIKED]ananas[/COLOR] trop tape-à-l'oeil ! Elle veut son plat [COLOR=SALTY]salé[/COLOR], malgré les ordres du médecin.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/MAMI_DISH2_1,boeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/ELIO_ACTION_1,lancer un boeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/EMA_FOOD_6,boeuf au poivre noir,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/EMA_FAMILY_1,grande soeur,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/JEN_ITEM2_4,noeud papillon,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/JEN_FOOD_2,nouilles aux oeufs,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/JOCKO_FOOD_4,oeufs durs,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/LIN_GAME1_7,Coeurs du,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC0_3,Cette photo doit faire mouche ! Mes soeurs vont en baver !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC0_12,"Mes petites soeurs vont être tellement jalouses, hé hé.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC0_18,Te voir prendre tes marques ici m'a rappelé mes soeurs !,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC0_39,Toutes ces histoires sur mes soeurs ont dû me replonger dans le passé. J'aidais Maman à les nourrir.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC0_47,Ça m'a rappelé quand j'aidais mes petites soeurs. Mais je ne devrais pas faire ça avec la clientèle.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC0_52,"Mais je ne regrette rien ! Hé hé, mes soeurs ont aussi envoyé des photos. Elles ne veulent pas perdre.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC1_HANGOUT_10,"Si je ne les aime pas, je les enverrai à mes soeurs.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC1_HANGOUT_12,Ce n'est rien ! C'est un truc entre soeurs.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC3_9,D-D'accord. C'est une bonne idée. Mes soeurs l'ont dit aussi.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC4_15,"Tu vois, [NAME], j'ai toujours été une bonne élève. Et une bonne grande soeur aussi, si je puis me permettre.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC4_16,"Mais la fac, c'était si différent. Je vivais loin de ma famille. ...Je n'avais plus à être un modèle ni à m'occuper de mes petites soeurs.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC4_35,"...Encore mes soeurs. Elles voulaient faire du pain perdu, mais ont obtenu un seau de pâte grisâtre. Allez savoir comment.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNC5_32,"« Alors, grande soeur, quel trouillard ! lol », puis : « Je parie que tu t'es accrochée à [NAME] comme si ta vie en dépendait. »",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNU5_20,"Tu es la seule personne avec qui je peux être parfaitement à l'aise, [NAME]. Alors... merci encore. Du fond du coeur.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNS4_2,"Désolé, je suis vaseux. Je n'ai pas fermé l'oeil.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM62_3,C'en est presque dommage de briser dans l'oeuf une si prometteuse carrière.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/VNM62_17,"Elle tentait sans cesse de m'en dissuader. À l'époque, je la prenais pour une idiote myope au coeur tendre.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Shop/SHOP_INGREDIENT_MEATBALL_DESC,Ingrédient pour la table de cuisson à l'eau.<br>« Boulettes indonésiennes au boeuf haché et à la farine de tapioca. Leur texture rebondie les rend amusantes à manger ! »,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Shop/SHOP_PREMIUM_INGREDIENT_MEATBALL_DESC,"Boulettes premium pour la table de cuisson.<br>""Des boulettes délicieuses, faites de boeuf d'exception et de farine de tapioca de qualité cérémonielle.""",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Contest/MODIFIER_POSITIVE_5,Ajouter un ingrédient aimé d'un juge lui donne 2 coeurs (une fois par tour).,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Contest/MODIFIER_DISLIKE_REDUCES_HEART,Ajouter un ingrédient détesté retire 1 coeur à tous les juges (une fois par tour).,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Contest/MODIFIER_INCREASE_DISLIKE_PENALTY,Ajouter un ingrédient détesté par un juge lui retire 2 coeurs.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Contest/MODIFIER_STARTING_OPPONENT_HEART_SINGLE,L'adversaire commence avec 3 coeurs d'un juge aléatoire.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Contest/MODIFIER_STARTING_OPPONENT_HEART_ALL,L'adversaire commence avec 1 coeur de tous les juges.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Tutorial/CONTEST_T1_5E_MINIGAME_HEARTEXPLANATION,"Avec des boulettes, M. Crois est ravi. Tu vois les [COLOR=ALERT]coeurs[/COLOR] ? Il te donnera sûrement une bonne note !",reviewed,Tutoiement harmonisé et graphie oe compatible avec la police du jeu.
+Tutorial/GPN10_1,"Et si on jetait un oeil à ces [COLOR=ALERT]objectifs[/COLOR], hein hein ?",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
