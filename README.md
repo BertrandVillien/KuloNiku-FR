@@ -25,15 +25,22 @@ communauté dans l’attente d’une éventuelle localisation française officie
 - nouvelles phrases inconnues laissées en anglais après une mise à jour ;
 - aucune donnée ou fichier complet du jeu distribué.
 
-## Installation simple — bientôt disponible
+## Installation simple — préversion macOS
 
-Des installateurs autonomes pour **Windows** et **macOS** sont en cours de
-validation. Ce sera la méthode recommandée : télécharger le paquet adapté depuis
-la page [Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases),
-lancer l’installateur, vérifier la simulation affichée, puis confirmer.
+Une première préversion de l’application macOS est disponible sur la page
+[Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases). Choisissez :
 
-La première release n’est pas encore publiée. En attendant, la méthode suivante
-permet de tester le mod depuis les sources.
+- **macOS Apple Silicon** si votre Mac possède une puce Apple M1, M2, M3, M4
+  ou plus récente ;
+- **macOS Intel** si votre Mac possède un processeur Intel.
+
+Pour le vérifier, ouvrez le menu ** > À propos de ce Mac**. Si la ligne
+**Puce** indique « Apple M… », choisissez Apple Silicon. Si la ligne
+**Processeur** indique « Intel », choisissez Intel.
+
+Téléchargez le DMG adapté, ouvrez-le puis glissez **KuloNiku FR** dans le dossier
+**Applications**. Cette préversion est destinée aux premiers tests ; la méthode
+depuis les sources reste disponible plus bas.
 
 ### Windows — validation en cours
 

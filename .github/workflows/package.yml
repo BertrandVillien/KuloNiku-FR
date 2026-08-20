@@ -92,6 +92,10 @@ jobs:
           find artifacts -type f \( -name '*.dmg' -o -name '*.zip' -o -name 'update-manifest.json' \) -exec cp {} release-files/ \;
           cd release-files
           sha256sum *.dmg *.zip > SHA256SUMS.txt
-          gh release create "${GITHUB_REF_NAME}" --generate-notes --verify-tag ./*
+          release_flags=(--generate-notes --verify-tag)
+          if [[ "${GITHUB_REF_NAME}" == *-* ]]; then
+            release_flags+=(--prerelease)
+          fi
+          gh release create "${GITHUB_REF_NAME}" "${release_flags[@]}" ./*
         env:
           GH_TOKEN: ${{ github.token }}

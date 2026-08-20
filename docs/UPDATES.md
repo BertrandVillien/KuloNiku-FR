@@ -46,9 +46,10 @@ restauration préalable n’est demandée.
 ## Activation
 
 Le dépôt de référence est `BertrandVillien/KuloNiku-FR`. Le téléchargement et
-ses contrôles sont branchés, mais GitHub renvoie actuellement « aucune release ».
-Le parcours deviendra donc réellement observable lors de la première
-publication taguée.
+ses contrôles sont branchés. L’application utilise l’API GitHub
+`releases/latest`, qui ignore volontairement les préversions : le parcours de
+mise à jour distante deviendra donc réellement observable lors de la première
+version stable.
 
 ## Après une mise à jour Steam
 

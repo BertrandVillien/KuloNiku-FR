@@ -26,15 +26,21 @@ available.
 - unknown new strings remain in English after an update;
 - no game data or complete game file is distributed.
 
-## Simple installation — coming soon
+## Simple installation — macOS prerelease
 
-Standalone **Windows** and **macOS** installers are being validated. This will
-be the recommended method: download the appropriate package from the
-[Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases) page, run
-the installer, review the displayed simulation, then confirm.
+A first prerelease of the macOS application is available from the
+[Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases) page. Choose:
 
-The first release has not been published yet. Until then, the following method
-lets you test the mod from source.
+- **macOS Apple Silicon** if your Mac has an Apple M1, M2, M3, M4, or newer
+  chip;
+- **macOS Intel** if your Mac has an Intel processor.
+
+To check, open **Apple menu > About This Mac**. If **Chip** says “Apple M…”,
+choose Apple Silicon. If **Processor** says “Intel”, choose Intel.
+
+Download the matching DMG, open it, then drag **KuloNiku FR** to the
+**Applications** folder. This prerelease is intended for early testing; the
+source-based method remains available below.
 
 ### Windows — validation in progress
 
