@@ -87,6 +87,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.setActivationPolicy(.regular)
         configureApplicationMenu()
         buildWindow()
+        checkLatestRelease()
         selectDefaultInstallationIfAvailable()
         window.makeKeyAndOrderFront(nil)
         window.orderFrontRegardless()
@@ -717,10 +718,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    private func checkLatestRelease(edition: String, bundledTranslationHash: String) {
+    private func checkLatestRelease(
+        edition: String? = nil,
+        bundledTranslationHash: String? = nil
+    ) {
         latestReleaseURL = nil
         releaseButton.isHidden = true
-        guard let apiURL = URL(string: "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases/latest") else { return }
+        guard let apiURL = URL(string: "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1") else { return }
         var request = URLRequest(url: apiURL)
         request.setValue("KuloNiku-FR/\(currentVersion)", forHTTPHeaderField: "User-Agent")
         request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
@@ -730,7 +734,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                   let http = response as? HTTPURLResponse,
                   http.statusCode == 200,
                   let data,
-                  let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+                  let releases = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]],
+                  let object = releases.first,
                   let page = object["html_url"] as? String,
                   let pageURL = URL(string: page),
                   let assets = object["assets"] as? [[String: Any]],
@@ -742,15 +747,31 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             URLSession.shared.dataTask(with: manifestURL) { [weak self] data, _, _ in
                 guard let self,
                       let data,
-                      let manifest = try? JSONDecoder().decode(UpdateManifest.self, from: data),
-                      let remoteHash = manifest.translationBundles[edition]
+                      let manifest = try? JSONDecoder().decode(UpdateManifest.self, from: data)
                 else { return }
-                let translationChanged = remoteHash != bundledTranslationHash
                 let engineUpdateAvailable = manifest.version.compare(
                     self.currentVersion,
                     options: .numeric
                 ) == .orderedDescending
 
+                if engineUpdateAvailable {
+                    DispatchQueue.main.async {
+                        self.latestReleaseURL = pageURL
+                        self.releaseButton.title = "Nouvel installateur \(manifest.version)"
+                        self.releaseButton.isHidden = false
+                        self.appendLog(
+                            "\n\nNouvelle version de l’installateur sur GitHub : \(manifest.version)"
+                        )
+                    }
+                    return
+                }
+
+                guard let edition,
+                      let bundledTranslationHash,
+                      let remoteHash = manifest.translationBundles[edition]
+                else { return }
+
+                let translationChanged = remoteHash != bundledTranslationHash
                 if translationChanged,
                    let package = manifest.translationPackage,
                    let expectedHash = package.bundles[edition] {
@@ -781,15 +802,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                         edition: edition,
                         releaseURL: pageURL
                     )
-                } else if engineUpdateAvailable {
-                    DispatchQueue.main.async {
-                        self.latestReleaseURL = pageURL
-                        self.releaseButton.title = "Nouvelle version de l’app"
-                        self.releaseButton.isHidden = false
-                        self.appendLog(
-                            "\n\nNouvelle version de l’application sur GitHub : \(manifest.version)"
-                        )
-                    }
                 }
             }.resume()
         }.resume()

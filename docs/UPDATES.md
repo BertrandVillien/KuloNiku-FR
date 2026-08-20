@@ -31,10 +31,14 @@ lot autonome `KuloNiku-FR-translations.zip` et un petit
 traduction du jeu complet et celle de la démo, l’empreinte du téléchargement et
 la version minimale du moteur capable de l’appliquer.
 
-Les interfaces interrogent la dernière release stable GitHub sans bloquer leur
-usage. Une version plus récente de l’application ou du moteur est signalée par
-un bouton qui ouvre la release : elle n’est jamais téléchargée ni installée
+Les interfaces interrogent la dernière release publiée sur GitHub sans bloquer
+leur usage. Une version plus récente de l’application ou du moteur est signalée
+par un bouton qui ouvre la release : elle n’est jamais téléchargée ni installée
 silencieusement.
+
+Sous macOS, cette vérification de l’installateur démarre dès l’ouverture de
+l’application, même si le jeu n’a pas été trouvé. Le contrôle des traductions
+reste effectué après l’identification de l’édition installée.
 
 Si l’empreinte de traduction de l’édition détectée diffère, l’application macOS
 télécharge automatiquement le petit lot, contrôle son SHA-256, l’ouvre dans un
@@ -50,9 +54,9 @@ restauration préalable n’est demandée.
 
 ## Versions proposées
 
-L’application recherche uniquement la dernière version stable publiée dans le
-dépôt `BertrandVillien/KuloNiku-FR`. Les préversions GitHub ne sont pas proposées
-automatiquement.
+L’application recherche la dernière version publiée dans le dépôt
+`BertrandVillien/KuloNiku-FR`. Les préversions publiées sont également prises en
+compte.
 
 ## Après une mise à jour Steam
 

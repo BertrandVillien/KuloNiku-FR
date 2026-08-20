@@ -6,6 +6,7 @@ from kuloniku_fr.windows_launcher import (
     decode_engine_output,
     engine_environment,
     installed_game_candidates,
+    latest_release_from_payload,
     parse_steam_library_paths,
     version_tuple,
 )
@@ -51,6 +52,17 @@ def test_update_manifest_distinguishes_engine_and_translation_updates():
         bundled_translation_hash="local",
         current_version="0.1.0",
     ) is None
+
+
+def test_latest_release_endpoint_payload_is_a_release_list():
+    release = {
+        "html_url": "https://github.com/example/project/releases/tag/v0.2.0",
+        "assets": [{"name": "update-manifest.json"}],
+    }
+
+    assert latest_release_from_payload([release]) == release
+    assert latest_release_from_payload([]) is None
+    assert latest_release_from_payload(release) is None
 
 
 def make_game(folder: Path) -> Path:

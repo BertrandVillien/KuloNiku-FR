@@ -15,7 +15,7 @@ from . import __version__
 
 
 REPOSITORY_URL = "https://github.com/BertrandVillien/KuloNiku-FR"
-RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases/latest"
+RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1"
 STEAM_APP_ID = "3357960"
 
 
@@ -51,6 +51,18 @@ def available_update_kind(
     if remote_hash and remote_hash != bundled_translation_hash:
         return "translations"
     return None
+
+
+def latest_release_from_payload(payload: object) -> dict | None:
+    """Return GitHub's most recent published release, including prereleases."""
+    if not isinstance(payload, list) or not payload or not isinstance(payload[0], dict):
+        return None
+    release = payload[0]
+    if not isinstance(release.get("html_url"), str) or not isinstance(
+        release.get("assets"), list
+    ):
+        return None
+    return release
 
 
 def parse_steam_library_paths(text: str) -> list[Path]:
@@ -327,10 +339,9 @@ class WindowsLauncher:
                 }
                 request = urllib.request.Request(RELEASES_API_URL, headers=headers)
                 with urllib.request.urlopen(request, timeout=8) as response:
-                    releases = json.load(response)
-                if not releases:
+                    release = latest_release_from_payload(json.load(response))
+                if release is None:
                     return
-                release = releases[0]
                 assets = release.get("assets", [])
                 manifest_asset = next(
                     (asset for asset in assets if asset.get("name") == "update-manifest.json"),
