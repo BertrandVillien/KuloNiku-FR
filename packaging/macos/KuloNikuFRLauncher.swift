@@ -58,6 +58,48 @@ private struct TranslationPackage: Decodable {
     }
 }
 
+private func comparableVersion(_ rawValue: String) -> [Int] {
+    let pattern = #"(\d+)\.(\d+)\.(\d+)(?:[-.]?(alpha|beta|rc|a|b)(?:[.-]?(\d+))?)?"#
+    guard let expression = try? NSRegularExpression(pattern: pattern),
+          let match = expression.firstMatch(
+              in: rawValue.lowercased(),
+              range: NSRange(rawValue.startIndex..., in: rawValue)
+          )
+    else { return [0, 0, 0, 3, 0] }
+
+    func capture(_ index: Int) -> String? {
+        let range = match.range(at: index)
+        guard range.location != NSNotFound,
+              let swiftRange = Range(range, in: rawValue.lowercased())
+        else { return nil }
+        return String(rawValue.lowercased()[swiftRange])
+    }
+
+    let major = Int(capture(1) ?? "0") ?? 0
+    let minor = Int(capture(2) ?? "0") ?? 0
+    let patch = Int(capture(3) ?? "0") ?? 0
+    let stage: Int
+    switch capture(4) {
+    case "a", "alpha": stage = 0
+    case "b", "beta": stage = 1
+    case "rc": stage = 2
+    default: stage = 3
+    }
+    let prereleaseNumber = Int(capture(5) ?? "0") ?? 0
+    return [major, minor, patch, stage, prereleaseNumber]
+}
+
+private func isVersion(_ candidate: String, newerThan current: String) -> Bool {
+    let candidateKey = comparableVersion(candidate)
+    let currentKey = comparableVersion(current)
+    for (candidatePart, currentPart) in zip(candidateKey, currentKey) {
+        if candidatePart != currentPart {
+            return candidatePart > currentPart
+        }
+    }
+    return false
+}
+
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private let repositoryURL = URL(string: "https://github.com/BertrandVillien/KuloNiku-FR")!
     private var window: NSWindow!
@@ -773,10 +815,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                       let data,
                       let manifest = try? JSONDecoder().decode(UpdateManifest.self, from: data)
                 else { return }
-                let engineUpdateAvailable = manifest.version.compare(
-                    self.currentVersion,
-                    options: .numeric
-                ) == .orderedDescending
+                let engineUpdateAvailable = isVersion(
+                    manifest.version,
+                    newerThan: self.currentVersion
+                )
 
                 if engineUpdateAvailable {
                     DispatchQueue.main.async {
@@ -799,10 +841,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 if translationChanged,
                    let package = manifest.translationPackage,
                    let expectedHash = package.bundles[edition] {
-                    if package.minimumPatcherVersion.compare(
-                        self.currentVersion,
-                        options: .numeric
-                    ) == .orderedDescending {
+                    if isVersion(
+                        package.minimumPatcherVersion,
+                        newerThan: self.currentVersion
+                    ) {
                         DispatchQueue.main.async {
                             self.installerUpdateRequired = true
                             self.latestReleaseURL = pageURL

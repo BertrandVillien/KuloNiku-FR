@@ -33,7 +33,7 @@ def test_update_manifest_distinguishes_engine_and_translation_updates():
         "version": "0.2.0",
         "translation_bundles": {"full": "remote"},
     }
-    assert version_tuple("v0.2.0-beta.1") == (0, 2, 0)
+    assert version_tuple("v0.2.0-beta.1") == (0, 2, 0, 1, 1)
     assert available_update_kind(
         manifest,
         edition="full",
@@ -56,6 +56,13 @@ def test_update_manifest_distinguishes_engine_and_translation_updates():
         bundled_translation_hash="local",
         current_version="0.1.0",
     ) is None
+
+
+def test_prerelease_versions_are_compared_in_publication_order():
+    assert version_tuple("0.3.0-beta.2") > version_tuple("0.3.0-beta.1")
+    assert version_tuple("0.3.0-rc.1") > version_tuple("0.3.0-beta.9")
+    assert version_tuple("0.3.0") > version_tuple("0.3.0-rc.9")
+    assert version_tuple("0.3.0b1") == version_tuple("0.3.0-beta.1")
 
 
 def test_installer_and_translation_updates_are_independent():

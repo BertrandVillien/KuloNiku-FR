@@ -44,8 +44,24 @@ def decode_engine_output(output: bytes) -> str:
 
 
 def version_tuple(version: str) -> tuple[int, ...]:
-    numbers = re.findall(r"\d+", version)
-    return tuple(int(number) for number in numbers[:3])
+    """Return a comparable key for stable, alpha, beta and release-candidate versions."""
+    match = re.search(
+        r"(\d+)\.(\d+)\.(\d+)(?:[-.]?(alpha|beta|rc|a|b)(?:[.-]?(\d+))?)?",
+        version.lower(),
+    )
+    if match is None:
+        return (0, 0, 0, 3, 0)
+    major, minor, patch = (int(match.group(index)) for index in range(1, 4))
+    prerelease = match.group(4)
+    stage = {
+        "a": 0,
+        "alpha": 0,
+        "b": 1,
+        "beta": 1,
+        "rc": 2,
+    }.get(prerelease, 3)
+    prerelease_number = int(match.group(5) or 0)
+    return (major, minor, patch, stage, prerelease_number)
 
 
 def available_update_kind(
