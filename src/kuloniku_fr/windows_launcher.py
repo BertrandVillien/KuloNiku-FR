@@ -19,7 +19,7 @@ from . import __version__
 
 
 REPOSITORY_URL = "https://github.com/BertrandVillien/KuloNiku-FR"
-RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1"
+RELEASES_API_URL = "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=10"
 STEAM_APP_ID = "3357960"
 TRANSLATION_PACKAGE_FILES = {
     "fr.csv",
@@ -62,6 +62,10 @@ def version_tuple(version: str) -> tuple[int, ...]:
     }.get(prerelease, 3)
     prerelease_number = int(match.group(5) or 0)
     return (major, minor, patch, stage, prerelease_number)
+
+
+def is_prerelease_version(version: str) -> bool:
+    return version_tuple(version)[3] < 3
 
 
 def available_update_kind(
@@ -146,16 +150,25 @@ def extract_translation_package(archive: Path, destination: Path, expected_sha25
     return destination / "fr.csv"
 
 
-def latest_release_from_payload(payload: object) -> dict | None:
-    """Return GitHub's most recent published release, including prereleases."""
-    if not isinstance(payload, list) or not payload or not isinstance(payload[0], dict):
+def latest_release_from_payload(
+    payload: object,
+    *,
+    include_prereleases: bool,
+) -> dict | None:
+    """Return the newest usable GitHub release for the current update channel."""
+    if not isinstance(payload, list):
         return None
-    release = payload[0]
-    if not isinstance(release.get("html_url"), str) or not isinstance(
-        release.get("assets"), list
-    ):
-        return None
-    return release
+    for release in payload:
+        if not isinstance(release, dict):
+            continue
+        if release.get("prerelease", False) and not include_prereleases:
+            continue
+        if not isinstance(release.get("html_url"), str) or not isinstance(
+            release.get("assets"), list
+        ):
+            continue
+        return release
+    return None
 
 
 def parse_steam_library_paths(text: str) -> list[Path]:
@@ -467,7 +480,10 @@ class WindowsLauncher:
                 }
                 request = urllib.request.Request(RELEASES_API_URL, headers=headers)
                 with urllib.request.urlopen(request, timeout=8) as response:
-                    release = latest_release_from_payload(json.load(response))
+                    release = latest_release_from_payload(
+                        json.load(response),
+                        include_prereleases=is_prerelease_version(__version__),
+                    )
                 if release is None:
                     return
                 assets = release.get("assets", [])

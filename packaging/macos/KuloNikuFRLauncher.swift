@@ -100,6 +100,10 @@ private func isVersion(_ candidate: String, newerThan current: String) -> Bool {
     return false
 }
 
+private func isPrereleaseVersion(_ version: String) -> Bool {
+    comparableVersion(version)[3] < 3
+}
+
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private let repositoryURL = URL(string: "https://github.com/BertrandVillien/KuloNiku-FR")!
     private var window: NSWindow!
@@ -790,7 +794,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     ) {
         latestReleaseURL = nil
         appUpdateRow.isHidden = true
-        guard let apiURL = URL(string: "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=1") else { return }
+        guard let apiURL = URL(string: "https://api.github.com/repos/BertrandVillien/KuloNiku-FR/releases?per_page=10") else { return }
         var request = URLRequest(url: apiURL)
         request.setValue("KuloNiku-FR/\(currentVersion)", forHTTPHeaderField: "User-Agent")
         request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
@@ -801,7 +805,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                   http.statusCode == 200,
                   let data,
                   let releases = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]],
-                  let object = releases.first,
+                  let object = releases.first(where: { release in
+                      isPrereleaseVersion(self.currentVersion)
+                          || !((release["prerelease"] as? Bool) ?? false)
+                  }),
                   let page = object["html_url"] as? String,
                   let pageURL = URL(string: page),
                   let assets = object["assets"] as? [[String: Any]],

@@ -10,6 +10,7 @@ from kuloniku_fr.windows_launcher import (
     engine_environment,
     extract_translation_package,
     installed_game_candidates,
+    is_prerelease_version,
     latest_release_from_payload,
     parse_steam_library_paths,
     version_tuple,
@@ -63,6 +64,9 @@ def test_prerelease_versions_are_compared_in_publication_order():
     assert version_tuple("0.3.0-rc.1") > version_tuple("0.3.0-beta.9")
     assert version_tuple("0.3.0") > version_tuple("0.3.0-rc.9")
     assert version_tuple("0.3.0b1") == version_tuple("0.3.0-beta.1")
+    assert is_prerelease_version("0.3.0-beta.1") is True
+    assert is_prerelease_version("0.3.0-rc.1") is True
+    assert is_prerelease_version("0.3.0") is False
 
 
 def test_installer_and_translation_updates_are_independent():
@@ -111,14 +115,25 @@ def test_translation_package_is_verified_and_extracted_safely(tmp_path: Path):
 
 
 def test_latest_release_endpoint_payload_is_a_release_list():
-    release = {
+    stable_release = {
         "html_url": "https://github.com/example/project/releases/tag/v0.2.0",
         "assets": [{"name": "update-manifest.json"}],
+        "prerelease": False,
+    }
+    beta_release = {
+        "html_url": "https://github.com/example/project/releases/tag/v0.3.0-beta.1",
+        "assets": [{"name": "update-manifest.json"}],
+        "prerelease": True,
     }
 
-    assert latest_release_from_payload([release]) == release
-    assert latest_release_from_payload([]) is None
-    assert latest_release_from_payload(release) is None
+    assert latest_release_from_payload(
+        [beta_release, stable_release], include_prereleases=True
+    ) == beta_release
+    assert latest_release_from_payload(
+        [beta_release, stable_release], include_prereleases=False
+    ) == stable_release
+    assert latest_release_from_payload([], include_prereleases=False) is None
+    assert latest_release_from_payload(stable_release, include_prereleases=False) is None
 
 
 def make_game(folder: Path) -> Path:

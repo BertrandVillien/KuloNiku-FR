@@ -58,8 +58,10 @@ n’est demandée.
 ## Versions proposées
 
 L’application recherche la dernière version publiée dans le dépôt
-`BertrandVillien/KuloNiku-FR`. Les préversions publiées sont également prises en
-compte.
+`BertrandVillien/KuloNiku-FR`. Une application stable ignore toujours les
+préversions et reste sur le canal stable. Seules les applications elles-mêmes
+publiées en bêta, RC ou autre préversion peuvent proposer une nouvelle
+préversion ; elles acceptent également une version stable plus récente.
 
 ## Après une mise à jour Steam
 
