@@ -17,7 +17,7 @@ l’empreinte du fichier, sans joindre de données personnelles.
 
 ## Modèle de confiance
 
-- aucun fichier du jeu n’est distribué ;
+- aucune donnée jouable ni fichier complet du jeu n’est distribué ;
 - toute installation commence par une simulation ;
 - la sauvegarde et les téléchargements sont vérifiés par SHA-256 ;
 - les remplacements sont atomiques et restaurables ;

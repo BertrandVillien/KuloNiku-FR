@@ -27,10 +27,13 @@
   minimale du moteur déclarée ;
 - détection d’un remplacement Steam par lecture du fichier réel et comparaison
   SHA-256, indépendamment de la date du manifeste.
+- icône commune du mod, déclinée pour les applications macOS et Windows.
 
 ## À valider avant la première release publique
 
 - test réel sur Windows ;
+- interface graphique Windows novice, avec le même contrat d’état et les mêmes
+  garanties que l’application macOS ;
 - comportement après « Vérifier l’intégrité » et après une mise à jour Steam ;
 - parcours réel de téléchargement autonome après publication d’une release ;
 - rendu des accents et couverture de la police ;

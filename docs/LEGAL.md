@@ -5,11 +5,15 @@ juridique.
 
 ## Position recommandée avant publication
 
-Le patcher est conçu pour ne distribuer ni `resources.assets`, ni asset du jeu,
-ni table multilingue extraite. Il reconstruit localement le fichier depuis une
-copie légalement installée, avec sauvegarde et repli. Cette architecture réduit
-fortement ce qui est redistribué, mais ne suffit pas à elle seule à autoriser la
-publication d’une traduction dérivée des textes du jeu.
+Le patcher est conçu pour ne distribuer ni `resources.assets`, ni table
+multilingue extraite, ni contenu jouable du jeu. Il reconstruit localement le
+fichier depuis une copie légalement installée, avec sauvegarde et repli. La
+seule exception visuelle est l’icône de l’installateur, dérivée de l’icône du jeu
+et marquée d’un macaron « FR » afin d’identifier clairement le mod. Elle demeure
+la propriété de ses ayants droit et pourra être remplacée ou retirée sur simple
+demande. Cette architecture réduit fortement ce qui est redistribué, mais ne
+suffit pas à elle seule à autoriser la publication d’une traduction dérivée des
+textes du jeu.
 
 Le droit français réserve en principe la traduction et l’adaptation à l’auteur
 ou à ses ayants droit. Les exceptions d’observation, sauvegarde et
@@ -42,8 +46,9 @@ visible n’est pas automatiquement open source.
 ## Règles de publication proposées
 
 - projet gratuit, non officiel et sans affiliation revendiquée ;
-- aucun asset, police, binaire ou fichier reconstruit du jeu dans Git ou les
-  releases ;
+- aucun contenu jouable, police, binaire ou fichier reconstruit du jeu dans Git
+  ou les releases ; l’icône d’identification documentée ci-dessus est la seule
+  exception visuelle ;
 - captures limitées à l’explication du projet et retirables sur demande ;
 - crédits visibles à Gambir Studio et Raw Fury ;
 - canal de contact et procédure de retrait publiés ;

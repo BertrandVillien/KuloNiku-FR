@@ -10,6 +10,8 @@
     <string>KuloNiku FR</string>
     <key>CFBundleIdentifier</key>
     <string>fr.kuloniku.patch</string>
+    <key>CFBundleIconFile</key>
+    <string>KuloNikuFR</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>

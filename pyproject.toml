@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "kuloniku-fr"
 version = "0.1.0"
-description = "Outils communautaires pour construire le patch français de KuloNiku"
+description = "Outils communautaires pour construire le mod / patch français de KuloNiku"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

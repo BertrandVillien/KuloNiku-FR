@@ -1,12 +1,14 @@
-# Mises à jour du jeu, des traductions et du patcher
+# Mises à jour du jeu, des traductions et de l’installateur
 
-Le projet distingue trois versions indépendantes.
+Ce document couvre l’application macOS actuelle, la future interface Windows,
+leur moteur de patch commun et les petits lots de traduction téléchargeables
+séparément. Le projet distingue trois versions indépendantes.
 
 | Axe | Exemple | Action |
 |---|---|---|
 | Jeu Steam | table I2 ou fichier modifié | restaurer si nécessaire, simuler, puis repatcher |
 | Traductions | nouveau lot français | télécharger le petit lot vérifié, puis mettre à jour directement |
-| Moteur | nouveau patcher | informer, sans installation forcée |
+| Application / moteur | nouvel installateur ou moteur de patch | informer, sans installation forcée |
 
 ## État local
 

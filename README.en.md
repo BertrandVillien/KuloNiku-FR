@@ -1,6 +1,6 @@
 # KuloNiku FR
 
-**Community French patch for _KuloNiku: Bowl Up!_**
+**Community French mod / patch for _KuloNiku: Bowl Up!_**
 
 [View or buy KuloNiku: Bowl Up! on Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
 
@@ -13,9 +13,10 @@
 
 ![KuloNiku: Bowl Up! home screen translated into French](docs/assets/kuloniku-fr-home.jpg)
 
-KuloNiku FR brings a community-made French localization to both the demo and
-the full game. It is free, unofficial, and intended as a temporary solution
-until an official French localization becomes available.
+KuloNiku FR is a translation mod that brings a community-made French
+localization to both the demo and the full game. It is free, unofficial, and
+intended as a temporary solution until an official French localization becomes
+available.
 
 ## Why I made this patch
 
@@ -48,13 +49,22 @@ issues.
 
 ## Simple installation — coming soon
 
-Standalone **macOS** and **Windows** installers are being validated. This will
+Standalone **Windows** and **macOS** installers are being validated. This will
 be the recommended method: download the appropriate package from the
 [Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases) page, run
 the installer, review the displayed simulation, then confirm.
 
 The first release has not been published yet. Until then, the following method
-lets you test the patch from source.
+lets you test the mod from source.
+
+### Windows — validation in progress
+
+Windows comes first in the documentation because it covers most players. A
+technical package is already built automatically, but it is not yet simple
+enough for beginners: a real Windows graphical interface still needs to be
+built and tested on a PC. It must find Steam and KuloNiku automatically, prefer
+the full game over the demo, and offer installation, updates, and restoration
+without a command line.
 
 ### First launch on macOS
 
@@ -94,13 +104,22 @@ to inspect or modify the code.
    uv sync
    ```
 
-3. Run the simulation first; it makes no changes:
+3. Run the simulation first; it makes no changes.
+
+   On Windows:
+
+   ```powershell
+   uv run kuloniku-fr install "C:\Program Files (x86)\Steam\steamapps\common\KuloNiku"
+   ```
+
+   On macOS:
 
    ```sh
    uv run kuloniku-fr install "/path/to/KuloNiku.app"
    ```
 
-4. If the diagnosis is correct, install the patch:
+4. If the diagnosis is correct, install the mod by adding `--apply` to the same
+   command. macOS example:
 
    ```sh
    uv run kuloniku-fr install "/path/to/KuloNiku.app" --apply
@@ -108,8 +127,7 @@ to inspect or modify the code.
 
 5. Launch the game from Steam and select **Français** in the settings.
 
-On Windows, provide the folder containing `KuloNiku_Data` instead of the macOS
-application.
+On Windows, the supplied path must be the folder containing `KuloNiku_Data`.
 
 To restore the verified backup created automatically:
 

@@ -1,4 +1,4 @@
-# Distribution Mac et Windows
+# Distribution Windows et macOS
 
 ## Séparation des contenus
 
@@ -14,7 +14,7 @@ fichier localement depuis la version installée; aucun binaire Unity n’est liv
 
 ## Parcours utilisateur visé
 
-1. Télécharger le paquet « KuloNiku FR » correspondant à Mac ou Windows.
+1. Télécharger le paquet « KuloNiku FR » correspondant à Windows ou macOS.
 2. Lancer un unique installateur.
 3. L’installateur détecte Steam et le jeu.
 4. Il analyse I2, affiche le SHA-256 et effectue d’abord une simulation.

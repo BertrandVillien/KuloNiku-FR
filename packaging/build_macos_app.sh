@@ -27,6 +27,7 @@ swiftc \
   -o "$macos/KuloNiku FR"
 
 cp packaging/macos/Info.plist "$contents/Info.plist"
+cp packaging/icons/KuloNikuFR.icns "$resources/KuloNikuFR.icns"
 version="$($patcher --version | awk '{print $2}')"
 plutil -replace CFBundleShortVersionString -string "$version" "$contents/Info.plist"
 plutil -replace CFBundleVersion -string "$version" "$contents/Info.plist"

@@ -1,6 +1,6 @@
 # KuloNiku FR
 
-**Patch français communautaire pour _KuloNiku: Bowl Up!_**
+**Mod / patch français communautaire pour _KuloNiku: Bowl Up!_**
 
 [Voir ou acheter KuloNiku: Bowl Up! sur Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
 
@@ -13,9 +13,9 @@
 
 ![Accueil de KuloNiku: Bowl Up! traduit en français](docs/assets/kuloniku-fr-home.jpg)
 
-KuloNiku FR permet de jouer en français à la démo et au jeu complet. Le projet
-est gratuit, non officiel et construit par la communauté dans l’attente d’une
-éventuelle localisation française officielle.
+KuloNiku FR est un mod de traduction qui permet de jouer en français à la démo
+et au jeu complet. Le projet est gratuit, non officiel et construit par la
+communauté dans l’attente d’une éventuelle localisation française officielle.
 
 ## Pourquoi j’ai créé ce patch
 
@@ -48,13 +48,22 @@ par le jeu afin de limiter les problèmes d’affichage.
 
 ## Installation simple — bientôt disponible
 
-Des installateurs autonomes pour **macOS** et **Windows** sont en cours de
+Des installateurs autonomes pour **Windows** et **macOS** sont en cours de
 validation. Ce sera la méthode recommandée : télécharger le paquet adapté depuis
 la page [Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases),
 lancer l’installateur, vérifier la simulation affichée, puis confirmer.
 
 La première release n’est pas encore publiée. En attendant, la méthode suivante
-permet de tester le patch depuis les sources.
+permet de tester le mod depuis les sources.
+
+### Windows — validation en cours
+
+Windows est traité en priorité dans la documentation, car il concerne la
+majorité des joueurs. Un paquet technique est déjà construit automatiquement,
+mais il n’est pas encore assez simple pour un novice : une vraie interface
+graphique Windows reste à produire puis à tester sur un PC. Elle devra trouver
+Steam et KuloNiku toute seule, privilégier le jeu complet à la démo et proposer
+installation, mise à jour et restauration sans ligne de commande.
 
 ### Première ouverture sur macOS
 
@@ -95,13 +104,22 @@ souhaitent examiner ou modifier le code.
    uv sync
    ```
 
-3. Lancez d’abord la simulation, qui ne modifie rien :
+3. Lancez d’abord la simulation, qui ne modifie rien.
+
+   Sous Windows :
+
+   ```powershell
+   uv run kuloniku-fr install "C:\Program Files (x86)\Steam\steamapps\common\KuloNiku"
+   ```
+
+   Sous macOS :
 
    ```sh
    uv run kuloniku-fr install "/chemin/vers/KuloNiku.app"
    ```
 
-4. Si le diagnostic est correct, installez le patch :
+4. Si le diagnostic est correct, installez le mod en ajoutant `--apply` à la
+   même commande. Exemple macOS :
 
    ```sh
    uv run kuloniku-fr install "/chemin/vers/KuloNiku.app" --apply
@@ -109,8 +127,8 @@ souhaitent examiner ou modifier le code.
 
 5. Relancez le jeu depuis Steam et choisissez **Français** dans les paramètres.
 
-Sous Windows, indiquez le dossier contenant `KuloNiku_Data` à la place de
-l’application macOS.
+Sous Windows, le chemin fourni doit être le dossier contenant
+`KuloNiku_Data`.
 
 Pour restaurer la sauvegarde vérifiée créée automatiquement :
 
