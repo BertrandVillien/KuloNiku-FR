@@ -16,8 +16,8 @@ unofficial, and does not contain any complete game file.
 
 ## Project status
 
-- **macOS:** a prerelease is available and tested on Apple Silicon and Intel;
-- **Windows:** the prerelease has been successfully tested with the stable full
+- **macOS:** the stable release is available and tested on Apple Silicon and Intel;
+- **Windows:** the stable release has been successfully tested with the stable full
   game and its current beta branch (August 20, 2026);
 - **game:** full version `1.1.1` tested on macOS and Windows, demo `0.10.5`
   tested on macOS;

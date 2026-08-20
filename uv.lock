@@ -194,7 +194,7 @@ wheels = [
 
 [[package]]
 name = "kuloniku-fr"
-version = "0.3.0b2"
+version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "unitypy" },

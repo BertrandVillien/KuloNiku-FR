@@ -55,7 +55,7 @@ sauvegarde.
 
 ## Pourquoi macOS affiche-t-il parfois un avertissement ?
 
-La préversion macOS n’est pas notariée par Apple. Ne contournez jamais un
+L’application macOS n’est pas notariée par Apple. Ne contournez jamais un
 avertissement pour un fichier obtenu ailleurs que dans les releases officielles
 du projet. La procédure d’ouverture sûre est indiquée dans la note de release.
 
