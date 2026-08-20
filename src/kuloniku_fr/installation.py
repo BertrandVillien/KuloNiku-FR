@@ -87,6 +87,14 @@ def atomic_copy(source: Path, destination: Path) -> None:
         temporary.unlink(missing_ok=True)
 
 
+def require_writable_asset(path: Path) -> None:
+    if not os.access(path, os.W_OK) or not os.access(path.parent, os.W_OK):
+        raise PermissionError(
+            "Le fichier du jeu n’est pas accessible en écriture. "
+            "Fermez KuloNiku et vérifiez les permissions de la bibliothèque Steam."
+        )
+
+
 def mac_app_for(asset_path: Path) -> Path | None:
     for parent in asset_path.parents:
         if parent.suffix == ".app":

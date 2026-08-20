@@ -32,7 +32,14 @@ Sous macOS :
 uv run kuloniku-fr install "/chemin/vers/KuloNiku.app"
 ```
 
-Sous Windows, le chemin doit désigner le dossier contenant `KuloNiku_Data`.
+Sous Linux ou Steam Deck :
+
+```sh
+uv run kuloniku-fr install "/chemin/vers/steamapps/common/KuloNiku"
+```
+
+Sous Windows et Linux, le chemin doit désigner le dossier contenant
+`KuloNiku_Data`.
 
 Si le diagnostic est correct, relancez la même commande avec `--apply` :
 

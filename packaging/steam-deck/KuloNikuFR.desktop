@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=KuloNiku FR
+Comment=Installer la traduction française de KuloNiku
+Exec=KuloNiku-FR-GUI
+Icon=KuloNikuFR
+Categories=Game;Utility;
+Terminal=false

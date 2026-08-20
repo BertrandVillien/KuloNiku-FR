@@ -16,6 +16,7 @@ import webbrowser
 from zipfile import BadZipFile, ZipFile
 
 from . import __version__
+from .installation import user_data_dir
 
 
 REPOSITORY_URL = "https://github.com/BertrandVillien/KuloNiku-FR"
@@ -165,14 +166,16 @@ def review_context_directory(active_translations: Path, bundled_translations: Pa
 
 def default_review_workspace_output() -> Path:
     local_app_data = os.environ.get("LOCALAPPDATA")
-    base = Path(local_app_data) if local_app_data else Path.home() / "AppData" / "Local"
-    return base / "KuloNiku FR" / "review-workspace" / "index.html"
+    if local_app_data:
+        return Path(local_app_data) / "KuloNiku FR" / "review-workspace" / "index.html"
+    return user_data_dir() / "review-workspace" / "index.html"
 
 
 def default_review_test_output() -> Path:
     local_app_data = os.environ.get("LOCALAPPDATA")
-    base = Path(local_app_data) if local_app_data else Path.home() / "AppData" / "Local"
-    return base / "KuloNiku FR" / "review-test" / "fr.csv"
+    if local_app_data:
+        return Path(local_app_data) / "KuloNiku FR" / "review-test" / "fr.csv"
+    return user_data_dir() / "review-test" / "fr.csv"
 
 
 def review_workspace_arguments(
@@ -273,13 +276,49 @@ def _registry_steam_roots() -> list[Path]:
     return roots
 
 
+def linux_steam_roots(home: Path | None = None) -> list[Path]:
+    """Return standard native and Flatpak Steam roots, including mounted SD cards."""
+    home = home or Path.home()
+    candidates = [
+        home / ".steam" / "steam",
+        home / ".local" / "share" / "Steam",
+        home / ".var" / "app" / "com.valvesoftware.Steam" / ".local" / "share" / "Steam",
+    ]
+
+    mount_roots = [Path("/run/media") / home.name, Path("/run/media")]
+    for mount_root in mount_roots:
+        try:
+            mounted = list(mount_root.iterdir())
+        except OSError:
+            continue
+        for candidate in mounted:
+            if (candidate / "steamapps").is_dir():
+                candidates.append(candidate)
+
+    unique: dict[str, Path] = {}
+    for candidate in candidates:
+        if not candidate.is_dir():
+            continue
+        try:
+            normalized = candidate.resolve()
+        except OSError:
+            normalized = candidate.absolute()
+        unique[os.path.normcase(str(normalized))] = normalized
+    return list(unique.values())
+
+
 def steam_library_roots() -> list[Path]:
-    roots = _registry_steam_roots()
-    program_files = os.environ.get("PROGRAMFILES(X86)")
-    if program_files:
-        fallback = Path(program_files) / "Steam"
-        if fallback not in roots:
-            roots.append(fallback)
+    if os.name == "nt":
+        roots = _registry_steam_roots()
+        program_files = os.environ.get("PROGRAMFILES(X86)")
+        if program_files:
+            fallback = Path(program_files) / "Steam"
+            if fallback not in roots:
+                roots.append(fallback)
+    elif sys.platform.startswith("linux"):
+        roots = linux_steam_roots()
+    else:
+        roots = []
 
     for steam_root in list(roots):
         for relative in ("steamapps/libraryfolders.vdf", "config/libraryfolders.vdf"):
@@ -341,12 +380,15 @@ def installed_game_candidates(library_roots: list[Path] | None = None) -> list[P
 
 
 class LauncherPaths:
-    def __init__(self, base: Path | None = None):
+    def __init__(self, base: Path | None = None, *, linux_mode: bool | None = None):
         if base is None:
             base = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path.cwd()
+        if linux_mode is None:
+            linux_mode = sys.platform.startswith("linux")
+        self.linux_mode = linux_mode
         self.base = base
         self.resources = base / "resources"
-        self.engine = self.resources / "KuloNiku-FR.exe"
+        self.engine = self.resources / ("KuloNiku-FR" if linux_mode else "KuloNiku-FR.exe")
         self.translations = self.resources / "translations" / "fr.csv"
         self.review_context = self.resources / "translations"
         self.icon = self.resources / "KuloNikuFR.ico"
@@ -355,9 +397,11 @@ class LauncherPaths:
         missing = []
         if not self.engine.is_file():
             missing.append(str(self.engine))
-        if not self.translations.is_file():
-            missing.append(str(self.translations))
-        for name in sorted(REVIEW_CONTEXT_FILES):
+        for name in sorted(TRANSLATION_PACKAGE_FILES):
+            path = self.review_context / name
+            if not path.is_file():
+                missing.append(str(path))
+        for name in sorted(REVIEW_CONTEXT_FILES if not self.linux_mode else set()):
             path = self.review_context / name
             if not path.is_file():
                 missing.append(str(path))
@@ -372,6 +416,7 @@ class WindowsLauncher:
         self.tk = tk
         self.ttk = ttk
         self.paths = paths or LauncherPaths()
+        self.steam_deck_mode = self.paths.linux_mode
         self.active_translations = self.paths.translations
         self.game: Path | None = None
         self.simulation_succeeded = False
@@ -500,14 +545,16 @@ class WindowsLauncher:
             command=self.open_review_workspace,
             state="disabled",
         )
-        self.review_button.pack(side="left", padx=(8, 0))
+        if not self.steam_deck_mode:
+            self.review_button.pack(side="left", padx=(8, 0))
         self.test_review_button = ttk.Button(
             utility_row,
             text="Importer mon fichier de correction",
             command=self.test_review_corrections,
             state="disabled",
         )
-        self.test_review_button.pack(side="left", padx=(8, 0))
+        if not self.steam_deck_mode:
+            self.test_review_button.pack(side="left", padx=(8, 0))
         self.details_frame = ttk.Frame(self.advanced_frame)
         self.log = tk.Text(
             self.details_frame,
@@ -520,7 +567,8 @@ class WindowsLauncher:
         self.log.pack(fill="both", expand=True, pady=(6, 0))
 
         self.root.after(80, self.select_default_installation)
-        self.root.after(120, self.check_latest_release)
+        if not self.steam_deck_mode:
+            self.root.after(120, self.check_latest_release)
 
     def set_status(self, title: str, message: str, kind: str = "warning") -> None:
         if self.installer_update_required:
@@ -563,6 +611,8 @@ class WindowsLauncher:
         edition: str | None = None,
         bundled_translation_hash: str | None = None,
     ) -> None:
+        if self.steam_deck_mode:
+            return
         if edition is not None and bundled_translation_hash is not None:
             self.pending_translation_context = (edition, bundled_translation_hash)
         if self.release_data is not None:
@@ -699,7 +749,7 @@ class WindowsLauncher:
         self.append_log("\n\nTéléchargement de la mise à jour française…")
 
         def worker() -> None:
-            cache_root = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "KuloNiku FR" / "translations"
+            cache_root = user_data_dir() / "translations"
             destination = cache_root / str(expected_archive_hash)
             candidate = destination / "fr.csv"
             try:
@@ -848,7 +898,11 @@ class WindowsLauncher:
             self.set_log("Fichiers manquants :\n" + "\n".join(missing))
             self.set_status(
                 "Installateur incomplet",
-                "Retéléchargez puis extrayez entièrement le paquet Windows.",
+                (
+                    "Retéléchargez l’AppImage Steam Deck."
+                    if self.steam_deck_mode
+                    else "Retéléchargez puis extrayez entièrement le paquet Windows."
+                ),
                 "error",
             )
             return
@@ -888,8 +942,9 @@ class WindowsLauncher:
         origin = "Steam" if "steam" in str(game).lower() else "installation locale"
         self.game_label.configure(text=f"{edition} détecté · {origin}")
         self.analyze_button.configure(state="normal")
-        self.review_button.configure(state="normal")
-        self.test_review_button.configure(state="normal")
+        if not self.steam_deck_mode:
+            self.review_button.configure(state="normal")
+            self.test_review_button.configure(state="normal")
         self.install_button.configure(state="disabled")
 
     def open_review_workspace(self) -> None:
@@ -1230,8 +1285,8 @@ def main() -> int:
         except Exception:
             return 1
         return 0
-    if os.name != "nt":
-        print("L’interface graphique est réservée à Windows.", file=sys.stderr)
+    if os.name != "nt" and not sys.platform.startswith("linux"):
+        print("Cette interface graphique est réservée à Windows et Linux.", file=sys.stderr)
         return 2
     WindowsLauncher(paths).run()
     return 0

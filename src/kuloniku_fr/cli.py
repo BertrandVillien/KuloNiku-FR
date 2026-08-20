@@ -33,6 +33,7 @@ from .installation import (
     detect_asset,
     installation_state,
     latest_backup_for,
+    require_writable_asset,
     resign_macos,
 )
 from .review_workspace import (
@@ -624,6 +625,8 @@ def command_install(args) -> int:
         print("Simulation terminée : aucune modification. Relancez avec --apply pour installer.")
         return 0
 
+    require_writable_asset(asset.path)
+
     if not updating:
         backup_path, manifest_path = backup_asset(asset, sha256)
         manifest = json.loads(manifest_path.read_text())
@@ -806,6 +809,7 @@ def command_restore(args) -> int:
         print(f"Restauration disponible : {backup_path}")
         print("Simulation terminée : aucune modification. Relancez avec --apply pour restaurer.")
         return 0
+    require_writable_asset(asset.path)
     atomic_copy(backup_path, asset.path)
     resign_macos(asset.path)
     if sha256(asset.path) != manifest["original_sha256"]:

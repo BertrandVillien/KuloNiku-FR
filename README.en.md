@@ -1,6 +1,6 @@
 # KuloNiku FR
 
-**Community French patch for _KuloNiku: Bowl Up!_**
+**Community French translation mod for _KuloNiku: Bowl Up!_**
 
 [View KuloNiku: Bowl Up! on Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
 · [Version française](README.md)
@@ -19,6 +19,7 @@ unofficial, and does not contain any complete game file.
 - **macOS:** the stable release is available and tested on Apple Silicon and Intel;
 - **Windows:** the stable release has been successfully tested with the stable full
   game and its current beta branch (August 20, 2026);
+- **Steam Deck:** native AppImage in beta, still awaiting real-device validation;
 - **game:** full version `1.1.1` tested on macOS and Windows, demo `0.10.5`
   tested on macOS;
 - **updates:** unknown new strings remain in English.
@@ -40,6 +41,11 @@ antivirus to open it.
 On macOS, download the universal DMG, then drag **KuloNiku FR** into
 **Applications**. The same application works on Apple Silicon and Intel Macs
 and provides the same operations.
+
+On Steam Deck, the native beta runs in Desktop Mode without a Terminal or any
+system installation. It detects games stored internally or on a microSD card.
+Follow the [Steam Deck guide](docs/STEAM_DECK.en.md); support will only be marked
+stable after a complete test on real hardware.
 
 ![macOS installer ready to install the French translation](docs/assets/kuloniku-fr-installer-macos.png)
 

@@ -32,7 +32,14 @@ On macOS:
 uv run kuloniku-fr install "/path/to/KuloNiku.app"
 ```
 
-On Windows, the path must point to the folder that contains `KuloNiku_Data`.
+On Linux or Steam Deck:
+
+```sh
+uv run kuloniku-fr install "/path/to/steamapps/common/KuloNiku"
+```
+
+On Windows and Linux, the path must point to the folder that contains
+`KuloNiku_Data`.
 
 If the diagnosis is correct, run the same command with `--apply`:
 

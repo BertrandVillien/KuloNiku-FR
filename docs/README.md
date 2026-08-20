@@ -3,6 +3,7 @@
 ## Pour jouer
 
 - [Questions fréquentes](FAQ.md)
+- [Installer sur Steam Deck](STEAM_DECK.md)
 - [Installation depuis les sources](INSTALL_FROM_SOURCE.md)
 - [Compatibilité et mises à jour](UPDATES.md)
 - [Sélection de la langue française](LANGUAGE_SELECTION.md)

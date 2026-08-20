@@ -12,11 +12,14 @@ from kuloniku_fr.windows_launcher import (
     extract_translation_package,
     installed_game_candidates,
     is_prerelease_version,
+    is_windows_game_folder,
     latest_release_from_payload,
+    linux_steam_roots,
     parse_steam_library_paths,
     prepare_review_test_arguments,
     review_context_directory,
     review_workspace_arguments,
+    steam_library_roots,
     version_tuple,
 )
 
@@ -177,16 +180,88 @@ def test_installed_game_candidates_prefers_full_game_and_uses_manifest(tmp_path:
     assert installed_game_candidates([tmp_path]) == [full.resolve(), demo.resolve()]
 
 
+def test_linux_steam_roots_include_native_and_flatpak_locations(tmp_path: Path):
+    expected = [
+        tmp_path / ".steam" / "steam",
+        tmp_path / ".local" / "share" / "Steam",
+        tmp_path / ".var" / "app" / "com.valvesoftware.Steam" / ".local" / "share" / "Steam",
+    ]
+    for path in expected:
+        path.mkdir(parents=True)
+
+    assert linux_steam_roots(tmp_path) == [path.resolve() for path in expected]
+
+
+def test_linux_detection_uses_internal_external_sd_and_flatpak_libraries(
+    monkeypatch, tmp_path: Path
+):
+    from kuloniku_fr import windows_launcher
+
+    internal = tmp_path / "internal"
+    external = tmp_path / "external"
+    sd_card = tmp_path / "sd-card"
+    flatpak = tmp_path / "flatpak"
+    for root, install_dir in (
+        (internal, "KuloNiku Internal"),
+        (external, "KuloNiku External"),
+        (sd_card, "KuloNiku SD"),
+        (flatpak, "KuloNiku Flatpak"),
+    ):
+        steamapps = root / "steamapps"
+        make_game(steamapps / "common" / install_dir)
+        (steamapps / f"appmanifest_{windows_launcher.STEAM_APP_ID}.acf").write_text(
+            f'"AppState" {{ "installdir" "{install_dir}" }}', encoding="utf-8"
+        )
+    (internal / "steamapps" / "libraryfolders.vdf").write_text(
+        f'"libraryfolders" {{ "1" {{ "path" "{external}" }} }}', encoding="utf-8"
+    )
+
+    monkeypatch.setattr(windows_launcher.sys, "platform", "linux")
+    monkeypatch.setattr(
+        windows_launcher, "linux_steam_roots", lambda: [internal, sd_card, flatpak]
+    )
+
+    roots = steam_library_roots()
+    candidates = installed_game_candidates(roots)
+
+    assert {path.resolve() for path in roots} == {
+        internal.resolve(), external.resolve(), sd_card.resolve(), flatpak.resolve()
+    }
+    assert {path.name for path in candidates} == {
+        "KuloNiku Internal", "KuloNiku External", "KuloNiku SD", "KuloNiku Flatpak"
+    }
+
+
+def test_manual_selection_accepts_a_windows_game_folder(tmp_path: Path):
+    game = make_game(tmp_path / "KuloNiku")
+
+    assert is_windows_game_folder(game) is True
+
+
 def test_launcher_paths_requires_engine_translations_and_review_context(tmp_path: Path):
-    paths = LauncherPaths(tmp_path)
-    assert len(paths.validate()) == 5
+    paths = LauncherPaths(tmp_path, linux_mode=False)
+    assert len(paths.validate()) == 8
 
     paths.resources.mkdir()
     paths.engine.write_bytes(b"exe")
     paths.translations.parent.mkdir()
     paths.translations.write_text("key,fr\n", encoding="utf-8")
+    for name in ("source-hashes.csv", "demo-overrides.csv", "known-sources.json"):
+        (paths.review_context / name).write_text("test\n", encoding="utf-8")
     for name in ("review-overrides.csv", "TERMINOLOGY.md", "AGENT_BRIEF.md"):
         (paths.review_context / name).write_text("test\n", encoding="utf-8")
+    assert paths.validate() == []
+
+
+def test_linux_launcher_uses_extensionless_engine_and_core_files_only(tmp_path: Path):
+    paths = LauncherPaths(tmp_path, linux_mode=True)
+    paths.resources.mkdir()
+    paths.engine.write_bytes(b"engine")
+    paths.translations.parent.mkdir()
+    for name in ("fr.csv", "source-hashes.csv", "demo-overrides.csv", "known-sources.json"):
+        (paths.review_context / name).write_text("test\n", encoding="utf-8")
+
+    assert paths.engine.name == "KuloNiku-FR"
     assert paths.validate() == []
 
 

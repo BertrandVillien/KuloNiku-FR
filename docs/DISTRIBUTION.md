@@ -1,4 +1,4 @@
-# Distribution Windows et macOS
+# Distribution Windows, macOS et Steam Deck
 
 ## Séparation des contenus
 
@@ -30,7 +30,7 @@ Le moteur suit toujours le même enchaînement :
 
 ## Moteur commun
 
-Les interfaces macOS et Windows ne contiennent pas la logique de patch. Elles
+Les interfaces macOS, Windows et Linux ne contiennent pas la logique de patch. Elles
 utilisent la sortie JSON versionnée de `status --json` (`schema_version: 1`),
 puis lancent les mêmes commandes de simulation, d’installation et de
 restauration.
@@ -42,12 +42,22 @@ correspondant inclus dans le même paquet.
 La sauvegarde, la compatibilité et les mises à jour restent ainsi gérées au même
 endroit, indépendamment de l’interface utilisée.
 
+Sur Steam Deck, le moteur et l’interface PyInstaller sont réunis dans une
+AppImage x86-64 autonome. La première bêta est fabriquée séparément par GitHub
+Actions et reste un artefact de test. Elle ne sera ajoutée aux releases stables
+qu’après validation sur un véritable Deck.
+
+L’AppImage ne demande ni installation système ni privilège administrateur. Les
+sauvegardes sont placées dans le répertoire XDG de l’utilisateur, en dehors des
+préfixes Proton. Le parcours Linux masque provisoirement la relecture, l’import
+de corrections et les mises à jour intégrées.
+
 ## Compatibilité adaptative
 
 Chaque manifeste de release indique au minimum :
 
 - la version du jeu ;
-- la plateforme (`macos` ou `windows`) ;
+- la plateforme (`macos` ou `windows`, y compris le jeu Windows lancé par Proton) ;
 - le SHA-256 attendu du fichier original ;
 - le SHA-256 du fichier reconstruit ;
 - la version de la traduction.
@@ -70,6 +80,9 @@ sauvegarde est restaurée automatiquement.
 - jeu complet `1.1.1` sur macOS et Windows ;
 - branche bêta du jeu disponible le 20 août 2026 sur Windows ;
 - démo `0.10.5` sur macOS.
+
+Le support Steam Deck reste en bêta et n’apparaît pas dans cette liste tant que
+le parcours complet n’a pas été validé sur le matériel réel.
 
 L’application Windows de KuloNiku FR a installé et utilisé correctement la
 traduction avec la branche bêta du jeu lors de ce test.

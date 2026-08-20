@@ -5,6 +5,18 @@
 Oui. Il modifie uniquement la copie locale du jeu après une simulation et une
 sauvegarde vérifiée. Le jeu se lance ensuite normalement depuis Steam.
 
+## Comment l’installer sur Steam Deck ?
+
+Utilisez l’AppImage native en mode Bureau. Elle recherche automatiquement le
+jeu sur le stockage interne, les bibliothèques Steam et la carte microSD.
+
+Il suffit d’autoriser l’exécution du fichier dans **Propriétés > Permissions**.
+N’utilisez ni `sudo`, ni `pacman`, ni Protontricks, Wine ou l’installateur
+Windows. Consultez le [guide Steam Deck](STEAM_DECK.md).
+
+Cette version est encore en bêta : elle ne sera déclarée testée qu’après une
+validation complète sur un véritable Steam Deck.
+
 ## Démo ou jeu complet ?
 
 Les deux sont reconnus automatiquement. La version complète est la référence.
@@ -40,6 +52,10 @@ L’installateur refait alors une simulation sur la nouvelle version avant toute
 Non. L’application peut télécharger et vérifier le petit lot de traduction
 publié sur GitHub. Elle demande seulement une nouvelle version complète si ce
 lot déclare avoir besoin d’un moteur plus récent.
+
+Cette mise à jour intégrée reste temporairement désactivée dans la bêta Steam
+Deck. Sur le Deck, téléchargez une nouvelle AppImage lorsqu’une version est
+annoncée.
 
 ## Une nouvelle phrase peut-elle casser le jeu ?
 

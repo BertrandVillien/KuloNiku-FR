@@ -19,6 +19,7 @@ est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 - **macOS :** version stable disponible et testée sur Apple Silicon et Intel ;
 - **Windows :** version stable testée avec succès sur le jeu complet stable et sur
   la branche bêta actuelle du jeu (20 août 2026) ;
+- **Steam Deck :** AppImage native en bêta, validation matérielle encore requise ;
 - **jeu :** version complète `1.1.1` testée sur macOS et Windows, démo `0.10.5`
   testée sur macOS ;
 - **mises à jour :** les nouvelles phrases inconnues restent en anglais.
@@ -41,6 +42,11 @@ confirmation. Ne désactivez jamais votre antivirus pour l’ouvrir.
 Sur macOS, téléchargez le DMG universel, puis glissez **KuloNiku FR** dans
 **Applications**. La même application fonctionne sur les Mac Apple Silicon et
 Intel et propose les mêmes opérations.
+
+Sur Steam Deck, la bêta native s’utilise en mode Bureau, sans Terminal ni
+installation système. Elle détecte le jeu sur le stockage interne ou la carte
+microSD. Suivez le [guide Steam Deck](docs/STEAM_DECK.md) ; cette version ne sera
+annoncée comme stable qu’après un essai complet sur un véritable Deck.
 
 ![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)
 
