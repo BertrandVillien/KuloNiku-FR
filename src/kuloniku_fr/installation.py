@@ -116,3 +116,18 @@ def latest_backup_for(target: Path) -> tuple[Path, dict]:
         if manifest.get("target") == resolved:
             return manifest_path.parent / "resources.assets", manifest
     raise FileNotFoundError(f"Aucune sauvegarde trouvée pour {resolved}.")
+
+
+def installation_state(
+    current_hash: str, french_active: bool, manifest: dict | None
+) -> str:
+    """Classify the installed asset without modifying it."""
+    if french_active:
+        if manifest and manifest.get("patched_sha256") == current_hash:
+            return "patched"
+        return "patched_unknown"
+    if manifest:
+        if manifest.get("original_sha256") == current_hash:
+            return "restored"
+        return "game_updated"
+    return "unpatched"

@@ -1,0 +1,58 @@
+name: Problème d’installation ou de restauration
+description: Signaler un échec du patcher sur macOS ou Windows.
+title: "[Installation] "
+labels: ["installation", "à diagnostiquer"]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Plateforme
+      options: [macOS, Windows]
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Version du jeu
+      options: [Jeu complet, Démo 0.10.5, Je ne sais pas]
+    validations:
+      required: true
+  - type: input
+    id: patcher
+    attributes:
+      label: Version de KuloNiku FR
+      placeholder: "Exemple : 0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: Action en échec
+      options: [Simulation, Installation, Lancement depuis Steam, Restauration, Vérification de mise à jour]
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Message affiché
+      description: Copiez le message en masquant votre nom et vos chemins personnels.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu et résultat obtenu
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Capture facultative
+      description: Glissez une capture recadrée et sans donnée personnelle.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Sécurité
+      options:
+        - label: Je n’ai joint ni fichier du jeu, ni sauvegarde, ni donnée personnelle.
+          required: true

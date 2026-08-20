@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from kuloniku_fr.installation import detect_asset
+from kuloniku_fr.installation import detect_asset, installation_state
 
 
 def test_detect_windows_asset(tmp_path: Path):
@@ -25,3 +25,17 @@ def test_detect_refuses_ambiguous_assets(tmp_path: Path):
 
     with pytest.raises(FileNotFoundError):
         detect_asset(tmp_path)
+
+
+@pytest.mark.parametrize(
+    ("current_hash", "french_active", "manifest", "expected"),
+    [
+        ("patched", True, {"patched_sha256": "patched"}, "patched"),
+        ("other", True, {"patched_sha256": "patched"}, "patched_unknown"),
+        ("original", False, {"original_sha256": "original"}, "restored"),
+        ("steam-update", False, {"original_sha256": "original"}, "game_updated"),
+        ("new", False, None, "unpatched"),
+    ],
+)
+def test_installation_state(current_hash, french_active, manifest, expected):
+    assert installation_state(current_hash, french_active, manifest) == expected

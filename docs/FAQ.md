@@ -1,0 +1,60 @@
+# Questions fréquentes
+
+## Le patch fonctionne-t-il avec Steam ?
+
+Oui. Il modifie uniquement la copie locale du jeu après une simulation et une
+sauvegarde vérifiée. Le jeu se lance ensuite normalement depuis Steam.
+
+## Démo ou jeu complet ?
+
+Les deux sont reconnus automatiquement. La version complète est la référence.
+La démo `0.10.5` reçoit uniquement les exceptions nécessaires à son ancienne
+version des textes.
+
+## Pourquoi l’allemand disparaît-il ?
+
+Le menu actuel masque une neuvième langue. Le patch réutilise donc l’emplacement
+allemand et conserve l’anglais comme repli sûr. Restaurer le fichier original
+rend immédiatement l’allemand au jeu.
+
+## Que se passe-t-il après une mise à jour Steam ?
+
+Steam peut remettre un fichier original ou nouveau. La commande `status`
+signale alors qu’un nouveau patch est nécessaire. L’installateur doit refaire
+une simulation sur la nouvelle version avant toute écriture.
+
+## Une nouvelle phrase peut-elle casser le jeu ?
+
+Les traductions sont liées à l’empreinte des textes anglais et indonésien. Si
+leur sens change, l’ancienne version française n’est pas injectée : l’anglais
+installé reste affiché jusqu’à la prochaine traduction.
+
+## Puis-je annuler ?
+
+Oui. Chaque installation crée d’abord une sauvegarde dont l’empreinte SHA-256
+est vérifiée. La commande ou le lanceur « Restaurer KuloNiku » remet cette
+sauvegarde.
+
+## Pourquoi macOS affiche-t-il parfois un avertissement ?
+
+Les futurs paquets communautaires ne seront peut-être pas notariés par Apple.
+Ne contournez jamais un avertissement pour un fichier obtenu ailleurs que dans
+les releases officielles du projet. Les empreintes publiées devront permettre
+de vérifier chaque téléchargement.
+
+## Mon antivirus Windows réagit : que faire ?
+
+N’ajoutez pas d’exclusion générale. Fermez le programme, conservez l’alerte et
+ouvrez un rapport d’installation avec la version téléchargée, son empreinte et
+une capture. Le code et la fabrication des paquets sont publics.
+
+## Comment proposer une meilleure formulation ?
+
+Utilisez le formulaire GitHub « Proposer une correction française ». Aucune
+connaissance de Git n’est nécessaire. Indiquez le contexte et, si possible, une
+capture limitée à l’écran concerné.
+
+## Le projet continuera-t-il si le français devient officiel ?
+
+Le patch n’a pas vocation à concurrencer une traduction officielle. Il pourra
+être archivé comme outil et comme base technique pour d’autres communautés.

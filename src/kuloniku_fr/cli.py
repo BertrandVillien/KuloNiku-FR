@@ -10,6 +10,7 @@ import tempfile
 
 import UnityPy
 
+from . import __version__
 from .batching import (
     Batch,
     make_batches,
@@ -26,6 +27,7 @@ from .installation import (
     atomic_copy,
     backup_asset,
     detect_asset,
+    installation_state,
     latest_backup_for,
     resign_macos,
 )
@@ -263,6 +265,30 @@ def load_resolved_french(
     )
 
 
+def translation_bundle_hash(
+    translations_path: Path,
+    *,
+    edition: str,
+    source_hashes: str | None = None,
+    compatibility_overrides: str | None = None,
+) -> str:
+    hashes_path, overrides_path = translation_profile_paths(
+        translations_path,
+        edition=edition,
+        source_hashes=source_hashes,
+        compatibility_overrides=compatibility_overrides,
+    )
+    digest = hashlib.sha256()
+    for path in (translations_path, hashes_path, overrides_path):
+        if path is None:
+            continue
+        digest.update(path.name.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(path.read_bytes())
+        digest.update(b"\0")
+    return digest.hexdigest()
+
+
 def command_build(args) -> int:
     source_path = Path(args.assets).resolve()
     csv_path = Path(args.translations).resolve()
@@ -427,8 +453,67 @@ def command_install(args) -> int:
     manifest = json.loads(manifest_path.read_text())
     manifest["patched_sha256"] = sha256(asset.path)
     manifest["translation_keys_matched"] = matched
+    manifest["patcher_version"] = __version__
+    manifest["translation_bundle_sha256"] = translation_bundle_hash(
+        translations_path,
+        edition=asset.edition,
+        source_hashes=getattr(args, "source_hashes", None),
+        compatibility_overrides=getattr(args, "compatibility_overrides", None),
+    )
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     print(f"Installation terminée. Sauvegarde : {backup_path}")
+    return 0
+
+
+def command_status(args) -> int:
+    """Report whether Steam or the local translation changed since patching."""
+    asset = detect_asset(Path(args.game))
+    translations_path = Path(args.translations).resolve()
+    current_hash = sha256(asset.path)
+    _, _, source = load_source(asset.path)
+    codes = [language.code for language in source.languages]
+    selection = next(
+        (term for term in source.terms if term.key == "SETTINGS_LANGUAGESELECTION"),
+        None,
+    )
+    french_active = bool(
+        selection
+        and "de" in codes
+        and selection.translations[codes.index("de")] == "Français"
+    )
+    manifest = None
+    try:
+        _, manifest = latest_backup_for(asset.path)
+    except FileNotFoundError:
+        pass
+    state = installation_state(current_hash, french_active, manifest)
+    labels = {
+        "patched": "patch français installé et fichier inchangé",
+        "patched_unknown": "français présent, mais état différent du dernier manifeste",
+        "restored": "fichier original restauré ; installation du patch disponible",
+        "game_updated": "jeu modifié ou mis à jour par Steam ; nouveau patch nécessaire",
+        "unpatched": "aucun patch KuloNiku FR reconnu",
+    }
+    print(f"État : {labels[state]}")
+    print(f"Édition : {asset.edition}; plateforme : {asset.platform}")
+    print(f"SHA-256 actuel : {current_hash}")
+
+    bundle_hash = translation_bundle_hash(
+        translations_path,
+        edition=asset.edition,
+        source_hashes=getattr(args, "source_hashes", None),
+        compatibility_overrides=getattr(args, "compatibility_overrides", None),
+    )
+    installed_bundle = manifest.get("translation_bundle_sha256") if manifest else None
+    if state == "patched" and installed_bundle and installed_bundle != bundle_hash:
+        print("Traductions locales plus récentes : restauration puis réinstallation conseillée.")
+    elif state == "patched" and installed_bundle == bundle_hash:
+        print("Traductions locales : à jour.")
+    elif state == "patched" and not installed_bundle:
+        print("Version de traduction installée inconnue (ancien manifeste).")
+    if manifest and manifest.get("patcher_version"):
+        print(f"Moteur ayant installé le patch : {manifest['patcher_version']}")
+    print(f"Moteur actuellement lancé : {__version__}")
     return 0
 
 
@@ -734,6 +819,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     install_parser.add_argument("--apply", action="store_true", help="effectuer réellement l’installation")
     install_parser.set_defaults(handler=command_install)
+
+    status_parser = subparsers.add_parser(
+        "status", help="détecter une mise à jour du jeu ou des traductions"
+    )
+    status_parser.add_argument("game", help="application, dossier du jeu ou resources.assets")
+    status_parser.add_argument("--translations", default="translations/fr.csv")
+    status_parser.add_argument("--source-hashes")
+    status_parser.add_argument("--compatibility-overrides")
+    status_parser.set_defaults(handler=command_status)
 
     restore_parser = subparsers.add_parser("restore", help="restaurer la dernière sauvegarde")
     restore_parser.add_argument("game", help="application, dossier du jeu ou resources.assets")

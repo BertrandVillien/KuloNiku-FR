@@ -4,6 +4,17 @@ La source de travail publique est `translations/fr.csv`. Les traductions
 originales du jeu sont extraites localement dans `work/` et ne sont pas
 versionnées.
 
+## Sans savoir programmer
+
+Le moyen le plus simple est d’ouvrir le formulaire GitHub « Proposer une
+correction française ». Il suffit d’indiquer le texte vu, le contexte et une
+proposition. Une capture est recommandée pour montrer la place disponible et
+le personnage qui parle. La clé technique est facultative.
+
+Ne joignez jamais `resources.assets`, un fichier du jeu ou une extraction
+complète. Une capture limitée à l’écran concerné et une courte citation sont
+suffisantes.
+
 ## Cycle d’un lot
 
 1. Extraire la version installée vers `work/context.csv` avec la commande
@@ -19,6 +30,20 @@ versionnées.
    - `provisional` : validation visuelle ou narrative encore nécessaire.
 7. Exécuter `lint`, construire un fichier de test et vérifier l’affichage en jeu.
 8. Corriger puis valider le lot avant de passer au suivant.
+
+## Dialogues dupliqués
+
+Une même réplique peut exister sous une clé principale et plusieurs clés de
+secours. Il ne faut pas les corriger séparément au hasard :
+
+1. corriger la clé principale dans `translations/review-overrides.csv` ;
+2. exécuter `prepare-backups` pour propager les copies dont le texte source est
+   strictement identique ;
+3. ne faire relire que les variantes réellement différentes ;
+4. fusionner puis contrôler les variables et balises.
+
+Cette règle évite qu’une correction ne soit visible dans une scène mais pas
+dans sa variante.
 
 ## Colonnes du CSV français
 
@@ -61,3 +86,16 @@ utiles, sans joindre de fichier original du jeu.
 - Les noms de plats traditionnels exigent une vérification d’usage en français;
   une translittération ou un nom indonésien ne doit jamais être « traduit » par
   approximation.
+
+## Contributions assistées par IA
+
+Codex, Claude ou un autre agent peuvent aider, mais leur sortie n’est jamais
+acceptée sans contrôle. Fournissez seulement le brief versionné
+`translations/AGENT_BRIEF.md` et un lot compact contenant les clés concernées.
+Ne transmettez ni historique privé, ni journal de conversation, ni extraction
+complète du jeu.
+
+Le contributeur reste responsable de comparer les langues, de vérifier les
+variables, d’expliquer les dépassements de longueur et de signaler ce qui n’a
+pas été vu en jeu. Le protocole détaillé se trouve dans
+`docs/AGENT_WORKFLOW.md`.

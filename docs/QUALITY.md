@@ -15,7 +15,7 @@ Instantané du 20 août 2026, établi sur la version complète macOS.
 - clés inconnues : 0 ;
 - traductions vides dans le CSV français : 0 ;
 - variables ou balises cassées : 0 ;
-- tests automatisés : 11/11 ;
+- tests automatisés : 18/18 ;
 - reconstruction, installation puis réextraction : 13 173 valeurs vérifiées,
   0 divergence ;
 - signature macOS vérifiée après installation ;

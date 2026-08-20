@@ -1,0 +1,58 @@
+name: Proposer une correction française
+description: Signaler un texte maladroit, faux, trop long ou incohérent sans savoir programmer.
+title: "[Traduction] "
+labels: ["traduction", "à relire"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Ne joignez pas de fichier du jeu. Une capture limitée à l’écran concerné suffit.
+  - type: textarea
+    id: seen
+    attributes:
+      label: Texte français vu
+      description: Recopiez seulement la phrase ou le libellé concerné.
+      placeholder: Texte affiché dans le jeu
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposition
+      placeholder: Formulation française suggérée
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte
+      description: Écran, personnage, moment de l’histoire, genre choisi et raison de la correction.
+    validations:
+      required: true
+  - type: input
+    id: key
+    attributes:
+      label: Clé technique, si connue
+      description: Facultatif.
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Version du jeu
+      options:
+        - Jeu complet
+        - Démo 0.10.5
+        - Je ne sais pas
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Capture d’écran
+      description: Glissez ici une capture recadrée, sans donnée personnelle.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vérification
+      options:
+        - label: Je n’ai joint aucun fichier du jeu ni extraction complète.
+          required: true

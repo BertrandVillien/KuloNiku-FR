@@ -1,7 +1,17 @@
 .DS_Store
+.idea/
+.vscode/
+.codex/
+.agents/
 __pycache__/
 *.pyc
+*.log
+*.jsonl
 .venv/
+build/
+dist/
+package/
+*.spec
 work/
 outputs/
 *.assets
