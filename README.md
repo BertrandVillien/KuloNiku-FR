@@ -40,6 +40,8 @@ confirmation. Ne désactivez jamais votre antivirus pour l’ouvrir.
 Sur macOS, téléchargez le DMG adapté à votre Mac, puis glissez **KuloNiku FR**
 dans **Applications**. L’application propose les mêmes opérations.
 
+![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)
+
 Après l’installation, lancez le jeu depuis Steam et choisissez **Français** dans
 les paramètres.
 

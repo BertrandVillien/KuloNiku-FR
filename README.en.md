@@ -39,6 +39,8 @@ antivirus to open it.
 On macOS, download the DMG that matches your Mac, then drag **KuloNiku FR** into
 **Applications**. The application provides the same operations.
 
+![macOS installer ready to install the French translation](docs/assets/kuloniku-fr-installer-macos.png)
+
 After installation, launch the game from Steam and select **Français** in the
 settings.
 
