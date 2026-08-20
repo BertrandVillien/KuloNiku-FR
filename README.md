@@ -8,7 +8,6 @@
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS testé](https://img.shields.io/badge/macOS-test%C3%A9-2ea44f)
 ![Windows testé](https://img.shields.io/badge/Windows-test%C3%A9-2ea44f)
-![Démo et jeu complet](https://img.shields.io/badge/%C3%A9ditions-d%C3%A9mo%20%7C%20complet-6f42c1)
 
 ![Accueil de KuloNiku: Bowl Up! traduit en français](docs/assets/kuloniku-fr-home.jpg)
 
@@ -73,8 +72,9 @@ complet du jeu n’est téléchargé ou distribué.
 
 Chaque ligne est comparée aux langues fournies avec le jeu, puis adaptée au
 contexte et à la place disponible à l’écran. Une attention particulière est
-portée aux plats indonésiens, aux voix des personnages et aux textes encore à
-valider en jeu.
+portée aux plats indonésiens et aux voix des personnages. Toutes les traductions
+sont arbitrées ; certains dépassements de longueur restent à contrôler
+visuellement en jeu.
 
 <p>
   <img src="docs/assets/kuloniku-fr-settings.jpg" width="49%" alt="Langue française sélectionnée dans les paramètres">
@@ -109,8 +109,7 @@ contexte de la scène.
 
 L’indonésien a été particulièrement précieux pour respecter l’origine du studio,
 les plats et l’intention de certains dialogues. Les formulations françaises
-cherchent à rester naturelles et assez courtes pour l’interface, quitte à laisser
-provisoires les passages qui doivent encore être confirmés en jeu.
+cherchent à rester naturelles et assez courtes pour l’interface.
 
 ## Documentation
 

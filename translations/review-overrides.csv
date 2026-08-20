@@ -413,6 +413,9 @@ HANGOUT_DAN_2_REWARD_DESC,Nouveau bonus : bons supplémentaires obtenus lors des
 Shop/SHOP_DININGDECORATION_TOP_WALL_DECORATION_DESC,"Décoration pour la salle. [COLOR=ALERT]Augmente de [X] les bons remportés lors des duels culinaires.[/COLOR]<br>« C'est ce que regardaient les ancêtres avant les smartphones. »",reviewed,Audit terminologie.
 BUTTON_TAPANYWHERETOCLOSE,Continuer...,reviewed,Audit terminologie.
 SAVESLOT_SELECT_CONFIRMATION,Choisir la sauvegarde [X] ?,reviewed,Audit terminologie.
+SAVESLOT_DELETE_CONFIRMATION,Supprimer la sauvegarde de l'emplacement [X] ?,reviewed,Arbitrage utilisateur : formulation raccourcie ; dépasse max source de 10 caractères à vérifier en jeu.
+SAVESLOT_OVERWRITE_CONFIRMATION,Écraser la sauvegarde sur l'emplacement [X] ?,reviewed,Arbitrage utilisateur : formulation raccourcie ; dépasse max source de 4 caractères à vérifier en jeu.
+SAVESLOT_NEW_CONFIRMATION,Créer une sauvegarde sur l'emplacement [X] ?,reviewed,Arbitrage utilisateur : formulation raccourcie ; dépasse max source de 1 caractère à vérifier en jeu.
 SAVEDATA_PANEL_TITLE,Sauvegarde,reviewed,Audit terminologie.
 FEEDBACK_DESC,Envoyer un avis,reviewed,Correction validée.
 BUTTON_CITY,Centre-ville,reviewed,Correction validée.

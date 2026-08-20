@@ -8,7 +8,6 @@
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS tested](https://img.shields.io/badge/macOS-tested-2ea44f)
 ![Windows tested](https://img.shields.io/badge/Windows-tested-2ea44f)
-![Demo and full game](https://img.shields.io/badge/editions-demo%20%7C%20full-6f42c1)
 
 ![KuloNiku: Bowl Up! home screen translated into French](docs/assets/kuloniku-fr-home.jpg)
 
@@ -71,7 +70,8 @@ downloaded or distributed.
 
 Each line is compared with the languages shipped with the game, then adapted to
 its context and the available screen space. Particular care is given to
-Indonesian dishes, character voices, and text that still needs in-game review.
+Indonesian dishes and character voices. All translations have been reviewed;
+some length overages still need visual in-game checks.
 
 <p>
   <img src="docs/assets/kuloniku-fr-settings.jpg" width="49%" alt="French selected in the language settings">
@@ -104,8 +104,7 @@ its available screen space, and, whenever possible, its scene context.
 
 Indonesian was especially valuable for respecting the studio’s roots, its food,
 and the intent of certain dialogues. The French wording aims to feel natural and
-fit the interface, while passages that still require in-game confirmation remain
-clearly marked as provisional.
+fit the interface.
 
 ## Documentation
 

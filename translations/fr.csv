@@ -467,9 +467,9 @@ LOGO_KULONIKU,Logo KuloNiku,reviewed,
 SAVESLOT_NOSAVE_TITLE,Vide,reviewed,
 SAVESLOT_SELECT_CONFIRMATION,Choisir la sauvegarde [X] ?,reviewed,Audit terminologie.
 SAVESLOT_DELETE_ACTION,Supprimer,reviewed,Dépasse max source ; à vérifier.
-SAVESLOT_DELETE_CONFIRMATION,Supprimer les données de sauvegarde sur l'emplacement [X] ?,reviewed,Dépasse max source ; à vérifier.
-SAVESLOT_OVERWRITE_CONFIRMATION,Écraser les données de sauvegarde sur l'emplacement [X] ?,reviewed,Dépasse max source ; à vérifier.
-SAVESLOT_NEW_CONFIRMATION,Créer de nouvelles données sur l'emplacement [X] ?,reviewed,Dépasse max source ; à vérifier.
+SAVESLOT_DELETE_CONFIRMATION,Supprimer la sauvegarde de l'emplacement [X] ?,reviewed,Arbitrage utilisateur : formulation raccourcie ; dépasse max source de 10 caractères à vérifier en jeu.
+SAVESLOT_OVERWRITE_CONFIRMATION,Écraser la sauvegarde sur l'emplacement [X] ?,reviewed,Arbitrage utilisateur : formulation raccourcie ; dépasse max source de 4 caractères à vérifier en jeu.
+SAVESLOT_NEW_CONFIRMATION,Créer une sauvegarde sur l'emplacement [X] ?,reviewed,Arbitrage utilisateur : formulation raccourcie ; dépasse max source de 1 caractère à vérifier en jeu.
 SAVEDATA_PANEL_TITLE,Sauvegarde,reviewed,Audit terminologie.
 HEATLEVEL_COLD,Froid,reviewed,
 HEATLEVEL_NORMAL,Normale,reviewed,Dépasse max source ; à vérifier.
