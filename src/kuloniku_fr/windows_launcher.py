@@ -27,6 +27,11 @@ TRANSLATION_PACKAGE_FILES = {
     "demo-overrides.csv",
     "known-sources.json",
 }
+REVIEW_CONTEXT_FILES = {
+    "review-overrides.csv",
+    "TERMINOLOGY.md",
+    "AGENT_BRIEF.md",
+}
 
 
 def engine_environment() -> dict[str, str]:
@@ -135,7 +140,7 @@ def extract_translation_package(archive: Path, destination: Path, expected_sha25
             names = {item.filename for item in bundle.infolist() if not item.is_dir()}
             if not TRANSLATION_PACKAGE_FILES.issubset(names):
                 raise ValueError("Le paquet de traduction est incomplet.")
-            for name in TRANSLATION_PACKAGE_FILES | {"NOTICE.md"}:
+            for name in TRANSLATION_PACKAGE_FILES | REVIEW_CONTEXT_FILES | {"NOTICE.md"}:
                 if name not in names:
                     continue
                 target = temporary / name
@@ -148,6 +153,69 @@ def extract_translation_package(archive: Path, destination: Path, expected_sha25
         shutil.rmtree(temporary, ignore_errors=True)
         raise
     return destination / "fr.csv"
+
+
+def review_context_directory(active_translations: Path, bundled_translations: Path) -> Path:
+    """Prefer updated review references, with bundled files as a safe fallback."""
+    active_directory = active_translations.parent
+    if all((active_directory / name).is_file() for name in REVIEW_CONTEXT_FILES):
+        return active_directory
+    return bundled_translations.parent
+
+
+def default_review_workspace_output() -> Path:
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    base = Path(local_app_data) if local_app_data else Path.home() / "AppData" / "Local"
+    return base / "KuloNiku FR" / "review-workspace" / "index.html"
+
+
+def default_review_test_output() -> Path:
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    base = Path(local_app_data) if local_app_data else Path.home() / "AppData" / "Local"
+    return base / "KuloNiku FR" / "review-test" / "fr.csv"
+
+
+def review_workspace_arguments(
+    engine: Path,
+    game: Path,
+    translations: Path,
+    context_directory: Path,
+    output: Path,
+) -> list[str]:
+    return [
+        str(engine),
+        "review-workspace",
+        str(game),
+        "--translations",
+        str(translations),
+        "--review-notes",
+        str(context_directory / "review-overrides.csv"),
+        "--terminology",
+        str(context_directory / "TERMINOLOGY.md"),
+        "--brief",
+        str(context_directory / "AGENT_BRIEF.md"),
+        "--output",
+        str(output),
+    ]
+
+
+def prepare_review_test_arguments(
+    engine: Path,
+    game: Path,
+    proposals: Path,
+    translations: Path,
+    output: Path,
+) -> list[str]:
+    return [
+        str(engine),
+        "prepare-review-test",
+        str(game),
+        str(proposals),
+        "--translations",
+        str(translations),
+        "--output",
+        str(output),
+    ]
 
 
 def latest_release_from_payload(
@@ -280,6 +348,7 @@ class LauncherPaths:
         self.resources = base / "resources"
         self.engine = self.resources / "KuloNiku-FR.exe"
         self.translations = self.resources / "translations" / "fr.csv"
+        self.review_context = self.resources / "translations"
         self.icon = self.resources / "KuloNikuFR.ico"
 
     def validate(self) -> list[str]:
@@ -288,6 +357,10 @@ class LauncherPaths:
             missing.append(str(self.engine))
         if not self.translations.is_file():
             missing.append(str(self.translations))
+        for name in sorted(REVIEW_CONTEXT_FILES):
+            path = self.review_context / name
+            if not path.is_file():
+                missing.append(str(path))
         return missing
 
 
@@ -398,11 +471,36 @@ class WindowsLauncher:
         )
         self.analyze_button.pack(side="right")
 
-        self.details_button = ttk.Button(
-            outer, text="Afficher les détails techniques ▸", command=self.toggle_details
+        self.advanced_visible = False
+        self.log_visible = False
+        self.advanced_button = ttk.Button(
+            outer,
+            text="Options avancées ▸",
+            command=self.toggle_advanced,
         )
-        self.details_button.pack(anchor="w", pady=(8, 0))
-        self.details_frame = ttk.Frame(outer)
+        self.advanced_button.pack(anchor="w", pady=(8, 0))
+        self.advanced_frame = ttk.Frame(outer)
+        utility_row = ttk.Frame(self.advanced_frame)
+        utility_row.pack(fill="x")
+        self.details_button = ttk.Button(
+            utility_row, text="Journal de logs ▸", command=self.toggle_details
+        )
+        self.details_button.pack(side="left")
+        self.review_button = ttk.Button(
+            utility_row,
+            text="Réviser et corriger les traductions",
+            command=self.open_review_workspace,
+            state="disabled",
+        )
+        self.review_button.pack(side="left", padx=(8, 0))
+        self.test_review_button = ttk.Button(
+            utility_row,
+            text="Importer mon fichier de correction",
+            command=self.test_review_corrections,
+            state="disabled",
+        )
+        self.test_review_button.pack(side="left", padx=(8, 0))
+        self.details_frame = ttk.Frame(self.advanced_frame)
         self.log = tk.Text(
             self.details_frame,
             height=10,
@@ -413,11 +511,11 @@ class WindowsLauncher:
         )
         self.log.pack(fill="both", expand=True, pady=(6, 0))
 
-        footer = ttk.Frame(outer)
-        footer.pack(side="bottom", fill="x", pady=(12, 0))
-        ttk.Label(footer, text=f"Version {__version__}", foreground="#707070").pack(side="left")
-        ttk.Button(footer, text="Projet GitHub", command=lambda: webbrowser.open(REPOSITORY_URL)).pack(side="right")
-        ttk.Button(footer, text="À propos", command=self.show_about).pack(side="right", padx=(0, 8))
+        self.footer = ttk.Frame(outer)
+        self.footer.pack(side="bottom", fill="x", pady=(12, 0))
+        ttk.Label(self.footer, text=f"Version {__version__}", foreground="#707070").pack(side="left")
+        ttk.Button(self.footer, text="Projet GitHub", command=lambda: webbrowser.open(REPOSITORY_URL)).pack(side="right")
+        ttk.Button(self.footer, text="À propos", command=self.show_about).pack(side="right", padx=(0, 8))
 
         self.root.after(80, self.select_default_installation)
         self.root.after(120, self.check_latest_release)
@@ -560,7 +658,7 @@ class WindowsLauncher:
         )
         if not self.update_frame.winfo_manager():
             self.update_frame.pack(fill="x", pady=(12, 0), before=self.game_row)
-            self.root.geometry("760x540")
+            self.refresh_window_geometry()
         if required:
             self.installer_update_required = True
             self.install_button.pack_forget()
@@ -701,7 +799,7 @@ class WindowsLauncher:
         self.update_message.configure(text="Le téléchargement automatique est indisponible.")
         if not self.update_frame.winfo_manager():
             self.update_frame.pack(fill="x", pady=(12, 0), before=self.game_row)
-            self.root.geometry("760x540")
+            self.refresh_window_geometry()
         self.append_log(f"\nTéléchargement automatique indisponible : {message}.")
 
     def set_busy(self, busy: bool) -> None:
@@ -709,22 +807,43 @@ class WindowsLauncher:
         state = "disabled" if busy else "normal"
         self.choose_button.configure(state=state)
         self.analyze_button.configure(state=state if self.game else "disabled")
+        self.review_button.configure(state=state if self.game else "disabled")
+        self.test_review_button.configure(state=state if self.game else "disabled")
         if busy:
             self.install_button.configure(state="disabled")
             self.restore_button.configure(state="disabled")
         else:
             self.restore_button.configure(state="normal" if self.restore_available else "disabled")
 
-    def toggle_details(self) -> None:
-        if self.details_frame.winfo_manager():
-            self.details_frame.pack_forget()
-            self.details_button.configure(text="Afficher les détails techniques ▸")
-            self.root.geometry("760x540" if self.update_frame.winfo_manager() else "760x480")
+    def refresh_window_geometry(self) -> None:
+        height = 480
+        if self.update_frame.winfo_manager():
+            height += 60
+        if self.advanced_visible:
+            height += 55
+        if self.advanced_visible and self.log_visible:
+            height += 200
+        self.root.geometry(f"760x{height}")
+
+    def toggle_advanced(self) -> None:
+        self.advanced_visible = not self.advanced_visible
+        if self.advanced_visible:
+            self.advanced_frame.pack(fill="x", pady=(8, 0), before=self.footer)
+            self.advanced_button.configure(text="Options avancées ▾")
         else:
-            footer = self.details_button.master.winfo_children()[-1]
-            self.details_frame.pack(fill="both", expand=True, before=footer)
-            self.details_button.configure(text="Masquer les détails techniques ▾")
-            self.root.geometry("760x740" if self.update_frame.winfo_manager() else "760x680")
+            self.advanced_frame.pack_forget()
+            self.advanced_button.configure(text="Options avancées ▸")
+        self.refresh_window_geometry()
+
+    def toggle_details(self) -> None:
+        self.log_visible = not self.log_visible
+        if not self.log_visible:
+            self.details_frame.pack_forget()
+            self.details_button.configure(text="Journal de logs ▸")
+        else:
+            self.details_frame.pack(fill="both", expand=True, pady=(8, 0))
+            self.details_button.configure(text="Journal de logs ▾")
+        self.refresh_window_geometry()
 
     def select_default_installation(self) -> None:
         missing = self.paths.validate()
@@ -772,7 +891,154 @@ class WindowsLauncher:
         origin = "Steam" if "steam" in str(game).lower() else "installation locale"
         self.game_label.configure(text=f"{edition} détecté · {origin}")
         self.analyze_button.configure(state="normal")
+        self.review_button.configure(state="normal")
+        self.test_review_button.configure(state="normal")
         self.install_button.configure(state="disabled")
+
+    def open_review_workspace(self) -> None:
+        if not self.game or self.busy:
+            return
+        context_directory = review_context_directory(
+            self.active_translations,
+            self.paths.translations,
+        )
+        output = default_review_workspace_output()
+        arguments = review_workspace_arguments(
+            self.paths.engine,
+            self.game,
+            self.active_translations,
+            context_directory,
+            output,
+        )
+        self.set_status(
+            "Préparation de l’espace de relecture…",
+            "Les textes restent sur cet ordinateur et le jeu n’est pas modifié.",
+            "info",
+        )
+        self.set_log("Création de l’espace de relecture en cours…")
+
+        def workspace_ready(code: int, details: str) -> None:
+            self.set_busy(False)
+            self.set_log(details)
+            if code != 0 or not output.is_file():
+                self.set_status(
+                    "Création impossible",
+                    "Consultez les détails techniques pour identifier le problème.",
+                    "error",
+                )
+                return
+            webbrowser.open(output.resolve().as_uri())
+            self.set_status(
+                "Espace de relecture ouvert",
+                "Vous pouvez explorer les textes et préparer des corrections dans votre navigateur.",
+                "good",
+            )
+
+        self.run_async(arguments, workspace_ready)
+
+    def test_review_corrections(self) -> None:
+        from tkinter import filedialog, messagebox
+
+        if not self.game or self.busy:
+            return
+        selected = filedialog.askopenfilename(
+            title="Choisir les propositions exportées",
+            filetypes=(("Propositions KuloNiku FR", "*.csv"), ("Tous les fichiers", "*.*")),
+        )
+        if not selected:
+            return
+        output = default_review_test_output()
+        preparation = prepare_review_test_arguments(
+            self.paths.engine,
+            self.game,
+            Path(selected),
+            self.active_translations,
+            output,
+        )
+        self.set_status(
+            "Préparation du test…",
+            "Le fichier est contrôlé avant toute modification du jeu.",
+            "info",
+        )
+        self.set_log("Contrôle des corrections en cours…")
+
+        def prepared(code: int, preparation_details: str) -> None:
+            if code != 0 or not output.is_file():
+                self.set_busy(False)
+                self.set_log(preparation_details)
+                self.set_status(
+                    "Corrections non testables",
+                    "Le fichier ne correspond pas aux textes actuels ou contient des marqueurs invalides.",
+                    "error",
+                )
+                return
+            simulation = [
+                str(self.paths.engine),
+                "install",
+                str(self.game),
+                "--translations",
+                str(output),
+            ]
+
+            def simulated(simulation_code: int, simulation_details: str) -> None:
+                details = preparation_details + "\n\n--- Simulation ---\n" + simulation_details
+                self.set_busy(False)
+                self.set_log(details)
+                if simulation_code != 0:
+                    self.set_status(
+                        "Test indisponible",
+                        "La simulation a échoué. Le jeu n’a pas été modifié.",
+                        "error",
+                    )
+                    return
+                if not messagebox.askokcancel(
+                    "Tester les corrections",
+                    "Installer ces corrections dans le jeu ?\n\n"
+                    "La sauvegarde originale vérifiée sera créée ou conservée.",
+                    icon="info",
+                ):
+                    self.set_status(
+                        "Corrections prêtes à tester",
+                        "Aucune modification n’a été effectuée.",
+                        "info",
+                    )
+                    return
+                self.set_status(
+                    "Installation des corrections…",
+                    "Ne fermez pas cette fenêtre.",
+                    "info",
+                )
+
+                def installed(install_code: int, install_details: str) -> None:
+                    self.set_busy(False)
+                    self.set_log(details + "\n\n--- Installation ---\n" + install_details)
+                    if install_code == 0:
+                        self.restore_available = True
+                        self.restore_button.configure(state="normal")
+                        self.simulation_succeeded = False
+                        self.install_button.configure(state="disabled")
+                        self.set_status(
+                            "Corrections installées pour test",
+                            "Lancez le jeu et vérifiez les passages concernés.",
+                            "good",
+                        )
+                        messagebox.showinfo(
+                            "Corrections prêtes à tester",
+                            "Lancez KuloNiku depuis Steam.\n\n"
+                            "Vous pourrez restaurer l’original ou réinstaller la traduction publique ensuite.",
+                        )
+                    else:
+                        self.set_status(
+                            "Installation impossible",
+                            "Le jeu reste protégé. Consultez les détails techniques.",
+                            "error",
+                        )
+
+                self.run_async([*simulation, "--apply"], installed)
+
+            self.run_async(simulation, simulated)
+
+        self.run_async(preparation, prepared)
 
     def command(self, action: str, *, apply: bool = False, json_output: bool = False) -> list[str]:
         assert self.game is not None

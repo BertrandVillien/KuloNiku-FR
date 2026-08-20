@@ -3,7 +3,12 @@ import json
 import pytest
 
 from kuloniku_fr.i2_asset import Language, LanguageSource, Pointer, Term
-from kuloniku_fr.review_workspace import build_review_payload, write_review_workspace
+from kuloniku_fr.review_workspace import (
+    build_review_payload,
+    merge_review_test_proposals,
+    source_fingerprint,
+    write_review_workspace,
+)
 
 
 def make_source(*, patched: bool = False) -> LanguageSource:
@@ -131,6 +136,60 @@ def test_review_payload_rejects_an_already_patched_source():
         )
 
 
+def test_review_test_proposals_match_the_exact_source_and_merge_with_the_base():
+    source = make_source()
+    merged, length_warnings, applied = merge_review_test_proposals(
+        source,
+        {"Dialogue/STELLA_HELLO_1": "Bienvenue !"},
+        [
+            {
+                "key": "Dialogue/STELLA_HELLO_2",
+                "fr": "On cuisine ?",
+                "source_fingerprint": source_fingerprint(source),
+            }
+        ],
+    )
+
+    assert merged["Dialogue/STELLA_HELLO_1"] == "Bienvenue !"
+    assert merged["Dialogue/STELLA_HELLO_2"] == "On cuisine ?"
+    assert length_warnings == []
+    assert applied == 1
+
+
+def test_review_test_proposals_reject_another_game_text_version():
+    with pytest.raises(ValueError, match="autre version"):
+        merge_review_test_proposals(
+            make_source(),
+            {},
+            [
+                {
+                    "key": "Dialogue/STELLA_HELLO_2",
+                    "fr": "On cuisine ?",
+                    "source_fingerprint": "ancienne-version",
+                }
+            ],
+        )
+
+
+def test_review_test_proposals_reject_changed_square_bracket_variables():
+    source = make_source()
+    source.terms.append(
+        Term("Dialogue/NAME", 0, ["Hello [NAME]", "Halo [NAME]", "Hallo [NAME]"], b"", [])
+    )
+    with pytest.raises(ValueError, match="marqueurs différents"):
+        merge_review_test_proposals(
+            source,
+            {},
+            [
+                {
+                    "key": "Dialogue/NAME",
+                    "fr": "Bonjour",
+                    "source_fingerprint": source_fingerprint(source),
+                }
+            ],
+        )
+
+
 def test_workspace_is_self_contained_and_escapes_script_end(tmp_path):
     payload = build_review_payload(
         make_source(),
@@ -153,6 +212,8 @@ def test_workspace_is_self_contained_and_escapes_script_end(tmp_path):
     assert "100 % hors ligne" in html
     assert "sélectionnez seulement ceux" in html
     assert "Exporter ma sélection" in html
+    assert "Importer mon fichier de correction" in html
+    assert "source_fingerprint" in html
     assert "Traductions manquantes" in html
     assert "Projet GitHub" in html
     assert "function renderList" in html

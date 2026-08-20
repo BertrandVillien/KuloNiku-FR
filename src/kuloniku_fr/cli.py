@@ -38,6 +38,7 @@ from .installation import (
 from .review_workspace import (
     build_review_payload,
     ensure_unpatched_source,
+    merge_review_test_proposals,
     read_translation_rows,
     write_review_workspace,
 )
@@ -130,20 +131,8 @@ def command_context(args) -> int:
 
 
 def command_review_workspace(args) -> int:
-    game_asset = detect_asset(Path(args.game))
-    source_path = game_asset.path
-    edition = game_asset.edition
-    _, _, source = load_source(source_path)
-    try:
-        ensure_unpatched_source(source)
-    except ValueError as patched_error:
-        try:
-            source_path, manifest = latest_backup_for(game_asset.path)
-        except FileNotFoundError:
-            raise patched_error
-        _, _, source = load_source(source_path)
-        ensure_unpatched_source(source)
-        edition = manifest.get("edition", edition)
+    source_path, edition, source, used_backup = review_source(Path(args.game))
+    if used_backup:
         print("KuloNiku FR est installé : utilisation de la sauvegarde originale vérifiée.")
     translations_path = Path(args.translations).resolve()
     review_notes_path = Path(args.review_notes).resolve()
@@ -169,6 +158,96 @@ def command_review_workspace(args) -> int:
     print("Ce fichier contient les textes du jeu : gardez-le dans work/ et ne le publiez pas.")
     if args.open:
         webbrowser.open(destination.as_uri())
+    return 0
+
+
+def review_source(game: Path) -> tuple[Path, str, LanguageSource, bool]:
+    game_asset = detect_asset(game)
+    source_path = game_asset.path
+    edition = game_asset.edition
+    _, _, source = load_source(source_path)
+    used_backup = False
+    try:
+        ensure_unpatched_source(source)
+    except ValueError as patched_error:
+        try:
+            source_path, manifest = latest_backup_for(game_asset.path)
+        except FileNotFoundError:
+            raise patched_error
+        _, _, source = load_source(source_path)
+        ensure_unpatched_source(source)
+        edition = manifest.get("edition", edition)
+        used_backup = True
+    return source_path, edition, source, used_backup
+
+
+def command_prepare_review_test(args) -> int:
+    source_path, edition, source, used_backup = review_source(Path(args.game))
+    if used_backup:
+        print("KuloNiku FR est installé : préparation depuis la sauvegarde originale vérifiée.")
+    translations_path = Path(args.translations).resolve()
+    proposals_path = Path(args.proposals).resolve()
+    output_path = Path(args.output).resolve()
+    with proposals_path.open(newline="", encoding="utf-8-sig") as stream:
+        reader = csv.DictReader(stream)
+        required = {"key", "fr", "source_fingerprint"}
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            raise ValueError(
+                "Ce fichier n’est pas un export de test récent. "
+                "Réexportez les propositions depuis l’espace de relecture."
+            )
+        proposals = list(reader)
+    base_translations, _, _ = load_resolved_french(
+        source,
+        translations_path,
+        edition=edition,
+    )
+    merged, length_warnings, applied = merge_review_test_proposals(
+        source,
+        base_translations,
+        proposals,
+    )
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    by_key = {term.key: term for term in source.terms}
+    with output_path.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(
+            stream,
+            fieldnames=["key", "fr", "status", "notes"],
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        for term in source.terms:
+            french = merged.get(term.key)
+            if french:
+                writer.writerow(
+                    {"key": term.key, "fr": french, "status": "test", "notes": "Test local"}
+                )
+    hashes_path = output_path.with_name("source-hashes.csv")
+    with hashes_path.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(
+            stream,
+            fieldnames=["key", "source_hash"],
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        for key in merged:
+            term = by_key.get(key)
+            if term is None:
+                continue
+            writer.writerow(
+                {
+                    "key": key,
+                    "source_hash": reference_hash(
+                        term.translations[0] if term.translations else "",
+                        term.translations[1] if len(term.translations) > 1 else "",
+                    ),
+                }
+            )
+    print(f"Fichier de test préparé : {output_path}")
+    print(f"Corrections à tester : {applied}")
+    if length_warnings:
+        print(f"Dépassements de longueur à contrôler en jeu : {len(length_warnings)}")
+    print(f"Source vérifiée : {source_path}")
     return 0
 
 
@@ -994,6 +1073,20 @@ def build_parser() -> argparse.ArgumentParser:
         "--open", action="store_true", help="ouvrir l’espace dans le navigateur"
     )
     review_parser.set_defaults(handler=command_review_workspace)
+
+    review_test_parser = subparsers.add_parser(
+        "prepare-review-test",
+        help="préparer un fichier local pour tester des corrections en jeu",
+    )
+    review_test_parser.add_argument(
+        "game", help="application, dossier du jeu ou resources.assets original"
+    )
+    review_test_parser.add_argument("proposals", help="CSV exporté par l’espace de relecture")
+    review_test_parser.add_argument("--translations", default="translations/fr.csv")
+    review_test_parser.add_argument(
+        "--output", default="work/review-test/fr.csv"
+    )
+    review_test_parser.set_defaults(handler=command_prepare_review_test)
 
     build_parser = subparsers.add_parser("build", help="construire un resources.assets français")
     build_parser.add_argument("assets")

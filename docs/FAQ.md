@@ -67,6 +67,15 @@ une capture. Le code et la fabrication des paquets sont publics.
 
 ## Comment proposer une meilleure formulation ?
 
+Pour comparer le français aux autres langues et voir les clés voisines, ouvrez
+l’application, sélectionnez le jeu, ouvrez **Options avancées** puis cliquez sur **Réviser
+et corriger les traductions**. Suivez ensuite le
+[tutoriel de l’espace de relecture](REVIEW_WORKSPACE.md).
+
+Vous pouvez aussi exporter vos propositions puis utiliser **Importer mon fichier
+de correction** dans **Options avancées**. Elles seront vérifiées, simulées et installées
+temporairement pour un contrôle direct en jeu.
+
 Utilisez le formulaire GitHub
 [« Proposer une correction française »](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml).
 Aucune

@@ -91,6 +91,12 @@ Pas besoin de savoir programmer. L’**espace de relecture local** affiche les
 huit langues du jeu, les clés voisines et le français actuel. Il repère aussi
 automatiquement les traductions manquantes après une mise à jour du jeu.
 
+Dans l’application Windows ou macOS, sélectionnez le jeu, ouvrez **Options avancées** puis
+choisissez **Réviser et corriger les traductions**. L’espace s’ouvre dans votre
+navigateur, sans modifier le jeu et sans envoyer ses textes sur Internet.
+Les propositions exportées peuvent ensuite être installées temporairement avec
+**Importer mon fichier de correction** afin de les contrôler directement en jeu.
+
 [Découvrir l’espace de relecture et suivre le tutoriel](docs/REVIEW_WORKSPACE.md)
 
 <a href="docs/REVIEW_WORKSPACE.md">

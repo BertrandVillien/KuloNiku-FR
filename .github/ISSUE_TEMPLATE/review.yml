@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Vous n’avez pas encore préparé votre relecture ? L’[espace de relecture local](https://github.com/BertrandVillien/KuloNiku-FR/blob/main/docs/REVIEW_WORKSPACE.md) compare les huit langues du jeu, retrouve les traductions manquantes et prépare les fichiers à transmettre.
+        Vous n’avez pas encore préparé votre relecture ? Ouvrez l’application Windows ou macOS, sélectionnez le jeu, ouvrez **Options avancées**, puis cliquez sur **Réviser et corriger les traductions**. L’espace local compare les huit langues du jeu, retrouve les traductions manquantes et prépare les fichiers à transmettre.
 
-        Consultez d’abord le [tutoriel complet](https://github.com/BertrandVillien/KuloNiku-FR/blob/main/docs/REVIEW_WORKSPACE.md), puis exportez vos propositions et joignez-les ci-dessous.
+        Consultez le [tutoriel complet](https://github.com/BertrandVillien/KuloNiku-FR/blob/main/docs/REVIEW_WORKSPACE.md), qui indique aussi la méthode manuelle en ligne de commande, puis exportez vos propositions et joignez-les ci-dessous.
 
         Ne joignez jamais l’espace HTML généré ni un fichier du jeu.
   - type: textarea

@@ -38,7 +38,8 @@ case "$(uname -m)" in
 esac
 cp "$patcher" "$resources/$patcher_name"
 cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv translations/known-sources.json "$resources/translations/"
-cp translations/NOTICE.md "$resources/translations/"
+cp translations/review-overrides.csv translations/AGENT_BRIEF.md translations/NOTICE.md "$resources/translations/"
+cp docs/TERMINOLOGY.md "$resources/translations/TERMINOLOGY.md"
 cp README.md LICENSE SECURITY.md THIRD_PARTY_NOTICES.md "$resources/"
 
 chmod +x "$macos/KuloNiku FR" "$resources/$patcher_name"

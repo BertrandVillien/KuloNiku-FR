@@ -50,7 +50,8 @@ jobs:
             cp "dist/Installer KuloNiku FR.exe" package/
             cp "packaging/icons/KuloNikuFR.ico" package/resources/
             cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv translations/known-sources.json package/resources/translations/
-            cp translations/NOTICE.md package/resources/translations/
+            cp translations/review-overrides.csv translations/AGENT_BRIEF.md translations/NOTICE.md package/resources/translations/
+            cp docs/TERMINOLOGY.md package/resources/translations/TERMINOLOGY.md
             cp README.md package/
             cp LICENSE SECURITY.md THIRD_PARTY_NOTICES.md package/resources/
             "package/Installer KuloNiku FR.exe" --self-test

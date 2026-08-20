@@ -41,6 +41,11 @@ def test_translation_release_is_standalone_and_declares_its_required_engine(
         '{"schema_version": 1, "editions": {}}\n', encoding="utf-8"
     )
     (translations / "NOTICE.md").write_text("Notice\n", encoding="utf-8")
+    (translations / "review-overrides.csv").write_text("key,fr\n", encoding="utf-8")
+    (translations / "AGENT_BRIEF.md").write_text("# Contexte\n", encoding="utf-8")
+    docs = tmp_path / "docs"
+    docs.mkdir()
+    (docs / "TERMINOLOGY.md").write_text("# Glossaire\n", encoding="utf-8")
 
     script = Path(__file__).parents[1] / "packaging" / "create_update_manifest.py"
     spec = importlib.util.spec_from_file_location("create_update_manifest", script)
@@ -70,5 +75,8 @@ def test_translation_release_is_standalone_and_declares_its_required_engine(
             "source-hashes.csv",
             "demo-overrides.csv",
             "known-sources.json",
+            "review-overrides.csv",
+            "AGENT_BRIEF.md",
+            "TERMINOLOGY.md",
             "NOTICE.md",
         }

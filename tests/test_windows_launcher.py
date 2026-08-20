@@ -7,12 +7,16 @@ from kuloniku_fr.windows_launcher import (
     available_update_kind,
     available_updates,
     decode_engine_output,
+    default_review_workspace_output,
     engine_environment,
     extract_translation_package,
     installed_game_candidates,
     is_prerelease_version,
     latest_release_from_payload,
     parse_steam_library_paths,
+    prepare_review_test_arguments,
+    review_context_directory,
+    review_workspace_arguments,
     version_tuple,
 )
 
@@ -101,6 +105,9 @@ def test_translation_package_is_verified_and_extracted_safely(tmp_path: Path):
         "source-hashes.csv": b"key,source_hash\nHELLO,hash\n",
         "demo-overrides.csv": b"key,source_hash,fr\n",
         "known-sources.json": b"{}\n",
+        "review-overrides.csv": b"key,fr\n",
+        "TERMINOLOGY.md": b"# Glossaire\n",
+        "AGENT_BRIEF.md": b"# Contexte\n",
         "NOTICE.md": b"Notice\n",
     }
     with ZipFile(archive, "w") as bundle:
@@ -170,12 +177,68 @@ def test_installed_game_candidates_prefers_full_game_and_uses_manifest(tmp_path:
     assert installed_game_candidates([tmp_path]) == [full.resolve(), demo.resolve()]
 
 
-def test_launcher_paths_requires_engine_and_translations(tmp_path: Path):
+def test_launcher_paths_requires_engine_translations_and_review_context(tmp_path: Path):
     paths = LauncherPaths(tmp_path)
-    assert len(paths.validate()) == 2
+    assert len(paths.validate()) == 5
 
     paths.resources.mkdir()
     paths.engine.write_bytes(b"exe")
     paths.translations.parent.mkdir()
     paths.translations.write_text("key,fr\n", encoding="utf-8")
+    for name in ("review-overrides.csv", "TERMINOLOGY.md", "AGENT_BRIEF.md"):
+        (paths.review_context / name).write_text("test\n", encoding="utf-8")
     assert paths.validate() == []
+
+
+def test_review_workspace_uses_updated_context_or_bundled_fallback(tmp_path: Path):
+    bundled = tmp_path / "bundled" / "fr.csv"
+    active = tmp_path / "active" / "fr.csv"
+    bundled.parent.mkdir()
+    active.parent.mkdir()
+
+    assert review_context_directory(active, bundled) == bundled.parent
+
+    for name in ("review-overrides.csv", "TERMINOLOGY.md", "AGENT_BRIEF.md"):
+        (active.parent / name).write_text("test\n", encoding="utf-8")
+    assert review_context_directory(active, bundled) == active.parent
+
+
+def test_review_workspace_arguments_are_explicit_and_output_is_local(
+    monkeypatch, tmp_path: Path
+):
+    local_app_data = tmp_path / "Local"
+    monkeypatch.setenv("LOCALAPPDATA", str(local_app_data))
+    output = default_review_workspace_output()
+    context = tmp_path / "context"
+
+    arguments = review_workspace_arguments(
+        Path("engine.exe"),
+        Path("game"),
+        Path("fr.csv"),
+        context,
+        output,
+    )
+
+    assert output == local_app_data / "KuloNiku FR" / "review-workspace" / "index.html"
+    assert arguments[1] == "review-workspace"
+    assert arguments[-2:] == ["--output", str(output)]
+    assert str(context / "review-overrides.csv") in arguments
+
+
+def test_review_test_arguments_prepare_a_local_file(monkeypatch, tmp_path: Path):
+    local_app_data = tmp_path / "Local"
+    monkeypatch.setenv("LOCALAPPDATA", str(local_app_data))
+    from kuloniku_fr.windows_launcher import default_review_test_output
+
+    output = default_review_test_output()
+    arguments = prepare_review_test_arguments(
+        Path("engine.exe"),
+        Path("game"),
+        Path("propositions.csv"),
+        Path("fr.csv"),
+        output,
+    )
+
+    assert arguments[1] == "prepare-review-test"
+    assert arguments[-2:] == ["--output", str(output)]
+    assert output == local_app_data / "KuloNiku FR" / "review-test" / "fr.csv"

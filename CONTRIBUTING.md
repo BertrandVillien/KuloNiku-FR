@@ -40,6 +40,15 @@ langues, les clés voisines et le contexte depuis votre propre installation du
 jeu. Explorez librement les textes et exportez uniquement les passages sur
 lesquels vous souhaitez intervenir.
 
+La méthode la plus simple consiste à ouvrir l’application Windows ou macOS,
+sélectionner le jeu, ouvrir **Options avancées**, puis cliquer sur **Réviser et corriger
+les traductions**. La commande manuelle reste disponible pour les personnes qui
+travaillent depuis les sources.
+
+Pour vérifier une formulation en situation, exportez les propositions depuis
+l’espace puis utilisez **Importer mon fichier de correction** dans **Options avancées**.
+Le fichier est contrôlé et l’installation reste précédée d’une simulation.
+
 L’outil repère automatiquement les clés sans traduction française, propose une
 vue en liste et prépare le résumé à joindre à une issue GitHub.
 

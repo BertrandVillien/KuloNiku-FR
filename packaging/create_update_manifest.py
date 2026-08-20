@@ -16,12 +16,24 @@ def main() -> None:
     source_hashes = Path("translations/source-hashes.csv")
     overrides = Path("translations/demo-overrides.csv")
     known_sources = Path("translations/known-sources.json")
+    review_notes = Path("translations/review-overrides.csv")
+    agent_brief = Path("translations/AGENT_BRIEF.md")
+    terminology = Path("docs/TERMINOLOGY.md")
     notice = Path("translations/NOTICE.md")
     package_dir = Path("package")
     package_dir.mkdir(parents=True, exist_ok=True)
     archive = package_dir / "translations.zip"
     with ZipFile(archive, "w", compression=ZIP_DEFLATED, compresslevel=9) as bundle:
-        for path in (translations, source_hashes, overrides, known_sources, notice):
+        for path in (
+            translations,
+            source_hashes,
+            overrides,
+            known_sources,
+            review_notes,
+            agent_brief,
+            terminology,
+            notice,
+        ):
             info = ZipInfo(path.name, date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = ZIP_DEFLATED
             info.external_attr = 0o644 << 16

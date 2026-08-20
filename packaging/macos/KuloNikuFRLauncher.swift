@@ -1,5 +1,6 @@
 import Cocoa
 import CryptoKit
+import UniformTypeIdentifiers
 
 private final class StatusActionButton: NSButton {
     override func resetCursorRects() {
@@ -125,6 +126,20 @@ private func runLauncherSelfTest() -> Int32 {
         fputs("Moteur intégré introuvable : \(patcher.path)\n", stderr)
         return 1
     }
+    let translationResources = resources.appendingPathComponent("translations", isDirectory: true)
+    let requiredResources = [
+        "fr.csv",
+        "review-overrides.csv",
+        "TERMINOLOGY.md",
+        "AGENT_BRIEF.md",
+    ]
+    for name in requiredResources {
+        let path = translationResources.appendingPathComponent(name)
+        guard FileManager.default.isReadableFile(atPath: path.path) else {
+            fputs("Ressource intégrée introuvable : \(path.path)\n", stderr)
+            return 1
+        }
+    }
 
     let task = Process()
     let pipe = Pipe()
@@ -157,7 +172,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var releaseButton: NSButton!
     private var appUpdateRow: NSStackView!
     private var appUpdateMessage: NSTextField!
+    private var advancedButton: NSButton!
+    private var advancedStack: NSStackView!
     private var detailsButton: NSButton!
+    private var reviewButton: NSButton!
+    private var testReviewButton: NSButton!
     private var logScroll: NSScrollView!
     private var statusIcon: NSImageView!
     private var statusActionButton: StatusActionButton!
@@ -171,6 +190,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var installerUpdateRequired = false
     private var simulationSucceeded = false
     private var restoreAvailable = false
+    private var advancedVisible = false
     private var detailsVisible = false
 
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -336,8 +356,30 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         buttonRow.spacing = 10
         buttonRow.alignment = .centerY
 
-        detailsButton = NSButton(title: "Afficher les détails techniques ▸", target: self, action: #selector(toggleDetails))
+        advancedButton = NSButton(title: "Options avancées ▸", target: self, action: #selector(toggleAdvanced))
+        advancedButton.bezelStyle = .inline
+
+        detailsButton = NSButton(title: "Journal de logs ▸", target: self, action: #selector(toggleDetails))
         detailsButton.bezelStyle = .inline
+
+        reviewButton = NSButton(
+            title: "Réviser et corriger les traductions",
+            target: self,
+            action: #selector(openReviewWorkspace)
+        )
+        reviewButton.bezelStyle = .inline
+        reviewButton.isEnabled = false
+        testReviewButton = NSButton(
+            title: "Importer mon fichier de correction",
+            target: self,
+            action: #selector(testReviewCorrections)
+        )
+        testReviewButton.bezelStyle = .inline
+        testReviewButton.isEnabled = false
+        let advancedActions = NSStackView(views: [detailsButton, reviewButton, testReviewButton])
+        advancedActions.orientation = .horizontal
+        advancedActions.alignment = .centerY
+        advancedActions.spacing = 10
 
         logScroll = NSScrollView()
         logScroll.hasVerticalScroller = true
@@ -351,6 +393,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         logView.font = .monospacedSystemFont(ofSize: 12, weight: .regular)
         logView.string = "Vérification en attente."
         logScroll.documentView = logView
+
+        advancedStack = NSStackView(views: [advancedActions, logScroll])
+        advancedStack.orientation = .vertical
+        advancedStack.alignment = .leading
+        advancedStack.spacing = 10
+        advancedStack.isHidden = true
 
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "inconnue"
         let footer = NSTextField(wrappingLabelWithString:
@@ -378,7 +426,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         flexibleSpace.setContentHuggingPriority(.defaultLow, for: .vertical)
         flexibleSpace.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
 
-        let utilityStack = NSStackView(views: [detailsButton, logScroll, footerRow])
+        let utilityStack = NSStackView(views: [advancedButton, advancedStack, footerRow])
         utilityStack.orientation = .vertical
         utilityStack.alignment = .leading
         utilityStack.spacing = 18
@@ -394,20 +442,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             stack.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: 32),
             stack.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -32),
             stack.topAnchor.constraint(equalTo: content.topAnchor, constant: 30),
-            stack.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -24),
             statusIcon.widthAnchor.constraint(equalToConstant: 48),
             statusIcon.heightAnchor.constraint(equalToConstant: 48),
             progressIndicator.widthAnchor.constraint(equalToConstant: 24),
             primaryStack.widthAnchor.constraint(equalTo: stack.widthAnchor),
             utilityStack.widthAnchor.constraint(equalTo: stack.widthAnchor),
-            flexibleSpace.heightAnchor.constraint(greaterThanOrEqualToConstant: 20),
+            flexibleSpace.heightAnchor.constraint(equalToConstant: 44),
             statusBox.widthAnchor.constraint(equalTo: primaryStack.widthAnchor),
             statusBox.heightAnchor.constraint(equalToConstant: 154),
             appUpdateRow.widthAnchor.constraint(equalTo: primaryStack.widthAnchor),
             gameRow.widthAnchor.constraint(equalTo: primaryStack.widthAnchor),
-            logScroll.widthAnchor.constraint(equalTo: utilityStack.widthAnchor),
+            advancedStack.widthAnchor.constraint(equalTo: utilityStack.widthAnchor),
+            advancedActions.widthAnchor.constraint(equalTo: advancedStack.widthAnchor),
+            logScroll.widthAnchor.constraint(equalTo: advancedStack.widthAnchor),
             logScroll.heightAnchor.constraint(equalToConstant: 210),
-            footerRow.widthAnchor.constraint(equalTo: utilityStack.widthAnchor)
+            footerRow.widthAnchor.constraint(equalTo: utilityStack.widthAnchor),
+            stack.bottomAnchor.constraint(lessThanOrEqualTo: content.bottomAnchor, constant: -24)
         ])
     }
 
@@ -522,13 +572,27 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
+    private func refreshWindowSize() {
+        var height: CGFloat = 440
+        if advancedVisible { height += 55 }
+        if advancedVisible && detailsVisible { height += 230 }
+        window.setContentSize(NSSize(width: 760, height: height))
+    }
+
+    @objc private func toggleAdvanced() {
+        advancedVisible.toggle()
+        advancedStack.isHidden = !advancedVisible
+        advancedButton.title = advancedVisible ? "Options avancées ▾" : "Options avancées ▸"
+        refreshWindowSize()
+    }
+
     @objc private func toggleDetails() {
         detailsVisible.toggle()
         logScroll.isHidden = !detailsVisible
         detailsButton.title = detailsVisible
-            ? "Masquer les détails techniques ▾"
-            : "Afficher les détails techniques ▸"
-        window.setContentSize(NSSize(width: 760, height: detailsVisible ? 670 : 440))
+            ? "Journal de logs ▾"
+            : "Journal de logs ▸"
+        refreshWindowSize()
     }
 
     @objc private func chooseGame() {
@@ -555,10 +619,172 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         gamePathField.toolTip = url.path
         logView.string = "Jeu sélectionné. Vérification en attente."
         analyzeButton.isEnabled = true
+        reviewButton.isEnabled = true
+        testReviewButton.isEnabled = true
         installButton.isEnabled = false
         installButton.isHidden = false
         restoreButton.isEnabled = false
         restoreAvailable = false
+    }
+
+    @objc private func openReviewWorkspace() {
+        guard let game = selectedGameURL else { return }
+        let context = reviewContextDirectory
+        let output = reviewWorkspaceOutputURL
+        setBusy(
+            true,
+            title: "Préparation de l’espace de relecture…",
+            subtitle: "Les textes restent sur ce Mac et le jeu n’est pas modifié.",
+            details: "Création de l’espace de relecture en cours…"
+        )
+        runPatcher(arguments: [
+            "review-workspace",
+            game.path,
+            "--translations", translationsURL.path,
+            "--review-notes", context.appendingPathComponent("review-overrides.csv").path,
+            "--terminology", context.appendingPathComponent("TERMINOLOGY.md").path,
+            "--brief", context.appendingPathComponent("AGENT_BRIEF.md").path,
+            "--output", output.path
+        ]) { [weak self] result in
+            guard let self else { return }
+            self.setBusy(false, details: result.output)
+            guard result.status == 0, FileManager.default.fileExists(atPath: output.path) else {
+                self.setStatus(
+                    symbol: "exclamationmark.triangle.fill",
+                    color: .systemOrange,
+                    title: "Création impossible",
+                    message: "Consultez les détails techniques pour identifier le problème."
+                )
+                return
+            }
+            NSWorkspace.shared.open(output)
+            self.setStatus(
+                symbol: "doc.text.magnifyingglass",
+                color: .systemTeal,
+                title: "Espace de relecture ouvert",
+                message: "Vous pouvez explorer les textes et préparer des corrections dans votre navigateur."
+            )
+        }
+    }
+
+    @objc private func testReviewCorrections() {
+        guard selectedGameURL != nil else { return }
+        let panel = NSOpenPanel()
+        panel.title = "Choisir les propositions exportées"
+        panel.prompt = "Tester"
+        panel.canChooseFiles = true
+        panel.canChooseDirectories = false
+        panel.allowsMultipleSelection = false
+        panel.allowedContentTypes = [.commaSeparatedText]
+        guard panel.runModal() == .OK, let proposals = panel.url else { return }
+        prepareReviewTest(from: proposals)
+    }
+
+    private func prepareReviewTest(from proposals: URL) {
+        guard let game = selectedGameURL else { return }
+        let output = reviewTestOutputURL
+        setBusy(
+            true,
+            title: "Préparation du test…",
+            subtitle: "Le fichier est contrôlé avant toute modification du jeu.",
+            details: "Contrôle des corrections en cours…"
+        )
+        runPatcher(arguments: [
+            "prepare-review-test",
+            game.path,
+            proposals.path,
+            "--translations", translationsURL.path,
+            "--output", output.path
+        ]) { [weak self] preparation in
+            guard let self else { return }
+            guard preparation.status == 0, FileManager.default.fileExists(atPath: output.path) else {
+                self.setBusy(false, details: preparation.output)
+                self.setStatus(
+                    symbol: "exclamationmark.triangle.fill",
+                    color: .systemOrange,
+                    title: "Corrections non testables",
+                    message: "Le fichier ne correspond pas aux textes actuels ou contient des marqueurs invalides."
+                )
+                return
+            }
+            let simulationArguments = [
+                "install", game.path, "--translations", output.path
+            ]
+            self.runPatcher(arguments: simulationArguments) { [weak self] simulation in
+                guard let self else { return }
+                let details = preparation.output + "\n\n--- Simulation ---\n" + simulation.output
+                self.setBusy(false, details: details)
+                guard simulation.status == 0 else {
+                    self.setStatus(
+                        symbol: "exclamationmark.triangle.fill",
+                        color: .systemOrange,
+                        title: "Test indisponible",
+                        message: "La simulation a échoué. Le jeu n’a pas été modifié."
+                    )
+                    return
+                }
+                let alert = NSAlert()
+                alert.messageText = "Installer ces corrections dans le jeu ?"
+                alert.informativeText = "La sauvegarde originale vérifiée sera créée ou conservée."
+                alert.alertStyle = .informational
+                alert.addButton(withTitle: "Installer pour tester")
+                alert.addButton(withTitle: "Annuler")
+                guard alert.runModal() == .alertFirstButtonReturn else {
+                    self.setStatus(
+                        symbol: "doc.text.magnifyingglass",
+                        color: .systemTeal,
+                        title: "Corrections prêtes à tester",
+                        message: "Aucune modification n’a été effectuée."
+                    )
+                    return
+                }
+                self.installReviewTest(
+                    arguments: simulationArguments + ["--apply"],
+                    previousDetails: details
+                )
+            }
+        }
+    }
+
+    private func installReviewTest(arguments: [String], previousDetails: String) {
+        setBusy(
+            true,
+            title: "Installation des corrections…",
+            subtitle: "Ne fermez pas cette fenêtre.",
+            details: previousDetails
+        )
+        runPatcher(arguments: arguments) { [weak self] result in
+            guard let self else { return }
+            self.setBusy(
+                false,
+                details: previousDetails + "\n\n--- Installation ---\n" + result.output
+            )
+            if result.status == 0 {
+                self.restoreAvailable = true
+                self.restoreButton.isEnabled = true
+                self.simulationSucceeded = false
+                self.installButton.isEnabled = false
+                self.installButton.isHidden = true
+                self.setStatus(
+                    symbol: "checkmark.circle.fill",
+                    color: .systemGreen,
+                    title: "Corrections installées pour test",
+                    message: "Lancez le jeu et vérifiez les passages concernés."
+                )
+                self.showCompletion(
+                    success: true,
+                    title: "Corrections prêtes à tester",
+                    message: "Lancez KuloNiku depuis Steam. Vous pourrez restaurer l’original ou réinstaller la traduction publique ensuite."
+                )
+            } else {
+                self.setStatus(
+                    symbol: "exclamationmark.triangle.fill",
+                    color: .systemOrange,
+                    title: "Installation impossible",
+                    message: "Le jeu reste protégé. Consultez les détails techniques."
+                )
+            }
+        }
     }
 
     @objc private func analyze() {
@@ -1093,6 +1319,27 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             .appendingPathComponent("KuloNiku FR/translations", isDirectory: true)
     }
 
+    private var reviewWorkspaceOutputURL: URL {
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("KuloNiku FR/review-workspace/index.html")
+    }
+
+    private var reviewTestOutputURL: URL {
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("KuloNiku FR/review-test/fr.csv")
+    }
+
+    private var reviewContextDirectory: URL {
+        let active = translationsURL.deletingLastPathComponent()
+        let required = ["review-overrides.csv", "TERMINOLOGY.md", "AGENT_BRIEF.md"]
+        if required.allSatisfy({
+            FileManager.default.fileExists(atPath: active.appendingPathComponent($0).path)
+        }) {
+            return active
+        }
+        return Bundle.main.resourceURL!.appendingPathComponent("translations", isDirectory: true)
+    }
+
     private func runPatcher(arguments: [String], completion: @escaping ((status: Int32, output: String)) -> Void) {
         let patcher = patcherURL
         guard FileManager.default.isExecutableFile(atPath: patcher.path) else {
@@ -1133,6 +1380,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     ) {
         chooseButton.isEnabled = !busy
         analyzeButton.isEnabled = !busy && selectedGameURL != nil
+        reviewButton.isEnabled = !busy && selectedGameURL != nil
+        testReviewButton.isEnabled = !busy && selectedGameURL != nil
         restoreButton.isEnabled = !busy && restoreAvailable
         installButton.isEnabled = !busy && simulationSucceeded
         releaseButton.isEnabled = !busy

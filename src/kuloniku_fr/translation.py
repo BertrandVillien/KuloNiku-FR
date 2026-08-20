@@ -8,7 +8,7 @@ from .i2_asset import LanguageSource, Term
 
 
 TOKEN_PATTERN = re.compile(
-    r"\{[^{}]+\}|<[^<>]+>|%(?:\d+\$)?[-+#0 '.]*\d*(?:\.\d+)?[a-zA-Z]|\\[nrt]"
+    r"\[[^\[\]]+\]|\{[^{}]+\}|<[^<>]+>|%(?:\d+\$)?[-+#0 '.]*\d*(?:\.\d+)?[a-zA-Z]|\\[nrt]"
 )
 
 

@@ -88,6 +88,12 @@ You do not need to know how to code. The local **review workspace** compares all
 eight game languages, nearby keys, and the current French text. It also detects
 missing translations automatically after a game update.
 
+In the Windows or macOS app, select the game, open **Options avancées**, then choose
+**Réviser et corriger les traductions**. The workspace opens in your browser
+without modifying the game or sending its text online. Exported suggestions can
+then be installed temporarily with **Importer mon fichier de correction** for
+an in-game check.
+
 [Discover the review workspace and follow the French tutorial](docs/REVIEW_WORKSPACE.md)
 
 <a href="docs/REVIEW_WORKSPACE.md">

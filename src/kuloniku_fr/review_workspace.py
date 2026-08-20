@@ -8,7 +8,7 @@ import re
 
 from .batching import macro_group, semantic_group
 from .i2_asset import LanguageSource
-from .translation import source_character_limit
+from .translation import lint_translation, source_character_limit
 
 
 LANGUAGE_LABELS = {
@@ -80,6 +80,49 @@ def source_fingerprint(source: LanguageSource) -> str:
             digest.update(value.encode("utf-8"))
             digest.update(b"\0")
     return digest.hexdigest()
+
+
+def merge_review_test_proposals(
+    source: LanguageSource,
+    base_translations: dict[str, str],
+    proposals: list[dict[str, str]],
+) -> tuple[dict[str, str], list[str], int]:
+    """Merge a review export only when it matches this exact game text set."""
+    ensure_unpatched_source(source)
+    expected_fingerprint = source_fingerprint(source)
+    by_key = {term.key: term for term in source.terms}
+    merged = dict(base_translations)
+    length_warnings: list[str] = []
+    applied = 0
+    seen: set[str] = set()
+    for row in proposals:
+        key = (row.get("key") or "").strip()
+        french = row.get("fr") or ""
+        fingerprint = (row.get("source_fingerprint") or "").strip()
+        if not key or not french:
+            continue
+        if key in seen:
+            raise ValueError(f"Clé présente plusieurs fois dans les propositions : {key}")
+        seen.add(key)
+        if fingerprint != expected_fingerprint:
+            raise ValueError(
+                "Ce fichier de propositions correspond à une autre version des textes. "
+                "Recréez-le depuis l’espace de relecture actuel."
+            )
+        term = by_key.get(key)
+        if term is None:
+            raise ValueError(f"Clé de proposition absente du jeu : {key}")
+        warnings = lint_translation(term, french)
+        token_warning = next((warning for warning in warnings if warning.kind == "tokens"), None)
+        if token_warning:
+            raise ValueError(f"{key} : {token_warning.message}")
+        if any(warning.kind == "length" for warning in warnings):
+            length_warnings.append(key)
+        merged[key] = french
+        applied += 1
+    if applied == 0:
+        raise ValueError("Ce fichier ne contient aucune correction française à tester.")
+    return merged, length_warnings, applied
 
 
 def ensure_unpatched_source(source: LanguageSource) -> None:
@@ -214,7 +257,7 @@ REVIEW_HTML = r'''<!doctype html>
     .top h1{font-size:2rem}.top p{max-width:70ch}.decision button.remove{color:var(--muted)}
     .game-text{white-space:pre-wrap;overflow-wrap:anywhere}.game-text.raw-text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}.game-color{font-weight:700;color:var(--accent2)}.game-color-alert{color:var(--game-alert)}.game-color-liked{color:var(--game-liked)}.game-color-disliked{color:var(--game-disliked)}.game-color-sour{color:var(--game-sour)}.game-color-skewer{color:var(--game-skewer)}.game-color-drink{color:var(--game-drink)}.game-color-spicy{color:var(--game-spicy)}.game-color-salty{color:var(--game-salty)}.game-color-sweet{color:var(--game-sweet)}.game-variable{display:inline-block;margin:0 1px;padding:0 5px;border:1px solid color-mix(in srgb,var(--accent2) 55%,var(--line));border-radius:5px;background:color-mix(in srgb,var(--accent2) 9%,transparent);color:var(--accent2);font:700 .88em/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;vertical-align:.05em}.game-color .game-variable{border-color:currentColor;background:color-mix(in srgb,currentColor 11%,transparent);color:inherit}.game-nowrap{white-space:nowrap}.game-sprite{display:inline-flex;width:1.25em;height:1.25em;align-items:center;justify-content:center;margin:0 3px;border-radius:50%;background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn);font-size:.9em;font-weight:800;line-height:1;vertical-align:-.12em}.hidden-languages{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}.hidden-languages strong{color:var(--muted);font-size:13px}.hidden-language-list{display:flex;gap:6px;flex-wrap:wrap}.hidden-language-list button{border:1px solid var(--line);border-radius:999px;padding:5px 9px;background:transparent;color:var(--muted);font-size:12px}.hidden-language-list button:hover,.hidden-language-list button:focus-visible{border-color:var(--accent2);color:var(--accent2);outline:none}.clear-filters{width:100%;margin:-4px 0 14px;border:0;background:transparent;color:var(--accent2);font-weight:700;text-align:left;padding:4px 0}.clear-filters:hover{text-decoration:underline}.clear-filters:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:3px}
     .markdown{max-width:75ch}.markdown h1,.markdown h2,.markdown h3{font-size:1rem;margin:18px 0 7px}.markdown p{margin:9px 0}.markdown ul{padding-left:22px}.markdown code{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 4px}.markdown a{color:var(--accent2)}.markdown table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}.markdown th,.markdown td{border:1px solid var(--line);padding:7px;text-align:left;vertical-align:top}.markdown th{background:var(--bg)}
-    .top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.project-link,.button-link{display:block;border:1px solid var(--line);border-radius:9px;padding:8px 11px;color:var(--accent2);text-decoration:none;text-align:center;background:var(--panel)}.missing-callout{display:flex;justify-content:space-between;align-items:center;gap:18px;border:1px solid var(--accent2);border-radius:14px;padding:14px 16px;margin-bottom:18px;background:color-mix(in srgb,var(--accent2) 8%,var(--panel))}.missing-callout p{margin:3px 0 0;color:var(--muted)}.missing-callout button{border:1px solid var(--accent2);border-radius:9px;padding:8px 11px;background:var(--accent2);color:var(--panel);white-space:nowrap}.view-switch{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:14px}.view-switch button{border:1px solid var(--line);padding:8px;background:var(--bg);color:var(--text)}.view-switch button:first-child{border-radius:9px 0 0 9px}.view-switch button:last-child{border-radius:0 9px 9px 0}.view-switch button.active{background:var(--accent2);border-color:var(--accent2);color:var(--panel)}.counts .count{background:transparent;color:var(--text);text-align:left;cursor:pointer}.counts .count:hover,.counts .count.active{border-color:var(--accent2);background:color-mix(in srgb,var(--accent2) 8%,transparent)}.counts .count:disabled{cursor:default;opacity:.6}.action-heading{margin:16px 0 7px;padding-top:14px;border-top:1px solid var(--line);font-size:14px}.copy-status{min-height:1.5em;color:var(--accent2);font-size:13px}.table-wrap{overflow:auto}.review-table{width:100%;border-collapse:collapse;font-size:14px}.review-table th,.review-table td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.review-table th{position:sticky;top:0;background:var(--panel);z-index:1}.review-table tr:hover td{background:color-mix(in srgb,var(--accent2) 6%,transparent)}.review-table button{all:unset;cursor:pointer;color:var(--accent2);font:700 13px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}.status{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;white-space:nowrap;color:var(--muted)}.status.missing{border-color:var(--warn);color:var(--warn)}.list-note{margin:0 0 14px;color:var(--muted)}@media(max-width:900px){.top-actions{justify-content:flex-start;margin-top:10px}.missing-callout{align-items:flex-start;flex-direction:column}.review-table{min-width:760px}}
+    .top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.project-link,.button-link{display:block;border:1px solid var(--line);border-radius:9px;padding:8px 11px;color:var(--accent2);text-decoration:none;text-align:center;background:var(--panel)}.missing-callout{display:flex;justify-content:space-between;align-items:center;gap:18px;border:1px solid var(--accent2);border-radius:14px;padding:14px 16px;margin-bottom:18px;background:color-mix(in srgb,var(--accent2) 8%,var(--panel))}.missing-callout p{margin:3px 0 0;color:var(--muted)}.missing-callout button{border:1px solid var(--accent2);border-radius:9px;padding:8px 11px;background:var(--accent2);color:var(--panel);white-space:nowrap}.view-switch{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:14px}.view-switch button{border:1px solid var(--line);padding:8px;background:var(--bg);color:var(--text)}.view-switch button:first-child{border-radius:9px 0 0 9px}.view-switch button:last-child{border-radius:0 9px 9px 0}.view-switch button.active{background:var(--accent2);border-color:var(--accent2);color:var(--panel)}.counts .count{background:transparent;color:var(--text);text-align:left;cursor:pointer}.counts .count:hover,.counts .count.active{border-color:var(--accent2);background:color-mix(in srgb,var(--accent2) 8%,transparent)}.counts .count:disabled{cursor:default;opacity:.6}.action-heading{margin:16px 0 7px;padding-top:14px;border-top:1px solid var(--line);font-size:14px}.action-help{margin:0 2px 5px;color:var(--muted);font-size:12px}.copy-status{min-height:1.5em;color:var(--accent2);font-size:13px}.table-wrap{overflow:auto}.review-table{width:100%;border-collapse:collapse;font-size:14px}.review-table th,.review-table td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.review-table th{position:sticky;top:0;background:var(--panel);z-index:1}.review-table tr:hover td{background:color-mix(in srgb,var(--accent2) 6%,transparent)}.review-table button{all:unset;cursor:pointer;color:var(--accent2);font:700 13px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}.status{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;white-space:nowrap;color:var(--muted)}.status.missing{border-color:var(--warn);color:var(--warn)}.list-note{margin:0 0 14px;color:var(--muted)}@media(max-width:900px){.top-actions{justify-content:flex-start;margin-top:10px}.missing-callout{align-items:flex-start;flex-direction:column}.review-table{min-width:760px}}
   </style>
 </head>
 <body>
@@ -235,6 +278,7 @@ REVIEW_HTML = r'''<!doctype html>
       <div class="actions">
         <button class="primary" id="exportProgress">Exporter ma sélection</button>
         <button id="exportCsv">Exporter les propositions</button>
+        <p class="action-help">Pour les essayer en jeu, exportez-les puis ouvrez « Avancé » et choisissez « Importer mon fichier de correction » dans l’application KuloNiku FR.</p>
         <button id="importButton">Importer une sélection</button>
         <input class="file-input" id="importFile" type="file" accept="application/json,.json">
         <h2 class="action-heading">Partager le travail</h2>
@@ -369,7 +413,7 @@ REVIEW_HTML = r'''<!doctype html>
   async function copyText(value){try{await navigator.clipboard.writeText(value);return true}catch(_){const area=document.createElement('textarea');area.value=value;area.style.position='fixed';area.style.opacity='0';document.body.append(area);area.select();const copied=document.execCommand('copy');area.remove();return copied}}
   function download(name,type,content){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
   $('exportProgress').addEventListener('click',()=>download('kuloniku-fr-selection.json','application/json',JSON.stringify({schema:1,metadata:data.metadata,progress},null,2)+'\n'));
-  $('exportCsv').addEventListener('click',()=>{const lines=['key,fr,status,notes'];for(const row of rows){const d=currentDecision(row.key);if((d.state==='change'||d.state==='ambiguous')&&d.proposal.trim()){const note=`Relecture externe : ${d.notes||d.state}`;lines.push([row.key,d.proposal,'provisional',note].map(escapeCsv).join(','))}}download('kuloniku-fr-propositions.csv','text/csv;charset=utf-8','\ufeff'+lines.join('\n')+'\n')});
+  $('exportCsv').addEventListener('click',()=>{const lines=['key,fr,status,notes,source_fingerprint'];for(const row of rows){const d=currentDecision(row.key);if((d.state==='change'||d.state==='ambiguous')&&d.proposal.trim()){const note=`Relecture externe : ${d.notes||d.state}`;lines.push([row.key,d.proposal,'provisional',note,data.metadata.source_fingerprint].map(escapeCsv).join(','))}}download('kuloniku-fr-propositions.csv','text/csv;charset=utf-8','\ufeff'+lines.join('\n')+'\n')});
   $('importButton').addEventListener('click',()=>$('importFile').click());$('importFile').addEventListener('change',event=>{const file=event.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const incoming=JSON.parse(reader.result);if(incoming.metadata?.source_fingerprint!==data.metadata.source_fingerprint)throw new Error('Cette sélection correspond à une autre version des textes du jeu.');progress=incoming.progress||{};for(const key of Object.keys(progress)){if(progress[key]?.state==='approved')delete progress[key]}save();applyFilters()}catch(error){alert(error.message)}};reader.readAsText(file)});
   $('viewCard').addEventListener('click',()=>{view='card';render()});$('viewList').addEventListener('click',()=>{view='list';listPage=Math.floor(cursor/pageSize);render()});
   $('toggleRaw').addEventListener('click',()=>{uiPrefs.rawMode=!uiPrefs.rawMode;saveUi();render()});
