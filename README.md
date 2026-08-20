@@ -17,7 +17,8 @@ est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 ## État du projet
 
 - **macOS :** préversion disponible et testée sur Apple Silicon et Intel ;
-- **Windows :** interface graphique testée avec le jeu complet ;
+- **Windows :** préversion testée avec succès sur le jeu complet stable et sur
+  la branche bêta actuelle du jeu (20 août 2026) ;
 - **jeu :** version complète `1.1.1` testée sur macOS et Windows, démo `0.10.5`
   testée sur macOS ;
 - **mises à jour :** les nouvelles phrases inconnues restent en anglais.

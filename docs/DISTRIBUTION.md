@@ -61,6 +61,15 @@ Il s’arrête sans écriture si la structure est ambiguë, si aucune clé ne
 correspond ou si une validation échoue. Après une erreur d’installation, la
 sauvegarde est restaurée automatiquement.
 
+## Versions réellement testées
+
+- jeu complet `1.1.1` sur macOS et Windows ;
+- branche bêta du jeu disponible le 20 août 2026 sur Windows ;
+- démo `0.10.5` sur macOS.
+
+La préversion Windows de KuloNiku FR a installé et utilisé correctement la
+traduction avec la branche bêta du jeu lors de ce test.
+
 ## Pourquoi le patch remplace l’allemand
 
 Le test d’ajout d’une neuvième entrée `French (fr)` a montré que le menu du jeu
