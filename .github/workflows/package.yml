@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p "package/translations"
           cp "dist/${{ matrix.executable }}" package/
-          cp translations/fr.csv package/translations/
+          cp translations/fr.csv translations/source-hashes.csv translations/demo-overrides.csv package/translations/
           cp README.md LICENSE package/
           if [[ "${{ matrix.platform }}" == "macOS" ]]; then
             cp "packaging/Installer KuloNiku FR.command" package/

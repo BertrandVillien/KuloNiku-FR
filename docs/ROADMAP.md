@@ -9,6 +9,8 @@
 - détection macOS/Windows et Démo/Complet par la structure installée ;
 - CSV de contexte local, contrôle des marqueurs et budget de caractères ;
 - CI macOS/Windows et fabrication de paquets autonomes sur GitHub Actions.
+- profil de compatibilité de la démo `0.10.5`, sans dupliquer la traduction
+  complète et avec repli anglais si le texte source change.
 
 ## À valider avant la première release publique
 

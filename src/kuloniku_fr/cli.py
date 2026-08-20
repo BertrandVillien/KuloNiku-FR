@@ -129,6 +129,140 @@ def read_french_csv(path: Path) -> dict[str, str]:
     return translations
 
 
+def reference_hash(english: str, indonesian: str) -> str:
+    """Fingerprint the two reference languages without publishing their text."""
+    digest = hashlib.sha256()
+    digest.update(english.encode("utf-8"))
+    digest.update(b"\0")
+    digest.update(indonesian.encode("utf-8"))
+    return digest.hexdigest()
+
+
+def read_source_hashes(path: Path) -> dict[str, str]:
+    hashes = {}
+    with path.open(newline="", encoding="utf-8") as stream:
+        reader = csv.DictReader(stream)
+        if not reader.fieldnames or not {"key", "source_hash"}.issubset(reader.fieldnames):
+            raise ValueError("Le profil source doit contenir les colonnes key et source_hash.")
+        for row in reader:
+            key = (row.get("key") or "").strip()
+            value = (row.get("source_hash") or "").strip()
+            if key and value:
+                hashes[key] = value
+    return hashes
+
+
+def read_compatibility_overrides(path: Path) -> dict[tuple[str, str], str]:
+    overrides = {}
+    with path.open(newline="", encoding="utf-8") as stream:
+        reader = csv.DictReader(stream)
+        required = {"key", "source_hash", "fr"}
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            raise ValueError(
+                "Les exceptions de compatibilité doivent contenir key, source_hash et fr."
+            )
+        for row in reader:
+            key = (row.get("key") or "").strip()
+            source_hash = (row.get("source_hash") or "").strip()
+            value = row.get("fr") or ""
+            if key and source_hash and value:
+                overrides[(key, source_hash)] = value
+    return overrides
+
+
+def resolve_french_for_source(
+    source: LanguageSource,
+    translations: dict[str, str],
+    source_hashes: dict[str, str] | None = None,
+    compatibility_overrides: dict[tuple[str, str], str] | None = None,
+) -> tuple[dict[str, str], int, int]:
+    """Select only translations proven compatible with the installed strings.
+
+    A changed English/Indonesian reference falls back to the installed English
+    instead of silently receiving a translation written for another meaning.
+    """
+    actual_hashes = {
+        term.key: reference_hash(
+            term.translations[0] if term.translations else "",
+            term.translations[1] if len(term.translations) > 1 else "",
+        )
+        for term in source.terms
+    }
+    if source_hashes is None:
+        resolved = dict(translations)
+        rejected = 0
+    else:
+        resolved = {
+            key: value
+            for key, value in translations.items()
+            if source_hashes.get(key) == actual_hashes.get(key)
+        }
+        rejected = len(set(translations) & set(actual_hashes)) - len(resolved)
+
+    applied_overrides = 0
+    for (key, expected_hash), value in (compatibility_overrides or {}).items():
+        if actual_hashes.get(key) == expected_hash:
+            resolved[key] = value
+            applied_overrides += 1
+    return resolved, rejected, applied_overrides
+
+
+def translation_profile_paths(
+    translations_path: Path,
+    *,
+    edition: str,
+    source_hashes: str | None = None,
+    compatibility_overrides: str | None = None,
+) -> tuple[Path | None, Path | None]:
+    hashes_path = (
+        Path(source_hashes).resolve()
+        if source_hashes
+        else translations_path.with_name("source-hashes.csv")
+    )
+    if not hashes_path.exists():
+        if source_hashes:
+            raise FileNotFoundError(f"Profil source absent : {hashes_path}")
+        hashes_path = None
+    overrides_path = None
+    if edition == "demo":
+        overrides_path = (
+            Path(compatibility_overrides).resolve()
+            if compatibility_overrides
+            else translations_path.with_name("demo-overrides.csv")
+        )
+        if not overrides_path.exists():
+            if compatibility_overrides:
+                raise FileNotFoundError(
+                    f"Exceptions de compatibilité absentes : {overrides_path}"
+                )
+            overrides_path = None
+    return hashes_path, overrides_path
+
+
+def load_resolved_french(
+    source: LanguageSource,
+    translations_path: Path,
+    *,
+    edition: str,
+    source_hashes: str | None = None,
+    compatibility_overrides: str | None = None,
+) -> tuple[dict[str, str], int, int]:
+    hashes_path, overrides_path = translation_profile_paths(
+        translations_path,
+        edition=edition,
+        source_hashes=source_hashes,
+        compatibility_overrides=compatibility_overrides,
+    )
+    hashes = read_source_hashes(hashes_path) if hashes_path else None
+    overrides = read_compatibility_overrides(overrides_path) if overrides_path else None
+    return resolve_french_for_source(
+        source,
+        read_french_csv(translations_path),
+        hashes,
+        overrides,
+    )
+
+
 def command_build(args) -> int:
     source_path = Path(args.assets).resolve()
     csv_path = Path(args.translations).resolve()
@@ -137,7 +271,16 @@ def command_build(args) -> int:
         raise FileExistsError(f"La destination existe déjà : {output_path}")
 
     environment, obj, source = load_source(source_path)
-    translations = read_french_csv(csv_path)
+    edition = getattr(args, "edition", None) or (
+        "demo" if "demo" in str(source_path).lower() else "full"
+    )
+    translations, rejected, applied_overrides = load_resolved_french(
+        source,
+        csv_path,
+        edition=edition,
+        source_hashes=getattr(args, "source_hashes", None),
+        compatibility_overrides=getattr(args, "compatibility_overrides", None),
+    )
     warnings = []
     by_key = {term.key: term for term in source.terms}
     for key, value in translations.items():
@@ -177,6 +320,8 @@ def command_build(args) -> int:
         "terms_translated": replaced,
         "terms_fallback_english": fallback_count,
         "translation_keys_unknown": unknown_keys,
+        "translation_keys_rejected_source_change": rejected,
+        "compatibility_overrides_applied": applied_overrides,
         "mode": f"slot:{slot_language}" if slot_language else "append-experimental",
         "warnings": [warning.__dict__ for warning in warnings],
     }
@@ -187,6 +332,10 @@ def command_build(args) -> int:
     print(f"Repli anglais : {fallback_count}")
     if unknown_keys:
         print(f"Clés françaises absentes de cette version : {len(unknown_keys)}")
+    if rejected:
+        print(f"Traductions écartées après changement de source : {rejected}")
+    if applied_overrides:
+        print(f"Exceptions de compatibilité appliquées : {applied_overrides}")
     if warnings:
         print(f"Avertissements de traduction : {len(warnings)} (voir le JSON)")
     return 0
@@ -226,7 +375,13 @@ def command_install(args) -> int:
         )
         if selection and selection.translations[codes.index("de")] == "Français":
             raise RuntimeError("Le patch français est déjà installé. Restaurez-le avant de repatcher.")
-    translations = read_french_csv(translations_path)
+    translations, rejected, applied_overrides = load_resolved_french(
+        parsed,
+        translations_path,
+        edition=asset.edition,
+        source_hashes=getattr(args, "source_hashes", None),
+        compatibility_overrides=getattr(args, "compatibility_overrides", None),
+    )
     game_keys = {term.key for term in parsed.terms}
     matched = len(set(translations) & game_keys)
     if matched == 0:
@@ -236,6 +391,10 @@ def command_install(args) -> int:
     print(f"SHA-256 actuel : {source_hash}")
     print(f"Clés françaises reconnues : {matched}/{len(translations)}")
     print(f"Nouvelles clés du jeu en repli anglais : {len(game_keys - set(translations))}")
+    if rejected:
+        print(f"Traductions écartées après changement de source : {rejected}")
+    if applied_overrides:
+        print(f"Exceptions de compatibilité {asset.edition} : {applied_overrides}")
     if not args.apply:
         print("Simulation terminée : aucune modification. Relancez avec --apply pour installer.")
         return 0
@@ -246,7 +405,9 @@ def command_install(args) -> int:
             output = Path(temporary_dir) / "resources.assets"
             build_args = argparse.Namespace(
                 assets=str(asset.path), translations=str(translations_path), output=str(output),
-                force=False, slot_language="de",
+                force=False, slot_language="de", edition=asset.edition,
+                source_hashes=getattr(args, "source_hashes", None),
+                compatibility_overrides=getattr(args, "compatibility_overrides", None),
             )
             command_build(build_args)
             atomic_copy(output, asset.path)
@@ -326,6 +487,34 @@ def command_prepare_update_batches(args) -> int:
     print("Inclus : nouvelles clés sans français et changements anglais/indonésien")
     print(f"Budget maximal : {args.character_budget} caractères de contexte par lot")
     print(f"Manifeste : {manifest_path}")
+    return 0
+
+
+def command_source_hashes(args) -> int:
+    """Write the source fingerprints that prevent stale translations."""
+    source_rows = read_csv_rows(Path(args.source).resolve())
+    translations = read_french_csv(Path(args.translations).resolve())
+    output = Path(args.output).resolve()
+    output.parent.mkdir(parents=True, exist_ok=True)
+    written = 0
+    with output.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(
+            stream, fieldnames=["key", "source_hash"], lineterminator="\n"
+        )
+        writer.writeheader()
+        for row in source_rows:
+            if row["key"] not in translations:
+                continue
+            writer.writerow(
+                {
+                    "key": row["key"],
+                    "source_hash": reference_hash(
+                        row.get("english", ""), row.get("indonesian", "")
+                    ),
+                }
+            )
+            written += 1
+    print(f"{written} empreintes source écrites dans {output}")
     return 0
 
 
@@ -504,6 +693,15 @@ def build_parser() -> argparse.ArgumentParser:
     build_parser.add_argument("assets")
     build_parser.add_argument("translations")
     build_parser.add_argument("output")
+    build_parser.add_argument("--edition", choices=("full", "demo"))
+    build_parser.add_argument(
+        "--source-hashes",
+        help="profil de compatibilité source (source-hashes.csv voisin par défaut)",
+    )
+    build_parser.add_argument(
+        "--compatibility-overrides",
+        help="exceptions d'édition (demo-overrides.csv voisin pour la démo)",
+    )
     build_parser.add_argument(
         "--slot-language",
         default="de",
@@ -526,6 +724,14 @@ def build_parser() -> argparse.ArgumentParser:
     install_parser = subparsers.add_parser("install", help="installer avec sauvegarde automatique")
     install_parser.add_argument("game", help="application, dossier du jeu ou resources.assets")
     install_parser.add_argument("--translations", default="translations/fr.csv")
+    install_parser.add_argument(
+        "--source-hashes",
+        help="profil de compatibilité source (source-hashes.csv voisin par défaut)",
+    )
+    install_parser.add_argument(
+        "--compatibility-overrides",
+        help="exceptions d'édition (demo-overrides.csv voisin pour la démo)",
+    )
     install_parser.add_argument("--apply", action="store_true", help="effectuer réellement l’installation")
     install_parser.set_defaults(handler=command_install)
 
@@ -563,6 +769,15 @@ def build_parser() -> argparse.ArgumentParser:
     update_batches_parser.add_argument("--manifest", default="work/update-batches/manifest.json")
     update_batches_parser.add_argument("--character-budget", type=int, default=80_000)
     update_batches_parser.set_defaults(handler=command_prepare_update_batches)
+
+    hashes_parser = subparsers.add_parser(
+        "source-hashes",
+        help="générer les empreintes anglais/indonésien des traductions validées",
+    )
+    hashes_parser.add_argument("--source", default="work/source.csv")
+    hashes_parser.add_argument("--translations", default="translations/fr.csv")
+    hashes_parser.add_argument("--output", default="translations/source-hashes.csv")
+    hashes_parser.set_defaults(handler=command_source_hashes)
 
     merge_parser = subparsers.add_parser("merge-batches", help="valider et fusionner les lots terminés")
     merge_parser.add_argument("--source", default="work/source.csv")

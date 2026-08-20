@@ -4,8 +4,8 @@ Projet communautaire de traduction française de **KuloNiku: Bowl Up!**.
 
 ## État actuel
 
-- Patch validé techniquement sur la démo macOS `0.10.5`, puis adapté à la
-  version complète macOS.
+- Patch validé techniquement sur la démo macOS `0.10.5` et sur la version
+  complète macOS.
 - Extraction confirmée de la version complète : 13 173 clés, 8 langues.
 - Le menu du jeu n’accepte que huit emplacements codés. Le patch conserve
   techniquement l’emplacement allemand (`de`), l’affiche comme « Français » et
@@ -14,7 +14,7 @@ Projet communautaire de traduction française de **KuloNiku: Bowl Up!**.
 
 ## Principes
 
-1. Les traductions françaises vivent dans `translations/fr.csv`.
+1. Les traductions françaises communes vivent dans `translations/fr.csv`.
 2. Chaque traduction est relue à partir de toutes les langues disponibles et du
    contexte donné par sa clé.
 3. Les fichiers Unity produits restent des artefacts locaux ou de publication,
@@ -43,8 +43,7 @@ uv run kuloniku-fr restore "/chemin/vers/KuloNiku.app" --apply
 ```
 
 Sur Windows, donner le dossier qui contient `KuloNiku_Data`. Le même outil
-détecte automatiquement macOS et Windows. Le projet cible désormais la version
-complète ; la démo n'est plus maintenue.
+détecte automatiquement macOS/Windows et Démo/Complet.
 
 ## Commandes de développement
 
@@ -61,13 +60,27 @@ uv run kuloniku-fr build /chemin/vers/resources.assets translations/fr.csv work/
 maximale observée. Il reste dans `work/` car il contient les textes originaux du
 jeu. Le dépôt public ne distribue que les traductions françaises et les outils.
 
+Après validation d'une nouvelle version complète, régénérer le garde-fou des
+textes source :
+
+```sh
+uv run kuloniku-fr source-hashes --source work/source.csv
+```
+
 ## Compatibilité avec les mises à jour
 
 Le patch est reconstruit depuis le `resources.assets` installé : il n’impose pas
-un fichier provenant d’une ancienne version. Une version inconnue est acceptée
-si sa table I2 est valide, contient l’anglais et reconnaît au moins une clé
-française. Les nouvelles clés restent en anglais et les clés françaises devenues
-absentes sont signalées.
+un fichier provenant d’une ancienne version. Chaque traduction est liée à une
+empreinte de ses sources anglaise et indonésienne. Si une mise à jour change le
+sens d'une clé connue, l'ancienne traduction est écartée et le texte anglais de
+la version installée sert de repli. Les nouvelles clés restent également en
+anglais jusqu'à leur traduction.
+
+La version complète reste la référence communautaire unique. La démo `0.10.5`
+utilise seulement `translations/demo-overrides.csv`, soit 699 exceptions pour
+les clés dont le sens diffère ou qui n'existent que dans cette ancienne
+version. Il n'y a donc pas de deuxième copie complète à maintenir. Le choix de
+ce profil est automatique lors de l'installation.
 
 Projet communautaire non officiel, sans affiliation avec Gambir Studio.
 

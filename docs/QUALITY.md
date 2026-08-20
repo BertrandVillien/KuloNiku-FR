@@ -23,6 +23,10 @@ Instantané du 20 août 2026, établi sur la version complète macOS.
   leur dialogue principal ;
 - 1 625 clés actives nouvelles ou modifiées relues pour le passage de la démo
   à la version complète.
+- profil de la démo : 12 196 traductions sur 12 211 clés, avec 699 exceptions
+  versionnées et 15 replis correspondant aux entrées vides dans toutes les
+  langues ;
+- reconstruction et réextraction des profils Démo/Complet : 0 divergence.
 
 ## Longueurs et validation visuelle
 
