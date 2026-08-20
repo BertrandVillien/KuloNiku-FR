@@ -143,10 +143,23 @@ jobs:
           find artifacts -type f \( -name '*.dmg' -o -name '*.zip' -o -name 'update-manifest.json' \) -exec cp {} release-files/ \;
           cd release-files
           sha256sum *.dmg *.zip > SHA256SUMS.txt
-          release_flags=(--generate-notes --verify-tag)
+          cat > release-notes.md <<'EOF'
+          KuloNiku FR permet de jouer en français à la démo et au jeu complet.
+
+          **Installer :** sous Windows, téléchargez l’archive `KuloNiku-FR-Windows-x64.zip`, décompressez-la entièrement, puis ouvrez **Installer KuloNiku FR.exe**. Sous macOS, téléchargez `KuloNiku-FR-macOS-Universal.dmg`, glissez **KuloNiku FR** dans **Applications** et, si la première ouverture est bloquée, utilisez **Réglages Système > Confidentialité et sécurité > Ouvrir quand même**.
+
+          **Cette mise à jour :**
+
+          - ajout d’un espace local pour relire, corriger et tester les traductions ;
+          - amélioration de l’affichage des options avancées sur Windows et macOS.
+
+          Projet communautaire non officiel. Aucun fichier complet du jeu n’est distribué.
+          EOF
+          release_flags=(--notes-file release-notes.md --verify-tag)
           if [[ "${GITHUB_REF_NAME}" == *-* ]]; then
             release_flags+=(--prerelease)
           fi
-          gh release create "${GITHUB_REF_NAME}" "${release_flags[@]}" ./*
+          gh release create "${GITHUB_REF_NAME}" "${release_flags[@]}" \
+            ./*.dmg ./*.zip ./SHA256SUMS.txt ./update-manifest.json
         env:
           GH_TOKEN: ${{ github.token }}
