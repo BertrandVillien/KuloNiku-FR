@@ -17,6 +17,5 @@
 
 ## Pour maintenir ou adapter le projet
 
-- [Cycle de maintenance](MAINTAINER_WORKFLOW.md)
 - [Architecture des installateurs](DISTRIBUTION.md)
 - [Cadre juridique et attribution](LEGAL.md)

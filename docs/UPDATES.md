@@ -1,8 +1,8 @@
 # Mises à jour du jeu, des traductions et de l’installateur
 
-Ce document couvre l’application macOS actuelle, la future interface Windows,
-leur moteur de patch commun et les petits lots de traduction téléchargeables
-séparément. Le projet distingue trois versions indépendantes.
+Ce document couvre l’application macOS, le moteur de patch commun aux paquets
+macOS et Windows, et les petits lots de traduction téléchargeables séparément.
+Le projet distingue trois versions indépendantes.
 
 | Axe | Exemple | Action |
 |---|---|---|
@@ -43,13 +43,11 @@ pas présentée comme une mise à jour française. Lorsque le moteur courant suf
 la mise à jour du jeu est directe et conserve la sauvegarde originale ; aucune
 restauration préalable n’est demandée.
 
-## Activation
+## Versions proposées
 
-Le dépôt de référence est `BertrandVillien/KuloNiku-FR`. Le téléchargement et
-ses contrôles sont branchés. L’application utilise l’API GitHub
-`releases/latest`, qui ignore volontairement les préversions : le parcours de
-mise à jour distante deviendra donc réellement observable lors de la première
-version stable.
+L’application recherche uniquement la dernière version stable publiée dans le
+dépôt `BertrandVillien/KuloNiku-FR`. Les préversions GitHub ne sont pas proposées
+automatiquement.
 
 ## Après une mise à jour Steam
 

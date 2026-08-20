@@ -17,39 +17,30 @@ L’icône utilisée par les installateurs se trouve dans
 `packaging/icons/KuloNikuFR.svg` peut servir de base aux adaptations du mod dans
 d’autres langues.
 
-## Parcours utilisateur visé
+## Étapes de sécurité
 
-1. Télécharger le paquet « KuloNiku FR » correspondant à Windows ou macOS.
-2. Lancer un unique installateur.
-3. L’installateur détecte Steam et le jeu.
-4. Il analyse I2, affiche le SHA-256 et effectue d’abord une simulation.
-5. Il conserve une sauvegarde récupérable du fichier original.
-6. Il applique le correctif et vérifie le résultat.
-7. Sur Mac seulement, il restaure une signature ad hoc valide de l’application.
-8. Un bouton ou une commande « Restaurer » remet le fichier d’origine.
+Le moteur suit toujours le même enchaînement :
 
-## Contrat commun des interfaces
+1. détecter Steam et le jeu ;
+2. analyser la table I2 et effectuer une simulation ;
+3. conserver une sauvegarde vérifiée du fichier original ;
+4. appliquer le correctif et vérifier le résultat ;
+5. restaurer une signature ad hoc valide sur macOS ;
+6. permettre le retour au fichier d’origine.
 
-L’interface macOS ne contient pas la logique de patch. Comme la future
-interface Windows, elle consomme la sortie JSON versionnée de `status --json`
-(`schema_version: 1`) puis lance les mêmes commandes de simulation,
-d’installation et de restauration.
+## Moteur commun
 
-Les deux interfaces doivent partager la même hiérarchie :
+L’interface macOS ne contient pas la logique de patch. Elle utilise la sortie
+JSON versionnée de `status --json` (`schema_version: 1`), puis lance les mêmes
+commandes de simulation, d’installation et de restauration que le paquet
+technique Windows.
 
-1. état principal lisible et illustré ;
-2. une seule action principale adaptée à cet état ;
-3. jeu détecté et changement manuel facultatif ;
-4. détails techniques repliés ;
-5. mises à jour de traduction et d’application nommées séparément.
-
-Une évolution graphique ou une nouvelle version de l’installateur ne doit donc
-pas dupliquer ni modifier les règles de sauvegarde, de compatibilité ou de mise
-à jour du moteur commun.
+La sauvegarde, la compatibilité et les mises à jour restent ainsi gérées au même
+endroit, indépendamment de l’interface utilisée.
 
 ## Compatibilité adaptative
 
-Chaque manifeste de release devra identifier au minimum :
+Chaque manifeste de release indique au minimum :
 
 - la version du jeu ;
 - la plateforme (`macos` ou `windows`) ;
@@ -70,23 +61,14 @@ Il s’arrête sans écriture si la structure est ambiguë, si aucune clé ne
 correspond ou si une validation échoue. Après une erreur d’installation, la
 sauvegarde est restaurée automatiquement.
 
-## Prototype actuel
+## Pourquoi le patch remplace l’allemand
 
 Le test d’ajout d’une neuvième entrée `French (fr)` a montré que le menu du jeu
 la masque. Le mode compatible conserve donc l’emplacement reconnu `German (de)`
 et remplace uniquement son contenu et son libellé visible. Les textes absents de
 `translations/fr.csv` utilisent l’anglais de la version locale comme repli.
 
-La raison pour laquelle la première release laisse l’utilisateur choisir
-manuellement « Français » est détaillée dans
+L’anglais est conservé comme langue source et comme repli pour les phrases
+inconnues. La sélection manuelle de « Français » et le comportement après une
+restauration sont détaillés dans
 [Sélection de la langue française](LANGUAGE_SELECTION.md).
-
-## Inspiration et choix retenus
-
-- Le patch coréen KuloNiku conserve l’emplacement anglais et en remplace le
-  contenu. Cette comparaison a confirmé que le menu filtre les codes de langue.
-- KuloNiku FR applique la même compatibilité sur l’emplacement allemand afin de
-  préserver l’anglais comme langue source et comme repli.
-- `pyI2L` valide le principe d’extraction/réinjection d’une table I2 et d’un CSV.
-- KuloNiku FR conserve la simplicité, mais génère le patch localement, sauvegarde
-  avant écriture et tolère les nouvelles clés grâce au repli anglais.

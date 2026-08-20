@@ -14,6 +14,5 @@ sous licence MIT.
 Le patcher utilise UnityPy 1.25.3, distribué sous licence MIT, copyright
 2019–2026 K0lb3 : [dépôt UnityPy](https://github.com/K0lb3/UnityPy).
 
-Les paquets autonomes peuvent inclure les dépendances de UnityPy. Leurs notices
-de licence devront être collectées et jointes à chaque release avant
-publication.
+Les paquets autonomes qui incluent des dépendances de UnityPy doivent également
+inclure leurs notices de licence.

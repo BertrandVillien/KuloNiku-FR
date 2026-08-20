@@ -1,8 +1,7 @@
 # Traduction assistée par agent
 
 Ce guide s’adresse aux contributeurs qui utilisent Codex, Claude ou un autre
-agent pour préparer un lot de traduction. Les opérations réservées aux
-mainteneurs sont regroupées dans [Cycle de maintenance](MAINTAINER_WORKFLOW.md).
+agent pour préparer un lot de traduction.
 
 Le procédé ne dépend d’aucune conversation particulière. Les journaux privés ne
 sont ni nécessaires ni publiables.

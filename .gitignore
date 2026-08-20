@@ -3,6 +3,9 @@
 .vscode/
 .codex/
 .agents/
+/PRODUCT.md
+/DESIGN.md
+/docs/MAINTAINER_WORKFLOW.md
 __pycache__/
 *.pyc
 *.log

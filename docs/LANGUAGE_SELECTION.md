@@ -1,11 +1,11 @@
 # Sélection de la langue française
 
-## Décision pour la première version
+## Fonctionnement actuel
 
 L’installateur n’impose pas automatiquement la langue. Après installation,
 l’utilisateur choisit « Français » dans les paramètres du jeu.
 
-## Observation macOS en lecture seule
+## Valeur enregistrée par le jeu
 
 KuloNiku utilise les préférences Unity du domaine
 `com.gambirstudio.kuloniku`. La clé `I2 Language` contient le nom interne de
@@ -13,18 +13,11 @@ l’emplacement sélectionné. Comme le patch réutilise l’emplacement alleman
 valeur interne correspondant au français est actuellement `German`.
 
 La démo et le jeu complet ont le même identifiant d’application et partagent
-donc cette préférence. Une modification automatique affecterait les deux
-installations qui coexistent.
+donc cette préférence.
 
-## Condition avant automatisation
+## Après une restauration
 
-La fonction ne sera ajoutée que si le stockage Windows est vérifié sur une
-installation réelle et si elle peut :
-
-- sauvegarder la valeur précédente ;
-- ne modifier que `I2 Language` ;
-- fonctionner après installation comme une option explicite ;
-- restaurer la valeur antérieure avec le patch ;
-- ne jamais toucher aux sauvegardes de partie.
-
-Sans ces garanties, la sélection manuelle reste plus simple et plus sûre.
+La restauration remet les textes allemands d’origine sans modifier la préférence
+`I2 Language`. Si « Français » était sélectionné, l’interface apparaît donc en
+allemand au lancement suivant. Il suffit de choisir une autre langue dans les
+paramètres. Les sauvegardes de partie ne sont pas concernées.

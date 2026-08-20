@@ -124,7 +124,8 @@ official French localization is released.
 Other communities provide their own KuloNiku translations:
 
 - [unofficial Korean patch](https://github.com/killterm/Localization-KuloNikuBowlUp);
-- [Japanese translation tool](https://steamcommunity.com/app/3357960/discussions/0/807974496347632869/).
+- [Japanese translation tool](https://steamcommunity.com/app/3357960/discussions/0/807974496347632869/);
+- [AI-assisted Russian translation](https://boosty.to/ketsuneko/posts/5acd1b69-3ade-4a08-9319-95373059a4a6), available under its author’s terms.
 
 KuloNiku FR was created independently and did not use any file or translation
 from these projects. These links are provided to help players find the community

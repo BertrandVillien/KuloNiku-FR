@@ -17,6 +17,16 @@ Le menu actuel masque une neuvième langue. Le patch réutilise donc l’emplace
 allemand et conserve l’anglais comme repli sûr. Restaurer le fichier original
 rend immédiatement l’allemand au jeu.
 
+## Pourquoi le jeu passe-t-il en allemand après la restauration ?
+
+Lorsque vous choisissez **Français**, le jeu mémorise en réalité l’emplacement
+interne de l’allemand. Restaurer ou désinstaller le patch remet les textes
+allemands, mais ne change pas cette préférence : l’interface peut donc apparaître
+en allemand au lancement suivant.
+
+C’est normal et cela n’affecte pas votre sauvegarde. Ouvrez les paramètres du jeu
+et choisissez simplement la langue souhaitée.
+
 ## Que se passe-t-il après une mise à jour Steam ?
 
 Steam peut remettre un fichier original ou nouveau. La commande `status`
@@ -45,10 +55,9 @@ sauvegarde.
 
 ## Pourquoi macOS affiche-t-il parfois un avertissement ?
 
-Les futurs paquets communautaires ne seront peut-être pas notariés par Apple.
-Ne contournez jamais un avertissement pour un fichier obtenu ailleurs que dans
-les releases officielles du projet. Les empreintes publiées devront permettre
-de vérifier chaque téléchargement.
+La préversion macOS n’est pas notariée par Apple. Ne contournez jamais un
+avertissement pour un fichier obtenu ailleurs que dans les releases officielles
+du projet. La procédure d’ouverture sûre est indiquée dans la note de release.
 
 ## Mon antivirus Windows réagit : que faire ?
 

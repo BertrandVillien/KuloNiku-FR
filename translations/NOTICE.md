@@ -6,6 +6,6 @@ Bowl Up! La licence MIT à la racine couvre le patcher et la documentation
 originale, pas les droits détenus par Gambir Studio, Raw Fury ou d’autres ayants
 droit.
 
-Les conditions définitives de redistribution et de réutilisation de la
-traduction devront être fixées avec les ayants droit avant la première diffusion
-publique large. En attendant, ne republiez pas le CSV hors de ce projet.
+Aucune autorisation générale de redistribution ou de réutilisation de la
+traduction n’est accordée. Ne republiez pas le CSV hors de ce projet sans
+l’autorisation des ayants droit concernés.

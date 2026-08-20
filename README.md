@@ -128,7 +128,8 @@ française officielle paraît.
 D’autres communautés proposent leur propre traduction de KuloNiku :
 
 - [patch coréen non officiel](https://github.com/killterm/Localization-KuloNikuBowlUp) ;
-- [outil de traduction japonaise](https://steamcommunity.com/app/3357960/discussions/0/807974496347632869/).
+- [outil de traduction japonaise](https://steamcommunity.com/app/3357960/discussions/0/807974496347632869/) ;
+- [traduction russe assistée par IA](https://boosty.to/ketsuneko/posts/5acd1b69-3ade-4a08-9319-95373059a4a6), proposée selon les conditions de son auteur.
 
 KuloNiku FR a été réalisé indépendamment et n’a utilisé aucun fichier ni aucune
 traduction provenant de ces projets. Ces liens sont proposés pour aider les

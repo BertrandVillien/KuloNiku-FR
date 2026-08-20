@@ -59,10 +59,3 @@ Donnez-lui seulement :
 Ne transmettez pas d’historique privé, de journal de conversation ou
 d’extraction complète du jeu. Le protocole complet est décrit dans le
 [guide de traduction assistée par agent](docs/AGENT_WORKFLOW.md).
-
-## Pour les mainteneurs
-
-Les étapes d’extraction, de préparation des lots, de propagation des dialogues
-dupliqués et de validation finale ne font pas partie du parcours normal d’un
-contributeur. Elles sont regroupées dans le
-[guide de maintenance](docs/MAINTAINER_WORKFLOW.md).
