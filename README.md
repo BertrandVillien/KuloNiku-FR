@@ -1,10 +1,9 @@
 # KuloNiku FR
 
-**Mod / patch français communautaire pour _KuloNiku: Bowl Up!_**
+**Patch français communautaire pour _KuloNiku: Bowl Up!_**
 
-[Voir ou acheter KuloNiku: Bowl Up! sur Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
-
-[English version](README.en.md)
+[Voir KuloNiku: Bowl Up! sur Steam](https://store.steampowered.com/app/3357960/KuloNiku_Bowl_Up/)
+· [English version](README.en.md)
 
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS testé](https://img.shields.io/badge/macOS-test%C3%A9-2ea44f)
@@ -13,195 +12,124 @@
 
 ![Accueil de KuloNiku: Bowl Up! traduit en français](docs/assets/kuloniku-fr-home.jpg)
 
-KuloNiku FR est un mod de traduction qui permet de jouer en français à la démo
-et au jeu complet. Le projet est gratuit, non officiel et construit par la
-communauté dans l’attente d’une éventuelle localisation française officielle.
+KuloNiku FR permet de jouer en français à la démo et au jeu complet. Le projet
+est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 
 ## État du projet
 
-- traduction de toutes les entrées textuelles utilisées par le jeu ;
-- version complète `1.1.1` et démo `0.10.5` testées sur macOS ;
-- moteur compatible macOS et Windows, test réel Windows encore nécessaire ;
-- nouvelles phrases inconnues laissées en anglais après une mise à jour ;
-- aucune donnée ou fichier complet du jeu distribué.
+- **macOS :** préversion disponible et testée sur Apple Silicon et Intel ;
+- **Windows :** moteur compatible, interface simple encore à réaliser et tester ;
+- **jeu :** version complète `1.1.1` et démo `0.10.5` testées sur macOS ;
+- **mises à jour :** les nouvelles phrases inconnues restent en anglais.
 
-## Installation simple — préversion macOS
+---
 
-Une première préversion de l’application macOS est disponible sur la page
-[Releases](https://github.com/BertrandVillien/KuloNiku-FR/releases). Choisissez :
+## Installer le patch
 
-- **macOS Apple Silicon** si votre Mac possède une puce Apple M1, M2, M3, M4
-  ou plus récente ;
-- **macOS Intel** si votre Mac possède un processeur Intel.
+Rendez-vous sur la page des
+[releases officielles](https://github.com/BertrandVillien/KuloNiku-FR/releases).
+La note de chaque version indique clairement quel fichier télécharger et comment
+l’ouvrir.
 
-Pour le vérifier, ouvrez le menu ** > À propos de ce Mac**. Si la ligne
-**Puce** indique « Apple M… », choisissez Apple Silicon. Si la ligne
-**Processeur** indique « Intel », choisissez Intel.
+Sur macOS, téléchargez le DMG adapté à votre Mac, puis glissez **KuloNiku FR**
+dans **Applications**. L’application vous guide ensuite pour installer, mettre à
+jour ou restaurer le patch.
 
-Téléchargez le DMG adapté, ouvrez-le puis glissez **KuloNiku FR** dans le dossier
-**Applications**. Cette préversion est destinée aux premiers tests ; la méthode
-depuis les sources reste disponible plus bas.
+Après l’installation, lancez le jeu depuis Steam et choisissez **Français** dans
+les paramètres.
 
-### Windows — validation en cours
+> La version Windows actuelle reste destinée aux tests techniques. Une interface
+> adaptée aux débutants est encore en préparation.
 
-Windows est traité en priorité dans la documentation, car il concerne la
-majorité des joueurs. Un paquet technique est déjà construit automatiquement,
-mais il n’est pas encore assez simple pour un novice : une vraie interface
-graphique Windows reste à produire puis à tester sur un PC. Elle devra trouver
-Steam et KuloNiku toute seule, privilégier le jeu complet à la démo et proposer
-installation, mise à jour et restauration sans ligne de commande.
+Vous souhaitez examiner ou modifier le code ? Consultez
+[l’installation depuis les sources](docs/INSTALL_FROM_SOURCE.md).
 
-### Première ouverture sur macOS
+### Et si macOS bloque la première ouverture ?
 
-L’application est signée localement par GitHub Actions, mais pas notariée par
-Apple. Elle fonctionne sur les Mac Apple Silicon et Intel sans abonnement
-développeur. Téléchargez-la uniquement depuis les
-[releases officielles du projet](https://github.com/BertrandVillien/KuloNiku-FR/releases).
+Essayez d’ouvrir l’application une fois, puis allez dans **Réglages Système >
+Confidentialité et sécurité > Ouvrir quand même**. Il n’est pas nécessaire de
+désactiver une protection du Mac ni d’utiliser le Terminal.
 
-Si macOS refuse la première ouverture :
+[Voir la procédure officielle d’Apple](https://support.apple.com/fr-fr/102445)
 
-1. essayez d’ouvrir **KuloNiku FR** une fois ;
-2. ouvrez **Réglages Système > Confidentialité et sécurité** ;
-3. descendez jusqu’au message concernant KuloNiku FR, puis cliquez sur
-   **Ouvrir quand même** ;
-4. confirmez **Ouvrir**. Ce choix est mémorisé pour l’application.
+## Une installation facile à annuler
 
-Cette procédure est celle documentée par
-[Apple](https://support.apple.com/fr-fr/102445). Il n’est pas nécessaire de
-désactiver Gatekeeper ni de saisir une commande dans le Terminal.
+Avant de modifier le jeu, l’application effectue une simulation et crée une
+sauvegarde vérifiée. Le bouton **Restaurer** permet de revenir au fichier
+d’origine.
 
-L’installateur trouve automatiquement Steam, privilégie le jeu complet à la
-démo et affiche un état simple. Le journal technique reste replié. Il ne propose
-une mise à jour française que si l’empreinte des traductions est réellement
-différente. Les futurs lots de traduction pourront être téléchargés et vérifiés
-sans réinstaller l’application, sauf lorsqu’ils exigent une version plus récente
-du moteur ; la vérification de GitHub sera active dès la première release.
+Le patch est reconstruit à partir de votre propre installation : aucun fichier
+complet du jeu n’est téléchargé ou distribué.
 
-## Installation depuis les sources
+[Lire les détails de sécurité](SECURITY.md) ·
+[Comprendre le fonctionnement technique](docs/DISTRIBUTION.md)
 
-Cette méthode nécessite [Python](https://www.python.org/) et
-[uv](https://docs.astral.sh/uv/). Elle restera disponible pour les personnes qui
-souhaitent examiner ou modifier le code.
-
-1. Fermez le jeu.
-2. Installez les dépendances :
-
-   ```sh
-   uv sync
-   ```
-
-3. Lancez d’abord la simulation, qui ne modifie rien.
-
-   Sous Windows :
-
-   ```powershell
-   uv run kuloniku-fr install "C:\Program Files (x86)\Steam\steamapps\common\KuloNiku"
-   ```
-
-   Sous macOS :
-
-   ```sh
-   uv run kuloniku-fr install "/chemin/vers/KuloNiku.app"
-   ```
-
-4. Si le diagnostic est correct, installez le mod en ajoutant `--apply` à la
-   même commande. Exemple macOS :
-
-   ```sh
-   uv run kuloniku-fr install "/chemin/vers/KuloNiku.app" --apply
-   ```
-
-5. Relancez le jeu depuis Steam et choisissez **Français** dans les paramètres.
-
-Sous Windows, le chemin fourni doit être le dossier contenant
-`KuloNiku_Data`.
-
-Pour restaurer la sauvegarde vérifiée créée automatiquement :
-
-```sh
-uv run kuloniku-fr restore "/chemin/vers/KuloNiku.app" --apply
-```
-
-## Pourquoi l’installation reste sûre
-
-- simulation obligatoire avant écriture ;
-- sauvegarde locale vérifiée par SHA-256 ;
-- reconstruction depuis votre propre installation ;
-- remplacement atomique et restauration simple ;
-- contrôle des textes anglais et indonésien avant chaque injection ;
-- repli anglais lorsqu’une mise à jour change ou ajoute une phrase.
+---
 
 ## Une adaptation, pas une traduction mot à mot
 
-Chaque ligne est étudiée avec les huit langues fournies par le jeu, sa clé
-technique, le contexte de la scène et la place disponible à l’écran. L’anglais
-reste la référence pour les faits et les règles ; l’indonésien éclaire la
-culture, les plats et l’intention du studio. Les noms culinaires sont adaptés à
-l’usage français plutôt que traduits par approximation.
+Chaque ligne est comparée aux langues fournies avec le jeu, puis adaptée au
+contexte et à la place disponible à l’écran. Une attention particulière est
+portée aux plats indonésiens, aux voix des personnages et aux textes encore à
+valider en jeu.
 
 <p>
   <img src="docs/assets/kuloniku-fr-settings.jpg" width="49%" alt="Langue française sélectionnée dans les paramètres">
   <img src="docs/assets/kuloniku-fr-gameplay.jpg" width="49%" alt="Recette et tutoriel traduits en français">
 </p>
 
-## Participer sans savoir programmer
+## Participer
 
-Ouvrez directement le formulaire
-[Proposer une correction française](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml)
-pour :
+Pas besoin de savoir programmer. Vous pouvez :
 
-- proposer une meilleure formulation ;
-- joindre une capture et expliquer le contexte ;
-- signaler un texte trop long ou un problème d’installation.
+- [proposer une correction française](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml) ;
+- [signaler un problème d’installation](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml) ;
+- joindre une capture pour montrer le contexte ou un texte trop long.
 
-Il faut être connecté à un compte GitHub gratuit pour afficher le formulaire.
-La clé technique est facultative. Une fois le formulaire rempli, cliquez sur
-**Submit new issue** : la proposition apparaîtra dans les tickets du projet et
-pourra être discutée. Pour un problème d’installation, utilisez plutôt
-[Signaler un problème d’installation](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml).
+Ne joignez jamais un fichier du jeu ou une extraction complète. Pour contribuer
+avec Git, Codex, Claude ou un autre agent, consultez le
+[guide de contribution](CONTRIBUTING.md).
 
-Ne joignez jamais un fichier du jeu ou une extraction complète. Consultez
-[CONTRIBUTING.md](CONTRIBUTING.md) pour contribuer avec Git ou avec un agent
-comme Codex, Claude ou un autre outil.
+## Pourquoi ce projet ?
 
-Les autres communautés peuvent forker le moteur pour préparer leur propre
-langue, sous réserve des droits du jeu et des traductions concernées.
+Je voulais découvrir KuloNiku, mais la quantité d’ingrédients, de recettes et de
+termes culinaires en anglais freinait réellement mon expérience. J’ai commencé
+par chercher une manière prudente de traduire la démo. Le résultat m’a convaincu
+d’acheter le jeu complet au lieu d’abandonner. Cela montre aussi combien une
+localisation peut aider de nouveaux joueurs à découvrir et soutenir un jeu.
 
-## Pourquoi j’ai créé ce patch
+J’ai construit ce projet avec Codex en gardant une règle simple : pouvoir
+comprendre, vérifier et annuler chaque modification. Le patch ne se contente pas
+d’injecter une traduction automatique. Chaque ligne a été reprise avec les
+langues fournies par le jeu, sa place à l’écran et, lorsque c’était possible, le
+contexte de la scène.
 
-Je voulais découvrir KuloNiku, mais la quantité d’ingrédients et de termes
-culinaires en anglais freinait réellement mon expérience. J’ai d’abord cherché
-un moyen sûr de traduire la démo. Le résultat m’a convaincu d’acheter le jeu
-complet au lieu d’abandonner, ce qui illustre aussi l’intérêt d’une localisation
-pour faire connaître le jeu aux francophones.
-
-J’ai construit le projet avec Codex, en gardant chaque opération réversible :
-extraction des textes, comparaison des langues, simulation, sauvegarde puis
-injection. Le menu ne pouvant pas afficher une langue supplémentaire, le patch
-remplace temporairement l’allemand et conserve l’anglais comme solution de
-repli. Restaurer le jeu rend immédiatement l’allemand disponible.
-
-L’adaptation française a été travaillée ligne par ligne avec les huit langues
-du jeu, les clés techniques et le contexte disponible. L’indonésien a été
-particulièrement utile pour respecter l’origine du studio et préciser certains
-plats ; les termes délicats ont fait l’objet de recherches complémentaires.
-Les formulations restent aussi proches que possible des longueurs déjà prévues
-par le jeu afin de limiter les problèmes d’affichage.
+L’indonésien a été particulièrement précieux pour respecter l’origine du studio,
+les plats et l’intention de certains dialogues. Les formulations françaises
+cherchent à rester naturelles et assez courtes pour l’interface, quitte à laisser
+provisoires les passages qui doivent encore être confirmés en jeu.
 
 ## Documentation
 
-- [Questions fréquentes](docs/FAQ.md)
-- [Compatibilité et mises à jour](docs/UPDATES.md)
-- [Architecture des installateurs](docs/DISTRIBUTION.md)
-- [Feuille de route](docs/ROADMAP.md)
-- [Qualité de la traduction](docs/QUALITY.md)
-- [Terminologie française](docs/TERMINOLOGY.md)
-- [Sécurité](SECURITY.md)
-- [Cadre juridique et attribution](docs/LEGAL.md)
+La [documentation du projet](docs/README.md) rassemble la FAQ, la compatibilité,
+la qualité de la traduction et les informations techniques.
+
+---
 
 ## Projet non officiel
 
-_KuloNiku: Bowl Up!_, ses textes, visuels et marques appartiennent à leurs
-ayants droit, notamment Gambir Studio et Raw Fury. Ce projet n’est ni affilié ni
-approuvé par eux. Il ne distribue aucun fichier complet du jeu et sera retiré ou
-archivé à leur demande ou si une traduction française officielle paraît.
+_KuloNiku: Bowl Up!_, ses textes, visuels et marques appartiennent à leurs ayants
+droit, notamment Gambir Studio et Raw Fury. Ce projet n’est ni affilié ni
+approuvé par eux. Il sera retiré ou archivé à leur demande ou si une traduction
+française officielle paraît.
+
+## Autres traductions communautaires
+
+D’autres communautés proposent leur propre traduction de KuloNiku :
+
+- [patch coréen non officiel](https://github.com/killterm/Localization-KuloNikuBowlUp) ;
+- [outil de traduction japonaise](https://steamcommunity.com/app/3357960/discussions/0/807974496347632869/).
+
+KuloNiku FR a été réalisé indépendamment et n’a utilisé aucun fichier ni aucune
+traduction provenant de ces projets. Ces liens sont proposés pour aider les
+joueurs à trouver la communauté correspondant à leur langue.

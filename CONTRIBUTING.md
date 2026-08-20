@@ -1,103 +1,68 @@
-# Contribuer à la traduction
+# Contribuer à KuloNiku FR
 
-La source de travail publique est `translations/fr.csv`. Les traductions
-originales du jeu sont extraites localement dans `work/` et ne sont pas
-versionnées.
+Merci de vouloir améliorer le patch. Les contributions humaines et celles
+assistées par un agent sont les bienvenues, à condition de rester vérifiables et
+de ne jamais publier les fichiers du jeu.
 
-## Sans savoir programmer
+## Proposer une correction sans programmer
 
-Le moyen le plus simple est d’ouvrir le formulaire GitHub
+Le plus simple est d’utiliser le formulaire
 [Proposer une correction française](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=translation.yml).
-Après connexion à un compte GitHub gratuit, il suffit d’indiquer le texte vu,
-le contexte et une proposition, puis de cliquer sur **Submit new issue**. Une
-capture est recommandée pour montrer la place disponible et le personnage qui
-parle. La clé technique est facultative.
 
-Ne joignez jamais `resources.assets`, un fichier du jeu ou une extraction
-complète. Une capture limitée à l’écran concerné et une courte citation sont
-suffisantes.
+Indiquez si possible :
 
-## Cycle d’un lot
+- le texte vu dans le jeu ;
+- votre proposition ;
+- le personnage, l’écran ou la situation ;
+- une capture montrant la place disponible.
 
-1. Extraire la version installée vers `work/context.csv` avec la commande
-   `context` : toutes les langues et le budget de caractères y sont côte à côte.
-2. Sélectionner un lot cohérent de clés : ingrédients, interface, tutoriel, etc.
-   Consulter aussi `docs/TERMINOLOGY.md` pour les choix déjà harmonisés.
-3. Faire traduire ce lot par un sous-agent en lui fournissant les huit langues.
-4. Utiliser la clé, les langues et le contexte en jeu pour lever les ambiguïtés.
-5. Comparer la longueur française à `max_source_chars`. Dépasser seulement si
-   une formulation plus courte perdrait le sens, puis l’expliquer dans `notes`.
-6. Marquer chaque entrée :
-   - `reviewed` : traduction suffisamment sûre ;
-   - `provisional` : validation visuelle ou narrative encore nécessaire.
-7. Exécuter `lint`, construire un fichier de test et vérifier l’affichage en jeu.
-8. Corriger puis valider le lot avant de passer au suivant.
+La clé technique est facultative. Pour un souci avec l’application, utilisez
+plutôt le formulaire
+[Signaler un problème d’installation](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml).
 
-## Dialogues dupliqués
+## Proposer une modification avec Git
 
-Une même réplique peut exister sous une clé principale et plusieurs clés de
-secours. Il ne faut pas les corriger séparément au hasard :
+La traduction publique se trouve dans `translations/fr.csv`. Une pull request
+doit rester courte et indiquer :
 
-1. corriger la clé principale dans `translations/review-overrides.csv` ;
-2. exécuter `prepare-backups` pour propager les copies dont le texte source est
-   strictement identique ;
-3. ne faire relire que les variantes réellement différentes ;
-4. fusionner puis contrôler les variables et balises.
+- les phrases ou le lot modifiés ;
+- la raison du changement ;
+- la version du jeu utilisée ;
+- ce qui a été vérifié en jeu et ce qui reste à vérifier.
 
-Cette règle évite qu’une correction ne soit visible dans une scène mais pas
-dans sa variante.
+Consultez aussi le [glossaire](docs/TERMINOLOGY.md) pour conserver les choix déjà
+harmonisés.
 
-## Colonnes du CSV français
+## Règles communes
 
-- `key` : identifiant I2 Localization, jamais traduit ;
-- `fr` : texte français injecté ;
-- `status` : `reviewed` ou `provisional` ;
-- `notes` : justification courte seulement si elle apporte du contexte.
+- Ne modifiez jamais les clés, variables (`{0}`, `{PLAYER_COLOR}`, etc.), balises,
+  retours à la ligne ou marqueurs de mise en forme.
+- Préférez un français naturel à une traduction mot à mot.
+- Signalez les ambiguïtés et les textes qui n’ont pas encore été vus en jeu.
+- Ne publiez jamais `resources.assets`, un fichier du jeu, `work/context.csv` ou
+  une extraction complète des autres langues.
+- Une capture limitée à l’écran concerné et une courte citation suffisent pour
+  expliquer le contexte.
 
-## Règles importantes
+## Contribuer avec un agent
 
-- Ne jamais altérer les clés, variables (`{0}`, `{PLAYER_COLOR}`, etc.), balises
-  ou codes de mise en forme.
-- Éviter la traduction littérale lorsqu’une autre langue éclaire mieux le sens.
-- Ne pas introduire de typographie française qui risque de casser une variable
-  ou une limite d’interface sans validation visuelle.
-- Ne pas publier `resources.assets`, même modifié.
-- Ne pas publier `work/context.csv` ni les colonnes complètes extraites du jeu.
+Un agent comme Codex ou Claude peut aider à préparer une contribution, mais sa
+sortie doit toujours être relue et vérifiée.
 
-## Contexte communautaire sans redistribuer le jeu
+Donnez-lui seulement :
 
-Le dépôt peut conserver une note courte et originale : type d’écran, personnage,
-recette, intention, contrainte visuelle et validation en jeu. Les textes complets
-des autres langues restent locaux et sont régénérés par chaque contributeur
-possédant la démo ou le jeu.
+1. le [brief des agents de traduction](translations/AGENT_BRIEF.md) ;
+2. un petit lot contenant uniquement les clés concernées ;
+3. une note de contexte courte, si nécessaire ;
+4. le nom du seul fichier qu’il peut modifier.
 
-Une pull request doit indiquer le lot, la version testée et les observations
-utiles, sans joindre de fichier original du jeu.
+Ne transmettez pas d’historique privé, de journal de conversation ou
+d’extraction complète du jeu. Le protocole complet est décrit dans le
+[guide de traduction assistée par agent](docs/AGENT_WORKFLOW.md).
 
-## Lots automatisés
+## Pour les mainteneurs
 
-- Un agent ne reçoit aucun historique de conversation : seulement le brief et
-  son fichier source compact.
-- Deux agents peuvent travailler en parallèle uniquement sur deux fichiers
-  distincts dans `translations/batches/`.
-- L’agent principal vérifie le nombre de lignes, l’ordre, les clés, les marqueurs,
-  les longueurs et les statuts avant de fusionner.
-- Les corrections transversales validées vont dans
-  `translations/review-overrides.csv`; la fusion les réapplique après les lots,
-  ce qui conserve un historique clair sans modifier les sorties des agents.
-- Les noms de plats traditionnels exigent une vérification d’usage en français;
-  une translittération ou un nom indonésien ne doit jamais être « traduit » par
-  approximation.
-
-## Contributions assistées par IA
-
-Codex, Claude ou un autre agent peuvent aider, mais leur sortie n’est jamais
-acceptée sans contrôle. Fournissez seulement le brief versionné
-`translations/AGENT_BRIEF.md` et un lot compact contenant les clés concernées.
-Ne transmettez ni historique privé, ni journal de conversation, ni extraction
-complète du jeu.
-
-Le contributeur reste responsable de comparer les langues, de vérifier les
-variables, d’expliquer les dépassements de longueur et de signaler ce qui n’a
-pas été vu en jeu. Le protocole détaillé se trouve dans
-`docs/AGENT_WORKFLOW.md`.
+Les étapes d’extraction, de préparation des lots, de propagation des dialogues
+dupliqués et de validation finale ne font pas partie du parcours normal d’un
+contributeur. Elles sont regroupées dans le
+[guide de maintenance](docs/MAINTAINER_WORKFLOW.md).

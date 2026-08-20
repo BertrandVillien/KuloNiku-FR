@@ -1,7 +1,11 @@
 # Traduction assistée par agent
 
-Ce document conserve le procédé reproductible sans dépendre d’une conversation
-Codex particulière. Les journaux privés ne sont ni nécessaires ni publiables.
+Ce guide s’adresse aux contributeurs qui utilisent Codex, Claude ou un autre
+agent pour préparer un lot de traduction. Les opérations réservées aux
+mainteneurs sont regroupées dans [Cycle de maintenance](MAINTAINER_WORKFLOW.md).
+
+Le procédé ne dépend d’aucune conversation particulière. Les journaux privés ne
+sont ni nécessaires ni publiables.
 
 ## Contexte minimal à fournir
 
