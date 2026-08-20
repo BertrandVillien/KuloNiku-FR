@@ -13,11 +13,13 @@ import UnityPy
 from .batching import (
     Batch,
     make_batches,
+    make_update_batches,
     propagate_dialogue_backups,
     read_csv_rows,
     row_characters,
     translated_keys,
     write_batches,
+    write_update_batches,
 )
 from .i2_asset import LanguageSource, find_i2_object
 from .installation import (
@@ -304,6 +306,29 @@ def command_make_batches(args) -> int:
     return 0
 
 
+def command_prepare_update_batches(args) -> int:
+    """Prepare only the strings affected by a game-version update."""
+    previous_source_path = Path(args.previous_source).resolve()
+    source_path = Path(args.source).resolve()
+    translations_path = Path(args.translations).resolve()
+    source_dir = Path(args.source_dir).resolve()
+    output_dir = Path(args.output_dir).resolve()
+    manifest_path = Path(args.manifest).resolve()
+    batches = make_update_batches(
+        read_csv_rows(previous_source_path),
+        read_csv_rows(source_path),
+        read_french_csv(translations_path),
+        character_budget=args.character_budget,
+    )
+    write_update_batches(batches, source_dir, output_dir, manifest_path)
+    reviewed_rows = sum(len(batch.rows) for batch in batches)
+    print(f"{len(batches)} lots de mise à jour préparés pour {reviewed_rows} clés actives")
+    print("Inclus : nouvelles clés sans français et changements anglais/indonésien")
+    print(f"Budget maximal : {args.character_budget} caractères de contexte par lot")
+    print(f"Manifeste : {manifest_path}")
+    return 0
+
+
 def command_merge_batches(args) -> int:
     translations_path = Path(args.translations).resolve()
     source_dir = Path(args.source_dir).resolve()
@@ -517,6 +542,27 @@ def build_parser() -> argparse.ArgumentParser:
     batches_parser.add_argument("--manifest", default="work/translation-batches/manifest.json")
     batches_parser.add_argument("--character-budget", type=int, default=80_000)
     batches_parser.set_defaults(handler=command_make_batches)
+
+    update_batches_parser = subparsers.add_parser(
+        "prepare-update-batches",
+        help="préparer les nouvelles clés et les changements anglais/indonésien d'une version",
+    )
+    update_batches_parser.add_argument(
+        "--previous-source",
+        default="work/source.csv",
+        help="CSV extrait de la version précédemment traduite",
+    )
+    update_batches_parser.add_argument(
+        "--source",
+        default="work/full/source.csv",
+        help="CSV extrait de la nouvelle version du jeu",
+    )
+    update_batches_parser.add_argument("--translations", default="translations/fr.csv")
+    update_batches_parser.add_argument("--source-dir", default="work/update-batches/source")
+    update_batches_parser.add_argument("--output-dir", default="translations/update-batches")
+    update_batches_parser.add_argument("--manifest", default="work/update-batches/manifest.json")
+    update_batches_parser.add_argument("--character-budget", type=int, default=80_000)
+    update_batches_parser.set_defaults(handler=command_prepare_update_batches)
 
     merge_parser = subparsers.add_parser("merge-batches", help="valider et fusionner les lots terminés")
     merge_parser.add_argument("--source", default="work/source.csv")

@@ -4,8 +4,9 @@ Projet communautaire de traduction française de **KuloNiku: Bowl Up!**.
 
 ## État actuel
 
-- Prototype validé techniquement sur la démo macOS `0.10.5`.
-- Extraction confirmée de la table Unity `I2Languages` : 12 211 clés, 8 langues.
+- Patch validé techniquement sur la démo macOS `0.10.5`, puis adapté à la
+  version complète macOS.
+- Extraction confirmée de la version complète : 13 173 clés, 8 langues.
 - Le menu du jeu n’accepte que huit emplacements codés. Le patch conserve
   techniquement l’emplacement allemand (`de`), l’affiche comme « Français » et
   y injecte le français. L’anglais de la version installée sert de repli.
@@ -42,7 +43,8 @@ uv run kuloniku-fr restore "/chemin/vers/KuloNiku.app" --apply
 ```
 
 Sur Windows, donner le dossier qui contient `KuloNiku_Data`. Le même outil
-détecte automatiquement macOS/Windows et Démo/Complet.
+détecte automatiquement macOS et Windows. Le projet cible désormais la version
+complète ; la démo n'est plus maintenue.
 
 ## Commandes de développement
 
@@ -109,5 +111,5 @@ uv run kuloniku-fr merge-batches \
 ```
 
 Les choix culinaires et les validations visuelles restantes sont consignés dans
-`docs/TERMINOLOGY.md`. La couverture, les contrôles et les quinze validations
-restantes sont résumés dans `docs/QUALITY.md`.
+`docs/TERMINOLOGY.md`. La couverture et les contrôles sont résumés dans
+`docs/QUALITY.md`.

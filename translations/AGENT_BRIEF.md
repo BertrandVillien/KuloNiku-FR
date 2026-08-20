@@ -95,9 +95,14 @@ formulation neutre reste naturelle; sinon marquer la ligne `provisional`.
 - Brawl / Meatball Brawl → Duel culinaire dans les textes courants; conserver
   un éventuel titre stylisé seulement si la clé ou plusieurs langues l'imposent.
 - Fish balls → Boulettes de poisson; rice vermicelli → Vermicelles de riz.
+- Fish cake → Surimi Narutomaki.
 - Broth/soup base selon le contexte : Bouillon ou Soupe, ne pas uniformiser sans
   regarder la clé et les autres langues.
 - Cozy Mode → Mode détente.
+- Tous les tutoriels tutoient le joueur.
+- Écrire `oe` et non la ligature `œ`, absente de la police des bulles.
+- Les noms natifs de touches (`Left Shift`, `Space`, etc.) restent inchangés :
+  ils ne sont traduits dans aucune langue officielle.
 
 Le fichier de lot est volontairement le seul contexte textuel détaillé fourni.
 Il contient toutes les traductions officielles disponibles pour ses seules clés.

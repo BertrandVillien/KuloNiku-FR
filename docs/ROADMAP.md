@@ -12,8 +12,8 @@
 
 ## À valider avant la première release publique
 
-- apparition et sélection de `Français` dans la démo macOS avec le mode `slot:de` ;
-- même test sur la version complète macOS ;
+- installation, apparition et sélection de `Français` dans la version complète
+  macOS ;
 - test réel sur Windows ;
 - comportement après « Vérifier l’intégrité » et après une mise à jour Steam ;
 - rendu des accents et couverture de la police ;

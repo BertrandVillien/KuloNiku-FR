@@ -21,9 +21,8 @@ Dialogue/GH_CASSIE_OUTDOOR_1_4,"Si ça arrive, marchons doucement pour éviter l
 Dialogue/GH_SHUGA_OPENING_2_1,"Yo, [NAME]. Toujours la classe.",reviewed,Formulation neutre et registre de Shuga.
 Dialogue/GH_SHUGA_BEACH_2_8,"D'accord, je vais tout faire pour t'impressionner !",reviewed,Formulation neutre.
 Dialogue/GH_SHUGA_GENERIC_2_4,"Je trouve les gens bosseurs cool ! Courage !",reviewed,Formulation neutre.
-Dialogue/GH_SHUGA_INDOOR_2_CHOICE_5,Seulement en bonne compagnie.,reviewed,Formulation neutre.
 Dialogue/GH_SHUGA_OUTDOOR_1_CHOICE_2,Juste en bonne compagnie.,reviewed,Formulation neutre.
-Dialogue/CEM13_END_1,"Mais dernièrement... les gens ne voient la cuisine que comme un moyen de gagner de l'argent. Si tu propulses Bakuso à la [COLOR=ALERT]1re place[/COLOR], peut-être qu'ils...",reviewed,Contenu du champ anglais priorisé ; il est exceptionnellement rédigé en indonésien dans le fichier source.
+Dialogue/CEM13_END_1,"Vive l'hydratation ! C'est bien ce que j'attendais d'un restaurant du top 5.",reviewed,Réplique entièrement remplacée dans la version complète ; nouvel anglais priorisé.
 Dialogue/VNM44_8,"J'admets que tu cuisines très bien. Mais personne ne peut tout faire sans aide.",reviewed,Formulation neutre.
 Dialogue/VNM54_PLAYERWIN_CHOICE_2,"Parce que je cuisine si bien et que j'ai tant de charme ?",reviewed,Formulation neutre.
 Dialogue/VNU2_1,"S-Salut, [NAME]. Merci d'être là.",reviewed,Formulation neutre.
@@ -80,20 +79,19 @@ Festival/DESC_FES_DEEPLY_FRIED,Au moins 2 ingrédients de la table de friture pa
 Festival/DESC_FES_FLASHY_SLASH,Au moins 2 ingrédients de la table de découpe par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_BROTH_FOCUSED,Au moins 2 ingrédients de la table de cuisson par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
 Festival/DESC_FES_FARM_HARVEST,Au moins 2 légumes par commande.,reviewed,Anglais et indonésien concordent sur la quantité 2.
-Tutorial/,"Il existe plein de façons d'obtenir un bon score, alors essaie différentes approches. Mais surtout, amuse-toi !",reviewed,Tutoiement harmonisé dans tous les tutoriels.
 Tutorial/GPN10_3,"Voici ta liste d'[COLOR=ALERT]objectifs[/COLOR]. Commence par créer une recette et obtenir quelques ingrédients !",reviewed,Formulation neutre.
 Shop/SHOP_SEASONING_VINEGARPOWDER_NAME,Poudre de vinaigre,reviewed,Appellation culinaire harmonisée.
 BUTTON_SHOP,Boutique,reviewed,Libellé d'interface harmonisé.
 Dialogue/VNLOCATION_AQUARIUM_NAME,Saunaquarium de KuloNiku,reviewed,Graphie du nom propre harmonisée.
 VNLOCATION_PARK_NAME,Parc municipal,reviewed,Nom du lieu harmonisé.
-Dialogue/VNLOCATION_PARK,Parc municipal,reviewed,Nom du lieu harmonisé.
+Dialogue/VNLOCATION_PARK,Parc,reviewed,Nom raccourci conformément à la version complète.
 Dialogue/VNLOCATION_PARK_NAME,Parc municipal,reviewed,Nom du lieu harmonisé.
 Dialogue/STELLACONTEST_PLAYERWIN_21,"À plus, minus !",reviewed,Jeu de mots « Smell you later » adapté sans faux sens.
 Dialogue/DIALOGUE_VNM11_55,"À plus, minus !",reviewed,Jeu de mots harmonisé.
 Dialogue/VNM40_4,Hein ?,reviewed,Ponctuation française corrigée.
 Dialogue/GH_UME_INDOOR_2_3,Hein ?,reviewed,Ponctuation française corrigée.
 Dialogue/VNS2_47,Hein ?,reviewed,Ponctuation française corrigée.
-Dialogue/VNS2_48,Hein ?,reviewed,Ponctuation française corrigée.
+Dialogue/VNS2_48,Hum ?,reviewed,Interjection mise à jour dans la version complète.
 Dialogue/GH_DAN_BEACH_1_5,Voilà l'esprit !,reviewed,Expression française harmonisée.
 Dialogue/GH_SHUGA_OUTDOOR_1_3,"Ah ouais ? C'est génial.",reviewed,Répétition identique harmonisée avec la réplique de Shuga.
 Dialogue/GH_SHUGA_OUTDOOR_1_5,"Ah ouais ? Honnêtement, moi aussi.",reviewed,Répétition identique harmonisée avec la réplique de Shuga.
@@ -184,7 +182,7 @@ TUTORIAL_TASTE_BOOK_CLOSE,Ferme le livre quand tu as fini.,reviewed,Tutoiement h
 TUTORIAL_TASTE_MULTIPLE_SEASON,Tu peux ajouter plusieurs fois un ingrédient pour intensifier davantage sa saveur.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_TASTE_END,"En résumé, utilise tes ingrédients pour adapter le plat à la commande du client !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_DISCARD_OPENING,"Vide maintenant ton bol, pour pouvoir repartir de zéro.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
-TUTORIAL_DISCARD_ACTION,Maintiens le clic sur le bol pour jeter tous les ingrédients qu’il contient.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+TUTORIAL_DISCARD_ACTION,Sélectionne le bol et [COLOR=ALERT]maintiens[/COLOR] le bouton Jeter pour retirer ses ingrédients.,reviewed,Commande révisée dans la version complète ; tutoiement et balise préservés.
 TUTORIAL_DISCARD_COIN_REFUND,"En jetant des ingrédients, tu récupères une partie de leur coût.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_DISCARD_END,Pas d’inquiétude si tu dois recommencer : l’erreur est humaine !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 TUTORIAL_REMAKE_END,Ne te décourage pas. Lis bien la commande et refais le plat. Tu y arriveras.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
@@ -210,15 +208,15 @@ Tutorial/CONTEST_T1_4A_HEARTEXPLANATION,Bien joué. Les nouilles sont des ingré
 Tutorial/CONTEST_T1_4B_JUDGEINFOINTRO,Chaque juge a aussi ses propres préférences. Ouvre ici les [COLOR=ALERT]Infos du juge[/COLOR].,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T1_5B_MINIGAME_STARTMINIGAME,Ferme ensuite le couvercle pour relancer le [COLOR=ALERT]mini-jeu[/COLOR] de cuisson. Tu y arriveras !,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T1_6B_INGREDIENTANDJUDGEEXPLANATION,Tiens compte des ingrédients demandés et des préférences du jury pour marquer des points ! Sonne maintenant la cloche pour finir ton tour.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
-Tutorial/CONTEST_T2_1_CROWDCHAININTRO,"Pour plus d’ambiance, il y a aussi une [COLOR=ALERT]jauge du public[/COLOR] ! Si tu la remplis, chaque juge te donne un point de plus.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T2_1_CROWDCHAININTRO,"Pour plus d’ambiance, il y a aussi une [COLOR=ALERT]jauge du public[/COLOR] ! Si tu remplis complètement la [COLOR=ALERT]jauge du public[/COLOR], tous les juges s'enthousiasmeront et te donneront chacun un point de plus.",reviewed,Audit complet : les deux balises sont conservées.
 Tutorial/CONTEST_T2_2A_SELECTWRONGINGREDIENT,Réussir un [COLOR=ALERT]mini-jeu parfait[/COLOR] augmente la jauge du public. Fais bouillir une boulette de tendon et un ravioli.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T2_3_MINIGAMEAPPLAUSEINTRO,"Bien joué ! Comme c’était parfait, tu as [COLOR=ALERT]augmenté la jauge du public.[/COLOR]",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T2_4_CHAINEXPLANATION,Tu peux aussi l’augmenter en satisfaisant la [COLOR=ALERT]demande du public[/COLOR]. La demande actuelle est affichée ici.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T2_5A_SELECTCHAININGREDIENT,Le public veut quelque chose d’[COLOR=SOUR]acide[/COLOR] ! Ajoute la poudre de vinaigre. Prépare-toi au mini-jeu.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T2_7_WAITENDTURN,Sonne maintenant la cloche pour finir ton tour.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/CONTEST_T3_1_CHAINRESETEXPLANATION,"Regarde ! La [COLOR=ALERT]demande du public[/COLOR] a changé. Elle change à chaque tour, pense à la vérifier régulièrement.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
-Tutorial/CONTEST_T3_2_FREECOOKING,"C’est tout ! Pour un bon score, ajoute les [COLOR=ALERT]ingrédients demandés[/COLOR], suis les [COLOR=ALERT]préférences des juges[/COLOR] et essaie de remplir la [COLOR=ALERT]jauge du public[/COLOR].",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
-Tutorial/CONTEST_T3_3_SCORINGEXPLANATION,Ton score final est la somme des notes du jury. N’oublie pas qu’un duel peut compter plusieurs juges.,reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
+Tutorial/CONTEST_T3_2_FREECOOKING,"C’est tout ! Pour un bon score, ajoute les [COLOR=ALERT]ingrédients demandés[/COLOR], suis les [COLOR=ALERT]préférences des juges[/COLOR] et essaie de remplir la [COLOR=ALERT]jauge du public[/COLOR]. Et surtout, amuse-toi !",reviewed,Nouvelle conclusion de la version complète ajoutée ; tutoiement harmonisé.
+Tutorial/CONTEST_T3_3_SCORINGEXPLANATION,Ton score final est la somme des notes du jury. N’oublie pas qu’un duel peut compter plusieurs juges. Bonne chance !,reviewed,Nouvelle conclusion adaptée sans genrer le personnage joueur.
 Tutorial/GPN1B_1,"À Kuloniku, nous aimons nous promener le soir. Tu peux faire pareil !",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPN1B_2,"Pour redécorer ton restaurant, fais-le le soir. Sélectionne Bakuso pour entrer.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
 Tutorial/GPN1B_4,"C’est là que tu loges, non ? Sélectionne le bâtiment pour passer la nuit.",reviewed,Tutoiement harmonisé avec les personnages et les versions espagnole et allemande.
@@ -295,7 +293,7 @@ TUTORIAL_BASIC_WAIT_ORDERNOTES,Voici la commande du client ! Ferme-la quand tu a
 INGREDIENT_EGGBALL,Boulette à l'oeuf,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/CONTEST_PARTNER_INTRO_CHARMANT,"Applaudissez Charmant ! Sa prestance et son bagout ont brisé bien des coeurs ! Méfiez-vous, les amis !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/CONTEST_PARTNER_INTRO_EMA,"Douce mais ferme, c'est Ema ! Aussi appelée la reine de la cuisine familiale, ses plats chauds font fondre les coeurs gelés !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
-Dialogue/OPPONENT_INTRO_NEKORA,"Nyan nyan, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les oeufs, mais aussi les coeurs !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Dialogue/OPPONENT_INTRO_NEKORA,"Nyan nyan, miaou miaou, Nekora est là ! Ce chat a des griffes, alors attention ! Ses omelettes signature brisent les oeufs, mais aussi les coeurs !",reviewed,Réplique féline complétée selon le nouvel anglais ; graphie oe compatible.
 Dialogue/VNLOCATION_PARK_DESC,"Un paisible parc urbain rempli de bancs, de fleurs et d'une fontaine historique : une pause fraîche au coeur de la ville.",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM20_PLAYERWIN_5,"Tu as mérité ce huitième rang, [NAME]. Je suis de tout coeur avec toi !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Dialogue/VNM13_END_12,"Ha ha ha, en effet, c'est très satisfaisant de les voir cuisiner avec tant de coeur à chaque duel !",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
@@ -354,3 +352,181 @@ Contest/MODIFIER_STARTING_OPPONENT_HEART_SINGLE,L'adversaire commence avec 3 coe
 Contest/MODIFIER_STARTING_OPPONENT_HEART_ALL,L'adversaire commence avec 1 coeur de tous les juges.,reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
 Tutorial/CONTEST_T1_5E_MINIGAME_HEARTEXPLANATION,"Avec des boulettes, M. Crois est ravi. Tu vois les [COLOR=ALERT]coeurs[/COLOR] ? Il te donnera sûrement une bonne note !",reviewed,Tutoiement harmonisé et graphie oe compatible avec la police du jeu.
 Tutorial/GPN10_1,"Et si on jetait un oeil à ces [COLOR=ALERT]objectifs[/COLOR], hein hein ?",reviewed,Graphie oe retenue pour éviter le changement de police en jeu.
+Tutorial/GPR2_4,"Grille chaque ingrédient au chalumeau jusqu'à ce qu'il soit cuit à point.",reviewed,Audit complet : niveau de cuisson medium.
+Tutorial/GPB13_4,"Pour remplir la [COLOR=ALERT]jauge de motivation[/COLOR] d'un partenaire, passe du temps avec cette personne. Propose-lui une [COLOR=ALERT]sortie[/COLOR] !",reviewed,Audit complet : formulation neutre.
+Dialogue/JUDGE_DESC_ALMA_DRINK,"Elle aimerait aussi du [COLOR=DRINK]cola[/COLOR] ! J'ai entendu dire qu'à l'origine, c'était un tonique censé tout soigner !",reviewed,Audit complet.
+Dialogue/GPN11_1_4,"Hé, c'est comme ça quand on est aussi talentueuse et [MEI_ADJECTIVE] que moi !",reviewed,Audit complet : Mei est féminine.
+Dialogue/GPN11_3_2,"Quand Crois était aux commandes, il nous faisait tout vendre trop cher.",reviewed,Audit complet.
+Dialogue/GPN11_4_5,"R-Quoi qu'il en soit, si tu cherches une idée de plat, en voici une : [CRAFTABLE_RECIPE]. De rien !",reviewed,Audit complet : tutoiement.
+Dialogue/GH_STELLA_AQUARIUM_1_3,"C'est ça ! Ça doit être ça !",reviewed,Audit complet.
+Dialogue/GH_STELLA_AQUARIUM_1_6,"Elles arrivent à peine à rayer les diamants, je te signale !",reviewed,Audit complet : Stella parle de ses dents.
+Dialogue/GH_STELLA_ARTSTUDIO_1_CHOICE_1,"D'accord. Fais juste attention à ne pas me toucher !",reviewed,Audit complet : tutoiement.
+Dialogue/GH_STELLA_ARTSTUDIO_1_4,"Je suis prête à faire ce sacrifice : te salir un peu.",reviewed,Audit complet : Stella est féminine.
+Dialogue/GH_STELLA_SHOPPINGMALL_1_3,"Sérieux ?",reviewed,Audit complet.
+Dialogue/GH_STELLA_SHOPPINGMALL_1_4,"Je ne pense pas être faite pour toutes ces histoires étouffantes de monarchie. J'aime bien la démocratie !",reviewed,Audit complet : Stella est féminine.
+Dialogue/GH_STELLA_TOWNPARK_1_6,"Je ne suis pas arrivée si loin en prenant toujours le chemin le plus sûr, tu sais ?",reviewed,Audit complet : Stella est féminine.
+Dialogue/GH_STELLA_AMUSEMENTPARK_1_5,"Mais je ne devrais vraiment pas. Je ne veux pas me faire expulser encore une fois !",reviewed,Audit complet : Stella est féminine.
+Dialogue/VND6_8,"C'est ça ! Je peux coanimer ?",reviewed,Audit complet.
+Dialogue/VNS7_12,"Euh, en fait, ça n'en fait que neuf.",reviewed,Audit complet.
+Dialogue/VNS7_14,"Je veux simplement rendre la pareille à la communauté. Soutenir les autres fans, tu vois ?",reviewed,Audit complet.
+Dialogue/VNS7_25,"Si ses chansons ne m'avaient pas trouvé au bon moment, j'aurais peut-être...",reviewed,Audit complet.
+Dialogue/VNS7_32,"(Il s'est endormi d'un coup !)",reviewed,Audit complet.
+Dialogue/VNS7_41,"Mais merci de prendre soin de moi. Tu es vraiment quelqu'un de bien.",reviewed,Audit complet : formulation neutre.
+Dialogue/VNU7_10,"B-Bien sûr ! Ça me paraît une bonne idée.",reviewed,Audit complet.
+Dialogue/VNU7_15,"Tu savais ? Certains pensent que les requins sont lisses dans toutes les directions.",reviewed,Audit complet : tutoiement.
+Dialogue/VNU7_17,"O-Oh, mon Dieu. Désolée, commençons !",reviewed,Audit complet : Ume est féminine.
+Dialogue/VNU7_27,"Je ne pense pas que ça finira si mal... mais merci.",reviewed,Audit complet.
+Dialogue/VNU7_32,"Cela peut sembler peu de chose aux yeux des autres, mais je suis vraiment reconnaissante de t'avoir, [NAME].",reviewed,Audit complet : Ume est féminine et tutoiement.
+Dialogue/VNU7_33,"Il y a tant de choses que je voulais faire, mais que je n'ai pas faites. P-parce que je n'avais personne avec qui les faire.",reviewed,Audit complet.
+Dialogue/VNS2_CHOICE_10,"Shuga, attention !",reviewed,Audit complet : ordre des trois choix corrigé.
+Dialogue/VNS2_CHOICE_11,"(Ne rien dire.)",reviewed,Audit complet : ordre des trois choix corrigé.
+Dialogue/VNS2_CHOICE_12,"Arrête !!!",reviewed,Audit complet : ordre des trois choix corrigé.
+Recipe/RECIPE_BOWL_TENDONSOUP_0,Soupe aux boulettes de tendon,reviewed,Audit terminologie : Sup Bakso Urat.
+Recipe/RECIPE_BOWL_TENDONSOUP_1,Soupe aux boulettes de tendon spéciale,reviewed,Audit terminologie : variante Special.
+Recipe/RECIPE_BOWL_TENDONSOUP_2,Soupe aux boulettes de tendon suprême,reviewed,Audit terminologie : Sup Bakso Urat.
+Recipe/RECIPE_BOWL_VERMICELLISOUP_0,Soupe de vermicelles de riz,reviewed,Audit terminologie : Sup Bihun.
+Recipe/RECIPE_BOWL_VERMICELLISOUP_1,Soupe de vermicelles de riz spéciale,reviewed,Audit terminologie : variante Special.
+Recipe/RECIPE_BOWL_VERMICELLISOUP_2,Soupe de vermicelles de riz suprême,reviewed,Audit terminologie : Sup Bihun.
+Dialogue/VNM35_1,"Hé, [NAME] ! J'espère que tu es d'attaque, parce que je suis à fond !",reviewed,Audit terminologie : formulation neutre.
+Dialogue/VNM45_CONFIRMATION_1,"Bonsoir, [NAME]. Ça te dit, un duel culinaire ?",reviewed,Audit terminologie : formulation neutre.
+Dialogue/VNM51_16,"Lado semble lui aussi partagé. Accepte son défi quand tu te sentiras d'attaque, [NAME].",reviewed,Audit terminologie : formulation neutre.
+Dialogue/VNM57_20,"Prépare-toi au mieux, [NAME] !",reviewed,Audit terminologie : formulation neutre et tutoiement.
+Dialogue/GH_STELLA_OPENING_2_1,"Salut [NAME] ! Ça te dit de vivre le plus beau jour de ta vie ?",reviewed,Audit terminologie : tutoiement et formulation neutre.
+Contest/CONTEST_SUMMARY_BODY_WIN_START_2,"Le dernier duel culinaire s'est conclu par la victoire de [NAME], de Bakuso, sur [OPPONENT], lors de l'événement culinaire en direct le plus brûlant du jour.",reviewed,Audit terminologie : formulation neutre.
+Contest/CONTEST_SUMMARY_BODY_LOSE_END_2,"Malgré les grands espoirs placés en [NAME] pour perpétuer le glorieux héritage de Bakuso, ses talents doivent encore mijoter.",reviewed,Audit terminologie : formulation neutre ; variable source préservée.
+Shop/IMPROVED_SKEWER_TABLE_DESC,"[COLOR=ALERT]Réduit le temps de cuisson des brochettes de 50 %.[/COLOR]<br>« Un gril utilisant les flammes draconiques de l'âge des légendes (prétendument). »",reviewed,Audit terminologie : valeur corrigée.
+Shop/IMPROVED_DRINK_TABLE_DESC,"[COLOR=ALERT]Augmente la vitesse de remplissage de 25 %.[/COLOR]<br>« Une table qui transforme le désert en forêt tropicale (peut-être). »",reviewed,Audit terminologie : valeur corrigée.
+Shop/IMPROVED_TRASH_BIN_DESC,"[COLOR=ALERT]Augmente de 25 % la valeur de remboursement des plats.[/COLOR]<br>« Une poubelle mythique qui contient les maux du monde, mais aussi l'espoir (c'est ce qu'on dit). »",reviewed,Audit terminologie : valeur corrigée.
+Shop/SHOP_DININGDECORATION_WALLDECORATION_DESC_SHORT,Augmente le gain de lien de [X].,reviewed,Audit terminologie.
+Shop/SHOP_DININGDECORATION_CEILING_FAN_DESC_SHORT,Augmente le bénéfice de base de [X] pièce(s).,reviewed,Audit terminologie.
+Shop/SHOP_DININGDECORATION_TOP_WALL_DECORATION_DESC_SHORT,Augmente de [X] les bons remportés lors des duels culinaires.,reviewed,Audit terminologie.
+Shop/SHOP_DININGDECORATION_DECORATIVE_PLANT_DESC_SHORT,Augmente de [X] le bonus de pourboire de chaque jauge de réputation remplie.,reviewed,Audit terminologie.
+Shop/SHOP_DININGDECORATION_UPPERLEFTWALL_DESC_SHORT,Augmente la patience des clients de [X].,reviewed,Audit terminologie.
+Shop/SHOP_VOUCHER_EXCHANGE_TITLE,Échange de bons,reviewed,Audit terminologie.
+Shop/SHOP_VOUCHER_EXCHANGE_DESC,"Échange [COLOR=ALERT][X][/COLOR] pièces contre [COLOR=ALERT][Y][/COLOR] bon(s)",reviewed,Audit terminologie.
+HANGOUT_SHUGA_2_REWARD_TITLE,Débloquer des bons supplémentaires,reviewed,Audit terminologie.
+HANGOUT_SHUGA_2_REWARD_DESC,Nouveau bonus : bons supplémentaires obtenus lors des festivals,reviewed,Audit terminologie.
+HANGOUT_SHUGA_3_REWARD_TITLE,Débloquer encore plus de bons,reviewed,Audit terminologie.
+HANGOUT_SHUGA_3_REWARD_DESC,Nouveau bonus : encore plus de bons obtenus lors des festivals,reviewed,Audit terminologie.
+HANGOUT_DAN_2_REWARD_TITLE,Débloquer des bons supplémentaires,reviewed,Audit terminologie.
+HANGOUT_DAN_2_REWARD_DESC,Nouveau bonus : bons supplémentaires obtenus lors des duels culinaires,reviewed,Audit terminologie.
+Shop/SHOP_DININGDECORATION_TOP_WALL_DECORATION_DESC,"Décoration pour la salle. [COLOR=ALERT]Augmente de [X] les bons remportés lors des duels culinaires.[/COLOR]<br>« C'est ce que regardaient les ancêtres avant les smartphones. »",reviewed,Audit terminologie.
+BUTTON_TAPANYWHERETOCLOSE,Continuer...,reviewed,Audit terminologie.
+SAVESLOT_SELECT_CONFIRMATION,Choisir la sauvegarde [X] ?,reviewed,Audit terminologie.
+SAVEDATA_PANEL_TITLE,Sauvegarde,reviewed,Audit terminologie.
+FEEDBACK_DESC,Envoyer un avis,reviewed,Correction validée.
+BUTTON_CITY,Centre-ville,reviewed,Correction validée.
+UI_FRIENDSHIP_TITLE,Lien,reviewed,Correction validée.
+REWARD_AFFECTION,+[X] lien,reviewed,Correction validée.
+BLOCKEDACTION_DECORATIONSKIN_LOCKED,Nécessite un lien niv. [LEVEL] avec [CHARACTER],reviewed,Correction validée.
+SKEWER_COOKED_LEVEL_COOKED,À point,reviewed,Correction validée.
+GUIDE_CONTEST_INFO,Infos du duel,reviewed,Correction validée.
+GUIDE_JUDGE_INFO,Infos du juge,reviewed,Correction validée.
+Dialogue/VNM21_CHOICE_2,Autant le faire.,reviewed,Correction validée.
+Dialogue/VNS1_CHOICE_3,"J'aime juste passer du temps avec toi.",reviewed,Correction validée.
+Dialogue/SAI_ITEM2_4,un liquide gris qui palpite,reviewed,Correction validée.
+Dialogue/VNS1_12,"Waouh, haha, ça sort d'où ?",reviewed,Correction validée.
+Dialogue/VNM19_2,"Hé hé, j'ai vraiment hâte de t'affronter, pas toi ?",reviewed,Correction validée.
+Dialogue/GH_CASSIE_GENERIC_1_2,"Allez, ouistiti !",reviewed,Correction validée.
+Dialogue/GH_SHUGA_OUTDOOR_2_4,"Oh, une feuille ? Merci, [NAME]. Mais la prochaine fois, dis-le-moi.",reviewed,Correction validée.
+Dialogue/ALI_ACTION_4,ont des os,reviewed,Correction validée.
+Dialogue/GH_CASSIE_INDOOR_1_CHOICE_3,Tout est amusant quand tu es là !,reviewed,Correction validée.
+Dialogue/GPN6_2_3,Hum ? Et mon idée précédente ?,reviewed,Correction validée.
+ACTION_HIDEUI,Masquer l'interface,reviewed,Correction validée.
+Dialogue/ANDY_JOB_8,participer à des duels culinaires,reviewed,Correction validée.
+Dialogue/JAYA_TROUBLE_3,maid féline insupportablement mignonne,reviewed,Correction validée.
+Shop/SHOP_DRINK_ICE_DESC,"Ajout pour la table à boissons. [COLOR=ALERT]Ajoute des glaçons en accompagnement.[/COLOR]<br>« Issus des icebergs les plus purs. »",reviewed,Correction validée.
+Recipe/RECIPE_BOWL_CLASSICBOWL_1,Bol classique spécial,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_MEATBALLTWIST_1,Boulettes revisitées spéciales,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_NOODLESDELIGHT_1,Délice de nouilles spécial,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_ZESTYNOODLES_1,Nouilles relevées spéciales,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_DUMPLINGSOUP_1,Soupe aux raviolis spéciale,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_TOFUSOUP_1,Soupe au tofu spéciale,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_CHICKENSOUP_1,Soupe au poulet spéciale,reviewed,Variante Special de la version complète.
+Recipe/RECIPE_BOWL_FISHCAKESOUP_1,Soupe au narutomaki spéciale,reviewed,Variante Special de la version complète.
+Endless/MODIFIER_REFILLCOUPON_NAME,Coupon de réapprovisionnement,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_REFILLCOUPON_DESC,Réduit le coût du réapprovisionnement de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_MEATSURGE_NAME,Poussée de viande,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_MEATSURGE_DESC,Augmente le stock de viande de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_VEGETABLESURGE_NAME,Poussée de légumes,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_VEGETABLESURGE_DESC,Augmente le stock de légumes de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_BONUSCOUPON_NAME,Bon bonus,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_BONUSCOUPON_DESC,Ajoute [X] bon(s) bonus par client.,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_NEWCUSTOMER_NAME,Client en plus,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_NEWCUSTOMER_DESC,[X] client en plus.,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_GOODDELIVERY_NAME,Livraison rentable,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_GOODDELIVERY_DESC,Augmente le bénéfice des livraisons de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_QUICKFAME_NAME,Renommée express,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_QUICKFAME_DESC,Augmente la réputation gagnée de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_CUSTOMERPATIENCE_NAME,Patience des clients,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_CUSTOMERPATIENCE_DESC,Augmente la patience des clients de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_EXTRATIPS_NAME,Pourboires supplémentaires,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_EXTRATIPS_DESC,Augmente les pourboires des clients de [X].,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_EXTRACOIN_NAME,Pièces en plus,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_EXTRACOIN_DESC,Augmente de [X] les pièces gagnées à chaque commande.,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_INCREASEDPROFIT_NAME,Bénéfice accru,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_INCREASEDPROFIT_DESC,Augmente le bénéfice de base de [X] pièce(s).,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_REPUTATIONBONUS_NAME,Bonus de réputation,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_REPUTATIONBONUS_DESC,Bonus de pourboire de [X] par jauge de réputation remplie.,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_NODISLIKED_NAME,Aucun ingrédient détesté,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_NODISLIKED_DESC,Aucun ingrédient détesté dans les commandes.,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_NODIRTYCONTAINER_NAME,Aucun récipient sale,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_NODIRTYCONTAINER_DESC,Plus aucun récipient à laver.,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_AUTORESTOCK_NAME,Réapprovisionnement automatique,reviewed,Version complète : formulation naturelle.
+Endless/MODIFIER_AUTORESTOCK_DESC,Les ingrédients vides se réapprovisionnent automatiquement.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_BOIL_NAME,Cuisson lente,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_BOIL_DESC,La marmite cuit [X] % moins vite aujourd'hui.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_QUICKER_FRY_OVERCOOK_NAME,Poêle capricieuse,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_QUICKER_FRY_OVERCOOK_DESC,Les aliments dans la poêle surcuisent [X] % plus vite.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SMALL_CAPACITY_NAME,Petite capacité,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SMALL_CAPACITY_DESC,"La capacité de tous les outils baisse de [X] (minimum : 1 emplacement).",reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SUPPLY_SHORTAGE_NAME,Pénurie de stocks,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SUPPLY_SHORTAGE_DESC,Un ingrédient aléatoire de chaque table commence avec [X] en stock.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_TOOLS_NAME,Outils cassés,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_TOOLS_DESC,Tous les outils sont [X] % plus lents.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_MISSING_BOWL_NAME,Bol manquant,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_MISSING_BOWL_DESC,Un bol en moins.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_RESTOCK_COST_NAME,Inflation du réapprovisionnement,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_RESTOCK_COST_DESC,Chaque réapprovisionnement coûte [X] pièce(s) de plus.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_NONPERFECT_REFUND_NAME,Client en colère,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_NONPERFECT_REFUND_DESC,Le client exigera un remboursement si le plat n'est pas parfait.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_DISCARD_FEE_NAME,Coût d'élimination,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_DISCARD_FEE_DESC,Jeter un ingrédient coûte [X] pièce(s).,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_STAPLE_SHORTAGE_NAME,Pénurie d'ingrédients,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_STAPLE_SHORTAGE_DESC,Tous les ingrédients commencent aujourd'hui avec [X] en stock.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_EXPENSIVE_MISTAKES_NAME,Erreurs coûteuses,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_EXPENSIVE_MISTAKES_DESC,Le client reçoit [X] % de plus à chaque remboursement.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_DISABLE_DISCARD_NAME,Corbeille désactivée,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_DISABLE_DISCARD_DESC,Impossible de jeter des ingrédients.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_FRY_NAME,Sans huile,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_FRY_DESC,La poêle cuit [X] % moins vite aujourd'hui.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_SKEWER_NAME,Chalumeau usé,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_SKEWER_DESC,Le gril cuit [X] % moins vite aujourd'hui.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_REDUCED_FINAL_TIPS_NAME,Client peu généreux,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_REDUCED_FINAL_TIPS_DESC,Tous les pourboires du client sont réduits de [X] %.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_WASHING_NAME,Robinet qui fuit,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_SLOW_WASHING_DESC,Le lavage prend [X] % plus longtemps.,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_NO_STOCK_REFUND_NAME,Jetable,reviewed,Version complète : formulation naturelle.
+Endless/CHALLENGE_NO_STOCK_REFUND_DESC,Les ingrédients jetés ne réapparaissent plus.,reviewed,Version complète : formulation naturelle.
+Endless/REP_REWARD_RECIPE_DESC,"Débloque <b>[COLOR=ALERT][RECIPE][/COLOR]</b> avec un bénéfice de <sprite name=""icon_money""> [COLOR=ALERT][PROFIT][/COLOR]",reviewed,Version complète : formulation naturelle.
+Endless/REP_REWARD_INGREDIENT_DESC,"Débloque <b>[COLOR=ALERT][INGREDIENT][/COLOR]</b> pour <b>[COLOR=ALERT][TOOLS][/COLOR]</b>",reviewed,Version complète : formulation naturelle.
+Dialogue/VNS7_30,"Ça te dérange si je... ferme les yeux... juste pour un...",reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_AQUARIUM_1_CHOICE_2,"Tes propres dents, peut-être ?",reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_ARTSTUDIO_1_5,"C'est parti ! Je vais te montrer les ficelles du métier !",reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_TOWNPARK_1_CHOICE_1,Il n'est jamais trop tard pour poursuivre ton rêve !,reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_AMUSEMENTPARK_1_2,"J'allais souvent au feu d'artifice. Pour entraîner mes cordes vocales, tu sais.",reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_AMUSEMENTPARK_1_4,"Hé hé. J'aimerais te montrer !",reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_AMUSEMENTPARK_1_6,Tu as encore un de tes délires ?,reviewed,Audit résiduel : tutoiement.
+Dialogue/VNU6_CHOICE_6,Tu aimerais sentir les vagues avec moi ?,reviewed,Audit résiduel : tutoiement.
+Dialogue/VNU6_29,"Et j'espère que tu seras là avec moi, [NAME].",reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_7,"...Je vais essayer, mais ce n'est pas si simple, je te le dis.",reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_11,Tu as toujours dix longueurs d'avance !,reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_18,Merci. Tu es toujours aussi magnanime.,reviewed,Audit résiduel : tutoiement.
+Dialogue/GH_STELLA_OUTDOOR_1_8,"C'est mon cadeau cette fois. Tu pourras nous rendre la pareille la prochaine fois que nous sortirons !",reviewed,Audit résiduel : tutoiement.
+Dialogue/OPPONENT_INTRO_ALMA,Elle peut paraître fragile mais son esprit est indomptable ! Alma est là pour te faire découvrir sa spécialité : la nourriture réconfortante !,reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_23,"Donc si je prends une photo de toi, juste une personne ordinaire en train de se promener tranquillement dans le parc...",reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_26,"Très bien, s'il te plaît, fais un pas en arrière et deux pas vers la droite.",reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_32,"Personne ne devinerait que tu es un espion de haut niveau. Tu ressembles à un autre habitant de Kuloniku profitant d’une journée ensoleillée !",reviewed,Audit résiduel : tutoiement.
+Dialogue/VND6_36,"Tu as raison. Pour tout étranger, nous ressemblons à des amis se promenant dans le parc.",reviewed,Audit résiduel : tutoiement.
+Dialogue/VNST6_13,"Ce sera plus facile de te le montrer. Asseyons-nous là-bas !",reviewed,Audit résiduel : tutoiement.
+Dialogue/VNST6_31,"Bien sûr, je suis sûr que nous pouvons trouver un moyen de t'impliquer.",reviewed,Audit résiduel : tutoiement.
