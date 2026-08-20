@@ -8,8 +8,8 @@
 
 Le paquet testé est disponible dans le run GitHub Actions du 20 août 2026 :
 
-- [télécharger l’artefact KuloNiku-FR-Steam-Deck-x86_64](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32375908790/artifacts/9409065188) ;
-- [consulter le run et ses contrôles](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32375908790).
+- [télécharger l’artefact KuloNiku-FR-Steam-Deck-x86_64](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308/artifacts/9413342469) ;
+- [consulter le run et ses contrôles](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308).
 
 GitHub demande d’être connecté pour télécharger un artefact Actions. Ce lien de
 bêta expire le **3 septembre 2026**. Après cette date, utilisez la
@@ -20,9 +20,9 @@ Le téléchargement est une archive ZIP. Extrayez-la une seule fois. Elle contie
 l’AppImage et son fichier `.sha256`.
 
 - SHA-256 de l’archive ZIP GitHub :
-  `f67aa97825007873a7b8a7850ee56974f44ef18e480b52bf912ae8e6bc42a068`
+  `cda936d35914523737e1c4762e97028ceb44d8f34b9e75c06ba2be74e6a7a974`
 - SHA-256 de `KuloNiku-FR-Steam-Deck-x86_64.AppImage` :
-  `53abe0fa1cc87e31ab5c7c1aa11722d4947cca9ce3e595a9b383f1acacc510a7`
+  `dc1454bc235652265f7b0336c2d26683312da511c55f6977c78ac5d2773baa8d`
 
 La vérification de l’empreinte est facultative pour le parcours sans Terminal.
 Un testeur qui souhaite la faire peut ouvrir Konsole dans le dossier extrait et

@@ -6,17 +6,17 @@
 
 ## Download the beta
 
-- [Download the KuloNiku-FR-Steam-Deck-x86_64 artifact](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32375908790/artifacts/9409065188).
-- [View the successful workflow run](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32375908790).
+- [Download the KuloNiku-FR-Steam-Deck-x86_64 artifact](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308/artifacts/9413342469).
+- [View the successful workflow run](https://github.com/BertrandVillien/KuloNiku-FR/actions/runs/32386961308).
 
 GitHub requires testers to sign in before downloading an Actions artifact. This
 beta artifact expires on **September 3, 2026**. The downloaded ZIP contains the
 AppImage and its `.sha256` file.
 
 - GitHub artifact ZIP SHA-256:
-  `f67aa97825007873a7b8a7850ee56974f44ef18e480b52bf912ae8e6bc42a068`
+  `cda936d35914523737e1c4762e97028ceb44d8f34b9e75c06ba2be74e6a7a974`
 - AppImage SHA-256:
-  `53abe0fa1cc87e31ab5c7c1aa11722d4947cca9ce3e595a9b383f1acacc510a7`
+  `dc1454bc235652265f7b0336c2d26683312da511c55f6977c78ac5d2773baa8d`
 
 ## Before patching
 
