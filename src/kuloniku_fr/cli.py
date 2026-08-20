@@ -59,7 +59,9 @@ def sha256(path: Path) -> str:
 
 
 def load_source(path: Path):
-    environment = UnityPy.load(str(path))
+    # UnityPy keeps path-backed files open on Windows. Loading the bytes avoids
+    # a sharing violation when the freshly validated patch is copied atomically.
+    environment = UnityPy.load(path.read_bytes())
     obj = find_i2_object(environment)
     raw = obj.get_raw_data()
     source = LanguageSource.parse(raw)

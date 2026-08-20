@@ -28,6 +28,32 @@ class Source:
         ]
 
 
+def test_load_source_uses_bytes_to_avoid_windows_file_locks(monkeypatch, tmp_path: Path):
+    asset = tmp_path / "resources.assets"
+    asset.write_bytes(b"unity-asset")
+    environment = object()
+
+    class UnityObject:
+        def get_raw_data(self):
+            return b"i2"
+
+    unity_object = UnityObject()
+
+    monkeypatch.setattr(cli.UnityPy, "load", lambda value: (value, environment))
+    monkeypatch.setattr(cli, "find_i2_object", lambda loaded: unity_object)
+
+    class Parsed:
+        def serialize(self):
+            return b"i2"
+
+    monkeypatch.setattr(cli.LanguageSource, "parse", lambda raw: Parsed())
+
+    loaded, found, _ = cli.load_source(asset)
+
+    assert loaded == (b"unity-asset", environment)
+    assert found is unity_object
+
+
 def test_install_updates_directly_from_verified_original(monkeypatch, tmp_path: Path):
     asset_path = tmp_path / "KuloNiku_Data" / "resources.assets"
     asset_path.parent.mkdir()
