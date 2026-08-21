@@ -122,7 +122,7 @@ RECIPE_BOWL_PLAYTEST_ZESTYNOODLES,Nouilles relevées,reviewed,+1 caractère : fo
 RECIPE_SKEWER_LAMBSKEWER,Brochette d'agneau,reviewed,
 RECIPE_SKEWER_MUSHROOMLAMBDELIGHT,Brochette d'agneau aux champignons,reviewed,+1 caractère : intitulé culinaire naturel.
 RECIPE_SKEWER_MUSHROOMSKEWER,Brochette de champignons,reviewed,+1 caractère : intitulé culinaire naturel.
-RECIPE_SKEWER_OCTOPUSDELIGHTSKEWER,Brochette de poulpe,reviewed,
+RECIPE_SKEWER_OCTOPUSDELIGHTSKEWER,Délice de poulpe en brochette,reviewed,
 RECIPE_SKEWER_OCTOPUSSKEWER,Brochette de poulpe,reviewed,+1 caractère : intitulé culinaire naturel.
 RECIPE_SKEWER_TOMATOLAMBSKEWER,Brochette agneau tomate,reviewed,
 RECIPE_SKEWER_TOMATOSKEWER,Brochette tomate,reviewed,
@@ -286,7 +286,7 @@ BUTTON_CRAFTING_RETRY,Réessayer,reviewed,
 BUTTON_START_CONTEST,Duel !,reviewed,
 BUTTON_TAPANYWHERETOCLOSE,Continuer...,reviewed,Audit terminologie.
 BUTTON_TAPANYWHERETOCONTINUE,Continuer...,reviewed,
-BACKLOG_TITLE,Journal,reviewed,
+BACKLOG_TITLE,Historique,reviewed,Dépasse max source de 2 caractères ; vérification visuelle en jeu prévue.
 CRAFTING_GUIDE_INGREDIENT,Ingrédients,reviewed,
 CRAFTING_GUIDE_TASTE,Saveur,reviewed,
 SETTINGS_RESOLUTION,Résolution,reviewed,
@@ -473,11 +473,11 @@ SAVESLOT_NEW_CONFIRMATION,Créer une sauvegarde sur l'emplacement [X] ?,reviewe
 SAVEDATA_PANEL_TITLE,Sauvegarde,reviewed,Audit terminologie.
 HEATLEVEL_COLD,Froid,reviewed,
 HEATLEVEL_NORMAL,Normale,reviewed,Dépasse max source ; à vérifier.
-HEATLEVEL_WARM,Chaud,reviewed,
+HEATLEVEL_WARM,Tiède,reviewed,
 HEATLEVEL_HOT,Chaud,reviewed,
 HEATLEVEL_NOT_COLD,Pas froid,reviewed,
 HEATLEVEL_NOT_NORMAL,Pas normal,reviewed,
-HEATLEVEL_NOT_WARM,Pas chaud,reviewed,
+HEATLEVEL_NOT_WARM,Pas tiède,reviewed,
 HEATLEVEL_NOT_HOT,Pas chaud,reviewed,
 ACTION_ANSWERPHONE,Répondre,reviewed,
 ACTION_DECLINE,Refuser,reviewed,
@@ -697,7 +697,7 @@ Dialogue/MAMIINTRO_10,Tant mieux pour elle mais parfois une fille veut juste man
 Dialogue/MAMIINTRO_CHOICE_2,Je devrais chanter en cuisinant ?,reviewed,
 Dialogue/MAMIINTRO_11,Par pitié non ! Un Souper Starz suffit largement merci !,reviewed,
 Dialogue/MAMIINTRO_12,Concentre-toi sur la cuisine et je suis sûre que les gens viendront !,reviewed,
-Dialogue/MAMIINTRO_13,"Mais si tu veux faire du karaoké je suis partante ! Tu connais ""My Meatballs Will Go On"" ?",reviewed,
+Dialogue/MAMIINTRO_13,"Mais si tu veux faire du karaoké je suis partante ! Tu connais ""La Boulette"" ?",reviewed,Clin d'oeil à « La Boulette » de Diam's.
 Dialogue/MAMIINTRO_14,Bref je suis prête à commander !,reviewed,
 Dialogue/MAMIINTROEND_2,Tu viens de la ville hein ? Il faudra tout me raconter un de ces jours !,reviewed,
 Dialogue/MAMIINTROEND_3,J'apprendrai les astuces des grandes villes pour propulser la gastronomie de KuloNiku encore plus haut !,reviewed,
@@ -761,7 +761,7 @@ Dialogue/CRYPTIC_COMMON_BOWL_MANUAL_1,Hmm je voudrais {0}.,reviewed,
 Dialogue/CRYPTIC_COMMON_BOWL_MANUAL_2,Je prends {0}.,reviewed,
 Dialogue/CRYPTIC_COMMON_BOWL_MANUAL_3,Je pense à {0}.,reviewed,
 Dialogue/CRYPTIC_COMMON_BOWL_MANUAL_4,D'accord {0}.,reviewed,
-Dialogue/CRYPTIC_COMMON_LIKED_1,Ajoutez bien plus de {1}.,reviewed,
+Dialogue/CRYPTIC_COMMON_LIKED_1,Ajoutez bien un peu de {1}.,reviewed,
 Dialogue/CRYPTIC_COMMON_LIKED_2,Oh je voudrais plus de {1} avec.,reviewed,
 Dialogue/CRYPTIC_COMMON_LIKED_3,Vous pouvez mettre plus de {1} ?,reviewed,
 Dialogue/CRYPTIC_COMMON_LIKED_4,Un peu plus de {1}.,reviewed,
@@ -5968,7 +5968,7 @@ Dialogue/MEI_PEOPLE_1,vauriens,reviewed,
 Dialogue/MEI_PEOPLE_2,loubards,reviewed,
 Dialogue/MEI_PEOPLE_3,brutes,reviewed,
 Dialogue/MEI_PEOPLE_4,bons à rien,reviewed,
-Dialogue/MEI_PEOPLE_5,brutes,reviewed,Raccourci naturel ; sens conservé.
+Dialogue/MEI_PEOPLE_5,terreurs,reviewed,Familier : « terreurs » rend bullies ; distinct de thugs (« brutes »).
 Dialogue/MEI_PEOPLE_6,canaille,reviewed,
 Dialogue/MEI_PEOPLE_7,punks,reviewed,
 Dialogue/MEI_PEOPLE_8,criminels,reviewed,
@@ -7127,7 +7127,7 @@ Dialogue (Backup)/MAMIINTRO_10,Tant mieux pour elle mais parfois une fille veut 
 Dialogue (Backup)/MAMIINTRO_CHOICE_2,Je devrais chanter en cuisinant ?,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMIINTRO_11,Par pitié non ! Un Souper Starz suffit largement merci !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMIINTRO_12,Concentre-toi sur la cuisine et je suis sûre que les gens viendront !,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MAMIINTRO_13,"Mais si tu veux faire du karaoké je suis partante ! Tu connais ""My Meatballs Will Go On"" ?",reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MAMIINTRO_13,"Mais si tu veux faire du karaoké je suis partante ! Tu connais ""La Boulette"" ?",reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMIINTRO_14,Bref je suis prête à commander !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMIINTROEND_2,Tu viens de la ville hein ? Il faudra tout me raconter un de ces jours !,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MAMIINTROEND_3,"Un jour, je veux m'installer là-bas. Je leur montrerai à quel point la cuisine de KuloNiku est incroyable !",reviewed,dépassement : formulation naturelle et intention préservées.
@@ -11451,7 +11451,7 @@ Dialogue (Backup)/MEI_PEOPLE_1,vauriens,reviewed,Propagé depuis le dialogue pri
 Dialogue (Backup)/MEI_PEOPLE_2,loubards,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_3,brutes,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_4,bons à rien,reviewed,Propagé depuis le dialogue principal anglais identique.
-Dialogue (Backup)/MEI_PEOPLE_5,brutes,reviewed,Propagé depuis le dialogue principal anglais identique.
+Dialogue (Backup)/MEI_PEOPLE_5,terreurs,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_6,canaille,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_7,punks,reviewed,Propagé depuis le dialogue principal anglais identique.
 Dialogue (Backup)/MEI_PEOPLE_8,criminels,reviewed,Propagé depuis le dialogue principal anglais identique.
@@ -12676,7 +12676,7 @@ Shop/SHOP_DININGDECORATION_CLOCK_DESC_SHORT,Augmente les pièces gagnées à cha
 Shop/SHOP_DININGDECORATION_DECORATIVE_PLANT_NAME,Plante décorative,reviewed,
 Shop/SHOP_DININGDECORATION_DECORATIVE_PLANT_DESC,"Décoration pour la salle. [COLOR=ALERT]Augmente de [X] le bonus de pourboire d'une jauge de réputation pleine.[/COLOR]<br>""Une plante vraiment travailleuse !""",reviewed,
 Shop/SHOP_DININGDECORATION_DECORATIVE_PLANT_DESC_SHORT,Augmente de [X] le bonus de pourboire de chaque jauge de réputation remplie.,reviewed,Audit terminologie.
-Shop/SHOP_CASHIERDECORATION_CASHREGISTER_NAME,Caisse,reviewed,
+Shop/SHOP_CASHIERDECORATION_CASHREGISTER_NAME,Caisse enregistreuse,reviewed,Dépasse max source ; à vérifier.
 Shop/SHOP_CASHIERDECORATION_CASHREGISTER_DESC,"Décoration pour la caisse. [COLOR=ALERT]Augmente le bénéfice de base de [X] pièces[/COLOR].<br>""Parfaite pour garder l'argent des autres !""",reviewed,
 Shop/SHOP_CASHIERDECORATION_CASHREGISTER_DESC_SHORT,Augmente le profit de base de la ou des pièces [X].,reviewed,Dépasse max source ; à vérifier.
 Shop/SHOP_CASHIERDECORATION_LUCKYCAT_NAME,Chat porte-bonheur,reviewed,

@@ -141,7 +141,7 @@ jobs:
           uv sync --locked --no-dev --group package
       - name: Moteur et interface Linux
         run: |
-          uv run python -c 'from kuloniku_fr import __version__; assert __version__ == "1.3.0"'
+          uv run python -c 'from kuloniku_fr import __version__; assert __version__ == "1.3.1"'
           uv run --locked --no-dev --group package pyinstaller \
             --clean --onefile --collect-all UnityPy \
             --name KuloNiku-FR packaging/entrypoint.py
@@ -206,7 +206,7 @@ jobs:
 
           ## Cette mise à jour
 
-          - Prise en charge stable de Steam Deck, validée avec la démo et le jeu complet.
+          - Corrections de traduction validées en jeu : températures, historique des dialogues, recettes et formulations de personnages.
 
           Projet communautaire non officiel. Aucun fichier complet du jeu n’est distribué.
           EOF

@@ -109,7 +109,7 @@ Dialogue/VNM84_2,"Non ! Je suis là pour VOUS VOIR TOUS DEUX !",reviewed,Raccour
 Dialogue/GPN5_3_5,"O-Oh, ça ne te dérange pas si je te montre les photos de ma collection ? J'adore la peluche [MEI_JOB] [TYRO_DINO] !",reviewed,Raccourci naturel ; hésitation et variables conservées.
 Dialogue/GPN6_3_3,"Masque oculaire chauffant en [SAI_ITEM1], aromathérapie, beurre corporel, masseur crânien... En écoutant mon artiste indé préféré jouer de [ELIO_INSTRUMENT].",reviewed,Raccourci naturel ; variables et énumération conservées.
 Dialogue/GPN7_3_1,"Je suis allé aujourd'hui à L'Assiette secrète voir comment ça va.",reviewed,Raccourci naturel ; visite et intention conservées.
-Dialogue/MEI_PEOPLE_5,brutes,reviewed,Raccourci naturel ; sens conservé.
+Dialogue/MEI_PEOPLE_5,terreurs,reviewed,Terme familier fidèle à bullies et distinct de thugs.
 Dialogue/OTARU_TITLE2_1,araignée,reviewed,Les langues source désignent simplement une araignée.
 Dialogue/JOCKO_FOOD_1,riz nature,reviewed,Appellation culinaire naturelle et concise.
 Dialogue/ALI_ACTION_7,ne pondent pas,reviewed,Raccourci naturel ; sens conservé.
