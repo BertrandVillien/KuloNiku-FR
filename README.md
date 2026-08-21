@@ -148,6 +148,13 @@ cherchent à rester naturelles et assez courtes pour l’interface.
 La [documentation du projet](docs/README.md) rassemble la FAQ, la compatibilité,
 la qualité de la traduction et les informations techniques.
 
+## Soutenir le projet
+
+KuloNiku FR reste entièrement gratuit. Si vous souhaitez soutenir le temps
+consacré à ce projet et les activités de mon club informatique, vous pouvez
+faire un don libre à l’association Le Moulin Computer Club :
+[soutenir mon travail](https://www.helloasso.com/associations/le-moulin-computer-club/formulaires/3).
+
 ---
 
 ## Projet non officiel
