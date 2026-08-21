@@ -21,7 +21,3 @@
 
 - [Architecture des installateurs](DISTRIBUTION.md)
 - [Cadre juridique et attribution](LEGAL.md)
-
-## Captures de référence
-
-- [Installateur Linux prêt à appliquer le patch](assets/kuloniku-fr-linux-installer.png)

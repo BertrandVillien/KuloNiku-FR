@@ -17,29 +17,10 @@ unofficial, and does not contain any complete game file.
 
 ## Install the patch
 
-Go to the
-[official releases page](https://github.com/BertrandVillien/KuloNiku-FR/releases).
-Each release note explains which file to download and how to open it.
-
-On Windows, download the **Windows x64** archive, extract it completely, then
-open **Installer KuloNiku FR.exe**. The application finds Steam and guides you
-through installation, updates, and restoration. The executable is not digitally
-signed yet, so Windows SmartScreen may ask for confirmation. Never disable your
-antivirus to open it.
-
-On macOS, download the universal DMG, then drag **KuloNiku FR** into
-**Applications**. The same application works on Apple Silicon and Intel Macs
-and provides the same operations. macOS will block the first launch: try to
-open the application once, then go to **System Settings > Privacy & Security >
-Open Anyway**. You do not need to disable a Mac security feature or use the
-Terminal. [See Apple’s official instructions](https://support.apple.com/en-gb/102445).
-
-On Steam Deck, the native AppImage runs in Desktop Mode without a Terminal or any
-system installation. After downloading it, right-click the file, open
-**Properties > Permissions**, enable **Is executable**, then double-click the
-AppImage. It detects games stored internally or on a microSD card. Installation,
-restoration, and reinstallation have been validated on a real Deck with both the
-demo and full game. Follow the [Steam Deck guide](docs/STEAM_DECK.en.md).
+Download the installer for your device — Windows, macOS, or Steam Deck — from
+the [KuloNiku FR releases
+page](https://github.com/BertrandVillien/KuloNiku-FR/releases), then follow the
+installation instructions.
 
 ![macOS installer ready to install the French translation](docs/assets/kuloniku-fr-installer-macos.png)
 
@@ -56,9 +37,6 @@ verified backup. The **Restore** action returns the original file.
 
 The patch is rebuilt from your own installation: no complete game file is
 downloaded or distributed.
-
-[Read the security details](SECURITY.md) ·
-[Understand the technical design](docs/DISTRIBUTION.md)
 
 ---
 

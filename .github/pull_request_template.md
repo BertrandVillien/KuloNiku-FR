@@ -2,7 +2,7 @@
 
 - Catégorie / clés :
 - Version du jeu testée :
-- Plateforme : macOS / Windows
+- Plateforme : macOS / Windows / Steam Deck
 
 ## Vérifications
 

@@ -17,32 +17,10 @@ est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 
 ## Installer le patch
 
-Rendez-vous sur la page des
-[releases officielles](https://github.com/BertrandVillien/KuloNiku-FR/releases).
-La note de chaque version indique clairement quel fichier télécharger et comment
-l’ouvrir.
-
-Sur Windows, téléchargez l’archive **Windows x64**, décompressez-la entièrement,
-puis ouvrez **Installer KuloNiku FR.exe**. L’application détecte Steam et vous
-guide pour installer, mettre à jour ou restaurer le patch. L’exécutable n’est
-pas encore signé numériquement : Windows SmartScreen peut demander une
-confirmation. Ne désactivez jamais votre antivirus pour l’ouvrir.
-
-Sur macOS, téléchargez le DMG universel, puis glissez **KuloNiku FR** dans
-**Applications**. La même application fonctionne sur les Mac Apple Silicon et
-Intel et propose les mêmes opérations. Lors de la première ouverture, macOS
-bloquera l’application : essayez de l’ouvrir une fois, puis allez dans
-**Réglages Système > Confidentialité et sécurité > Ouvrir quand même**. Il n’est
-pas nécessaire de désactiver une protection du Mac ni d’utiliser le Terminal.
-[Voir la procédure officielle d’Apple](https://support.apple.com/fr-fr/102445).
-
-Sur Steam Deck, l’AppImage native s’utilise en mode Bureau, sans Terminal ni
-installation système. Après le téléchargement, faites un clic droit sur le
-fichier, ouvrez **Propriétés > Permissions** et cochez **Est exécutable**, puis
-double-cliquez sur l’AppImage. Elle détecte le jeu sur le stockage interne ou la
-carte microSD. L’installation, la restauration et la réinstallation ont été
-validées sur un véritable Deck avec la démo et le jeu complet. Suivez le
-[guide Steam Deck](docs/STEAM_DECK.md).
+Téléchargez l’installateur correspondant à votre appareil — Windows, macOS ou
+Steam Deck — sur la [page des releases de KuloNiku
+FR](https://github.com/BertrandVillien/KuloNiku-FR/releases), puis suivez les
+instructions d’installation.
 
 ![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)
 
@@ -60,9 +38,6 @@ d’origine.
 
 Le patch est reconstruit à partir de votre propre installation : aucun fichier
 complet du jeu n’est téléchargé ou distribué.
-
-[Lire les détails de sécurité](SECURITY.md) ·
-[Comprendre le fonctionnement technique](docs/DISTRIBUTION.md)
 
 ---
 

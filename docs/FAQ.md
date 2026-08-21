@@ -20,8 +20,8 @@ validés sur un véritable Steam Deck avec la démo et le jeu complet.
 ## Démo ou jeu complet ?
 
 Les deux sont reconnus automatiquement. La version complète est la référence.
-La démo `0.10.5` reçoit uniquement les exceptions nécessaires à son ancienne
-version des textes.
+La démo reçoit uniquement les adaptations nécessaires à son ancienne version
+des textes.
 
 ## Pourquoi l’allemand disparaît-il ?
 
@@ -65,7 +65,7 @@ installé reste affiché jusqu’à la prochaine traduction.
 ## Puis-je annuler ?
 
 Oui. Chaque installation crée d’abord une sauvegarde dont l’empreinte SHA-256
-est vérifiée. La commande ou le lanceur « Restaurer KuloNiku » remet cette
+est vérifiée. La commande ou le bouton **Restaurer l’original** remet cette
 sauvegarde.
 
 ## Pourquoi macOS affiche-t-il parfois un avertissement ?

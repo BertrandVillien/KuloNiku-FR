@@ -1,12 +1,12 @@
 # État de qualité de la traduction
 
-Instantané du 20 août 2026, établi sur la version complète macOS.
+Cet état présente les contrôles appliqués à la traduction actuellement fournie.
 
 ## Couverture
 
 - 13 173 clés présentes dans la table de localisation.
-- 13 122 traductions françaises.
-- 51 clés sans français : elles sont également vides dans les huit langues
+- 13 123 traductions françaises.
+- 50 clés sans français : elles sont également vides dans les huit langues
   officielles et utilisent donc le repli anglais vide.
 - aucune traduction `provisional`.
 
@@ -15,18 +15,15 @@ Instantané du 20 août 2026, établi sur la version complète macOS.
 - clés inconnues : 0 ;
 - traductions vides dans le CSV français : 0 ;
 - variables ou balises cassées : 0 ;
-- tests automatisés : 18/18 ;
-- reconstruction, installation puis réextraction : 13 173 valeurs vérifiées,
-  0 divergence ;
+- tests automatisés réussis ;
+- reconstruction, installation puis réextraction sans divergence ;
 - signature macOS vérifiée après installation ;
-- dialogues de secours identiques : 4 868 synchronisés automatiquement avec
-  leur dialogue principal ;
-- 1 625 clés actives nouvelles ou modifiées relues pour le passage de la démo
-  à la version complète.
-- profil de la démo : 12 196 traductions sur 12 211 clés, avec 699 exceptions
-  versionnées et 15 replis correspondant aux entrées vides dans toutes les
-  langues ;
-- reconstruction et réextraction des profils Démo/Complet : 0 divergence.
+- dialogues de secours identiques synchronisés automatiquement avec leur
+  dialogue principal ;
+- clés nouvelles ou modifiées relues pour le passage de la démo à la version
+  complète ;
+- profils de la démo et du jeu complet reconstruits puis réextraits sans
+  divergence.
 
 ## Longueurs et validation visuelle
 
