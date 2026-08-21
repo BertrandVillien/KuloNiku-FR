@@ -192,28 +192,32 @@ jobs:
       - shell: bash
         run: |
           mkdir release-files
-          find artifacts -type f \( -name '*.dmg' -o -name '*.zip' -o -name '*.AppImage' -o -name '*.AppImage.sha256' -o -name 'update-manifest.json' \) -exec cp {} release-files/ \;
+          find artifacts -type f \( -name '*.dmg' -o -name '*.zip' -o -name '*.AppImage' -o -name 'update-manifest.json' \) -exec cp {} release-files/ \;
           cd release-files
           sha256sum *.dmg *.zip *.AppImage > SHA256SUMS.txt
           cat > release-notes.md <<'EOF'
           KuloNiku FR permet de jouer en français à la démo et au jeu complet.
 
-          **Installer :** sous Windows, téléchargez l’archive `KuloNiku-FR-Windows-x64.zip`, décompressez-la entièrement, puis ouvrez **Installer KuloNiku FR.exe**. Sous macOS, téléchargez `KuloNiku-FR-macOS-Universal.dmg`, puis glissez **KuloNiku FR** dans **Applications**. Sur Steam Deck, téléchargez `KuloNiku-FR-Steam-Deck-x86_64.AppImage`, autorisez son exécution dans ses propriétés, puis ouvrez-le en mode Bureau.
+          ## Installer
 
-          **Cette mise à jour :**
+          - **Windows** : téléchargez `KuloNiku-FR-Windows-x64.zip`, décompressez-le, puis ouvrez **Installer KuloNiku FR.exe**.
+          - **macOS** : téléchargez `KuloNiku-FR-macOS-Universal.dmg`, ouvrez-le, puis glissez **KuloNiku FR** dans **Applications**.
+          - **Steam Deck** : téléchargez `KuloNiku-FR-Steam-Deck-x86_64.AppImage`, autorisez son exécution dans ses propriétés, puis ouvrez-le en mode Bureau.
 
-          - prise en charge stable de Steam Deck, validée avec la démo et le jeu complet ;
-          - ajout d’un espace local pour relire, corriger et tester les traductions ;
-          - amélioration de l’affichage des options avancées sur Windows et macOS.
+          ## Cette mise à jour
+
+          - Prise en charge stable de Steam Deck, validée avec la démo et le jeu complet.
+          - Ajout d’un espace local pour relire, corriger et tester les traductions.
+          - Amélioration de l’affichage des options avancées sur Windows et macOS.
 
           Projet communautaire non officiel. Aucun fichier complet du jeu n’est distribué.
           EOF
-          release_flags=(--notes-file release-notes.md --verify-tag)
+          release_flags=(--title "KuloNiku FR ${GITHUB_REF_NAME#v}" --notes-file release-notes.md --verify-tag)
           if [[ "${GITHUB_REF_NAME}" == *-* ]]; then
             release_flags+=(--prerelease)
           fi
           gh release create "${GITHUB_REF_NAME}" "${release_flags[@]}" \
-            ./*.dmg ./*.zip ./*.AppImage ./*.AppImage.sha256 \
+            ./*.dmg ./*.zip ./*.AppImage \
             ./SHA256SUMS.txt ./update-manifest.json
         env:
           GH_TOKEN: ${{ github.token }}
