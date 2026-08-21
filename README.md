@@ -37,9 +37,11 @@ pas nécessaire de désactiver une protection du Mac ni d’utiliser le Terminal
 [Voir la procédure officielle d’Apple](https://support.apple.com/fr-fr/102445).
 
 Sur Steam Deck, l’AppImage native s’utilise en mode Bureau, sans Terminal ni
-installation système. Elle détecte le jeu sur le stockage interne ou la carte
-microSD. L’installation, la restauration et la réinstallation ont été validées
-sur un véritable Deck avec la démo et le jeu complet. Suivez le
+installation système. Après le téléchargement, faites un clic droit sur le
+fichier, ouvrez **Propriétés > Permissions** et cochez **Est exécutable**, puis
+double-cliquez sur l’AppImage. Elle détecte le jeu sur le stockage interne ou la
+carte microSD. L’installation, la restauration et la réinstallation ont été
+validées sur un véritable Deck avec la démo et le jeu complet. Suivez le
 [guide Steam Deck](docs/STEAM_DECK.md).
 
 ![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)

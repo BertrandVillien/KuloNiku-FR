@@ -35,10 +35,11 @@ Open Anyway**. You do not need to disable a Mac security feature or use the
 Terminal. [See Apple’s official instructions](https://support.apple.com/en-gb/102445).
 
 On Steam Deck, the native AppImage runs in Desktop Mode without a Terminal or any
-system installation. It detects games stored internally or on a microSD card.
-Installation, restoration, and reinstallation have been validated on a real
-Deck with both the demo and full game. Follow the
-[Steam Deck guide](docs/STEAM_DECK.en.md).
+system installation. After downloading it, right-click the file, open
+**Properties > Permissions**, enable **Is executable**, then double-click the
+AppImage. It detects games stored internally or on a microSD card. Installation,
+restoration, and reinstallation have been validated on a real Deck with both the
+demo and full game. Follow the [Steam Deck guide](docs/STEAM_DECK.en.md).
 
 ![macOS installer ready to install the French translation](docs/assets/kuloniku-fr-installer-macos.png)
 

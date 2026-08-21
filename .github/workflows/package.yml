@@ -201,7 +201,7 @@ jobs:
           ## Installer
 
           - **Windows** : téléchargez `KuloNiku-FR-Windows-x64.zip`, décompressez-le, puis ouvrez **Installer KuloNiku FR.exe**.
-          - **macOS** : téléchargez `KuloNiku-FR-macOS-Universal.dmg`, ouvrez-le, puis glissez **KuloNiku FR** dans **Applications**.
+          - **macOS** : téléchargez `KuloNiku-FR-macOS-Universal.dmg`, ouvrez-le, puis glissez **KuloNiku FR** dans **Applications**. Si macOS bloque la première ouverture, utilisez **Réglages Système > Confidentialité et sécurité > Ouvrir quand même**.
           - **Steam Deck** : téléchargez `KuloNiku-FR-Steam-Deck-x86_64.AppImage`, autorisez son exécution dans ses propriétés, puis ouvrez-le en mode Bureau.
 
           ## Cette mise à jour
