@@ -29,7 +29,10 @@ antivirus to open it.
 
 On macOS, download the universal DMG, then drag **KuloNiku FR** into
 **Applications**. The same application works on Apple Silicon and Intel Macs
-and provides the same operations.
+and provides the same operations. macOS will block the first launch: try to
+open the application once, then go to **System Settings > Privacy & Security >
+Open Anyway**. You do not need to disable a Mac security feature or use the
+Terminal. [See Apple’s official instructions](https://support.apple.com/en-gb/102445).
 
 On Steam Deck, the native AppImage runs in Desktop Mode without a Terminal or any
 system installation. It detects games stored internally or on a microSD card.
@@ -44,14 +47,6 @@ settings.
 
 Want to inspect or modify the code? See the
 [source installation guide](docs/INSTALL_FROM_SOURCE.en.md).
-
-### What if macOS blocks the first launch?
-
-Try to open the application once, then go to **System Settings > Privacy &
-Security > Open Anyway**. You do not need to disable a Mac security feature or
-use the Terminal.
-
-[See Apple’s official instructions](https://support.apple.com/en-gb/102445)
 
 ## Easy to undo
 

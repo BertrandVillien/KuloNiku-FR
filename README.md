@@ -30,7 +30,11 @@ confirmation. Ne désactivez jamais votre antivirus pour l’ouvrir.
 
 Sur macOS, téléchargez le DMG universel, puis glissez **KuloNiku FR** dans
 **Applications**. La même application fonctionne sur les Mac Apple Silicon et
-Intel et propose les mêmes opérations.
+Intel et propose les mêmes opérations. Lors de la première ouverture, macOS
+bloquera l’application : essayez de l’ouvrir une fois, puis allez dans
+**Réglages Système > Confidentialité et sécurité > Ouvrir quand même**. Il n’est
+pas nécessaire de désactiver une protection du Mac ni d’utiliser le Terminal.
+[Voir la procédure officielle d’Apple](https://support.apple.com/fr-fr/102445).
 
 Sur Steam Deck, l’AppImage native s’utilise en mode Bureau, sans Terminal ni
 installation système. Elle détecte le jeu sur le stockage interne ou la carte
@@ -45,14 +49,6 @@ les paramètres.
 
 Vous souhaitez examiner ou modifier le code ? Consultez
 [l’installation depuis les sources](docs/INSTALL_FROM_SOURCE.md).
-
-### Et si macOS bloque la première ouverture ?
-
-Essayez d’ouvrir l’application une fois, puis allez dans **Réglages Système >
-Confidentialité et sécurité > Ouvrir quand même**. Il n’est pas nécessaire de
-désactiver une protection du Mac ni d’utiliser le Terminal.
-
-[Voir la procédure officielle d’Apple](https://support.apple.com/fr-fr/102445)
 
 ## Une installation facile à annuler
 
