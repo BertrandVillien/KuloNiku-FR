@@ -15,19 +15,6 @@
 KuloNiku FR brings French to both the demo and the full game. It is free,
 unofficial, and does not contain any complete game file.
 
-## Project status
-
-- **macOS:** the stable release is available and tested on Apple Silicon and Intel;
-- **Windows:** the stable release has been successfully tested with the stable full
-  game and its current beta branch (August 20, 2026);
-- **Steam Deck:** native AppImage tested on real hardware with both the demo and
-  full game;
-- **game:** full version `1.1.1` tested on macOS, Windows, and Steam Deck; demo
-  `0.10.5` tested on macOS and Steam Deck;
-- **updates:** unknown new strings remain in English.
-
----
-
 ## Install the patch
 
 Go to the
