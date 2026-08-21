@@ -43,9 +43,8 @@ La sauvegarde, la compatibilité et les mises à jour restent ainsi gérées au 
 endroit, indépendamment de l’interface utilisée.
 
 Sur Steam Deck, le moteur et l’interface PyInstaller sont réunis dans une
-AppImage x86-64 autonome. La première bêta est fabriquée séparément par GitHub
-Actions et publiée comme préversion. Elle ne sera ajoutée aux releases stables
-qu’après validation sur un véritable Deck.
+AppImage x86-64 autonome. Depuis la version `1.3.0`, elle est fabriquée avec les
+paquets Windows et macOS et jointe aux releases stables.
 
 L’AppImage ne demande ni installation système ni privilège administrateur. Les
 sauvegardes sont placées dans le répertoire XDG de l’utilisateur, en dehors des
@@ -79,10 +78,8 @@ sauvegarde est restaurée automatiquement.
 
 - jeu complet `1.1.1` sur macOS et Windows ;
 - branche bêta du jeu disponible le 20 août 2026 sur Windows ;
-- démo `0.10.5` sur macOS.
-
-Le support Steam Deck reste en bêta et n’apparaît pas dans cette liste tant que
-le parcours complet n’a pas été validé sur le matériel réel.
+- jeu complet `1.1.1` sur Steam Deck le 21 août 2026 ;
+- démo `0.10.5` sur macOS et Steam Deck.
 
 L’application Windows de KuloNiku FR a installé et utilisé correctement la
 traduction avec la branche bêta du jeu lors de ce test.

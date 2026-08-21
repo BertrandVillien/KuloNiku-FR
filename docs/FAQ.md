@@ -14,8 +14,8 @@ Il suffit d’autoriser l’exécution du fichier dans **Propriétés > Permissi
 N’utilisez ni `sudo`, ni `pacman`, ni Protontricks, Wine ou l’installateur
 Windows. Consultez le [guide Steam Deck](STEAM_DECK.md).
 
-Cette version est encore en bêta : elle ne sera déclarée testée qu’après une
-validation complète sur un véritable Steam Deck.
+L’installation, le lancement, la restauration et la réinstallation ont été
+validés sur un véritable Steam Deck avec la démo et le jeu complet.
 
 ## Démo ou jeu complet ?
 
@@ -53,9 +53,8 @@ Non. L’application peut télécharger et vérifier le petit lot de traduction
 publié sur GitHub. Elle demande seulement une nouvelle version complète si ce
 lot déclare avoir besoin d’un moteur plus récent.
 
-Cette mise à jour intégrée reste temporairement désactivée dans la bêta Steam
-Deck. Sur le Deck, téléchargez une nouvelle AppImage lorsqu’une version est
-annoncée.
+Cette mise à jour intégrée reste désactivée sur Steam Deck. Téléchargez la
+nouvelle AppImage lorsqu’une version est annoncée.
 
 ## Une nouvelle phrase peut-elle casser le jeu ?
 

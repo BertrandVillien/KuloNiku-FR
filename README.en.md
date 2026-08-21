@@ -8,6 +8,7 @@
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS tested](https://img.shields.io/badge/macOS-tested-2ea44f)
 ![Windows tested](https://img.shields.io/badge/Windows-tested-2ea44f)
+![Steam Deck tested](https://img.shields.io/badge/Steam%20Deck-tested-2ea44f)
 
 ![KuloNiku: Bowl Up! home screen translated into French](docs/assets/kuloniku-fr-home.jpg)
 
@@ -19,9 +20,10 @@ unofficial, and does not contain any complete game file.
 - **macOS:** the stable release is available and tested on Apple Silicon and Intel;
 - **Windows:** the stable release has been successfully tested with the stable full
   game and its current beta branch (August 20, 2026);
-- **Steam Deck:** native AppImage in beta, still awaiting real-device validation;
-- **game:** full version `1.1.1` tested on macOS and Windows, demo `0.10.5`
-  tested on macOS;
+- **Steam Deck:** native AppImage tested on real hardware with both the demo and
+  full game on August 21, 2026;
+- **game:** full version `1.1.1` tested on macOS, Windows, and Steam Deck; demo
+  `0.10.5` tested on macOS and Steam Deck;
 - **updates:** unknown new strings remain in English.
 
 ---
@@ -42,10 +44,13 @@ On macOS, download the universal DMG, then drag **KuloNiku FR** into
 **Applications**. The same application works on Apple Silicon and Intel Macs
 and provides the same operations.
 
-On Steam Deck, the native beta runs in Desktop Mode without a Terminal or any
+On Steam Deck, the native AppImage runs in Desktop Mode without a Terminal or any
 system installation. It detects games stored internally or on a microSD card.
-Follow the [Steam Deck guide](docs/STEAM_DECK.en.md); support will only be marked
-stable after a complete test on real hardware.
+Installation, restoration, and reinstallation have been validated on a real
+Deck with both the demo and full game. Follow the
+[Steam Deck guide](docs/STEAM_DECK.en.md).
+
+![KuloNiku FR installed and verified on Steam Deck](docs/assets/kuloniku-fr-steam-deck-tested.png)
 
 ![macOS installer ready to install the French translation](docs/assets/kuloniku-fr-installer-macos.png)
 

@@ -8,6 +8,7 @@
 ![Tests](https://github.com/BertrandVillien/KuloNiku-FR/actions/workflows/ci.yml/badge.svg)
 ![macOS testé](https://img.shields.io/badge/macOS-test%C3%A9-2ea44f)
 ![Windows testé](https://img.shields.io/badge/Windows-test%C3%A9-2ea44f)
+![Steam Deck testé](https://img.shields.io/badge/Steam%20Deck-test%C3%A9-2ea44f)
 
 ![Accueil de KuloNiku: Bowl Up! traduit en français](docs/assets/kuloniku-fr-home.jpg)
 
@@ -19,9 +20,10 @@ est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 - **macOS :** version stable disponible et testée sur Apple Silicon et Intel ;
 - **Windows :** version stable testée avec succès sur le jeu complet stable et sur
   la branche bêta actuelle du jeu (20 août 2026) ;
-- **Steam Deck :** AppImage native en bêta, validation matérielle encore requise ;
-- **jeu :** version complète `1.1.1` testée sur macOS et Windows, démo `0.10.5`
-  testée sur macOS ;
+- **Steam Deck :** AppImage native testée sur le matériel réel avec la démo et
+  le jeu complet le 21 août 2026 ;
+- **jeu :** version complète `1.1.1` testée sur macOS, Windows et Steam Deck ;
+  démo `0.10.5` testée sur macOS et Steam Deck ;
 - **mises à jour :** les nouvelles phrases inconnues restent en anglais.
 
 ---
@@ -43,10 +45,13 @@ Sur macOS, téléchargez le DMG universel, puis glissez **KuloNiku FR** dans
 **Applications**. La même application fonctionne sur les Mac Apple Silicon et
 Intel et propose les mêmes opérations.
 
-Sur Steam Deck, la bêta native s’utilise en mode Bureau, sans Terminal ni
+Sur Steam Deck, l’AppImage native s’utilise en mode Bureau, sans Terminal ni
 installation système. Elle détecte le jeu sur le stockage interne ou la carte
-microSD. Suivez le [guide Steam Deck](docs/STEAM_DECK.md) ; cette version ne sera
-annoncée comme stable qu’après un essai complet sur un véritable Deck.
+microSD. L’installation, la restauration et la réinstallation ont été validées
+sur un véritable Deck avec la démo et le jeu complet. Suivez le
+[guide Steam Deck](docs/STEAM_DECK.md).
+
+![KuloNiku FR installé et vérifié sur Steam Deck](docs/assets/kuloniku-fr-steam-deck-tested.png)
 
 ![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)
 

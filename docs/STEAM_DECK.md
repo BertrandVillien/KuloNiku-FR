@@ -1,8 +1,11 @@
 # Tester KuloNiku FR sur Steam Deck
 
-> **Mission :** installer le français, vérifier quelques écrans, puis tester la
-> restauration. Comptez environ **10 à 15 minutes**. Aucun compte GitHub ni
-> Terminal n’est nécessaire.
+> **Compatible Steam Deck.** Installation, jeu en français, restauration et
+> réinstallation validés sur un véritable Steam Deck avec la démo `0.10.5` et
+> le jeu complet `1.1.1` le 21 août 2026.
+
+Comptez environ **10 à 15 minutes**. Aucun compte GitHub ni Terminal n’est
+nécessaire.
 
 ## 1. Préparer le jeu
 
@@ -14,7 +17,7 @@
 ## 2. Ouvrir l’installateur
 
 1. Passez en **mode Bureau** : **Steam > Marche/Arrêt > Passer en mode Bureau**.
-2. [Téléchargez l’AppImage](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/steam-deck-1.3.0-beta.1/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
+2. [Téléchargez l’AppImage](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/v1.3.0/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
 3. Dans **Dolphin > Téléchargements**, faites un clic droit sur le fichier.
 4. Ouvrez **Propriétés > Permissions** et cochez **Est exécutable**.
 5. Double-cliquez sur l’AppImage, puis choisissez **Lancer** si demandé.
@@ -27,7 +30,7 @@
 4. Après le message de réussite, cliquez sur **Revérifier**. L’application doit
    afficher **Installation propre et à jour**.
 
-![Installateur prêt à appliquer le patch](assets/kuloniku-fr-linux-installer.png)
+![KuloNiku FR installé et vérifié sur un Steam Deck avec la démo](assets/kuloniku-fr-steam-deck-tested.png)
 
 Si le jeu n’est pas trouvé, cliquez sur **Changer…** et choisissez son dossier,
 celui qui contient `KuloNiku_Data`.
@@ -91,5 +94,5 @@ fichier du jeu ou une sauvegarde créée par l’installateur.
 - **Le jeu ne démarre plus :** rouvrez l’AppImage et choisissez
   **Restaurer l’original**.
 
-[Voir la préversion](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/steam-deck-1.3.0-beta.1)
+[Voir la version stable](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/v1.3.0)
 · [Sélection de la langue française](LANGUAGE_SELECTION.md)

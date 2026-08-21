@@ -21,7 +21,7 @@ body:
     id: patcher
     attributes:
       label: Version de KuloNiku FR
-      placeholder: "Exemple : 1.3.0-beta.1"
+      placeholder: "Exemple : 1.3.0"
     validations:
       required: true
   - type: dropdown

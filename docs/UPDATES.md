@@ -1,8 +1,8 @@
 # Mises à jour du jeu, des traductions et de l’installateur
 
-Ce document couvre les interfaces macOS et Windows, leur moteur de patch commun
-et les petits lots de traduction téléchargeables séparément. La bêta Steam Deck
-utilise le même moteur, mais n’active pas encore les mises à jour intégrées : une
+Ce document couvre les interfaces macOS, Windows et Steam Deck, leur moteur de
+patch commun et les petits lots de traduction téléchargeables séparément.
+L’AppImage Steam Deck n’active pas les mises à jour intégrées : une
 nouvelle AppImage doit être téléchargée manuellement. Le projet distingue trois
 versions indépendantes.
 
@@ -34,8 +34,8 @@ traduction du jeu complet et celle de la démo, l’empreinte du téléchargemen
 la version minimale du moteur capable de lire ce format de lot. Cette version
 minimale n’augmente pas à chaque nouvelle version de l’application.
 
-L’AppImage Steam Deck est d’abord produite comme artefact de test séparé. Elle
-rejoindra ce contrat de release uniquement après validation sur un vrai Deck.
+Depuis la version `1.3.0`, l’AppImage Steam Deck et son empreinte sont publiées
+avec les paquets Windows et macOS dans chaque release stable.
 
 Les interfaces interrogent la dernière release publiée sur GitHub sans bloquer
 leur usage. Une version plus récente de l’application ou du moteur est signalée

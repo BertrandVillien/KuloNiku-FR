@@ -1,7 +1,10 @@
 # Test KuloNiku FR on Steam Deck
 
-> **Mission:** install French, check a few screens, then test restoration. Allow
-> about **10 to 15 minutes**. No GitHub account or Terminal is required.
+> **Steam Deck compatible.** Installation, French gameplay, restoration, and
+> reinstallation were validated on a real Steam Deck with demo `0.10.5` and
+> full game `1.1.1` on August 21, 2026.
+
+Allow about **10 to 15 minutes**. No GitHub account or Terminal is required.
 
 ## 1. Prepare the game
 
@@ -12,7 +15,7 @@
 ## 2. Open the installer
 
 1. Select **Steam > Power > Switch to Desktop**.
-2. [Download the AppImage](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/steam-deck-1.3.0-beta.1/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
+2. [Download the AppImage](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/v1.3.0/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
 3. In **Dolphin > Downloads**, right-click the file.
 4. Open **Properties > Permissions** and enable **Is executable**.
 5. Double-click the AppImage and choose **Launch** if asked.
@@ -25,7 +28,7 @@
 4. After success, select **Revérifier**. The application should display
    **Installation propre et à jour**.
 
-![Installer ready to apply the patch](assets/kuloniku-fr-linux-installer.png)
+![KuloNiku FR installed and verified on Steam Deck with the demo](assets/kuloniku-fr-steam-deck-tested.png)
 
 If the game is not found, select **Changer…** and choose the game directory that
 contains `KuloNiku_Data`.
@@ -83,5 +86,5 @@ the installer.
 - **The game no longer starts:** reopen the AppImage and select
   **Restaurer l’original**.
 
-[View the prerelease](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/steam-deck-1.3.0-beta.1)
+[View the stable release](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/v1.3.0)
 · [French language selection](LANGUAGE_SELECTION.md)
