@@ -21,7 +21,7 @@ est gratuit, non officiel et ne contient aucun fichier complet du jeu.
 - **Windows :** version stable testée avec succès sur le jeu complet stable et sur
   la branche bêta actuelle du jeu (20 août 2026) ;
 - **Steam Deck :** AppImage native testée sur le matériel réel avec la démo et
-  le jeu complet le 21 août 2026 ;
+  le jeu complet ;
 - **jeu :** version complète `1.1.1` testée sur macOS, Windows et Steam Deck ;
   démo `0.10.5` testée sur macOS et Steam Deck ;
 - **mises à jour :** les nouvelles phrases inconnues restent en anglais.
@@ -50,8 +50,6 @@ installation système. Elle détecte le jeu sur le stockage interne ou la carte
 microSD. L’installation, la restauration et la réinstallation ont été validées
 sur un véritable Deck avec la démo et le jeu complet. Suivez le
 [guide Steam Deck](docs/STEAM_DECK.md).
-
-![KuloNiku FR installé et vérifié sur Steam Deck](docs/assets/kuloniku-fr-steam-deck-tested.png)
 
 ![Installateur macOS prêt à installer la traduction française](docs/assets/kuloniku-fr-installer-macos.png)
 

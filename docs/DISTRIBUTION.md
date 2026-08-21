@@ -78,7 +78,7 @@ sauvegarde est restaurée automatiquement.
 
 - jeu complet `1.1.1` sur macOS et Windows ;
 - branche bêta du jeu disponible le 20 août 2026 sur Windows ;
-- jeu complet `1.1.1` sur Steam Deck le 21 août 2026 ;
+- jeu complet `1.1.1` sur Steam Deck ;
 - démo `0.10.5` sur macOS et Steam Deck.
 
 L’application Windows de KuloNiku FR a installé et utilisé correctement la

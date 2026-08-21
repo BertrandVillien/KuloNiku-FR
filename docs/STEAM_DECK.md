@@ -1,98 +1,53 @@
-# Tester KuloNiku FR sur Steam Deck
+# Installer KuloNiku FR sur Steam Deck
 
-> **Compatible Steam Deck.** Installation, jeu en français, restauration et
-> réinstallation validés sur un véritable Steam Deck avec la démo `0.10.5` et
-> le jeu complet `1.1.1` le 21 août 2026.
+KuloNiku FR est compatible avec la démo et le jeu complet sur Steam Deck.
+L’installation se fait en mode Bureau, sans Terminal ni modification de
+SteamOS.
 
-Comptez environ **10 à 15 minutes**. Aucun compte GitHub ni Terminal n’est
-nécessaire.
+## Télécharger et ouvrir l’application
 
-## 1. Préparer le jeu
+1. Installez KuloNiku depuis Steam et lancez-le une première fois.
+2. Passez en **mode Bureau** : **Steam > Marche/Arrêt > Passer en mode Bureau**.
+3. [Téléchargez l’AppImage Steam Deck](https://github.com/BertrandVillien/KuloNiku-FR/releases/latest/download/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
+4. Dans **Dolphin > Téléchargements**, faites un clic droit sur le fichier.
+5. Ouvrez **Propriétés > Permissions** et cochez **Est exécutable**.
+6. Double-cliquez sur l’AppImage, puis choisissez **Lancer** si demandé.
 
-- Mettez SteamOS à jour.
-- Installez la démo ou le jeu complet depuis Steam.
-- Lancez le jeu une fois sans le patch, atteignez le menu principal, puis
-  quittez-le.
+## Installer le français
 
-## 2. Ouvrir l’installateur
+1. Attendez que l’application affiche **Prêt à installer le français**.
+2. Cliquez sur **Installer le français** et confirmez.
+3. Après l’installation, cliquez sur **Revérifier**. L’état doit indiquer
+   **Installation propre et à jour**.
 
-1. Passez en **mode Bureau** : **Steam > Marche/Arrêt > Passer en mode Bureau**.
-2. [Téléchargez l’AppImage](https://github.com/BertrandVillien/KuloNiku-FR/releases/download/v1.3.0/KuloNiku-FR-Steam-Deck-x86_64.AppImage).
-3. Dans **Dolphin > Téléchargements**, faites un clic droit sur le fichier.
-4. Ouvrez **Propriétés > Permissions** et cochez **Est exécutable**.
-5. Double-cliquez sur l’AppImage, puis choisissez **Lancer** si demandé.
+L’application effectue une simulation et crée une sauvegarde vérifiée avant de
+modifier le jeu.
 
-## 3. Installer le français
+![KuloNiku FR installé et vérifié sur Steam Deck](assets/kuloniku-fr-steam-deck-tested.png)
 
-1. Attendez l’état **Prêt à installer le français**.
-2. [Prenez une première capture de l’application](#captures-demandées).
-3. Cliquez sur **Installer le français** et confirmez.
-4. Après le message de réussite, cliquez sur **Revérifier**. L’application doit
-   afficher **Installation propre et à jour**.
+Si le jeu n’est pas détecté, cliquez sur **Changer…** et sélectionnez son
+dossier, celui qui contient `KuloNiku_Data`.
 
-![KuloNiku FR installé et vérifié sur un Steam Deck avec la démo](assets/kuloniku-fr-steam-deck-tested.png)
+## Jouer en français
 
-Si le jeu n’est pas trouvé, cliquez sur **Changer…** et choisissez son dossier,
-celui qui contient `KuloNiku_Data`.
-
-## 4. Vérifier dans le jeu
-
-1. Fermez l’installateur et revenez en mode Jeu avec **Return to Gaming Mode**.
+1. Fermez l’application et revenez en mode Jeu avec **Return to Gaming Mode**.
 2. Lancez KuloNiku depuis Steam.
 3. Dans les paramètres de langue, choisissez **Français**.
-4. Regardez rapidement le menu principal, un tutoriel, une recette et un
-   dialogue.
-5. Quittez et relancez le jeu : le français doit rester sélectionné.
 
-## 5. Tester la restauration
+## Restaurer le jeu original
 
 1. Quittez le jeu et repassez en mode Bureau.
-2. Rouvrez l’AppImage et cliquez sur **Restaurer l’original**.
-3. Cliquez sur **Revérifier** : l’application doit de nouveau proposer
-   **Installer le français**.
-4. Lancez brièvement le jeu pour vérifier qu’il fonctionne toujours.
-5. Réinstallez ensuite le français et faites un dernier essai.
+2. Rouvrez l’AppImage.
+3. Cliquez sur **Restaurer l’original** et confirmez.
 
-## Captures demandées
+Vous pourrez réinstaller le français plus tard avec la même AppImage.
 
-Une seule capture est obligatoire : **la fenêtre de l’installateur**, idéalement
-avec l’état **Installation propre et à jour**.
-
-Si possible, prenez aussi une capture après chaque grande étape :
-
-- installateur prêt ;
-- installation réussie ;
-- menu du jeu en français ;
-- restauration réussie ;
-- français réinstallé.
-
-### Comment prendre les captures
-
-- **En mode Bureau :** ouvrez le menu des applications, cherchez **Spectacle**,
-  puis choisissez **Fenêtre active** ou **Zone rectangulaire**. Enregistrez en
-  PNG dans **Images**.
-- **En mode Jeu :** appuyez en même temps sur **Steam + R1**. Les captures sont
-  visibles dans **Steam > Multimédia**.
-
-Envoyez les images en PNG ou JPG par le même moyen que celui utilisé pour vous
-transmettre ce guide (mail, messagerie, dossier partagé…). Aucun compte GitHub
-n’est nécessaire. Avec les images, indiquez simplement :
-
-- Steam Deck **LCD ou OLED** ;
-- jeu complet ou démo ;
-- stockage interne ou microSD ;
-- ce qui a fonctionné ou bloqué.
-
-Masquez votre nom de compte et vos chemins personnels. N’envoyez jamais un
-fichier du jeu ou une sauvegarde créée par l’installateur.
-
-## En cas de blocage
+## En cas de problème
 
 - **L’AppImage ne s’ouvre pas :** vérifiez que **Est exécutable** est coché.
-- **Le jeu n’est pas trouvé :** utilisez **Changer…**.
-- **Une erreur apparaît :** prenez une capture et arrêtez le test.
+- **Le jeu n’est pas détecté :** utilisez **Changer…**.
 - **Le jeu ne démarre plus :** rouvrez l’AppImage et choisissez
   **Restaurer l’original**.
 
-[Voir la version stable](https://github.com/BertrandVillien/KuloNiku-FR/releases/tag/v1.3.0)
-· [Sélection de la langue française](LANGUAGE_SELECTION.md)
+[Questions fréquentes](FAQ.md)
+· [Signaler un problème](https://github.com/BertrandVillien/KuloNiku-FR/issues/new?template=installation.yml)
