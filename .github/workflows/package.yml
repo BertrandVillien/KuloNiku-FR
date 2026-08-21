@@ -207,8 +207,6 @@ jobs:
           ## Cette mise à jour
 
           - Prise en charge stable de Steam Deck, validée avec la démo et le jeu complet.
-          - Ajout d’un espace local pour relire, corriger et tester les traductions.
-          - Amélioration de l’affichage des options avancées sur Windows et macOS.
 
           Projet communautaire non officiel. Aucun fichier complet du jeu n’est distribué.
           EOF
