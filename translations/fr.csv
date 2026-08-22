@@ -286,7 +286,7 @@ BUTTON_CRAFTING_RETRY,Réessayer,reviewed,
 BUTTON_START_CONTEST,Duel !,reviewed,
 BUTTON_TAPANYWHERETOCLOSE,Continuer...,reviewed,Audit terminologie.
 BUTTON_TAPANYWHERETOCONTINUE,Continuer...,reviewed,
-BACKLOG_TITLE,Historique,reviewed,Dépasse max source de 2 caractères ; vérification visuelle en jeu prévue.
+BACKLOG_TITLE,Historique,reviewed,Dépasse max source de 2 caractères ; validé visuellement en jeu.
 CRAFTING_GUIDE_INGREDIENT,Ingrédients,reviewed,
 CRAFTING_GUIDE_TASTE,Saveur,reviewed,
 SETTINGS_RESOLUTION,Résolution,reviewed,
